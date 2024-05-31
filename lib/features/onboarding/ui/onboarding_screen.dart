@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:kimofit/core/cache/cache_helper.dart';
 import 'package:kimofit/core/constants/assets.dart';
 import 'package:kimofit/core/constants/colors.dart';
+import 'package:kimofit/core/constants/constants.dart';
+import 'package:kimofit/core/di/dependency_injection.dart';
 import 'package:kimofit/core/helpers/extensions.dart';
 import 'package:kimofit/core/routing/routes.dart';
 import 'package:kimofit/core/theming/style.dart';
@@ -38,8 +41,7 @@ class OnBoardingScreen extends StatelessWidget {
                             text: S.of(context).getStarted,
                             textStyle: TextStyles.font18White,
                             backgroundColor: ColorsManager.yellow,
-                            onPressed: () => context
-                                .pushReplacementNamed(Routes.loginScreen),
+                            onPressed: () => visitedAndRoute(context),
                           ),
                         ],
                       ),
@@ -53,4 +55,12 @@ class OnBoardingScreen extends StatelessWidget {
       ),
     );
   }
+}
+
+void visitedAndRoute(BuildContext context) {
+  getIt<CacheHelper>().saveData(
+    key: Constants.isOnBoardingVisited,
+    value: true,
+  );
+  context.pushReplacementNamed(Routes.loginScreen);
 }
