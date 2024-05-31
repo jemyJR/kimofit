@@ -7,6 +7,7 @@ import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/custom_button.dart';
+import 'package:kimofit/core/widgets/loading_widget.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 class TopBar extends StatelessWidget {
@@ -54,7 +55,7 @@ class TopBar extends StatelessWidget {
             text: S.of(context).language,
             textStyle: TextStyles.font15White,
             backgroundColor: ColorsManager.blue,
-            onPressed: () {},
+            onPressed: () => changeLanguageWithDelay(context),
           ),
         ],
       ),

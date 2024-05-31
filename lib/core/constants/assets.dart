@@ -1,6 +1,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for animationLoading
+  /// assets/animation/loading.json
+  static const String animationLoading = "assets/animation/loading.json";
+
   /// Assets for fontsCairoRegular
   /// assets/fonts/Cairo-Regular.ttf
   static const String fontsCairoRegular = "assets/fonts/Cairo-Regular.ttf";

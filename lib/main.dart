@@ -1,20 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:kimofit/core/cache/cache_helper.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:kimofit/app/logic/cubit/language_cubit.dart';
+import 'package:kimofit/app/ui/kimofit_app.dart';
 import 'package:kimofit/core/di/dependency_injection.dart';
 import 'package:kimofit/core/routing/app_router.dart';
 import 'package:kimofit/core/routing/initial_route_manager.dart';
-import 'package:kimofit/kimofit_app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  setupGetIt();
-  await getIt<CacheHelper>().init();
+
+  await setupGetIt();
   String initialRoute = await InitialRouteManager.determineInitialRoute();
 
   runApp(
-    KimoFitApp(
-      appRouter: AppRouter(),
-      initialRoute: initialRoute,
+    BlocProvider(
+      create: (context) => getIt<LanguageCubit>(),
+      child: KimoFitApp(
+        appRouter: AppRouter(),
+        initialRoute: initialRoute,
+      ),
     ),
   );
 }
