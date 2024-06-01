@@ -9,6 +9,10 @@ class Assets {
   /// assets/fonts/Cairo-Regular.ttf
   static const String fontsCairoRegular = "assets/fonts/Cairo-Regular.ttf";
 
+  /// Assets for imagesBgAuth
+  /// assets/images/bg/auth.jpg
+  static const String imagesBgAuth = "assets/images/bg/auth.jpg";
+
   /// Assets for imagesBgOnboarding
   /// assets/images/bg/onboarding.jpg
   static const String imagesBgOnboarding = "assets/images/bg/onboarding.jpg";

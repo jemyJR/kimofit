@@ -22,8 +22,14 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "currentUser":
+            MessageLookupByLibrary.simpleMessage("Are you  current user ?"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
         "language": MessageLookupByLibrary.simpleMessage("عربي"),
+        "login": MessageLookupByLibrary.simpleMessage("Log in"),
+        "loginMessage":
+            MessageLookupByLibrary.simpleMessage("Log in to your account"),
+        "newUser": MessageLookupByLibrary.simpleMessage("Are you a new user ?"),
         "obParagraph1": MessageLookupByLibrary.simpleMessage(
             "You are the only one who can change yourself and I am here to help you\nChange needs a push"),
         "obParagraph2": MessageLookupByLibrary.simpleMessage(
@@ -33,6 +39,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "obParagraph4": MessageLookupByLibrary.simpleMessage(
             "Don\'t lose hope that you will change your body, your health, and your life\nFirst and last, this is your body, this is your health, and you are the decision maker"),
         "obParagraph5": MessageLookupByLibrary.simpleMessage(
-            "Your reaching your goal is\nas important to me as it is to you. Your shortcomings in some part, even if it is small in relation to you, may be a reason for your development and its lack thereof sometimes.")
+            "Your reaching your goal is\nas important to me as it is to you. Your shortcomings in some part, even if it is small in relation to you, may be a reason for your development and its lack thereof sometimes."),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "phone": MessageLookupByLibrary.simpleMessage("Phone Number"),
+        "searchCountry": MessageLookupByLibrary.simpleMessage("Search Country"),
+        "signup": MessageLookupByLibrary.simpleMessage("Sign up"),
+        "welcome": MessageLookupByLibrary.simpleMessage("Welcome")
       };
 }
