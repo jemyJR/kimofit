@@ -21,6 +21,7 @@ class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'en';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
+<<<<<<< HEAD
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
         "language": MessageLookupByLibrary.simpleMessage("عربي"),
@@ -35,4 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "obParagraph5": MessageLookupByLibrary.simpleMessage(
             "Your reaching your goal is\nas important to me as it is to you. Your shortcomings in some part, even if it is small in relation to you, may be a reason for your development and its lack thereof sometimes.")
       };
+=======
+  static Map<String, Function> _notInlinedMessages(_) => <String, Function>{};
+>>>>>>> development
 }
