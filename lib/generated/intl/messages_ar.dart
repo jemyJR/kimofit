@@ -1,5 +1,5 @@
 // DO NOT EDIT. This is code generated via package:intl/generate_localized.dart
-// This is a library that provides messages for a en locale. All the
+// This is a library that provides messages for a ar locale. All the
 // messages from the main program should be duplicated here with the same
 // function name.
 
@@ -18,21 +18,21 @@ final messages = new MessageLookup();
 typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 
 class MessageLookup extends MessageLookupByLibrary {
-  String get localeName => 'en';
+  String get localeName => 'ar';
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-        "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
-        "language": MessageLookupByLibrary.simpleMessage("عربي"),
+        "getStarted": MessageLookupByLibrary.simpleMessage("ابدء الان"),
+        "language": MessageLookupByLibrary.simpleMessage("English"),
         "obParagraph1": MessageLookupByLibrary.simpleMessage(
-            "You are the only one who can change yourself and I am here to help you\nChange needs a push"),
+            "انت الوحيد الي تقدر تغير من نفسك وانا هنا عشان اساعدك\nالتغيير محتاج زقه"),
         "obParagraph2": MessageLookupByLibrary.simpleMessage(
-            "This motivation may be a word you read or hear from me. I always think that you are a special person, but you are missing a simple motivation"),
+            "جايز الزقه دي تكون كلمه بتقراها او بتسمعها مني افتكر ديما انك شخص مميز لاكن ناقصك زقه بسيطه"),
         "obParagraph3": MessageLookupByLibrary.simpleMessage(
-            "Yourself is your biggest enemy\nShe won\'t tell you to exercise\nShe won\'t tell you to go on a diet"),
+            "نفسك هي اكبر عدو ليك\nنفسك مش هتقولك اتمرن\nمش هتقولك امشي علي دايت"),
         "obParagraph4": MessageLookupByLibrary.simpleMessage(
-            "Don\'t lose hope that you will change your body, your health, and your life\nFirst and last, this is your body, this is your health, and you are the decision maker"),
+            "أوعي تفقد الأمل من انك تغير من جسمك وصحتك وحياتك\nفالأول وفالاخر ده جسمك ودي صحتك وانت صاحب القرار"),
         "obParagraph5": MessageLookupByLibrary.simpleMessage(
-            "Your reaching your goal is\nas important to me as it is to you. Your shortcomings in some part, even if it is small in relation to you, may be a reason for your development and its lack thereof sometimes.")
+            "وصولك لهدفك مهم لي بقدر أهميته ليك تقصيرك في جزء ما حتي لو كان صغير بالنسبالك ممكن يكون سبب في تطورك وانعدامه احيانا")
       };
 }
