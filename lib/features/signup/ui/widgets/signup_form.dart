@@ -7,26 +7,33 @@ import 'package:kimofit/core/widgets/custom_button.dart';
 import 'package:kimofit/core/widgets/custom_form_field.dart';
 import 'package:kimofit/core/widgets/custom_snack_bar.dart';
 import 'package:kimofit/core/widgets/phone_form_field.dart';
-import 'package:kimofit/features/login/logic/cubit/login_cubit.dart';
+import 'package:kimofit/features/signup/logic/cubit/signup_cubit.dart';
 import 'package:kimofit/generated/l10n.dart';
 import 'package:kimofit/core/helpers/validation.dart';
 
-class LoginForm extends StatelessWidget {
-  const LoginForm({super.key});
+class SignupForm extends StatelessWidget {
+  const SignupForm({super.key});
 
   @override
   Widget build(BuildContext context) {
-    LoginCubit loginCubit = context.read<LoginCubit>();
+    SignupCubit signupCubit = context.read<SignupCubit>();
 
     return Form(
-      key: loginCubit.loginFormKey,
+      key: signupCubit.signupFormKey,
       autovalidateMode: AutovalidateMode.disabled,
       child: Column(
         children: [
+          CustomFormField(
+            hintText: S.of(context).name,
+            keyboardType: TextInputType.text,
+            validator: (value) => validateName(context, value),
+            onSaved: (name) => signupCubit.name = name!,
+          ),
+          verticalSpace(10),
           PhoneFormField(
             hintText: S.of(context).phone,
             validator: (value) => validatePhone(context, value),
-            onSaved: (phone) => loginCubit.phone = phone!.completeNumber,
+            onSaved: (phone) => signupCubit.phone = phone!.completeNumber,
           ),
           verticalSpace(5),
           CustomFormField(
@@ -34,15 +41,15 @@ class LoginForm extends StatelessWidget {
             obscureText: true,
             suffixIcon: true,
             validator: (value) => validatePassword(context, value),
-            onSaved: (password) => loginCubit.password = password!,
+            onSaved: (password) => signupCubit.password = password!,
           ),
           verticalSpace(15),
           CustomButton(
-            text: S.of(context).login,
+            text: S.of(context).signup,
             textStyle: TextStyles.font18White,
             backgroundColor: ColorsManager.blue,
             onPressed: () {
-              validateThenDoLogin(context, loginCubit);
+              validateThenDoSignup(context, signupCubit);
             },
           ),
         ],
@@ -51,34 +58,30 @@ class LoginForm extends StatelessWidget {
   }
 }
 
-void validateThenDoLogin(BuildContext context, LoginCubit loginCubit) async {
-  bool formIsValid = loginCubit.loginFormKey.currentState!.validate();
+void validateThenDoSignup(BuildContext context, SignupCubit signupCubit) async {
+  bool formIsValid = signupCubit.signupFormKey.currentState!.validate();
+  bool isPhoneValid = signupCubit.phone.length > 4;
+  bool isEgyPhone = signupCubit.phone.startsWith('+20');
 
-  // Exit if the form is not valid
   if (!formIsValid) {
     return;
   }
 
   // Save the form state
-  loginCubit.loginFormKey.currentState!.save();
+  signupCubit.signupFormKey.currentState!.save();
 
-  // Check the length of the phone number
-  bool isPhoneValid = loginCubit.phone.length > 4;
+  // Check if the phone number is valid
   if (!isPhoneValid) {
     customSnackBar(context, S.of(context).validationPhoneEmptyField);
     return;
   }
 
-  // Check if the phone number is an Egyptian number and validate it
-  bool isEgyPhone = loginCubit.phone.startsWith('+20');
-  if (isEgyPhone) {
-    bool isValidEgyPhone = validateEgyPhone(context, loginCubit.phone);
-    if (!isValidEgyPhone) {
-      customSnackBar(context, S.of(context).validationPhone);
-      return;
-    }
+  // Check if the phone number is an Egyptian phone number and validate it
+  if (isEgyPhone && !validateEgyPhone(context, signupCubit.phone)) {
+    customSnackBar(context, S.of(context).validationPhone);
+    return;
   }
 
-  // Attempt to login
-  await loginCubit.login();
+  // Attempt to Signup
+  await signupCubit.signup();
 }

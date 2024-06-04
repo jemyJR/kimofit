@@ -2,6 +2,7 @@ class ApiEndPoints {
   static const String apiBaseUrl = 'https://kimofit-production.up.railway.app/';
 
   static const String login = 'trainees/login/';
+  static const String signup = 'trainees/signup/';
 }
 
 class ApiKey {
@@ -17,6 +18,10 @@ class ApiKey {
   static const String password = 'password';
   static const String deviceId = 'registered_device_id';
 
+  //! Token keys
   static const String token = 'access';
   static const String refreshToken = 'refresh';
+
+  //! signup keys
+  static const String name = 'full_name';
 }

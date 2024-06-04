@@ -6,7 +6,8 @@ import 'package:kimofit/features/home/ui/home_screen.dart';
 import 'package:kimofit/features/login/logic/cubit/login_cubit.dart';
 import 'package:kimofit/features/login/ui/login_screen.dart';
 import 'package:kimofit/features/onboarding/ui/onboarding_screen.dart';
-import 'package:kimofit/features/sign_up/ui/sign_up_screen.dart';
+import 'package:kimofit/features/signup/logic/cubit/signup_cubit.dart';
+import 'package:kimofit/features/signup/ui/signup_screen.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
@@ -24,8 +25,12 @@ class AppRouter {
         );
       case Routes.signUpScreen:
         return MaterialPageRoute(
-          builder: (context) => const SignUpScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<SignupCubit>(),
+            child: const SignUpScreen(),
+          ),
         );
+
       case Routes.homeScreen:
         return MaterialPageRoute(
           builder: (context) => const HomeScreen(),

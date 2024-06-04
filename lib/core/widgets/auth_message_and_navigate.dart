@@ -30,9 +30,9 @@ class AuthMessageAndNavigate extends StatelessWidget {
             child: InkWell(
               onTap: () => authMessageType == AuthMessageType.login
                   ? context.pushNamed(Routes.signUpScreen)
-                  : context.pushNamed(Routes.loginScreen),
+                  : context.pop(),
               child: Text(
-                '  ${S.of(context).signup}',
+                ' ${authMessageType == AuthMessageType.login ? ' ${S.of(context).signup}' : ' ${S.of(context).login}'} ',
                 style: TextStyles.font18BlueBold,
               ),
             ),

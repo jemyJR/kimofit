@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:kimofit/core/cache/cache_helper.dart';
+import 'package:kimofit/core/constants/constants.dart';
 import 'package:kimofit/core/di/dependency_injection.dart';
 import 'package:kimofit/core/helpers/extensions.dart';
 import 'package:kimofit/core/routing/routes.dart';
@@ -22,7 +24,9 @@ class LoginBlocListener extends StatelessWidget {
         if (state is LoginSuccess) {
           loadingService.hideLoading();
           customSnackBar(context, S.of(context).loggedInSuccessfully);
-          context.pushNamed(Routes.homeScreen);
+          getIt<CacheHelper>()
+              .saveData(key: Constants.isUserLoggedIn, value: true);
+          context.pushReplacementNamed(Routes.homeScreen);
         } else if (state is LoginFailure) {
           loadingService.hideLoading();
           customSnackBar(context, state.errorMessage);

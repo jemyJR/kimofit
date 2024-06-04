@@ -20,10 +20,18 @@
     "validationPhone": "الرجاء ادخال رقم هاتف صالح",
     "validationPassword": "الرجاء ادخال كلمة مرور",
     "validationEmptyField": "لا يمكن أن يكون هذا الحقل فارغًا",
+    "validationPhoneEmptyField": "الرجاء ادخال رقم هاتف",
+    "validationPasswordLength" : "كلمة المرور يجب ان تكون اكبر من 8 خانات",
+    "validationName": "الرجاء ادخال اسم صالح",
     
     "currentUser": "انت مستخدم حالي ؟",
 
-    "loggedInSuccessfully": "تم تسجيل الدخول بنجاح"
+    "loggedInSuccessfully": "تم تسجيل الدخول بنجاح",
+    "signUpSuccessfully": "تم انشاء حساب جديد بنجاح",
+
+    "signupMessage": " قم بانشاء حسابك الان للاستمتاع بتجربه فريدة",
+    "name": "الاسم"
+
     
     
 }

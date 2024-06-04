@@ -230,6 +230,36 @@ class S {
     );
   }
 
+  /// `Please enter a phone number`
+  String get validationPhoneEmptyField {
+    return Intl.message(
+      'Please enter a phone number',
+      name: 'validationPhoneEmptyField',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password must be at least 8 characters long`
+  String get validationPasswordLength {
+    return Intl.message(
+      'Password must be at least 8 characters long',
+      name: 'validationPasswordLength',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a valid name`
+  String get validationName {
+    return Intl.message(
+      'Please enter a valid name',
+      name: 'validationName',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Are you  current user ?`
   String get currentUser {
     return Intl.message(
@@ -245,6 +275,36 @@ class S {
     return Intl.message(
       'You have been logged in successfully',
       name: 'loggedInSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have been signed up successfully`
+  String get signUpSuccessfully {
+    return Intl.message(
+      'You have been signed up successfully',
+      name: 'signUpSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create your account now to enjoy a unique experience`
+  String get signupMessage {
+    return Intl.message(
+      'Create your account now to enjoy a unique experience',
+      name: 'signupMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Name`
+  String get name {
+    return Intl.message(
+      'Name',
+      name: 'name',
       desc: '',
       args: [],
     );
