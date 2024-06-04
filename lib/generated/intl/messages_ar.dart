@@ -22,8 +22,16 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "currentUser":
+            MessageLookupByLibrary.simpleMessage("انت مستخدم حالي ؟"),
         "getStarted": MessageLookupByLibrary.simpleMessage("ابدء الان"),
         "language": MessageLookupByLibrary.simpleMessage("English"),
+        "loggedInSuccessfully":
+            MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
+        "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
+        "loginMessage":
+            MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول الي حسابك"),
+        "newUser": MessageLookupByLibrary.simpleMessage("انت مستخدم جديد ؟"),
         "obParagraph1": MessageLookupByLibrary.simpleMessage(
             "انت الوحيد الي تقدر تغير من نفسك وانا هنا عشان اساعدك\nالتغيير محتاج زقه"),
         "obParagraph2": MessageLookupByLibrary.simpleMessage(
@@ -33,6 +41,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "obParagraph4": MessageLookupByLibrary.simpleMessage(
             "أوعي تفقد الأمل من انك تغير من جسمك وصحتك وحياتك\nفالأول وفالاخر ده جسمك ودي صحتك وانت صاحب القرار"),
         "obParagraph5": MessageLookupByLibrary.simpleMessage(
-            "وصولك لهدفك مهم لي بقدر أهميته ليك تقصيرك في جزء ما حتي لو كان صغير بالنسبالك ممكن يكون سبب في تطورك وانعدامه احيانا")
+            "وصولك لهدفك مهم لي بقدر أهميته ليك تقصيرك في جزء ما حتي لو كان صغير بالنسبالك ممكن يكون سبب في تطورك وانعدامه احيانا"),
+        "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "searchCountry": MessageLookupByLibrary.simpleMessage("بحث عن دولة"),
+        "signup": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
+        "validationEmptyField": MessageLookupByLibrary.simpleMessage(
+            "لا يمكن أن يكون هذا الحقل فارغًا"),
+        "validationPassword":
+            MessageLookupByLibrary.simpleMessage("الرجاء ادخال كلمة مرور"),
+        "validationPhone":
+            MessageLookupByLibrary.simpleMessage("الرجاء ادخال رقم هاتف صالح"),
+        "welcome": MessageLookupByLibrary.simpleMessage("مرحباً")
       };
 }

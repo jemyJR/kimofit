@@ -3,17 +3,37 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
 
 class TextStyles {
-  static TextStyle font18White = TextStyle(
-    fontSize: 18.sp,
-    color: ColorsManager.white,
-  );
+  //! Regular
   static TextStyle font15White = TextStyle(
     fontSize: 15.sp,
     color: ColorsManager.white,
   );
-
+  static TextStyle font18White = TextStyle(
+    fontFamily: 'Cairo',
+    fontSize: 18.sp,
+    color: ColorsManager.white,
+  );
   static TextStyle font22White = TextStyle(
     fontSize: 22.sp,
+    color: ColorsManager.white,
+  );
+  static TextStyle font18Gray = TextStyle(
+    fontFamily: 'Cairo',
+    fontSize: 18.sp,
+    color: ColorsManager.gray,
+  );
+
+  //! Bold
+  static TextStyle font18BlueBold = TextStyle(
+    fontFamily: 'Cairo',
+    fontSize: 18.sp,
+    color: ColorsManager.blue,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle font32BoldWhite = TextStyle(
+    fontFamily: 'Cairo',
+    fontSize: 32.sp,
+    fontWeight: FontWeight.bold,
     color: ColorsManager.white,
   );
 }

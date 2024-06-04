@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:kimofit/core/di/dependency_injection.dart';
 import 'package:kimofit/core/routing/routes.dart';
+import 'package:kimofit/features/home/ui/home_screen.dart';
+import 'package:kimofit/features/login/logic/cubit/login_cubit.dart';
 import 'package:kimofit/features/login/ui/login_screen.dart';
 import 'package:kimofit/features/onboarding/ui/onboarding_screen.dart';
+import 'package:kimofit/features/sign_up/ui/sign_up_screen.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
@@ -12,7 +17,18 @@ class AppRouter {
         );
       case Routes.loginScreen:
         return MaterialPageRoute(
-          builder: (context) => const LoginScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<LoginCubit>(),
+            child: const LoginScreen(),
+          ),
+        );
+      case Routes.signUpScreen:
+        return MaterialPageRoute(
+          builder: (context) => const SignUpScreen(),
+        );
+      case Routes.homeScreen:
+        return MaterialPageRoute(
+          builder: (context) => const HomeScreen(),
         );
     }
     return null;
