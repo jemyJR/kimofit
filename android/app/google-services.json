@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "238941174298",
+    "project_id": "kimofit-d96c3",
+    "storage_bucket": "kimofit-d96c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:238941174298:android:d565153bc67d6be83cafa3",
+        "android_client_info": {
+          "package_name": "com.example.kimofit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_HPZ8hroetDda_neCn243KRMNjH2oYGg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
