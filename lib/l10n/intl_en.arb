@@ -17,8 +17,13 @@
     "signup": "Sign up",
 
     "searchCountry": "Search Country",
+    "validationPhone": "Please enter a valid phone number",
+    "validationPassword": "Please enter a password",
+    "validationEmptyField": "This field can't be empty",
 
-    "currentUser": "Are you  current user ?"
+    "currentUser": "Are you  current user ?",
+
+    "loggedInSuccessfully": "You have been logged in successfully"
 
     
     

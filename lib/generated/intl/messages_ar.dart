@@ -26,6 +26,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("انت مستخدم حالي ؟"),
         "getStarted": MessageLookupByLibrary.simpleMessage("ابدء الان"),
         "language": MessageLookupByLibrary.simpleMessage("English"),
+        "loggedInSuccessfully":
+            MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginMessage":
             MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول الي حسابك"),
@@ -44,6 +46,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "searchCountry": MessageLookupByLibrary.simpleMessage("بحث عن دولة"),
         "signup": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
+        "validationEmptyField": MessageLookupByLibrary.simpleMessage(
+            "لا يمكن أن يكون هذا الحقل فارغًا"),
+        "validationPassword":
+            MessageLookupByLibrary.simpleMessage("الرجاء ادخال كلمة مرور"),
+        "validationPhone":
+            MessageLookupByLibrary.simpleMessage("الرجاء ادخال رقم هاتف صالح"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً")
       };
 }

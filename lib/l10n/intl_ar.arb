@@ -17,8 +17,13 @@
     "signup": "انشاء حساب",
 
     "searchCountry": "بحث عن دولة",
+    "validationPhone": "الرجاء ادخال رقم هاتف صالح",
+    "validationPassword": "الرجاء ادخال كلمة مرور",
+    "validationEmptyField": "لا يمكن أن يكون هذا الحقل فارغًا",
+    
+    "currentUser": "انت مستخدم حالي ؟",
 
-    "currentUser": "انت مستخدم حالي ؟"
+    "loggedInSuccessfully": "تم تسجيل الدخول بنجاح"
     
     
 }

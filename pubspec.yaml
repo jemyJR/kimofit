@@ -37,6 +37,10 @@ dependencies:
   lottie: ^3.1.2
   # For International Phone Field
   intl_phone_field: ^3.1.0
+  # For Get Device Info (unique id)
+  device_info_plus: ^10.1.0
+  # For Error Handling
+  dartz: ^0.10.1
 
 dev_dependencies:
   flutter_test:

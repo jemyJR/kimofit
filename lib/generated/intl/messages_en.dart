@@ -26,6 +26,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Are you  current user ?"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
         "language": MessageLookupByLibrary.simpleMessage("عربي"),
+        "loggedInSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "You have been logged in successfully"),
         "login": MessageLookupByLibrary.simpleMessage("Log in"),
         "loginMessage":
             MessageLookupByLibrary.simpleMessage("Log in to your account"),
@@ -44,6 +46,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "searchCountry": MessageLookupByLibrary.simpleMessage("Search Country"),
         "signup": MessageLookupByLibrary.simpleMessage("Sign up"),
+        "validationEmptyField":
+            MessageLookupByLibrary.simpleMessage("This field can\'t be empty"),
+        "validationPassword":
+            MessageLookupByLibrary.simpleMessage("Please enter a password"),
+        "validationPhone": MessageLookupByLibrary.simpleMessage(
+            "Please enter a valid phone number"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome")
       };
 }

@@ -26,34 +26,45 @@ class LoadingWidget extends StatelessWidget {
   }
 }
 
-OverlayEntry showLoadingOverlay(BuildContext context) {
-  OverlayEntry overlayEntry = OverlayEntry(
-    builder: (context) => const Material(
-      color: Colors.transparent,
-      child: Center(
-        child: LoadingWidget(),
-      ),
-    ),
-  );
+class LoadingWidgetService {
+  OverlayEntry? _overlayEntry;
 
-  Overlay.of(context).insert(overlayEntry);
-  return overlayEntry;
-}
+  void showLoadingOverlay(BuildContext context) {
+    if (_overlayEntry == null) {
+      OverlayState overlayState = Overlay.of(context);
+      _overlayEntry = OverlayEntry(
+        builder: (context) => const Material(
+          color: Colors.transparent,
+          child: Center(
+            child: LoadingWidget(),
+          ),
+        ),
+      );
 
-void changeLanguageWithDelay(BuildContext context) {
-  OverlayEntry overlayEntry = showLoadingOverlay(context);
+      overlayState.insert(_overlayEntry!);
+    }
+  }
 
-  Future.delayed(
-    const Duration(seconds: 2),
-    () {
-      overlayEntry.remove();
+  void changeLanguageWithDelay(BuildContext context) {
+    showLoadingOverlay(context);
 
-      Locale newLocale =
-          (context.read<LanguageCubit>().state.locale.languageCode == 'en')
-              ? const Locale('ar')
-              : const Locale('en');
+    Future.delayed(
+      const Duration(seconds: 2),
+      () {
+        hideLoading();
 
-      context.read<LanguageCubit>().setLocale(newLocale);
-    },
-  );
+        Locale newLocale =
+            (context.read<LanguageCubit>().state.locale.languageCode == 'en')
+                ? const Locale('ar')
+                : const Locale('en');
+
+        context.read<LanguageCubit>().setLocale(newLocale);
+      },
+    );
+  }
+
+  void hideLoading() {
+    _overlayEntry?.remove();
+    _overlayEntry = null;
+  }
 }

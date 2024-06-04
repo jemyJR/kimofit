@@ -55,7 +55,8 @@ class TopBar extends StatelessWidget {
             text: S.of(context).language,
             textStyle: TextStyles.font15White,
             backgroundColor: ColorsManager.blue,
-            onPressed: () => changeLanguageWithDelay(context),
+            onPressed: () =>
+                LoadingWidgetService().changeLanguageWithDelay(context),
           ),
         ],
       ),

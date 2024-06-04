@@ -18,8 +18,8 @@ class PhoneFormField extends StatelessWidget {
     this.onSaved,
     this.validator,
   });
-  final String hintText;
 
+  final String hintText;
   final TextEditingController? controller;
   final void Function(PhoneNumber?)? onSaved;
   final String? Function(PhoneNumber?)? validator;
@@ -32,6 +32,7 @@ class PhoneFormField extends StatelessWidget {
           initialCountryCode: 'EG',
           languageCode: state.locale.toString(),
           dropdownTextStyle: TextStyles.font18Gray,
+          invalidNumberMessage: S.of(context).validationPhone,
           pickerDialogStyle: PickerDialogStyle(
             backgroundColor: ColorsManager.dark,
             countryCodeStyle: TextStyles.font15White,

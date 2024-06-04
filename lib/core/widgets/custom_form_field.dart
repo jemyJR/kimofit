@@ -32,6 +32,7 @@ class _CustomFormFieldState extends State<CustomFormField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      controller: widget.controller,
       onSaved: widget.onSaved,
       validator: widget.validator,
       obscureText: (widget.obscureText && _obscureText),

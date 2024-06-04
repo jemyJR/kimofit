@@ -200,11 +200,51 @@ class S {
     );
   }
 
+  /// `Please enter a valid phone number`
+  String get validationPhone {
+    return Intl.message(
+      'Please enter a valid phone number',
+      name: 'validationPhone',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please enter a password`
+  String get validationPassword {
+    return Intl.message(
+      'Please enter a password',
+      name: 'validationPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This field can't be empty`
+  String get validationEmptyField {
+    return Intl.message(
+      'This field can\'t be empty',
+      name: 'validationEmptyField',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Are you  current user ?`
   String get currentUser {
     return Intl.message(
       'Are you  current user ?',
       name: 'currentUser',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have been logged in successfully`
+  String get loggedInSuccessfully {
+    return Intl.message(
+      'You have been logged in successfully',
+      name: 'loggedInSuccessfully',
       desc: '',
       args: [],
     );
