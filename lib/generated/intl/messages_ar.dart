@@ -31,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginMessage":
             MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول الي حسابك"),
+        "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "newUser": MessageLookupByLibrary.simpleMessage("انت مستخدم جديد ؟"),
         "obParagraph1": MessageLookupByLibrary.simpleMessage(
             "انت الوحيد الي تقدر تغير من نفسك وانا هنا عشان اساعدك\nالتغيير محتاج زقه"),
@@ -45,13 +46,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "searchCountry": MessageLookupByLibrary.simpleMessage("بحث عن دولة"),
+        "signUpSuccessfully":
+            MessageLookupByLibrary.simpleMessage("تم انشاء حساب جديد بنجاح"),
         "signup": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
+        "signupMessage": MessageLookupByLibrary.simpleMessage(
+            " قم بانشاء حسابك الان للاستمتاع بتجربه فريدة"),
         "validationEmptyField": MessageLookupByLibrary.simpleMessage(
             "لا يمكن أن يكون هذا الحقل فارغًا"),
+        "validationName":
+            MessageLookupByLibrary.simpleMessage("الرجاء ادخال اسم صالح"),
         "validationPassword":
             MessageLookupByLibrary.simpleMessage("الرجاء ادخال كلمة مرور"),
+        "validationPasswordLength": MessageLookupByLibrary.simpleMessage(
+            "كلمة المرور يجب ان تكون اكبر من 8 خانات"),
         "validationPhone":
             MessageLookupByLibrary.simpleMessage("الرجاء ادخال رقم هاتف صالح"),
+        "validationPhoneEmptyField":
+            MessageLookupByLibrary.simpleMessage("الرجاء ادخال رقم هاتف"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً")
       };
 }

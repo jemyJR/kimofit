@@ -8,12 +8,14 @@ class Constants {
   static const String isOnBoardingVisited = 'isOnBoardingVisited';
   static const String languageCode = 'languageCode';
   static const String deviceId = 'registered_device_id';
+  static const String isUserLoggedIn = 'isUserLoggedIn';
 }
 
 class SavedData {
   static bool isOnBoardingVisited = false;
   static String languageCode = 'ar';
   static late String deviceId;
+  static bool isUserLoggedIn = false;
 
   static Future<void> init() async {
     //! isOnBoardingVisited
@@ -31,5 +33,10 @@ class SavedData {
 
     await getIt<CacheHelper>()
         .saveData(key: Constants.deviceId, value: deviceId);
+
+    //! isUserLoggedIn
+    isUserLoggedIn =
+        await getIt<CacheHelper>().getData(key: Constants.isUserLoggedIn) ??
+            false;
   }
 }

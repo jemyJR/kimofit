@@ -11,9 +11,31 @@ String? validatePhone(BuildContext context, PhoneNumber? value) {
   return null;
 }
 
+bool validateEgyPhone(BuildContext context, String value) {
+  String pattern = r'^\+2(010|011|012|015)\d{8}$';
+  RegExp regExp = RegExp(pattern);
+  return regExp.hasMatch(value);
+}
+
 String? validatePassword(BuildContext context, String? value) {
   if (value == null || value.isEmpty) {
-    return S.of(context).validationPassword;
+    return S.of(context).validationEmptyField;
   }
+  if (value.length < 8) {
+    return S.of(context).validationPasswordLength;
+  }
+  return null;
+}
+
+String? validateName(BuildContext context, String? value) {
+  String pattern = r'^[a-zA-Z]+$';
+  RegExp regExp = RegExp(pattern);
+  if (value == null || value.isEmpty) {
+    return S.of(context).validationEmptyField;
+  }
+  if (!regExp.hasMatch(value)) {
+    return S.of(context).validationName;
+  }
+
   return null;
 }

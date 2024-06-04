@@ -8,6 +8,8 @@ import 'package:kimofit/core/networking/api/dio_consumer.dart';
 import 'package:kimofit/core/widgets/loading_widget.dart';
 import 'package:kimofit/features/login/data/repos/login_repo.dart';
 import 'package:kimofit/features/login/logic/cubit/login_cubit.dart';
+import 'package:kimofit/features/signup/data/repos/signup_repo.dart';
+import 'package:kimofit/features/signup/logic/cubit/signup_cubit.dart';
 
 final getIt = GetIt.instance;
 
@@ -36,4 +38,8 @@ Future<void> setupGetIt() async {
   // Register LoginCubit
   getIt.registerLazySingleton<LoginRepo>(() => LoginRepo(getIt()));
   getIt.registerFactory<LoginCubit>(() => LoginCubit(getIt()));
+
+  // Register SignupCubit
+  getIt.registerLazySingleton<SignupRepo>(() => SignupRepo(getIt()));
+  getIt.registerFactory<SignupCubit>(() => SignupCubit(getIt()));
 }

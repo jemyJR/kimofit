@@ -20,11 +20,17 @@
     "validationPhone": "Please enter a valid phone number",
     "validationPassword": "Please enter a password",
     "validationEmptyField": "This field can't be empty",
+    "validationPhoneEmptyField": "Please enter a phone number",
+    "validationPasswordLength" : "Password must be at least 8 characters long",
+    "validationName": "Please enter a valid name",
 
     "currentUser": "Are you  current user ?",
 
-    "loggedInSuccessfully": "You have been logged in successfully"
+    "loggedInSuccessfully": "You have been logged in successfully",
+    "signUpSuccessfully": "You have been signed up successfully",
 
+    "signupMessage": "Create your account now to enjoy a unique experience",
+    "name": "Name"
     
     
 }

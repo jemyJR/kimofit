@@ -31,6 +31,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("Log in"),
         "loginMessage":
             MessageLookupByLibrary.simpleMessage("Log in to your account"),
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
         "newUser": MessageLookupByLibrary.simpleMessage("Are you a new user ?"),
         "obParagraph1": MessageLookupByLibrary.simpleMessage(
             "You are the only one who can change yourself and I am here to help you\nChange needs a push"),
@@ -45,13 +46,23 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "searchCountry": MessageLookupByLibrary.simpleMessage("Search Country"),
+        "signUpSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "You have been signed up successfully"),
         "signup": MessageLookupByLibrary.simpleMessage("Sign up"),
+        "signupMessage": MessageLookupByLibrary.simpleMessage(
+            "Create your account now to enjoy a unique experience"),
         "validationEmptyField":
             MessageLookupByLibrary.simpleMessage("This field can\'t be empty"),
+        "validationName":
+            MessageLookupByLibrary.simpleMessage("Please enter a valid name"),
         "validationPassword":
             MessageLookupByLibrary.simpleMessage("Please enter a password"),
+        "validationPasswordLength": MessageLookupByLibrary.simpleMessage(
+            "Password must be at least 8 characters long"),
         "validationPhone": MessageLookupByLibrary.simpleMessage(
             "Please enter a valid phone number"),
+        "validationPhoneEmptyField":
+            MessageLookupByLibrary.simpleMessage("Please enter a phone number"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome")
       };
 }

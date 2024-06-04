@@ -6,7 +6,9 @@ class InitialRouteManager {
   static Future<String> determineInitialRoute() async {
     await SavedData.init();
 
-    if (SavedData.isOnBoardingVisited) {
+    if (SavedData.isUserLoggedIn) {
+      return Routes.homeScreen;
+    } else if (SavedData.isOnBoardingVisited) {
       return Routes.loginScreen;
     } else {
       return Routes.onBoardingScreen;
