@@ -60,9 +60,8 @@ class SignupForm extends StatelessWidget {
 
 void validateThenDoSignup(BuildContext context, SignupCubit signupCubit) async {
   bool formIsValid = signupCubit.signupFormKey.currentState!.validate();
-  bool isPhoneValid = signupCubit.phone.length > 4;
-  bool isEgyPhone = signupCubit.phone.startsWith('+20');
 
+  // Exit if the form is not valid
   if (!formIsValid) {
     return;
   }
@@ -70,16 +69,21 @@ void validateThenDoSignup(BuildContext context, SignupCubit signupCubit) async {
   // Save the form state
   signupCubit.signupFormKey.currentState!.save();
 
-  // Check if the phone number is valid
+  // Check the length of the phone number
+  bool isPhoneValid = signupCubit.phone.length > 4;
   if (!isPhoneValid) {
     customSnackBar(context, S.of(context).validationPhoneEmptyField);
     return;
   }
 
-  // Check if the phone number is an Egyptian phone number and validate it
-  if (isEgyPhone && !validateEgyPhone(context, signupCubit.phone)) {
-    customSnackBar(context, S.of(context).validationPhone);
-    return;
+  // Check if the phone number is an Egyptian number and validate it
+  bool isEgyPhone = signupCubit.phone.startsWith('+20');
+  if (isEgyPhone) {
+    bool isValidEgyPhone = validateEgyPhone(context, signupCubit.phone);
+    if (!isValidEgyPhone) {
+      customSnackBar(context, S.of(context).validationPhone);
+      return;
+    }
   }
 
   // Attempt to Signup
