@@ -14,6 +14,7 @@ void main() async {
 
   runApp(
     BlocProvider(
+      //
       create: (context) => getIt<LanguageCubit>(),
       child: KimoFitApp(
         appRouter: AppRouter(),
