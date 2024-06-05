@@ -30,8 +30,16 @@ jobs:
         bundler-cache: true
         working-directory: android
         
+    - name: Update Bundler
+      run: gem install bundler
+      working-directory: android
+
     - name: Add Linux platform to Gemfile.lock
       run: bundle lock --add-platform x86_64-linux
+      working-directory: android
+
+    - name: Check Gemfile.lock content
+      run: cat Gemfile.lock
       working-directory: android
 
     - name: Build and Distribute Staging App
@@ -41,3 +49,4 @@ jobs:
         bundle install # Ensure dependencies are correctly installed
         bundle exec fastlane android firebase_distribution
       working-directory: android
+
