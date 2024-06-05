@@ -10,7 +10,7 @@ platform :android do
     sh "flutter build apk --release --flavor staging --target lib/main_staging.dart --no-tree-shake-icons"
     firebase_app_distribution(
         app: "1:544924445493:android:3f8a4a92e3ab9e52a07a7c",
-        firebase_cli_token: "1//03DLgqaEPI0rHCgYIARAAGAMSNgF-L9IruVKKHzWc3aY2KbDtuIfCaB3LJDEq7uI36m1UM_I6qed5cS2jA5KNZCrRGEWV9jBxgg",
+        firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
         android_artifact_type: "APK",
         android_artifact_path: "../build/app/outputs/flutter-apk/app-staging-release.apk",
         groups: "testing-group",
