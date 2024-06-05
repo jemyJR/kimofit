@@ -23,6 +23,10 @@ jobs:
       with:
         channel: stable
 
+    - name: add-platform ruby
+      run: bundle lock --add-platform ruby
+      working-directory: android
+
     - name: Add Linux platform to Gemfile.lock 
       run: bundle lock --add-platform x86_64-linux
       working-directory: android
