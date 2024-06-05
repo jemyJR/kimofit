@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "544924445493",
+    "project_id": "kimofit-a83db",
+    "storage_bucket": "kimofit-a83db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544924445493:android:c782de2e5df2b059a07a7c",
+        "android_client_info": {
+          "package_name": "com.example.kimofit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNXcW5N4JscZyGzQb6VY1Eq1mk36DZ5Hc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544924445493:android:94b70158f517aa92a07a7c",
+        "android_client_info": {
+          "package_name": "com.example.kimofit.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNXcW5N4JscZyGzQb6VY1Eq1mk36DZ5Hc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:544924445493:android:3f8a4a92e3ab9e52a07a7c",
+        "android_client_info": {
+          "package_name": "com.example.kimofit.stag"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNXcW5N4JscZyGzQb6VY1Eq1mk36DZ5Hc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
