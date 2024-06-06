@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/app/logic/cubit/language_cubit.dart';
 import 'package:kimofit/app/ui/kimofit_app.dart';
 import 'package:kimofit/core/di/dependency_injection.dart';
@@ -11,6 +12,9 @@ void main() async {
 
   await setupGetIt();
   String initialRoute = await InitialRouteManager.determineInitialRoute();
+
+  // To fix texts being hidden bug in flutter_screenutil in release mode.
+  await ScreenUtil.ensureScreenSize();
 
   runApp(
     BlocProvider(
