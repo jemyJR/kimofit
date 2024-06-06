@@ -6,7 +6,7 @@ on:
       - staging
 
 jobs:
-  distribute_to_firebase:
+  distribute_to_firebase_staging:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout my repo code
@@ -23,18 +23,10 @@ jobs:
       with:
         channel: stable
 
-    - name: add-platform ruby
-      run: bundle lock --add-platform ruby
-      working-directory: android
-
-    - name: Add Linux platform to Gemfile.lock 
-      run: bundle lock --add-platform x86_64-linux
-      working-directory: android
-
     - name: Setup Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: "3.2.3"
+        ruby-version: "3.3.2"
         bundler-cache: true
         working-directory: android
         
@@ -44,5 +36,3 @@ jobs:
       run: |
         bundle exec fastlane android firebase_distribution
       working-directory: android
-
-
