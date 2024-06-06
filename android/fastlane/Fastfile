@@ -6,7 +6,15 @@ platform :android do
     sh "flutter doctor -v"
     sh "flutter clean"
     sh "flutter pub get"
-    sh "flutter build apk --release --flavor staging --target lib/main_staging.dart --no-tree-shake-icons"
+    begin
+      sh "flutter build apk --release --flavor staging --target lib/main_staging.dart --no-tree-shake-icons"
+    rescue => error
+      UI.error("Failed to build the APK: #{error}")
+      sh "cat /home/runner/work/kimofit/kimofit/android/build/app/outputs/flutter-apk/app-staging-release.apk" # Print APK file details if exists
+      sh "flutter analyze" # Run flutter analyze to show potential issues
+      sh "flutter pub outdated" # Show outdated packages
+      exit 1
+    end
     firebase_app_distribution(
       app: "1:544924445493:android:3f8a4a92e3ab9e52a07a7c",
       firebase_cli_token: ENV["FIREBASE_CLI_TOKEN"],
