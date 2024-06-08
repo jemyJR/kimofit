@@ -12,6 +12,8 @@ class ApiKey {
 
   //! Headers keys
   static const String acceptLanguage = 'Accept-Language';
+  static const String authorization = 'Authorization';
+  static const String bearer = 'Bearer ';
 
   //! Login keys
   static const String phone = 'phone_number';

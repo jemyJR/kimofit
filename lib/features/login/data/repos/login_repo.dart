@@ -22,13 +22,17 @@ class LoginRepo {
       );
       final LoginResponseModel loginResponse =
           LoginResponseModel.fromJson(response);
-      getIt<CacheHelper>()
-          .saveData(key: ApiKey.token, value: loginResponse.token);
-      getIt<CacheHelper>().saveData(
-          key: ApiKey.refreshToken, value: loginResponse.refreshToken);
+      saveUserCredentials(loginResponse);
       return Right(loginResponse);
     } on ServerException catch (e) {
       return Left(e.errorModel.errorMessage!);
     }
+  }
+
+  void saveUserCredentials(LoginResponseModel loginResponse) {
+    getIt<CacheHelper>()
+        .saveSecuredData(key: ApiKey.token, value: loginResponse.token);
+    getIt<CacheHelper>().saveSecuredData(
+        key: ApiKey.refreshToken, value: loginResponse.refreshToken);
   }
 }
