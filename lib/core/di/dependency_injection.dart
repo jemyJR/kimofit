@@ -2,7 +2,6 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:kimofit/app/logic/cubit/language_cubit.dart';
 import 'package:kimofit/core/cache/cache_helper.dart';
-import 'package:kimofit/core/constants/constants.dart';
 import 'package:kimofit/core/networking/api/api_consumer.dart';
 import 'package:kimofit/core/networking/api/dio_consumer.dart';
 import 'package:kimofit/core/widgets/loading_widget.dart';
@@ -17,11 +16,8 @@ Future<void> setupGetIt() async {
   // Register CacheHelper
   getIt.registerLazySingleton<CacheHelper>(() => CacheHelper());
 
-  // Initialize CacheHelper and SavedData
+  // Initialize CacheHelper
   await getIt<CacheHelper>().init();
-
-  // Initialize SavedData
-  await SavedData.init();
 
   // Register LoadingWidgetService
   getIt.registerLazySingleton<LoadingWidgetService>(

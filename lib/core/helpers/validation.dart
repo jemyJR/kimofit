@@ -28,8 +28,9 @@ String? validatePassword(BuildContext context, String? value) {
 }
 
 String? validateName(BuildContext context, String? value) {
-  String pattern = r'^[a-zA-Z]+$';
+  String pattern = r'^[a-zA-Z\s]+$';
   RegExp regExp = RegExp(pattern);
+
   if (value == null || value.isEmpty) {
     return S.of(context).validationEmptyField;
   }
