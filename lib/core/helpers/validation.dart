@@ -1,4 +1,5 @@
 import 'package:intl_phone_field/phone_number.dart';
+import 'package:kimofit/core/helpers/extensions.dart';
 import 'package:kimofit/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
@@ -28,13 +29,14 @@ String? validatePassword(BuildContext context, String? value) {
 }
 
 String? validateName(BuildContext context, String? value) {
-  String pattern = r'^[a-zA-Z\s]+$';
+  // Pattern to match Arabic and English letters and spaces, but not digits
+  String pattern = r'^[a-zA-Z\u0600-\u06FF\s]+$';
   RegExp regExp = RegExp(pattern);
 
-  if (value == null || value.isEmpty) {
+  if (value.isNullOrEmpty()) {
     return S.of(context).validationEmptyField;
   }
-  if (!regExp.hasMatch(value)) {
+  if (!regExp.hasMatch(value!)) {
     return S.of(context).validationName;
   }
 
