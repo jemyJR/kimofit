@@ -29,14 +29,16 @@ String? validatePassword(BuildContext context, String? value) {
 }
 
 String? validateName(BuildContext context, String? value) {
-  // Pattern to match Arabic and English letters and spaces, but not digits
+  // Pattern to match Arabic and English letters and spaces, excluding digits
   String pattern = r'^[a-zA-Z\u0600-\u06FF\s]+$';
+  String numberPattern = r'[0-9\u0660-\u0669\u06F0-\u06F9]';
   RegExp regExp = RegExp(pattern);
+  RegExp numberRegExp = RegExp(numberPattern);
 
   if (value.isNullOrEmpty()) {
     return S.of(context).validationEmptyField;
   }
-  if (!regExp.hasMatch(value!)) {
+  if (!regExp.hasMatch(value!) || numberRegExp.hasMatch(value)) {
     return S.of(context).validationName;
   }
 
