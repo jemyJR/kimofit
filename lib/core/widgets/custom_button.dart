@@ -24,9 +24,9 @@ class CustomButton extends StatelessWidget {
       color: backgroundColor,
       elevation: 0.5,
       minWidth: 10.w,
-      padding: const EdgeInsets.all(15).h,
+      padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 15.w),
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10).h,
+        borderRadius: BorderRadius.circular(10.r),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,

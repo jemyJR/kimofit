@@ -44,7 +44,7 @@ class _CustomFormFieldState extends State<CustomFormField> {
         isDense: true,
         fillColor: ColorsManager.dark,
         filled: true,
-        contentPadding: EdgeInsets.all(15.r),
+        contentPadding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 15.w),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.r),
           borderSide: BorderSide.none,
