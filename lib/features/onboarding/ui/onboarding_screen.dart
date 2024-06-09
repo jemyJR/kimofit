@@ -32,7 +32,7 @@ class OnBoardingScreen extends StatelessWidget {
                 Expanded(
                   child: Padding(
                     padding:
-                        EdgeInsets.only(left: 15.w, right: 15.w, bottom: 15.w),
+                        EdgeInsets.only(left: 15.w, right: 15.w, bottom: 15.h),
                     child: SingleChildScrollView(
                       child: Column(
                         children: [
