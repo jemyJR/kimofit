@@ -1,4 +1,3 @@
-// initial_route_manager.dart
 import 'package:kimofit/core/cache/cache_helper.dart';
 import 'package:kimofit/core/constants/constants.dart';
 import 'package:kimofit/core/di/dependency_injection.dart';
