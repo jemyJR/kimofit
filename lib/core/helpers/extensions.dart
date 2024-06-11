@@ -22,3 +22,10 @@ extension Navigation on BuildContext {
 extension StringExtension on String? {
   bool isNullOrEmpty() => this == null || this == "";
 }
+
+extension FirstWord on String {
+  String getFirstWord() {
+    var words = split(" ");
+    return words[0];
+  }
+}

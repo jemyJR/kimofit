@@ -25,6 +25,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "currentUser":
             MessageLookupByLibrary.simpleMessage("Are you  current user ?"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
+        "homeWelcomeMessage":
+            MessageLookupByLibrary.simpleMessage("We hope you are well"),
         "language": MessageLookupByLibrary.simpleMessage("عربي"),
         "loggedInSuccessfully": MessageLookupByLibrary.simpleMessage(
             "You have been logged in successfully"),

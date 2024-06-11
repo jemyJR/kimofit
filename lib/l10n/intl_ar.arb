@@ -30,7 +30,9 @@
     "signUpSuccessfully": "تم انشاء حساب جديد بنجاح",
 
     "signupMessage": " قم بانشاء حسابك الان للاستمتاع بتجربه فريدة",
-    "name": "الاسم"
+    "name": "الاسم",
+
+    "homeWelcomeMessage": "نأمل ان تكون بخير"
 
     
     

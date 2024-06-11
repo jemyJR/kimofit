@@ -309,6 +309,16 @@ class S {
       args: [],
     );
   }
+
+  /// `We hope you are well`
+  String get homeWelcomeMessage {
+    return Intl.message(
+      'We hope you are well',
+      name: 'homeWelcomeMessage',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

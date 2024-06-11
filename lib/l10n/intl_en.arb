@@ -30,7 +30,9 @@
     "signUpSuccessfully": "You have been signed up successfully",
 
     "signupMessage": "Create your account now to enjoy a unique experience",
-    "name": "Name"
+    "name": "Name",
+
+    "homeWelcomeMessage": "We hope you are well"
     
     
 }
