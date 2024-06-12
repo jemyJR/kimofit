@@ -5,6 +5,10 @@ class Assets {
   /// assets/animation/loading.json
   static const String animationLoading = "assets/animation/loading.json";
 
+  /// Assets for animationProfile
+  /// assets/animation/profile.json
+  static const String animationProfile = "assets/animation/profile.json";
+
   /// Assets for fontsCairoRegular
   /// assets/fonts/Cairo-Regular.ttf
   static const String fontsCairoRegular = "assets/fonts/Cairo-Regular.ttf";
@@ -16,6 +20,10 @@ class Assets {
   /// Assets for imagesBgOnboarding
   /// assets/images/bg/onboarding.jpg
   static const String imagesBgOnboarding = "assets/images/bg/onboarding.jpg";
+
+  /// Assets for imagesIconAppIcon
+  /// assets/images/icon/app_icon.png
+  static const String imagesIconAppIcon = "assets/images/icon/app_icon.png";
 
   /// Assets for imagesLogoLogo
   /// assets/images/logo/logo.png

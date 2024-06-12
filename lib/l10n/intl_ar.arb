@@ -32,7 +32,9 @@
     "signupMessage": " قم بانشاء حسابك الان للاستمتاع بتجربه فريدة",
     "name": "الاسم",
 
-    "homeWelcomeMessage": "نأمل ان تكون بخير"
+    "homeWelcomeMessage": "نأمل ان تكون بخير",
+    "start": "يبدأ",
+    "end": "ينتهي"
 
     
     

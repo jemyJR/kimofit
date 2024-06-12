@@ -29,3 +29,12 @@ extension FirstWord on String {
     return words[0];
   }
 }
+
+extension DateFormatter on String {
+  String getMonthDay() {
+    var parts = split("-");
+    var month = parts[1];
+    var day = parts[2];
+    return '$month/$day';
+  }
+}

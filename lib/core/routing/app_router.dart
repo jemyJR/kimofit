@@ -30,10 +30,9 @@ class AppRouter {
             child: const SignUpScreen(),
           ),
         );
-
       case Routes.homeScreen:
         return MaterialPageRoute(
-          builder: (context) => const HomeScreen(),
+          builder: (context) => HomeScreen(),
         );
     }
     return null;

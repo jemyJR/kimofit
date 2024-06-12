@@ -32,7 +32,9 @@
     "signupMessage": "Create your account now to enjoy a unique experience",
     "name": "Name",
 
-    "homeWelcomeMessage": "We hope you are well"
+    "homeWelcomeMessage": "We hope you are well",
+    "start": "Start",
+    "end": "End"
     
     
 }
