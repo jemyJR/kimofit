@@ -1,10 +1,14 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/helpers/extensions.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/top_bar.dart';
+import 'package:kimofit/features/home/data/models/sponser_model.dart';
 import 'package:kimofit/features/home/data/models/subscription_model.dart';
 import 'package:kimofit/features/home/ui/widgets/profile_and_indicator/profile_and_indicator.dart';
+import 'package:kimofit/features/home/ui/widgets/sponsor_card.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -15,6 +19,29 @@ class HomeScreen extends StatelessWidget {
     status: true,
     percent: 26.666666666666668,
   );
+  List<SponserModel> sponsors = [
+    SponserModel(
+      id: 1,
+      name: 'مطعم الشيف',
+      image:
+          'https://kimofit-production.up.railway.app/media/sponsers/Sponser1.jpg',
+      link: 'https://www.google.com',
+    ),
+    SponserModel(
+      id: 2,
+      name: 'مطعم الشيف',
+      image:
+          'https://kimofit-production.up.railway.app/media/sponsers/Sponser2.jpg',
+      link: 'https://www.google.com',
+    ),
+    SponserModel(
+      id: 3,
+      name: 'Club 30',
+      image:
+          'https://kimofit-production.up.railway.app/media/sponsers/club30.jpg',
+      link: 'https://www.facebook.com/Club30/',
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +66,20 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           ProfileAndIndicator(subscription: subscription),
+          CarouselSlider.builder(
+            itemCount: 3,
+            itemBuilder:
+                (BuildContext context, int itemIndex, int pageViewIndex) {
+              final sponsor = sponsors[itemIndex];
+              return SponsorCard(sponsor: sponsor);
+            },
+            options: CarouselOptions(
+              height: 150.h,
+              enlargeCenterPage: true,
+              enableInfiniteScroll: true,
+              autoPlay: true,
+            ),
+          ),
         ],
       ),
     );

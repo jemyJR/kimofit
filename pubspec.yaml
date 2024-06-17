@@ -49,6 +49,10 @@ dependencies:
   flutter_secure_storage: ^9.2.2
   # Display progress widgets based on percentage
   percent_indicator: ^4.2.3
+  # Carousel slider widget, support infinite scroll 
+  carousel_slider: ^4.2.1
+  # Plugin for launching a URL
+  url_launcher: ^6.3.0
 
 
 flutter_launcher_icons:
