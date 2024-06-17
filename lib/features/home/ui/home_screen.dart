@@ -9,6 +9,7 @@ import 'package:kimofit/features/home/data/models/sponser_model.dart';
 import 'package:kimofit/features/home/data/models/subscription_model.dart';
 import 'package:kimofit/features/home/ui/widgets/profile_and_indicator/profile_and_indicator.dart';
 import 'package:kimofit/features/home/ui/widgets/sponsor_card.dart';
+import 'package:kimofit/features/home/ui/widgets/sponsor_card_shimmer.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -72,6 +73,7 @@ class HomeScreen extends StatelessWidget {
                 (BuildContext context, int itemIndex, int pageViewIndex) {
               final sponsor = sponsors[itemIndex];
               return SponsorCard(sponsor: sponsor);
+              // return const SponsorCardShimmer();
             },
             options: CarouselOptions(
               height: 150.h,

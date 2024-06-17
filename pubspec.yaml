@@ -53,6 +53,8 @@ dependencies:
   carousel_slider: ^4.2.1
   # Plugin for launching a URL
   url_launcher: ^6.3.0
+  # Provides an easy way to add shimmer effect in Flutter project
+  shimmer: ^3.0.0
 
 
 flutter_launcher_icons:
@@ -80,6 +82,9 @@ flutter:
     - family: Cairo
       fonts:
         - asset: assets/fonts/Cairo-Regular.ttf
+    - family: Lemonada
+      fonts:
+        - asset: assets/fonts/Lemonada-Regular.ttf
 
 flutter_intl:
   enabled: true

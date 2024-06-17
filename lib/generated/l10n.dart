@@ -339,6 +339,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Sponsor`
+  String get Sponsor {
+    return Intl.message(
+      'Sponsor',
+      name: 'Sponsor',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
