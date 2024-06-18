@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "currentUser":
             MessageLookupByLibrary.simpleMessage("انت مستخدم حالي ؟"),
         "end": MessageLookupByLibrary.simpleMessage("ينتهي"),
+        "free": MessageLookupByLibrary.simpleMessage("مجاني"),
         "getStarted": MessageLookupByLibrary.simpleMessage("ابدء الان"),
         "homeWelcomeMessage":
             MessageLookupByLibrary.simpleMessage("نأمل ان تكون بخير"),
