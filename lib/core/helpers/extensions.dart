@@ -22,3 +22,19 @@ extension Navigation on BuildContext {
 extension StringExtension on String? {
   bool isNullOrEmpty() => this == null || this == "";
 }
+
+extension FirstWord on String {
+  String getFirstWord() {
+    var words = split(" ");
+    return words[0];
+  }
+}
+
+extension DateFormatter on String {
+  String getMonthDay() {
+    var parts = split("-");
+    var month = parts[1];
+    var day = parts[2];
+    return '$month/$day';
+  }
+}

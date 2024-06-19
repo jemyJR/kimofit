@@ -22,10 +22,21 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Sponsor": MessageLookupByLibrary.simpleMessage("الراعي"),
+        "SubscriptionFeatures": MessageLookupByLibrary.simpleMessage(
+            " مهم جدا وذلك للاسباب التاليه :"),
+        "SubscriptionMessage": MessageLookupByLibrary.simpleMessage(
+            "هذة الميزة متاحه للمستخدمين المشتركين فقط يرجي ترقية حسابكم عن طريق التواصل للاستمتاع بجميع المميزات"),
+        "contactme": MessageLookupByLibrary.simpleMessage("تواصل معي للتفاصيل"),
         "currentUser":
             MessageLookupByLibrary.simpleMessage("انت مستخدم حالي ؟"),
+        "end": MessageLookupByLibrary.simpleMessage("ينتهي"),
+        "free": MessageLookupByLibrary.simpleMessage("مجاني"),
         "getStarted": MessageLookupByLibrary.simpleMessage("ابدء الان"),
+        "homeWelcomeMessage":
+            MessageLookupByLibrary.simpleMessage("نأمل ان تكون بخير"),
         "language": MessageLookupByLibrary.simpleMessage("English"),
+        "logOut": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "loggedInSuccessfully":
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
@@ -51,6 +62,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "signup": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
         "signupMessage": MessageLookupByLibrary.simpleMessage(
             " قم بانشاء حسابك الان للاستمتاع بتجربه فريدة"),
+        "start": MessageLookupByLibrary.simpleMessage("يبدأ"),
+        "subscription": MessageLookupByLibrary.simpleMessage("الاشتراك"),
+        "subscriptionEndMessage": MessageLookupByLibrary.simpleMessage(
+            "لقد وصلت إلى نهاية اشتراكك!!\nيرجى تجديد اشتراكك لمواصلة استخدام التطبيق."),
         "validationEmptyField": MessageLookupByLibrary.simpleMessage(
             "لا يمكن أن يكون هذا الحقل فارغًا"),
         "validationName":

@@ -47,6 +47,18 @@ dependencies:
   firebase_core: ^3.0.0
   # provides API to store data in secure storage
   flutter_secure_storage: ^9.2.2
+  # Display progress widgets based on percentage
+  percent_indicator: ^4.2.3
+  # Carousel slider widget, support infinite scroll 
+  carousel_slider: ^4.2.1
+  # Plugin for launching a URL
+  url_launcher: ^6.3.0
+  # Provides an easy way to add shimmer effect in Flutter project
+  shimmer: ^3.0.0
+  # Create and apply corner badges ( Free and Pro )
+  rotated_corner_decoration: ^2.1.0+1
+  # Font Awesome Icon pack available as Flutter Icons
+  font_awesome_flutter: ^10.7.0
 
 
 flutter_launcher_icons:
@@ -74,6 +86,9 @@ flutter:
     - family: Cairo
       fonts:
         - asset: assets/fonts/Cairo-Regular.ttf
+    - family: Lemonada
+      fonts:
+        - asset: assets/fonts/Lemonada-Regular.ttf
 
 flutter_intl:
   enabled: true

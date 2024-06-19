@@ -2,15 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kimofit/core/di/dependency_injection.dart';
 import 'package:kimofit/core/routing/routes.dart';
+import 'package:kimofit/features/diet_plan/ui/diet_plan_screen.dart';
+import 'package:kimofit/features/home/data/models/subscription_features_model.dart';
 import 'package:kimofit/features/home/ui/home_screen.dart';
+import 'package:kimofit/features/home/ui/subscription_screen.dart';
+import 'package:kimofit/features/home_cardio_plan/ui/warm_up_exercises_screen.dart';
 import 'package:kimofit/features/login/logic/cubit/login_cubit.dart';
 import 'package:kimofit/features/login/ui/login_screen.dart';
 import 'package:kimofit/features/onboarding/ui/onboarding_screen.dart';
 import 'package:kimofit/features/signup/logic/cubit/signup_cubit.dart';
 import 'package:kimofit/features/signup/ui/signup_screen.dart';
+import 'package:kimofit/features/supplement/ui/supplement_screen.dart';
+import 'package:kimofit/features/warm_up_exercises/ui/warm_up_exercises_screen.dart';
+import 'package:kimofit/features/workout_exercises/ui/workout_exercises_screen.dart';
 
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
+    //this arguments to be passed in any screen like this ( arguments as ClassName )
+    final arguments = settings.arguments;
     switch (settings.name) {
       case Routes.onBoardingScreen:
         return MaterialPageRoute(
@@ -30,10 +39,36 @@ class AppRouter {
             child: const SignUpScreen(),
           ),
         );
-
       case Routes.homeScreen:
         return MaterialPageRoute(
           builder: (context) => const HomeScreen(),
+        );
+      case Routes.warmUpExercisesScreen:
+        return MaterialPageRoute(
+          builder: (context) => const WarmUpExercisesScreen(),
+        );
+      case Routes.workoutExercisesScreen:
+        return MaterialPageRoute(
+          builder: (context) => const WorkoutExercisesScreen(),
+        );
+      case Routes.homeCardioPlanScreen:
+        return MaterialPageRoute(
+          builder: (context) => const HomeCardioPlanScreen(),
+        );
+      case Routes.dietPlanScreen:
+        return MaterialPageRoute(
+          builder: (context) => const DietPlanScreen(),
+        );
+      case Routes.supplementScreen:
+        return MaterialPageRoute(
+          builder: (context) => const SupplementScreen(),
+        );
+      case Routes.subscriptionScreen:
+        arguments as SubscriptionFeaturesModel;
+
+        return MaterialPageRoute(
+          builder: (context) =>
+              SubscriptionScreen(subscriptionFeatures: arguments),
         );
     }
     return null;

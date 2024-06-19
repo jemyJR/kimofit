@@ -5,9 +5,21 @@ class Assets {
   /// assets/animation/loading.json
   static const String animationLoading = "assets/animation/loading.json";
 
+  /// Assets for animationProfile
+  /// assets/animation/profile.json
+  static const String animationProfile = "assets/animation/profile.json";
+
+  /// Assets for animationSubscriptionEndAlert
+  /// assets/animation/subscription_end_alert.json
+  static const String animationSubscriptionEndAlert = "assets/animation/subscription_end_alert.json";
+
   /// Assets for fontsCairoRegular
   /// assets/fonts/Cairo-Regular.ttf
   static const String fontsCairoRegular = "assets/fonts/Cairo-Regular.ttf";
+
+  /// Assets for fontsLemonadaRegular
+  /// assets/fonts/Lemonada-Regular.ttf
+  static const String fontsLemonadaRegular = "assets/fonts/Lemonada-Regular.ttf";
 
   /// Assets for imagesBgAuth
   /// assets/images/bg/auth.jpg
@@ -16,6 +28,10 @@ class Assets {
   /// Assets for imagesBgOnboarding
   /// assets/images/bg/onboarding.jpg
   static const String imagesBgOnboarding = "assets/images/bg/onboarding.jpg";
+
+  /// Assets for imagesIconAppIcon
+  /// assets/images/icon/app_icon.png
+  static const String imagesIconAppIcon = "assets/images/icon/app_icon.png";
 
   /// Assets for imagesLogoLogo
   /// assets/images/logo/logo.png

@@ -6,3 +6,11 @@ class Constants {
   static const String deviceId = 'registered_device_id';
   static const String isUserLoggedIn = 'isUserLoggedIn';
 }
+
+class SocialMediaLinks {
+  static const String facebookAccount =
+      'https://www.facebook.com/profile.php?id=100007279725700/';
+  static const String facebookPage = 'https://www.facebook.com/C.EslamKamal/';
+  static const String instagramAccount = 'https://www.instagram.com/kimo.fit/';
+  static const String whatsapp = 'https://wa.me/201067813231';
+}

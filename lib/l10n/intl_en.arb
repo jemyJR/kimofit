@@ -30,7 +30,21 @@
     "signUpSuccessfully": "You have been signed up successfully",
 
     "signupMessage": "Create your account now to enjoy a unique experience",
-    "name": "Name"
+    "name": "Name",
+
+    "homeWelcomeMessage": "We hope you are well",
+    "start": "Start",
+    "end": "End",
+    "Sponsor": "Sponsor",
+    "free": "Free",
+    
+    "subscriptionEndMessage": "You have reached the end of your subscription!!\nPlease renew your subscription to continue using the app.",
+    "logOut": "Log out",
+
+    "subscription": "Subscription",
+    "SubscriptionMessage": "This feature is available to subscribed users only. Please upgrade your account by contacting us to enjoy all the features",
+    "SubscriptionFeatures":"are very important for the following reasons:",
+    "contactme": "Contact me for details"
     
     
 }

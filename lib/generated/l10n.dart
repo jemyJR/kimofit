@@ -309,6 +309,116 @@ class S {
       args: [],
     );
   }
+
+  /// `We hope you are well`
+  String get homeWelcomeMessage {
+    return Intl.message(
+      'We hope you are well',
+      name: 'homeWelcomeMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start`
+  String get start {
+    return Intl.message(
+      'Start',
+      name: 'start',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `End`
+  String get end {
+    return Intl.message(
+      'End',
+      name: 'end',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sponsor`
+  String get Sponsor {
+    return Intl.message(
+      'Sponsor',
+      name: 'Sponsor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Free`
+  String get free {
+    return Intl.message(
+      'Free',
+      name: 'free',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have reached the end of your subscription!!\nPlease renew your subscription to continue using the app.`
+  String get subscriptionEndMessage {
+    return Intl.message(
+      'You have reached the end of your subscription!!\nPlease renew your subscription to continue using the app.',
+      name: 'subscriptionEndMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Log out`
+  String get logOut {
+    return Intl.message(
+      'Log out',
+      name: 'logOut',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subscription`
+  String get subscription {
+    return Intl.message(
+      'Subscription',
+      name: 'subscription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This feature is available to subscribed users only. Please upgrade your account by contacting us to enjoy all the features`
+  String get SubscriptionMessage {
+    return Intl.message(
+      'This feature is available to subscribed users only. Please upgrade your account by contacting us to enjoy all the features',
+      name: 'SubscriptionMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `are very important for the following reasons:`
+  String get SubscriptionFeatures {
+    return Intl.message(
+      'are very important for the following reasons:',
+      name: 'SubscriptionFeatures',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact me for details`
+  String get contactme {
+    return Intl.message(
+      'Contact me for details',
+      name: 'contactme',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
