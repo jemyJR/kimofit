@@ -1,32 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
+import 'package:kimofit/core/helpers/extensions.dart';
+import 'package:kimofit/core/routing/routes.dart';
 import 'package:kimofit/core/theming/style.dart';
-import 'package:kimofit/features/home/ui/widgets/rotated_corner_badge_decoration.dart';
+import 'package:kimofit/features/home/data/models/subscription_features_model.dart';
+import 'package:kimofit/features/home/ui/widgets/home_category/rotated_corner_badge_decoration.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 class CustomHomeContainer extends StatelessWidget {
   const CustomHomeContainer({
     super.key,
-    required this.navName,
+    required this.homeCategoryNav,
+    required this.index,
     required this.text,
     required this.color,
     required this.imagePath,
     this.isPaid = false,
-    this.isFree = true,
   });
 
-  final String navName;
+  final String homeCategoryNav;
+  final int index;
   final String text;
   final Color color;
   final String imagePath;
   final bool isPaid;
-  final bool isFree;
 
   @override
   Widget build(BuildContext context) {
+    final isFree = homeCategoryNav == Routes.workoutExercisesScreen;
+
     return GestureDetector(
-      // onTap: () => context.pushNamed(Routes.getRoutePath(navName)),
+      onTap: () => isPaid
+          ? context.pushNamed(homeCategoryNav)
+          : homeCategoryNav == Routes.workoutExercisesScreen
+              ? context.pushNamed(homeCategoryNav)
+              : context.pushNamed(
+                  Routes.subscriptionScreen,
+                  arguments: subscriptionFeatures[index],
+                ),
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 30.w),
         child: isPaid
@@ -44,21 +56,24 @@ class CustomHomeContainer extends StatelessWidget {
                 foregroundDecoration: isFree
                     ? rotatedCornerBadgeDecoration(text: S.of(context).free)
                     : null,
-                child: ColorFiltered(
-                  colorFilter: ColorFilter.mode(
-                    isFree
-                        ? Colors.transparent
-                        : ColorsManager.black.withOpacity(0.5),
-                    BlendMode.darken,
-                  ),
-                  child: homeContainer(
-                    imagePath: imagePath,
-                    child: containerBorder(
-                      child: containerWithText(
-                        child: textAlignCenter(text: text),
+                // ClipRect to fix the ColorFiltered color be in home screen when navigate issue
+                child: ClipRect(
+                  child: ColorFiltered(
+                    colorFilter: ColorFilter.mode(
+                      isFree
+                          ? Colors.transparent
+                          : ColorsManager.black.withOpacity(0.5),
+                      BlendMode.darken,
+                    ),
+                    child: homeContainer(
+                      imagePath: imagePath,
+                      child: containerBorder(
+                        child: containerWithText(
+                          child: textAlignCenter(text: text),
+                          color: color,
+                        ),
                         color: color,
                       ),
-                      color: color,
                     ),
                   ),
                 ),

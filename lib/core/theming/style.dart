@@ -18,6 +18,10 @@ class TextStyles {
     fontSize: 22.sp,
     color: ColorsManager.white,
   );
+  static TextStyle font22Blue = TextStyle(
+    fontSize: 22.sp,
+    color: ColorsManager.blue,
+  );
   static TextStyle font18Gray = TextStyle(
     fontFamily: AppFonts.cairo,
     fontSize: 18.sp,
