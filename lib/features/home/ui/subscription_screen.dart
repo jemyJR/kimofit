@@ -29,6 +29,7 @@ class SubscriptionScreen extends StatelessWidget {
                 radius: 40.r,
                 child: Icon(
                   Icons.attach_money,
+                  color: ColorsManager.bgDark,
                   size: 50.sp,
                 ),
               ),

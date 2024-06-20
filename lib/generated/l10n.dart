@@ -360,6 +360,16 @@ class S {
     );
   }
 
+  /// `Trainee`
+  String get trainee {
+    return Intl.message(
+      'Trainee',
+      name: 'trainee',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `You have reached the end of your subscription!!\nPlease renew your subscription to continue using the app.`
   String get subscriptionEndMessage {
     return Intl.message(
@@ -375,6 +385,16 @@ class S {
     return Intl.message(
       'Log out',
       name: 'logOut',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have been logged out successfully`
+  String get loggedOutSuccessfully {
+    return Intl.message(
+      'You have been logged out successfully',
+      name: 'loggedOutSuccessfully',
       desc: '',
       args: [],
     );

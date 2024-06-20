@@ -8,11 +8,15 @@ class ErrorModel {
   final String? phone;
   final String? deviceId;
 
+  //! This is to handle errors in the home screen
+  final String? homeErrorMessage;
+
   ErrorModel({
     this.errorMessage,
     this.errorCode,
     this.phone,
     this.deviceId,
+    this.homeErrorMessage,
   });
   factory ErrorModel.fromJson(Map<String, dynamic> json) {
     return ErrorModel(
@@ -20,6 +24,7 @@ class ErrorModel {
       errorCode: json[ApiKey.errorCode],
       phone: json[ApiKey.phone],
       deviceId: json[ApiKey.deviceId],
+      homeErrorMessage: json[ApiKey.homeErrorMessage],
     );
   }
 }

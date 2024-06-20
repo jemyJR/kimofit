@@ -5,6 +5,10 @@ import 'package:kimofit/core/constants/colors.dart';
 
 class TextStyles {
   //! Regular
+  static TextStyle font12White = TextStyle(
+    fontSize: 12.sp,
+    color: ColorsManager.white,
+  );
   static TextStyle font15White = TextStyle(
     fontSize: 15.sp,
     color: ColorsManager.white,
@@ -14,6 +18,11 @@ class TextStyles {
     fontSize: 18.sp,
     color: ColorsManager.white,
   );
+  static TextStyle font18Gray = TextStyle(
+    fontFamily: AppFonts.cairo,
+    fontSize: 18.sp,
+    color: ColorsManager.gray,
+  );
   static TextStyle font22White = TextStyle(
     fontSize: 22.sp,
     color: ColorsManager.white,
@@ -21,11 +30,6 @@ class TextStyles {
   static TextStyle font22Blue = TextStyle(
     fontSize: 22.sp,
     color: ColorsManager.blue,
-  );
-  static TextStyle font18Gray = TextStyle(
-    fontFamily: AppFonts.cairo,
-    fontSize: 18.sp,
-    color: ColorsManager.gray,
   );
 
   //! Bold

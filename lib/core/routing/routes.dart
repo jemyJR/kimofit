@@ -11,7 +11,7 @@ class Routes {
   static const String subscriptionScreen = '/subscriptionScreen';
 }
 
-List<String> homeCategories = [
+List<String> homeCategoriesScreens = [
   Routes.warmUpExercisesScreen,
   Routes.workoutExercisesScreen,
   Routes.homeCardioPlanScreen,

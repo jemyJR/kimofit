@@ -7,7 +7,7 @@ import 'package:kimofit/core/helpers/extensions.dart';
 import 'package:kimofit/core/routing/routes.dart';
 import 'package:kimofit/core/widgets/custom_snack_bar.dart';
 import 'package:kimofit/core/widgets/loading_widget.dart';
-import 'package:kimofit/features/login/logic/cubit/login_cubit.dart';
+import 'package:kimofit/features/login/logic/login_cubit.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 class LoginBlocListener extends StatelessWidget {

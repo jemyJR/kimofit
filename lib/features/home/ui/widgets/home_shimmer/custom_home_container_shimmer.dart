@@ -24,7 +24,7 @@ class CustomHomeContainerShimmer extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 border: Border.all(
-                  color: ColorsManager.white,
+                  color: Colors.white,
                   width: 3,
                 ),
                 borderRadius: BorderRadius.circular(10.r),
@@ -33,7 +33,7 @@ class CustomHomeContainerShimmer extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 25.h, horizontal: 50.w),
                 child: Container(
                   decoration: BoxDecoration(
-                    color: ColorsManager.white,
+                    color: Colors.white,
                     borderRadius: BorderRadius.circular(10.r),
                   ),
                 ),

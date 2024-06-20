@@ -5,7 +5,7 @@ import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/helpers/extensions.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/routing/animation_route/custom_animation_route.dart';
-import 'package:kimofit/features/home/data/models/subscription_model.dart';
+import 'package:kimofit/features/home/data/models/home_response_model/subscription_model.dart';
 import 'package:kimofit/features/home/ui/widgets/profile_and_indicator/percent_indicator.dart';
 import 'package:kimofit/features/home/ui/widgets/profile_and_indicator/profile_circle.dart';
 import 'package:kimofit/features/home/ui/widgets/profile_and_indicator/subscription_date.dart';

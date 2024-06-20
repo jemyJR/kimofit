@@ -9,6 +9,7 @@ class SubscriptionFeaturesModel {
   });
 }
 
+//TODO: This is a dummy data, replace it with real data
 List<SubscriptionFeaturesModel> subscriptionFeatures = [
   SubscriptionFeaturesModel(
     title: LocalizedField(
@@ -24,10 +25,7 @@ List<SubscriptionFeaturesModel> subscriptionFeatures = [
       en: "Workout Exercises",
       ar: "نظام التمرين",
     ),
-    features: [
-      'Basic feature 1',
-      'Basic feature 2',
-    ],
+    features: [],
   ),
   SubscriptionFeaturesModel(
     title: LocalizedField(
