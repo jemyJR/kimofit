@@ -15,17 +15,13 @@ class ContainerWithTopBorder extends StatelessWidget {
       decoration: BoxDecoration(
         color: ColorsManager.bgDarklow,
         borderRadius: BorderRadius.only(
-          topLeft: const Radius.circular(40).w,
-          topRight: const Radius.circular(40).w,
+          topLeft: Radius.circular(40.r),
+          topRight: Radius.circular(40.r),
         ),
       ),
       child: Padding(
-        padding: EdgeInsets.only(
-          top: 30.w,
-          left: 15.w,
-          right: 15.w,
-          bottom: 15.w,
-        ),
+        padding:
+            EdgeInsets.only(top: 30.h, left: 15.w, right: 15.w, bottom: 15.h),
         child: child,
       ),
     );

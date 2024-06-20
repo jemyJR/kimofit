@@ -8,6 +8,7 @@ import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/custom_button.dart';
 import 'package:kimofit/core/widgets/loading_widget.dart';
+import 'package:kimofit/features/home/ui/widgets/home_shimmer/shimmer_with_text.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 class TopBar extends StatelessWidget {
@@ -16,14 +17,17 @@ class TopBar extends StatelessWidget {
     this.welcomeText,
     this.clientName,
     this.homeWelcomeMessage,
+    this.isTrainerNameLoading = false,
   });
   final Text? welcomeText;
   final Text? clientName;
   final Text? homeWelcomeMessage;
+  final bool? isTrainerNameLoading;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(15).h,
+      padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 15.w),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -40,13 +44,14 @@ class TopBar extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      welcomeText ?? horizontalSpace(0),
+                      welcomeText ?? const SizedBox.shrink(),
                       horizontalSpace(10),
-                      clientName ?? horizontalSpace(0),
+                      clientName ?? const SizedBox.shrink(),
+                      trainerNameShimmer(isTrainerNameLoading, context),
                       horizontalSpace(10),
                     ],
                   ),
-                  homeWelcomeMessage ?? horizontalSpace(0),
+                  homeWelcomeMessage ?? const SizedBox.shrink(),
                 ],
               ),
             ),
@@ -62,4 +67,17 @@ class TopBar extends StatelessWidget {
       ),
     );
   }
+}
+
+Widget trainerNameShimmer(isTrainerNameLoading, context) {
+  if (isTrainerNameLoading) {
+    return ShimmerWithText(
+      height: 25.h,
+      width: 80.w,
+      text: S.of(context).trainee,
+      textStyle: TextStyles.font12White,
+      border: 5,
+    );
+  }
+  return const SizedBox.shrink();
 }

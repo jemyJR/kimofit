@@ -22,12 +22,26 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Sponsor": MessageLookupByLibrary.simpleMessage("Sponsor"),
+        "SubscriptionFeatures": MessageLookupByLibrary.simpleMessage(
+            "are very important for the following reasons:"),
+        "SubscriptionMessage": MessageLookupByLibrary.simpleMessage(
+            "This feature is available to subscribed users only. Please upgrade your account by contacting us to enjoy all the features"),
+        "contactme":
+            MessageLookupByLibrary.simpleMessage("Contact me for details"),
         "currentUser":
             MessageLookupByLibrary.simpleMessage("Are you  current user ?"),
+        "end": MessageLookupByLibrary.simpleMessage("End"),
+        "free": MessageLookupByLibrary.simpleMessage("Free"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
+        "homeWelcomeMessage":
+            MessageLookupByLibrary.simpleMessage("We hope you are well"),
         "language": MessageLookupByLibrary.simpleMessage("عربي"),
+        "logOut": MessageLookupByLibrary.simpleMessage("Log out"),
         "loggedInSuccessfully": MessageLookupByLibrary.simpleMessage(
             "You have been logged in successfully"),
+        "loggedOutSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "You have been logged out successfully"),
         "login": MessageLookupByLibrary.simpleMessage("Log in"),
         "loginMessage":
             MessageLookupByLibrary.simpleMessage("Log in to your account"),
@@ -51,6 +65,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "signup": MessageLookupByLibrary.simpleMessage("Sign up"),
         "signupMessage": MessageLookupByLibrary.simpleMessage(
             "Create your account now to enjoy a unique experience"),
+        "start": MessageLookupByLibrary.simpleMessage("Start"),
+        "subscription": MessageLookupByLibrary.simpleMessage("Subscription"),
+        "subscriptionEndMessage": MessageLookupByLibrary.simpleMessage(
+            "You have reached the end of your subscription!!\nPlease renew your subscription to continue using the app."),
+        "trainee": MessageLookupByLibrary.simpleMessage("Trainee"),
         "validationEmptyField":
             MessageLookupByLibrary.simpleMessage("This field can\'t be empty"),
         "validationName":

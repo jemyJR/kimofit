@@ -3,15 +3,18 @@ class Routes {
   static const String loginScreen = '/loginScreen';
   static const String signUpScreen = '/signUpScreen';
   static const String homeScreen = '/homeScreen';
-
-  static final Map<String, String> _routes = {
-    'onBoardingScreen': onBoardingScreen,
-    'loginScreen': loginScreen,
-    'signUpScreen': signUpScreen,
-    'homeScreen': homeScreen,
-  };
-
-  static String getRoutePath(String routeName) {
-    return _routes[routeName] ?? '/';
-  }
+  static const String warmUpExercisesScreen = '/warmUpExercisesScreen';
+  static const String workoutExercisesScreen = '/workoutExercisesScreen';
+  static const String homeCardioPlanScreen = '/homeCardioPlanScreen';
+  static const String dietPlanScreen = '/dietPlanScreen';
+  static const String supplementScreen = '/supplementScreen';
+  static const String subscriptionScreen = '/subscriptionScreen';
 }
+
+List<String> homeCategoriesScreens = [
+  Routes.warmUpExercisesScreen,
+  Routes.workoutExercisesScreen,
+  Routes.homeCardioPlanScreen,
+  Routes.dietPlanScreen,
+  Routes.supplementScreen,
+];
