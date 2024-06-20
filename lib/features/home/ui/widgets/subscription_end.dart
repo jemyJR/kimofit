@@ -11,33 +11,31 @@ class SubscriptionEnd extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 30.w),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Spacer(flex: 4),
-            Lottie.asset(
-              Assets.animationSubscriptionEndAlert,
-              width: 200.w,
-              reverse: true,
-              repeat: true,
-            ),
-            Text(
-              S.of(context).subscriptionEndMessage,
-              style: TextStyles.font22White,
-              textAlign: TextAlign.center,
-            ),
-            const Spacer(flex: 4),
-            // button
-            getButtonType(context, ButtonType.contactme),
-            const Spacer(flex: 1),
-            getButtonType(context, ButtonType.logOut),
-            const Spacer(flex: 1),
-          ],
-        ),
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 30.w),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Spacer(flex: 4),
+          Lottie.asset(
+            Assets.animationSubscriptionEndAlert,
+            width: 200.w,
+            reverse: true,
+            repeat: true,
+          ),
+          Text(
+            S.of(context).subscriptionEndMessage,
+            style: TextStyles.font22White,
+            textAlign: TextAlign.center,
+          ),
+          const Spacer(flex: 4),
+          // button
+          getButtonType(context, ButtonType.contactme),
+          const Spacer(flex: 1),
+          getButtonType(context, ButtonType.logOut),
+          const Spacer(flex: 1),
+        ],
       ),
     );
   }
