@@ -2,12 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/app_fonts.dart';
 import 'package:kimofit/core/constants/colors.dart';
-import 'package:kimofit/core/theming/style.dart';
-import 'package:kimofit/generated/l10n.dart';
 import 'package:shimmer/shimmer.dart';
 
-class SponsorCardShimmer extends StatelessWidget {
-  const SponsorCardShimmer({super.key});
+class ShimmerWithText extends StatelessWidget {
+  const ShimmerWithText({
+    super.key,
+    required this.height,
+    required this.width,
+    required this.text,
+    required this.textStyle,
+    this.border = 10,
+  });
+  final double height;
+  final double width;
+  final String text;
+  final TextStyle textStyle;
+  final int? border;
 
   @override
   Widget build(BuildContext context) {
@@ -15,17 +25,16 @@ class SponsorCardShimmer extends StatelessWidget {
       baseColor: ColorsManager.dark,
       highlightColor: ColorsManager.gray,
       child: Container(
-        height: 150.h,
-        width: double.infinity,
+        height: height,
+        width: width,
         decoration: BoxDecoration(
           color: ColorsManager.dark.withOpacity(0.5),
-          borderRadius: BorderRadius.circular(10.r),
+          borderRadius: BorderRadius.circular(border!.r),
         ),
         child: Center(
           child: Text(
-            S.of(context).Sponsor,
-            style: TextStyles.font32BoldWhite
-                .copyWith(fontFamily: AppFonts.lemonada),
+            text,
+            style: textStyle.copyWith(fontFamily: AppFonts.lemonada),
           ),
         ),
       ),

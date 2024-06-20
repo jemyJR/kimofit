@@ -37,9 +37,11 @@
     "end": "End",
     "Sponsor": "Sponsor",
     "free": "Free",
+    "trainee": "Trainee",
     
     "subscriptionEndMessage": "You have reached the end of your subscription!!\nPlease renew your subscription to continue using the app.",
     "logOut": "Log out",
+    "loggedOutSuccessfully": "You have been logged out successfully",
 
     "subscription": "Subscription",
     "SubscriptionMessage": "This feature is available to subscribed users only. Please upgrade your account by contacting us to enjoy all the features",

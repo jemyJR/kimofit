@@ -9,6 +9,7 @@ import 'package:kimofit/core/helpers/launch_url.dart';
 import 'package:kimofit/core/routing/routes.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/custom_button.dart';
+import 'package:kimofit/core/widgets/custom_snack_bar.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 enum ButtonType { contactme, logOut }
@@ -47,4 +48,5 @@ void logout(BuildContext context) {
     Routes.loginScreen,
     predicate: (route) => false,
   );
+  customSnackBar(context, S.of(context).loggedOutSuccessfully);
 }

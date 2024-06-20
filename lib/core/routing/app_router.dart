@@ -4,6 +4,7 @@ import 'package:kimofit/core/di/dependency_injection.dart';
 import 'package:kimofit/core/routing/routes.dart';
 import 'package:kimofit/features/diet_plan/ui/diet_plan_screen.dart';
 import 'package:kimofit/features/home/data/models/subscription_features_model.dart';
+import 'package:kimofit/features/home/logic/home_cubit.dart';
 import 'package:kimofit/features/home/ui/home_screen.dart';
 import 'package:kimofit/features/home/ui/subscription_screen.dart';
 import 'package:kimofit/features/home_cardio_plan/ui/warm_up_exercises_screen.dart';
@@ -41,7 +42,10 @@ class AppRouter {
         );
       case Routes.homeScreen:
         return MaterialPageRoute(
-          builder: (context) => const HomeScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<HomeCubit>()..getHomeData(),
+            child: const HomeScreen(),
+          ),
         );
       case Routes.warmUpExercisesScreen:
         return MaterialPageRoute(

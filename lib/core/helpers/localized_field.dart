@@ -1,4 +1,5 @@
 import 'package:intl/intl.dart';
+import 'package:kimofit/core/networking/api/api_endpoints.dart';
 
 class LocalizedField {
   final String en;
@@ -11,16 +12,16 @@ class LocalizedField {
 
   factory LocalizedField.fromJson(Map<String, dynamic> json) {
     return LocalizedField(
-      en: json['en'],
-      ar: json['ar'],
+      en: json[ApiKey.en],
+      ar: json[ApiKey.ar],
     );
   }
 
   String getLocalizedText() {
     switch (Intl.getCurrentLocale()) {
-      case 'ar':
+      case ApiKey.ar:
         return ar;
-      case 'en':
+      case ApiKey.en:
       default:
         return en;
     }

@@ -40,6 +40,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "logOut": MessageLookupByLibrary.simpleMessage("Log out"),
         "loggedInSuccessfully": MessageLookupByLibrary.simpleMessage(
             "You have been logged in successfully"),
+        "loggedOutSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "You have been logged out successfully"),
         "login": MessageLookupByLibrary.simpleMessage("Log in"),
         "loginMessage":
             MessageLookupByLibrary.simpleMessage("Log in to your account"),
@@ -67,6 +69,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "subscription": MessageLookupByLibrary.simpleMessage("Subscription"),
         "subscriptionEndMessage": MessageLookupByLibrary.simpleMessage(
             "You have reached the end of your subscription!!\nPlease renew your subscription to continue using the app."),
+        "trainee": MessageLookupByLibrary.simpleMessage("Trainee"),
         "validationEmptyField":
             MessageLookupByLibrary.simpleMessage("This field can\'t be empty"),
         "validationName":

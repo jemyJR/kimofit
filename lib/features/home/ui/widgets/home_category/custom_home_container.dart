@@ -1,10 +1,13 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/helpers/extensions.dart';
 import 'package:kimofit/core/routing/routes.dart';
 import 'package:kimofit/core/theming/style.dart';
+import 'package:kimofit/core/widgets/not_found_widget.dart';
 import 'package:kimofit/features/home/data/models/subscription_features_model.dart';
+import 'package:kimofit/features/home/ui/widgets/home_shimmer/shimmer_normal.dart';
 import 'package:kimofit/features/home/ui/widgets/home_category/rotated_corner_badge_decoration.dart';
 import 'package:kimofit/generated/l10n.dart';
 
@@ -30,116 +33,109 @@ class CustomHomeContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     final isFree = homeCategoryNav == Routes.workoutExercisesScreen;
 
+    void handleTap(BuildContext context) {
+      final routeName =
+          isPaid || isFree ? homeCategoryNav : Routes.subscriptionScreen;
+      final arguments = isPaid || isFree ? null : subscriptionFeatures[index];
+      context.pushNamed(routeName, arguments: arguments);
+    }
+
     return GestureDetector(
-      onTap: () => isPaid
-          ? context.pushNamed(homeCategoryNav)
-          : homeCategoryNav == Routes.workoutExercisesScreen
-              ? context.pushNamed(homeCategoryNav)
-              : context.pushNamed(
-                  Routes.subscriptionScreen,
-                  arguments: subscriptionFeatures[index],
-                ),
+      onTap: () => handleTap(context),
       child: Padding(
         padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 30.w),
-        child: isPaid
-            ? homeContainer(
-                imagePath: imagePath,
-                child: containerBorder(
-                  child: containerWithText(
-                    child: textAlignCenter(text: text),
-                    color: color,
-                  ),
-                  color: color,
-                ),
-              )
-            : Container(
-                foregroundDecoration: isFree
-                    ? rotatedCornerBadgeDecoration(text: S.of(context).free)
-                    : null,
-                // ClipRect to fix the ColorFiltered color be in home screen when navigate issue
-                child: ClipRect(
-                  child: ColorFiltered(
-                    colorFilter: ColorFilter.mode(
-                      isFree
-                          ? Colors.transparent
-                          : ColorsManager.black.withOpacity(0.5),
-                      BlendMode.darken,
-                    ),
-                    child: homeContainer(
-                      imagePath: imagePath,
-                      child: containerBorder(
-                        child: containerWithText(
-                          child: textAlignCenter(text: text),
-                          color: color,
-                        ),
-                        color: color,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+        child: _buildContainer(context, isFree),
       ),
     );
   }
-}
 
-Widget homeContainer({required String imagePath, required Widget child}) {
-  return Container(
-    height: 150.h,
-    decoration: BoxDecoration(
-      image: DecorationImage(
-        image: NetworkImage(imagePath),
-        fit: BoxFit.cover,
-        colorFilter: ColorFilter.mode(
-          ColorsManager.black.withOpacity(0.2),
-          BlendMode.darken,
-        ),
-      ),
+  Widget _buildContainer(BuildContext context, bool isFree) {
+    return isPaid
+        ? _buildHomeContainerStack()
+        : Container(
+            foregroundDecoration:
+                isFree ? _buildRotatedCornerBadgeDecoration(context) : null,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10.r),
+              child: ColorFiltered(
+                colorFilter: _buildColorFilter(isFree),
+                child: _buildHomeContainerStack(),
+              ),
+            ),
+          );
+  }
+
+  Widget _buildHomeContainerStack() {
+    return Stack(
+      children: [
+        _buildHomeCategoryImage(),
+        _buildBorderContainerWithText(),
+      ],
+    );
+  }
+
+  Widget _buildHomeCategoryImage() {
+    return ClipRRect(
       borderRadius: BorderRadius.circular(10.r),
-    ),
-    child: child,
-  );
-}
+      child: CachedNetworkImage(
+        height: 150.h,
+        width: double.infinity,
+        imageUrl: imagePath,
+        fit: BoxFit.cover,
+        placeholder: (context, url) =>
+            ShimmerNormal(height: 150.h, width: double.infinity),
+        errorWidget: (context, url, error) => const NotFoundWidget(),
+        color: ColorsManager.black.withOpacity(0.2),
+        colorBlendMode: BlendMode.darken,
+      ),
+    );
+  }
 
-Widget containerBorder({required Widget child, required Color color}) {
-  return Padding(
-    padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
-    child: Container(
-      decoration: BoxDecoration(
-        color: Colors.transparent,
-        border: Border.all(
-          color: color,
-          width: 3,
+  Widget _buildBorderContainerWithText() {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
+      child: Container(
+        decoration: BoxDecoration(
+          color: Colors.transparent,
+          border: Border.all(color: color, width: 3),
+          borderRadius: BorderRadius.circular(10.r),
         ),
-        borderRadius: BorderRadius.circular(10.r),
+        child: _buildContainerWithText(),
       ),
-      child: child,
-    ),
-  );
-}
+    );
+  }
 
-Widget containerWithText({required Widget child, required Color color}) {
-  return Padding(
-    padding: EdgeInsets.symmetric(vertical: 25.h, horizontal: 50.w),
-    child: Container(
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(10.r),
+  Widget _buildContainerWithText() {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 25.h, horizontal: 50.w),
+      child: Container(
+        height: 55.h,
+        decoration: BoxDecoration(
+          color: color,
+          borderRadius: BorderRadius.circular(10.r),
+        ),
+        child: Align(
+          alignment: Alignment.center,
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Text(
+              text,
+              style: TextStyles.font18White,
+            ),
+          ),
+        ),
       ),
-      child: child,
-    ),
-  );
-}
+    );
+  }
 
-Widget textAlignCenter({required String text}) {
-  return Align(
-    alignment: Alignment.center,
-    child: SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      child: Text(
-        text,
-        style: TextStyles.font18White,
-      ),
-    ),
-  );
+  Decoration _buildRotatedCornerBadgeDecoration(BuildContext context) {
+    return rotatedCornerBadgeDecoration(text: S.of(context).free);
+  }
+
+  ColorFilter _buildColorFilter(bool isFree) {
+    return ColorFilter.mode(
+      isFree ? Colors.transparent : ColorsManager.black.withOpacity(0.5),
+      BlendMode.darken,
+    );
+  }
 }
