@@ -8,7 +8,7 @@ import 'package:kimofit/core/widgets/loading_widget.dart';
 import 'package:kimofit/features/home/data/repo/home_repo.dart';
 import 'package:kimofit/features/home/logic/home_cubit.dart';
 import 'package:kimofit/features/login/data/repos/login_repo.dart';
-import 'package:kimofit/features/login/logic/cubit/login_cubit.dart';
+import 'package:kimofit/features/login/logic/login_cubit.dart';
 import 'package:kimofit/features/signup/data/repos/signup_repo.dart';
 import 'package:kimofit/features/signup/logic/cubit/signup_cubit.dart';
 

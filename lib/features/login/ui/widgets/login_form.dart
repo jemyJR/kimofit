@@ -7,7 +7,7 @@ import 'package:kimofit/core/widgets/custom_button.dart';
 import 'package:kimofit/core/widgets/custom_form_field.dart';
 import 'package:kimofit/core/widgets/custom_snack_bar.dart';
 import 'package:kimofit/core/widgets/phone_form_field.dart';
-import 'package:kimofit/features/login/logic/cubit/login_cubit.dart';
+import 'package:kimofit/features/login/logic/login_cubit.dart';
 import 'package:kimofit/generated/l10n.dart';
 import 'package:kimofit/core/helpers/validation.dart';
 

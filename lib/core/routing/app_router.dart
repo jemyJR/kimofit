@@ -8,7 +8,7 @@ import 'package:kimofit/features/home/logic/home_cubit.dart';
 import 'package:kimofit/features/home/ui/home_screen.dart';
 import 'package:kimofit/features/home/ui/subscription_screen.dart';
 import 'package:kimofit/features/home_cardio_plan/ui/warm_up_exercises_screen.dart';
-import 'package:kimofit/features/login/logic/cubit/login_cubit.dart';
+import 'package:kimofit/features/login/logic/login_cubit.dart';
 import 'package:kimofit/features/login/ui/login_screen.dart';
 import 'package:kimofit/features/onboarding/ui/onboarding_screen.dart';
 import 'package:kimofit/features/signup/logic/cubit/signup_cubit.dart';
