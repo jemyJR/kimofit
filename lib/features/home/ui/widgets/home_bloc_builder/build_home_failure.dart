@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:kimofit/core/cache/cache_helper.dart';
 import 'package:kimofit/core/di/dependency_injection.dart';
 import 'package:kimofit/core/networking/api/api_endpoints.dart';
@@ -30,7 +31,11 @@ class BuildHomeFailure extends StatelessWidget {
             ),
           ),
         ),
-        const SubscriptionEnd(),
+        const Expanded(
+          child: Center(
+            child: SubscriptionEnd(),
+          ),
+        ),
       ],
     );
   }
