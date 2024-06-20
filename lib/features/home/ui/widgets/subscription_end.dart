@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/assets.dart';
+import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/app_buttons.dart';
 import 'package:kimofit/generated/l10n.dart';
@@ -11,14 +12,14 @@ class SubscriptionEnd extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 30.w),
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 30.w),
+      child: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Spacer(flex: 4),
+            verticalSpace(20),
             Lottie.asset(
               Assets.animationSubscriptionEndAlert,
               width: 200.w,
@@ -30,12 +31,12 @@ class SubscriptionEnd extends StatelessWidget {
               style: TextStyles.font22White,
               textAlign: TextAlign.center,
             ),
-            const Spacer(flex: 4),
+            verticalSpace(100),
             // button
             getButtonType(context, ButtonType.contactme),
-            const Spacer(flex: 1),
+            verticalSpace(10),
             getButtonType(context, ButtonType.logOut),
-            const Spacer(flex: 1),
+            verticalSpace(10),
           ],
         ),
       ),
