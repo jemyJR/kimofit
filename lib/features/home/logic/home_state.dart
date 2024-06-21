@@ -12,6 +12,6 @@ final class HomeSuccess extends HomeState {
 }
 
 final class HomeFailure extends HomeState {
-  final String errorMessage;
-  HomeFailure({required this.errorMessage});
+  final LocalizedField trainerName;
+  HomeFailure({required this.trainerName});
 }
