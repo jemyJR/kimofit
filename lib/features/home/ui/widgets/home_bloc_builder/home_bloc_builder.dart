@@ -21,7 +21,9 @@ class HomeBlocBuilder extends StatelessWidget {
         }
 
         if (state is HomeFailure) {
-          return const BuildHomeFailure();
+          return BuildHomeFailure(
+            trainerName: state.trainerName,
+          );
         }
 
         return const SizedBox.shrink();

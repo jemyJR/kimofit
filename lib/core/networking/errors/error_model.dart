@@ -1,3 +1,4 @@
+import 'package:kimofit/core/helpers/localized_field.dart';
 import 'package:kimofit/core/networking/api/api_endpoints.dart';
 
 class ErrorModel {
@@ -9,14 +10,14 @@ class ErrorModel {
   final String? deviceId;
 
   //! This is to handle errors in the home screen
-  final String? homeErrorMessage;
+  final LocalizedField? trainerName;
 
   ErrorModel({
     this.errorMessage,
     this.errorCode,
     this.phone,
     this.deviceId,
-    this.homeErrorMessage,
+    this.trainerName,
   });
   factory ErrorModel.fromJson(Map<String, dynamic> json) {
     return ErrorModel(
@@ -24,7 +25,8 @@ class ErrorModel {
       errorCode: json[ApiKey.errorCode],
       phone: json[ApiKey.phone],
       deviceId: json[ApiKey.deviceId],
-      homeErrorMessage: json[ApiKey.homeErrorMessage],
+      trainerName:
+          LocalizedField.fromJson(json[ApiKey.trainee][ApiKey.trainerName]),
     );
   }
 }
