@@ -46,7 +46,9 @@
     "subscription": "Subscription",
     "SubscriptionMessage": "This feature is available to subscribed users only. Please upgrade your account by contacting us to enjoy all the features",
     "SubscriptionFeatures":"are very important for the following reasons:",
-    "contactme": "Contact me for details"
+    "contactme": "Contact me for details",
+
+    "myProfile": "My Profile"
     
     
 }

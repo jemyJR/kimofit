@@ -45,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("Log in"),
         "loginMessage":
             MessageLookupByLibrary.simpleMessage("Log in to your account"),
+        "myProfile": MessageLookupByLibrary.simpleMessage("My Profile"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "newUser": MessageLookupByLibrary.simpleMessage("Are you a new user ?"),
         "obParagraph1": MessageLookupByLibrary.simpleMessage(
