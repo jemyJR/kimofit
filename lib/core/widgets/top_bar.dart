@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/assets.dart';
-import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
-import 'package:kimofit/core/widgets/custom_button.dart';
-import 'package:kimofit/core/widgets/loading_widget.dart';
+import 'package:kimofit/core/widgets/app_buttons.dart';
 import 'package:kimofit/features/home/ui/widgets/home_shimmer/shimmer_with_text.dart';
 import 'package:kimofit/generated/l10n.dart';
 
@@ -56,13 +54,7 @@ class TopBar extends StatelessWidget {
               ),
             ),
           ),
-          CustomButton(
-            text: S.of(context).language,
-            textStyle: TextStyles.font15White,
-            backgroundColor: ColorsManager.blue,
-            onPressed: () =>
-                LoadingWidgetService().changeLanguageWithDelay(context),
-          ),
+          getButtonType(context, ButtonType.changeLanguage),
         ],
       ),
     );

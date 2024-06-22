@@ -10,12 +10,22 @@ import 'package:kimofit/core/routing/routes.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/custom_button.dart';
 import 'package:kimofit/core/widgets/custom_snack_bar.dart';
+import 'package:kimofit/core/widgets/loading_widget.dart';
 import 'package:kimofit/generated/l10n.dart';
 
-enum ButtonType { contactme, logOut }
+enum ButtonType { changeLanguage, contactme, changePassword, logOut }
 
 Widget getButtonType(BuildContext context, ButtonType type) {
   switch (type) {
+    case ButtonType.changeLanguage:
+      return CustomButton(
+        text: S.of(context).language,
+        textStyle: TextStyles.font15White,
+        backgroundColor: ColorsManager.blue,
+        onPressed: () =>
+            LoadingWidgetService().changeLanguageWithDelay(context),
+      );
+
     case ButtonType.contactme:
       return CustomButton(
         text: S.of(context).contactme,
@@ -27,11 +37,22 @@ Widget getButtonType(BuildContext context, ButtonType type) {
           color: ColorsManager.white,
         ),
       );
+    case ButtonType.changePassword:
+      return CustomButton(
+        text: S.of(context).changePassword,
+        textStyle: TextStyles.font18White,
+        backgroundColor: ColorsManager.yellow,
+        onPressed: () {},
+        icon: const Icon(
+          FontAwesomeIcons.key,
+          color: ColorsManager.white,
+        ),
+      );
     case ButtonType.logOut:
       return CustomButton(
         text: S.of(context).logOut,
         textStyle: TextStyles.font18White,
-        backgroundColor: ColorsManager.yellow,
+        backgroundColor: ColorsManager.bgDark,
         onPressed: () => logout(context),
         icon: const Icon(
           FontAwesomeIcons.arrowRightFromBracket,
