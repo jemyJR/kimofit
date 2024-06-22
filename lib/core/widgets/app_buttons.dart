@@ -13,7 +13,13 @@ import 'package:kimofit/core/widgets/custom_snack_bar.dart';
 import 'package:kimofit/core/widgets/loading_widget.dart';
 import 'package:kimofit/generated/l10n.dart';
 
-enum ButtonType { changeLanguage, contactme, changePassword, logOut }
+enum ButtonType {
+  changeLanguage,
+  contactme,
+  changePasswordScreen,
+  changePasswordLogic,
+  logOut,
+}
 
 Widget getButtonType(BuildContext context, ButtonType type) {
   switch (type) {
@@ -37,7 +43,18 @@ Widget getButtonType(BuildContext context, ButtonType type) {
           color: ColorsManager.white,
         ),
       );
-    case ButtonType.changePassword:
+    case ButtonType.changePasswordScreen:
+      return CustomButton(
+        text: S.of(context).changePassword,
+        textStyle: TextStyles.font18White,
+        backgroundColor: ColorsManager.yellow,
+        onPressed: () => context.pushNamed(Routes.changePasswordScreen),
+        icon: const Icon(
+          FontAwesomeIcons.key,
+          color: ColorsManager.white,
+        ),
+      );
+    case ButtonType.changePasswordLogic:
       return CustomButton(
         text: S.of(context).changePassword,
         textStyle: TextStyles.font18White,

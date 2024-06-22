@@ -62,6 +62,11 @@
     "coachingDuration": "مدة التدريب",
     "month": "شهر",
     "days": "ايام",
-    "changePassword": "تغيير كلمة المرور"
+    "changePassword": "تغيير كلمة المرور",
+    
+    "changePasswordMessage": "قم بتغيير كلمة المرور الخاصة بك الان",
+    "oldPassword": "كلمة المرور القديمة",
+    "newPassword": "كلمة المرور الجديدة",
+    "passwordChangedSuccessfully": "تم تغيير كلمة المرور بنجاح"
 
 }

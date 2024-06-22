@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "age": MessageLookupByLibrary.simpleMessage("العمر"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
+        "changePasswordMessage": MessageLookupByLibrary.simpleMessage(
+            "قم بتغيير كلمة المرور الخاصة بك الان"),
         "cm": MessageLookupByLibrary.simpleMessage("سم"),
         "coachingDuration": MessageLookupByLibrary.simpleMessage("مدة التدريب"),
         "contactme": MessageLookupByLibrary.simpleMessage("تواصل معي للتفاصيل"),
@@ -56,6 +58,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "month": MessageLookupByLibrary.simpleMessage("شهر"),
         "myProfile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "newPassword":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
         "newUser": MessageLookupByLibrary.simpleMessage("انت مستخدم جديد ؟"),
         "number": MessageLookupByLibrary.simpleMessage("الرقم"),
         "obParagraph1": MessageLookupByLibrary.simpleMessage(
@@ -68,7 +72,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "أوعي تفقد الأمل من انك تغير من جسمك وصحتك وحياتك\nفالأول وفالاخر ده جسمك ودي صحتك وانت صاحب القرار"),
         "obParagraph5": MessageLookupByLibrary.simpleMessage(
             "وصولك لهدفك مهم لي بقدر أهميته ليك تقصيرك في جزء ما حتي لو كان صغير بالنسبالك ممكن يكون سبب في تطورك وانعدامه احيانا"),
+        "oldPassword":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور القديمة"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "passwordChangedSuccessfully":
+            MessageLookupByLibrary.simpleMessage("تم تغيير كلمة المرور بنجاح"),
         "personalInformation":
             MessageLookupByLibrary.simpleMessage("المعلومات الشخصية"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),

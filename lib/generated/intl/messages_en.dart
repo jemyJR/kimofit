@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "age": MessageLookupByLibrary.simpleMessage("Age"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Change Password"),
+        "changePasswordMessage":
+            MessageLookupByLibrary.simpleMessage("Change your password now"),
         "cm": MessageLookupByLibrary.simpleMessage("CM"),
         "coachingDuration":
             MessageLookupByLibrary.simpleMessage("Coaching Duration"),
@@ -58,6 +60,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "month": MessageLookupByLibrary.simpleMessage("Month"),
         "myProfile": MessageLookupByLibrary.simpleMessage("My Profile"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
         "newUser": MessageLookupByLibrary.simpleMessage("Are you a new user ?"),
         "number": MessageLookupByLibrary.simpleMessage("Number"),
         "obParagraph1": MessageLookupByLibrary.simpleMessage(
@@ -70,7 +73,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Don\'t lose hope that you will change your body, your health, and your life\nFirst and last, this is your body, this is your health, and you are the decision maker"),
         "obParagraph5": MessageLookupByLibrary.simpleMessage(
             "Your reaching your goal is\nas important to me as it is to you. Your shortcomings in some part, even if it is small in relation to you, may be a reason for your development and its lack thereof sometimes."),
+        "oldPassword": MessageLookupByLibrary.simpleMessage("Old Password"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "passwordChangedSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "Password changed successfully"),
         "personalInformation":
             MessageLookupByLibrary.simpleMessage("Personal Information"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone Number"),

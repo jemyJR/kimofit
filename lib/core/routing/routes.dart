@@ -9,6 +9,7 @@ class Routes {
   static const String dietPlanScreen = '/dietPlanScreen';
   static const String supplementScreen = '/supplementScreen';
   static const String subscriptionScreen = '/subscriptionScreen';
+  static const String changePasswordScreen = '/changePasswordScreen';
 }
 
 List<String> homeCategoriesScreens = [
