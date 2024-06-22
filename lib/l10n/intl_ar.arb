@@ -48,8 +48,20 @@
     "SubscriptionFeatures":" مهم جدا وذلك للاسباب التاليه :",
     "contactme": "تواصل معي للتفاصيل",
 
-    "myProfile": "الملف الشخصي"
+    "myProfile": "الملف الشخصي",
+    "personalInformation": "المعلومات الشخصية",
+    "number":"الرقم",
+    "age": "العمر",
+    "length": "الطول",
+    "weight": "الوزن",
+    "kg": "كجم",
+    "cm": "سم",
+    "subscriptionDetails": "تفاصيل الاشتراك",
+    "startDate": "تاريخ البدء",
+    "endDate": "تاريخ الانتهاء",
+    "coachingDuration": "مدة التدريب",
+    "month": "شهر",
+    "days": "ايام",
+    "changePassword": "تغيير كلمة المرور"
 
-    
-    
 }
