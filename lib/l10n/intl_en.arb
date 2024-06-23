@@ -66,10 +66,6 @@
 
     "changePasswordMessage": "Change your password now",
     "oldPassword": "Old Password",
-    "newPassword": "New Password",
-    "passwordChangedSuccessfully": "Password changed successfully"
-    
-
-    
+    "newPassword": "New Password"
     
 }

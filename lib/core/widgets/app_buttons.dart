@@ -11,6 +11,7 @@ import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/custom_button.dart';
 import 'package:kimofit/core/widgets/custom_snack_bar.dart';
 import 'package:kimofit/core/widgets/loading_widget.dart';
+import 'package:kimofit/features/profile/ui/widgets/change_password/change_password_form.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 enum ButtonType {
@@ -59,7 +60,7 @@ Widget getButtonType(BuildContext context, ButtonType type) {
         text: S.of(context).changePassword,
         textStyle: TextStyles.font18White,
         backgroundColor: ColorsManager.yellow,
-        onPressed: () {},
+        onPressed: () => validateThenDoChangePassword(context),
         icon: const Icon(
           FontAwesomeIcons.key,
           color: ColorsManager.white,

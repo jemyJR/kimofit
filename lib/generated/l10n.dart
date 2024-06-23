@@ -619,16 +619,6 @@ class S {
       args: [],
     );
   }
-
-  /// `Password changed successfully`
-  String get passwordChangedSuccessfully {
-    return Intl.message(
-      'Password changed successfully',
-      name: 'passwordChangedSuccessfully',
-      desc: '',
-      args: [],
-    );
-  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

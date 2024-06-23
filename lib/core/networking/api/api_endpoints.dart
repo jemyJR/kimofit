@@ -4,6 +4,7 @@ class ApiEndPoints {
   static const String login = 'trainees/login/';
   static const String signup = 'trainees/signup/';
   static const String home = 'home/';
+  static const String changePassword = 'trainees/password-update/';
 }
 
 class ApiKey {
@@ -51,4 +52,9 @@ class ApiKey {
   //! LocalizedField keys
   static const String en = 'en';
   static const String ar = 'ar';
+
+  //! Change Password
+  static const String oldPassword = 'old_password';
+  static const String newPassword = 'new_password';
+  static const String success = 'success';
 }

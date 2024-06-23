@@ -9,6 +9,8 @@ import 'package:kimofit/features/home/data/repo/home_repo.dart';
 import 'package:kimofit/features/home/logic/home_cubit.dart';
 import 'package:kimofit/features/login/data/repos/login_repo.dart';
 import 'package:kimofit/features/login/logic/login_cubit.dart';
+import 'package:kimofit/features/profile/data/repo/profile_repo.dart';
+import 'package:kimofit/features/profile/logic/profile_cubit.dart';
 import 'package:kimofit/features/signup/data/repos/signup_repo.dart';
 import 'package:kimofit/features/signup/logic/cubit/signup_cubit.dart';
 
@@ -44,4 +46,8 @@ Future<void> setupGetIt() async {
   // Register HomeCubit
   getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(getIt()));
   getIt.registerFactory<HomeCubit>(() => HomeCubit(getIt()));
+
+  // Register ProfileCubit
+  getIt.registerLazySingleton<ProfileRepo>(() => ProfileRepo(getIt()));
+  getIt.registerFactory<ProfileCubit>(() => ProfileCubit(getIt()));
 }

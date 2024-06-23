@@ -75,8 +75,6 @@ class MessageLookup extends MessageLookupByLibrary {
         "oldPassword":
             MessageLookupByLibrary.simpleMessage("كلمة المرور القديمة"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
-        "passwordChangedSuccessfully":
-            MessageLookupByLibrary.simpleMessage("تم تغيير كلمة المرور بنجاح"),
         "personalInformation":
             MessageLookupByLibrary.simpleMessage("المعلومات الشخصية"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),

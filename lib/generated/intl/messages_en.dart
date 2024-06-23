@@ -75,8 +75,6 @@ class MessageLookup extends MessageLookupByLibrary {
             "Your reaching your goal is\nas important to me as it is to you. Your shortcomings in some part, even if it is small in relation to you, may be a reason for your development and its lack thereof sometimes."),
         "oldPassword": MessageLookupByLibrary.simpleMessage("Old Password"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
-        "passwordChangedSuccessfully": MessageLookupByLibrary.simpleMessage(
-            "Password changed successfully"),
         "personalInformation":
             MessageLookupByLibrary.simpleMessage("Personal Information"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone Number"),

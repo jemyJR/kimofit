@@ -4,7 +4,8 @@ import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/custom_app_bar.dart';
 import 'package:kimofit/features/profile/ui/profile_screen.dart';
-import 'package:kimofit/features/profile/ui/widgets/change_password_form.dart';
+import 'package:kimofit/features/profile/ui/widgets/change_password/change_password_bloc_listener.dart';
+import 'package:kimofit/features/profile/ui/widgets/change_password/change_password_form.dart';
 import 'package:kimofit/features/profile/ui/widgets/profile_container.dart';
 import 'package:kimofit/generated/l10n.dart';
 
@@ -32,6 +33,7 @@ class ChangePasswordScreen extends StatelessWidget {
               ),
               verticalSpace(10),
               const ChangePasswordForm(),
+              const ChangePasswordBlocListener(),
             ],
           ),
         ),
