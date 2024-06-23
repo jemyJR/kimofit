@@ -11,6 +11,8 @@ import 'package:kimofit/features/home_cardio_plan/ui/warm_up_exercises_screen.da
 import 'package:kimofit/features/login/logic/login_cubit.dart';
 import 'package:kimofit/features/login/ui/login_screen.dart';
 import 'package:kimofit/features/onboarding/ui/onboarding_screen.dart';
+import 'package:kimofit/features/profile/logic/profile_cubit.dart';
+import 'package:kimofit/features/profile/ui/change_password_screen.dart';
 import 'package:kimofit/features/signup/logic/cubit/signup_cubit.dart';
 import 'package:kimofit/features/signup/ui/signup_screen.dart';
 import 'package:kimofit/features/supplement/ui/supplement_screen.dart';
@@ -45,6 +47,13 @@ class AppRouter {
           builder: (context) => BlocProvider(
             create: (context) => getIt<HomeCubit>()..getHomeData(),
             child: const HomeScreen(),
+          ),
+        );
+      case Routes.changePasswordScreen:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<ProfileCubit>(),
+            child: const ChangePasswordScreen(),
           ),
         );
       case Routes.warmUpExercisesScreen:

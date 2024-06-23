@@ -44,7 +44,7 @@ class ProfileScreen extends StatelessWidget {
                         proflileDataList: profileSubscriptionList(context),
                       ),
                       verticalSpace(20),
-                      getButtonType(context, ButtonType.changePassword),
+                      getButtonType(context, ButtonType.changePasswordScreen),
                       verticalSpace(10),
                       getButtonType(context, ButtonType.logOut),
                     ],

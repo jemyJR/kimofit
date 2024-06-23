@@ -589,6 +589,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Change your password now`
+  String get changePasswordMessage {
+    return Intl.message(
+      'Change your password now',
+      name: 'changePasswordMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Old Password`
+  String get oldPassword {
+    return Intl.message(
+      'Old Password',
+      name: 'oldPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Password`
+  String get newPassword {
+    return Intl.message(
+      'New Password',
+      name: 'newPassword',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

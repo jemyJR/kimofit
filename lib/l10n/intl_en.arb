@@ -62,9 +62,10 @@
     "coachingDuration": "Coaching Duration",
     "month": "Month",
     "days": "Days",
-    "changePassword": "Change Password"
-    
+    "changePassword": "Change Password",
 
-    
+    "changePasswordMessage": "Change your password now",
+    "oldPassword": "Old Password",
+    "newPassword": "New Password"
     
 }
