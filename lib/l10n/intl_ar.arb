@@ -66,6 +66,8 @@
     
     "changePasswordMessage": "قم بتغيير كلمة المرور الخاصة بك الان",
     "oldPassword": "كلمة المرور القديمة",
-    "newPassword": "كلمة المرور الجديدة"
+    "newPassword": "كلمة المرور الجديدة",
+
+    "tokenExpiredMessage" : "عذرا حدث خطا , قم بتسجيل الدخول مرة اخرى"
     
 }
