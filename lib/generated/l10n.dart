@@ -619,6 +619,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Sorry, an error occurred, you have to log in again`
+  String get tokenExpiredMessage {
+    return Intl.message(
+      'Sorry, an error occurred, you have to log in again',
+      name: 'tokenExpiredMessage',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

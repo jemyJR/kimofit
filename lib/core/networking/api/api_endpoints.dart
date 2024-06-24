@@ -5,6 +5,7 @@ class ApiEndPoints {
   static const String signup = 'trainees/signup/';
   static const String home = 'home/';
   static const String changePassword = 'trainees/password-update/';
+  static const String refreshToken = 'trainees/token/refresh/';
 }
 
 class ApiKey {
@@ -21,10 +22,13 @@ class ApiKey {
   static const String phone = 'phone_number';
   static const String password = 'password';
   static const String deviceId = 'registered_device_id';
+  static const String id = 'traineeID';
 
   //! Token keys
   static const String token = 'access';
   static const String refreshToken = 'refresh';
+  static const String tokenNotValid = 'token_not_valid';
+  static const String tokenExpiredMessage = 'Token is invalid or expired';
 
   //! signup keys
   static const String name = 'full_name';

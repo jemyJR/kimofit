@@ -66,6 +66,8 @@
 
     "changePasswordMessage": "Change your password now",
     "oldPassword": "Old Password",
-    "newPassword": "New Password"
+    "newPassword": "New Password",
+
+    "tokenExpiredMessage" : "Sorry, an error occurred, you have to log in again"
     
 }

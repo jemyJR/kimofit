@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:kimofit/core/cache/cache_helper.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/constants/constants.dart';
-import 'package:kimofit/core/di/dependency_injection.dart';
 import 'package:kimofit/core/helpers/extensions.dart';
 import 'package:kimofit/core/helpers/launch_url.dart';
+import 'package:kimofit/core/networking/user_credentials/user_credentials.dart';
 import 'package:kimofit/core/routing/routes.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/custom_button.dart';
-import 'package:kimofit/core/widgets/custom_snack_bar.dart';
 import 'package:kimofit/core/widgets/loading_widget.dart';
 import 'package:kimofit/features/profile/ui/widgets/change_password/change_password_form.dart';
 import 'package:kimofit/generated/l10n.dart';
@@ -71,21 +69,13 @@ Widget getButtonType(BuildContext context, ButtonType type) {
         text: S.of(context).logOut,
         textStyle: TextStyles.font18White,
         backgroundColor: ColorsManager.bgDark,
-        onPressed: () => logout(context),
+        onPressed: () => UserCredentials.deleteAll(
+          S.of(context).loggedOutSuccessfully,
+        ),
         icon: const Icon(
           FontAwesomeIcons.arrowRightFromBracket,
           color: ColorsManager.white,
         ),
       );
   }
-}
-
-void logout(BuildContext context) {
-  getIt<CacheHelper>().clearSecuredData();
-  getIt<CacheHelper>().removeData(key: Constants.isUserLoggedIn);
-  context.pushNamedAndRemoveUntil(
-    Routes.loginScreen,
-    predicate: (route) => false,
-  );
-  customSnackBar(context, S.of(context).loggedOutSuccessfully);
 }
