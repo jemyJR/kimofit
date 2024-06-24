@@ -89,6 +89,7 @@ class ApiInterceptors extends Interceptor {
 class HeaderHelper {
   static Future<Map<String, String>> getAuthHeaders() async {
     String token = await UserCredentials.getToken() ?? '';
+
     String languageCode =
         await getIt<CacheHelper>().getData(key: Constants.languageCode) ?? 'ar';
 
