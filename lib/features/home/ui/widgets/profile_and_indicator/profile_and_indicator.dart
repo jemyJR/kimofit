@@ -11,7 +11,7 @@ import 'package:kimofit/features/home/ui/widgets/profile_and_indicator/percent_i
 import 'package:kimofit/features/home/ui/widgets/profile_and_indicator/profile_circle.dart';
 import 'package:kimofit/features/home/ui/widgets/profile_and_indicator/subscription_date.dart';
 import 'package:kimofit/core/routing/animation_route/custom_animation_wrapper.dart';
-import 'package:kimofit/features/profile/ui/widgets/profile_screen_builder.dart';
+import 'package:kimofit/features/profile/ui/widgets/get_profile_data/profile_screen_builder.dart';
 
 class ProfileAndIndicator extends StatelessWidget {
   const ProfileAndIndicator({super.key, required this.subscription});
@@ -53,7 +53,7 @@ class ProfileAndIndicator extends StatelessWidget {
                           // profile screen is the screen that will be navigated to
                           CustomAnimatedRoute(
                             screenWrapper: const CustomAnimatedWrapper(
-                              screen: ProfileScreenBuilder(),
+                              screen: ProfileScreenBlocProvider(),
                             ),
                           ),
                         );

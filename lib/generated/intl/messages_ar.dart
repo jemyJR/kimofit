@@ -33,11 +33,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "changePasswordMessage": MessageLookupByLibrary.simpleMessage(
             "قم بتغيير كلمة المرور الخاصة بك الان"),
         "cm": MessageLookupByLibrary.simpleMessage("سم"),
-        "coachingDuration": MessageLookupByLibrary.simpleMessage("مدة التدريب"),
         "contactme": MessageLookupByLibrary.simpleMessage("تواصل معي للتفاصيل"),
         "currentUser":
             MessageLookupByLibrary.simpleMessage("انت مستخدم حالي ؟"),
         "days": MessageLookupByLibrary.simpleMessage("ايام"),
+        "duration": MessageLookupByLibrary.simpleMessage("المدة"),
         "end": MessageLookupByLibrary.simpleMessage("ينتهي"),
         "endDate": MessageLookupByLibrary.simpleMessage("تاريخ الانتهاء"),
         "free": MessageLookupByLibrary.simpleMessage("مجاني"),

@@ -33,13 +33,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "changePasswordMessage":
             MessageLookupByLibrary.simpleMessage("Change your password now"),
         "cm": MessageLookupByLibrary.simpleMessage("CM"),
-        "coachingDuration":
-            MessageLookupByLibrary.simpleMessage("Coaching Duration"),
         "contactme":
             MessageLookupByLibrary.simpleMessage("Contact me for details"),
         "currentUser":
             MessageLookupByLibrary.simpleMessage("Are you  current user ?"),
         "days": MessageLookupByLibrary.simpleMessage("Days"),
+        "duration": MessageLookupByLibrary.simpleMessage("Duration"),
         "end": MessageLookupByLibrary.simpleMessage("End"),
         "endDate": MessageLookupByLibrary.simpleMessage("End Date"),
         "free": MessageLookupByLibrary.simpleMessage("Free"),
