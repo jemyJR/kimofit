@@ -5,6 +5,10 @@ class Assets {
   /// assets/animation/loading.json
   static const String animationLoading = "assets/animation/loading.json";
 
+  /// Assets for animationNoData
+  /// assets/animation/no_data.json
+  static const String animationNoData = "assets/animation/no_data.json";
+
   /// Assets for animationProfile
   /// assets/animation/profile.json
   static const String animationProfile = "assets/animation/profile.json";

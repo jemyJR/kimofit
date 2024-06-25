@@ -16,6 +16,8 @@ class ApiEndPoints {
       throw Exception("Trainee ID not found");
     }
   }
+
+  static const String supplement = 'supplements/all/';
 }
 
 class ApiKey {
@@ -77,4 +79,12 @@ class ApiKey {
   static const String height = 'height';
   static const String weight = 'weight';
   static const String subscriptionMonths = 'subscription_months';
+
+  //! Supplement keys
+  static const String supplementName = 'name';
+  static const String supplementImage = 'image';
+  static const String supplementDose = 'dose';
+  static const String supplementTimes = 'time_description';
+  static const String results = 'results';
+  static const String count = 'count';
 }

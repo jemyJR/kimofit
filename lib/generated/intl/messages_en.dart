@@ -38,9 +38,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "currentUser":
             MessageLookupByLibrary.simpleMessage("Are you  current user ?"),
         "days": MessageLookupByLibrary.simpleMessage("Days"),
+        "dose": MessageLookupByLibrary.simpleMessage("Dose"),
         "duration": MessageLookupByLibrary.simpleMessage("Duration"),
         "end": MessageLookupByLibrary.simpleMessage("End"),
         "endDate": MessageLookupByLibrary.simpleMessage("End Date"),
+        "evening": MessageLookupByLibrary.simpleMessage("Evening"),
         "free": MessageLookupByLibrary.simpleMessage("Free"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
         "homeWelcomeMessage":
@@ -57,10 +59,13 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginMessage":
             MessageLookupByLibrary.simpleMessage("Log in to your account"),
         "month": MessageLookupByLibrary.simpleMessage("Month"),
+        "morning": MessageLookupByLibrary.simpleMessage("Morning"),
         "myProfile": MessageLookupByLibrary.simpleMessage("My Profile"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
         "newUser": MessageLookupByLibrary.simpleMessage("Are you a new user ?"),
+        "noDataMessage": MessageLookupByLibrary.simpleMessage(
+            "Sorry, there is no current data . Please contact us to obtain data specifically for you"),
         "number": MessageLookupByLibrary.simpleMessage("Number"),
         "obParagraph1": MessageLookupByLibrary.simpleMessage(
             "You are the only one who can change yourself and I am here to help you\nChange needs a push"),

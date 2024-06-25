@@ -5,7 +5,8 @@ import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
 
 class NotFoundWidget extends StatelessWidget {
-  const NotFoundWidget({super.key});
+  const NotFoundWidget({super.key, this.withText = false});
+  final bool withText;
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +19,12 @@ class NotFoundWidget extends StatelessWidget {
           size: 50.sp,
         ),
         horizontalSpace(10),
-        Text(
-          'Not Found',
-          style: TextStyles.font22White,
-        ),
+        withText
+            ? Text(
+                'Not Found',
+                style: TextStyles.font22White,
+              )
+            : const SizedBox.shrink(),
       ],
     );
   }
