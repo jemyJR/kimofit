@@ -73,8 +73,10 @@ class AppRouter {
           builder: (context) => const DietPlanScreen(),
         );
       case Routes.supplementScreen:
+        arguments as String;
+
         return MaterialPageRoute(
-          builder: (context) => const SupplementScreen(),
+          builder: (context) => SupplementScreen(title: arguments),
         );
       case Routes.subscriptionScreen:
         arguments as SubscriptionFeaturesModel;
