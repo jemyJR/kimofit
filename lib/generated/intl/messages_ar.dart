@@ -37,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "currentUser":
             MessageLookupByLibrary.simpleMessage("انت مستخدم حالي ؟"),
         "days": MessageLookupByLibrary.simpleMessage("ايام"),
+        "dose": MessageLookupByLibrary.simpleMessage("وحدة"),
         "duration": MessageLookupByLibrary.simpleMessage("المدة"),
         "end": MessageLookupByLibrary.simpleMessage("ينتهي"),
         "endDate": MessageLookupByLibrary.simpleMessage("تاريخ الانتهاء"),
