@@ -59,7 +59,7 @@
     "subscriptionDetails": "تفاصيل الاشتراك",
     "startDate": "تاريخ البدء",
     "endDate": "تاريخ الانتهاء",
-    "coachingDuration": "مدة التدريب",
+    "duration": "المدة",
     "month": "شهر",
     "days": "ايام",
     "changePassword": "تغيير كلمة المرور",

@@ -2,15 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/features/profile/data/models/profile_list_title_model.dart';
 import 'package:kimofit/features/profile/ui/widgets/profile_list_title.dart';
+import 'package:kimofit/features/profile/ui/widgets/profile_list_title_shimmer.dart';
+
+enum ProfilestateType { sucess, loading }
 
 class ProfileListViewWithTitle extends StatelessWidget {
   const ProfileListViewWithTitle({
     super.key,
     required this.title,
+    required this.listLength,
     required this.proflileDataList,
+    required this.stateType,
   });
   final String title;
+  final int listLength;
   final List<ProfileListTitleModel> proflileDataList;
+  final ProfilestateType stateType;
 
   @override
   Widget build(BuildContext context) {
@@ -23,13 +30,17 @@ class ProfileListViewWithTitle extends StatelessWidget {
           style: TextStyles.font18White,
         ),
         ListView.builder(
-          itemCount: proflileDataList.length,
+          itemCount: listLength,
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
           itemBuilder: (context, index) {
-            return ProfileListTitle(
-              profileListTitleModel: proflileDataList[index],
-            );
+            return stateType == ProfilestateType.sucess
+                ? ProfileListTitle(
+                    profileListTitleModel: proflileDataList[index],
+                  )
+                : ProfileListTitleShimmer(
+                    profileListTitleModel: proflileDataList[index],
+                  );
           },
         ),
       ],

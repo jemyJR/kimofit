@@ -1,3 +1,5 @@
+import 'package:kimofit/core/networking/user_credentials/user_credentials.dart';
+
 class ApiEndPoints {
   static const String apiBaseUrl = 'https://kimofit-production.up.railway.app/';
 
@@ -6,6 +8,14 @@ class ApiEndPoints {
   static const String home = 'home/';
   static const String changePassword = 'trainees/password-update/';
   static const String refreshToken = 'trainees/token/refresh/';
+  static Future<String> profile() async {
+    String? traineeId = await UserCredentials.getId();
+    if (traineeId != null) {
+      return '/trainees/profiles/$traineeId/';
+    } else {
+      throw Exception("Trainee ID not found");
+    }
+  }
 }
 
 class ApiKey {
@@ -49,7 +59,7 @@ class ApiKey {
   static const String subscriptionStartDate = 'starts';
   static const String subscriptionEndDate = 'ends';
   static const String subscriptionStatus = 'status';
-  static const String subscriptionPercent = 'subscription_percentage';
+  static const String subscriptionPercent = 'percentage';
   static const String subscriptionIsPaid = 'monthly';
   static const String homeErrorMessage = 'message';
 
@@ -61,4 +71,10 @@ class ApiKey {
   static const String oldPassword = 'old_password';
   static const String newPassword = 'new_password';
   static const String success = 'success';
+
+  //! profile keys
+  static const String age = 'age';
+  static const String height = 'height';
+  static const String weight = 'weight';
+  static const String subscriptionMonths = 'subscription_months';
 }

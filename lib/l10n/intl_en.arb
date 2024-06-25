@@ -59,7 +59,7 @@
     "subscriptionDetails": "Subscription Details",
     "startDate": "Start Date",
     "endDate": "End Date",
-    "coachingDuration": "Coaching Duration",
+    "duration": "Duration",
     "month": "Month",
     "days": "Days",
     "changePassword": "Change Password",

@@ -550,11 +550,11 @@ class S {
     );
   }
 
-  /// `Coaching Duration`
-  String get coachingDuration {
+  /// `Duration`
+  String get duration {
     return Intl.message(
-      'Coaching Duration',
-      name: 'coachingDuration',
+      'Duration',
+      name: 'duration',
       desc: '',
       args: [],
     );

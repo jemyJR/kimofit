@@ -17,3 +17,16 @@ final class ChangePasswordFailure extends ProfileState {
   final String errorMessage;
   ChangePasswordFailure({required this.errorMessage});
 }
+
+//! Get Profile Data
+final class GetProfleDataSuccess extends ProfileState {
+  final ProfileResponseModel profileResponseModel;
+  GetProfleDataSuccess({required this.profileResponseModel});
+}
+
+final class GetProfleDataLoading extends ProfileState {}
+
+final class GetProfleDataFailure extends ProfileState {
+  final String errorMessage;
+  GetProfleDataFailure({required this.errorMessage});
+}

@@ -5,10 +5,9 @@ import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/widgets/app_buttons.dart';
 import 'package:kimofit/core/widgets/custom_app_bar.dart';
 import 'package:kimofit/core/widgets/gradient.dart';
-import 'package:kimofit/features/profile/data/models/profile_list_title_model.dart';
 import 'package:kimofit/features/profile/ui/widgets/profile_container.dart';
-import 'package:kimofit/features/profile/ui/widgets/profile_list_view_with_title.dart';
 import 'package:kimofit/generated/l10n.dart';
+import 'widgets/get_profile_data/get_profile_data_bloc_builder.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -34,15 +33,7 @@ class ProfileScreen extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      ProfileListViewWithTitle(
-                        title: S.of(context).personalInformation,
-                        proflileDataList: profilePersonalList(context),
-                      ),
-                      verticalSpace(20),
-                      ProfileListViewWithTitle(
-                        title: S.of(context).subscriptionDetails,
-                        proflileDataList: profileSubscriptionList(context),
-                      ),
+                      const GetProfileDataBlocBuilder(),
                       verticalSpace(20),
                       getButtonType(context, ButtonType.changePasswordScreen),
                       verticalSpace(10),
