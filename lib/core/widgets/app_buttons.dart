@@ -20,13 +20,13 @@ enum ButtonType {
   logOut,
 }
 
-Widget getButtonType(BuildContext context, ButtonType type) {
+Widget getButtonType(BuildContext context, ButtonType type, {Color? btnColor}) {
   switch (type) {
     case ButtonType.changeLanguage:
       return CustomButton(
         text: S.of(context).language,
         textStyle: TextStyles.font15White,
-        backgroundColor: ColorsManager.blue,
+        backgroundColor: btnColor ?? ColorsManager.blue,
         onPressed: () =>
             LoadingWidgetService().changeLanguageWithDelay(context),
       );
@@ -35,7 +35,7 @@ Widget getButtonType(BuildContext context, ButtonType type) {
       return CustomButton(
         text: S.of(context).contactme,
         textStyle: TextStyles.font18White,
-        backgroundColor: ColorsManager.green,
+        backgroundColor: btnColor ?? ColorsManager.green,
         onPressed: () => launchURL(SocialMediaLinks.whatsapp),
         icon: const FaIcon(
           FontAwesomeIcons.whatsapp,
@@ -46,7 +46,7 @@ Widget getButtonType(BuildContext context, ButtonType type) {
       return CustomButton(
         text: S.of(context).changePassword,
         textStyle: TextStyles.font18White,
-        backgroundColor: ColorsManager.yellow,
+        backgroundColor: btnColor ?? ColorsManager.yellow,
         onPressed: () => context.pushNamed(Routes.changePasswordScreen),
         icon: const Icon(
           FontAwesomeIcons.key,
@@ -57,7 +57,7 @@ Widget getButtonType(BuildContext context, ButtonType type) {
       return CustomButton(
         text: S.of(context).changePassword,
         textStyle: TextStyles.font18White,
-        backgroundColor: ColorsManager.yellow,
+        backgroundColor: btnColor ?? ColorsManager.yellow,
         onPressed: () => validateThenDoChangePassword(context),
         icon: const Icon(
           FontAwesomeIcons.key,
@@ -68,7 +68,7 @@ Widget getButtonType(BuildContext context, ButtonType type) {
       return CustomButton(
         text: S.of(context).logOut,
         textStyle: TextStyles.font18White,
-        backgroundColor: ColorsManager.bgDark,
+        backgroundColor: btnColor ?? ColorsManager.bgDark,
         onPressed: () => UserCredentials.deleteAll(
           S.of(context).loggedOutSuccessfully,
         ),
