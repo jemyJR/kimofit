@@ -7,7 +7,6 @@ import 'package:kimofit/core/widgets/custom_app_bar.dart';
 import 'package:kimofit/core/widgets/gradient.dart';
 import 'package:kimofit/features/profile/ui/widgets/profile_container.dart';
 import 'package:kimofit/generated/l10n.dart';
-
 import 'widgets/get_profile_data/get_profile_data_bloc_builder.dart';
 
 class ProfileScreen extends StatelessWidget {
