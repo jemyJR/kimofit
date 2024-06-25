@@ -639,6 +639,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Morning`
+  String get morning {
+    return Intl.message(
+      'Morning',
+      name: 'morning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Evening`
+  String get evening {
+    return Intl.message(
+      'Evening',
+      name: 'evening',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sorry, there is no current data . Please contact us to obtain data specifically for you`
+  String get noDataMessage {
+    return Intl.message(
+      'Sorry, there is no current data . Please contact us to obtain data specifically for you',
+      name: 'noDataMessage',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

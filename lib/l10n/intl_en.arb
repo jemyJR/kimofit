@@ -70,6 +70,10 @@
 
     "tokenExpiredMessage" : "Sorry, an error occurred, you have to log in again",
 
-    "dose": "Dose"
+    "dose": "Dose",
+    "morning": "Morning",
+    "evening": "Evening",
+
+    "noDataMessage":"Sorry, there is no current data . Please contact us to obtain data specifically for you"
     
 }

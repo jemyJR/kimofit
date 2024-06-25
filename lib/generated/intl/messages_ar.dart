@@ -41,6 +41,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "duration": MessageLookupByLibrary.simpleMessage("المدة"),
         "end": MessageLookupByLibrary.simpleMessage("ينتهي"),
         "endDate": MessageLookupByLibrary.simpleMessage("تاريخ الانتهاء"),
+        "evening": MessageLookupByLibrary.simpleMessage("مساء"),
         "free": MessageLookupByLibrary.simpleMessage("مجاني"),
         "getStarted": MessageLookupByLibrary.simpleMessage("ابدء الان"),
         "homeWelcomeMessage":
@@ -57,11 +58,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginMessage":
             MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول الي حسابك"),
         "month": MessageLookupByLibrary.simpleMessage("شهر"),
+        "morning": MessageLookupByLibrary.simpleMessage("صباحا"),
         "myProfile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "newPassword":
             MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
         "newUser": MessageLookupByLibrary.simpleMessage("انت مستخدم جديد ؟"),
+        "noDataMessage": MessageLookupByLibrary.simpleMessage(
+            "عذرا، لا توجد بيانات الحالية. يرجى التواصل بنا للحصول على بيانات خاصة بك"),
         "number": MessageLookupByLibrary.simpleMessage("الرقم"),
         "obParagraph1": MessageLookupByLibrary.simpleMessage(
             "انت الوحيد الي تقدر تغير من نفسك وانا هنا عشان اساعدك\nالتغيير محتاج زقه"),

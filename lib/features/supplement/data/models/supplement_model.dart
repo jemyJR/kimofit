@@ -1,4 +1,6 @@
 import 'package:kimofit/core/helpers/localized_field.dart';
+import 'package:kimofit/core/networking/api/api_endpoints.dart';
+import 'package:kimofit/features/supplement/data/models/supplement_doses_model.dart';
 
 class SupplementModel {
   LocalizedField name;
@@ -10,14 +12,11 @@ class SupplementModel {
     required this.image,
     required this.doses,
   });
-}
-
-class SupplementDosesModel {
-  int dose;
-  String times;
-
-  SupplementDosesModel({
-    required this.dose,
-    required this.times,
-  });
+  factory SupplementModel.fromJson(Map<String, dynamic> json) {
+    final List<dynamic> doses = json[ApiKey.supplementDose];
+    return SupplementModel(
+        name: LocalizedField.fromJson(json[ApiKey.supplementName]),
+        image: json[ApiKey.supplementImage],
+        doses: doses.map((e) => SupplementDosesModel.fromJson(e)).toList());
+  }
 }

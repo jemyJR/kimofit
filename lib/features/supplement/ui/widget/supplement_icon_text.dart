@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
-import 'package:kimofit/features/supplement/data/models/supplement_model.dart';
+import 'package:kimofit/features/supplement/data/models/supplement_doses_model.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 enum IconText { dose, time }

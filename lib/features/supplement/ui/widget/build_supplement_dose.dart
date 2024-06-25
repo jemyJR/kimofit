@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
-import 'package:kimofit/features/supplement/data/models/supplement_model.dart';
+import 'package:kimofit/features/supplement/data/models/supplement_doses_model.dart';
 import 'package:kimofit/features/supplement/ui/widget/supplement_icon_text.dart';
 
 class BuildSupplementDoses extends StatelessWidget {
