@@ -1,7 +1,6 @@
 import 'package:kimofit/core/helpers/localized_field.dart';
 import 'package:kimofit/core/networking/api/api_endpoints.dart';
 
-//TODO: Will change this model api key to match the api response
 class TraineeModel {
   final LocalizedField name;
   final String phone;
