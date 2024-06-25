@@ -33,6 +33,11 @@ class TextStyles {
   );
 
   //! Bold
+  static TextStyle font15BlueBold = TextStyle(
+    fontSize: 15.sp,
+    color: ColorsManager.blue,
+    fontWeight: FontWeight.bold,
+  );
   static TextStyle font18BlueBold = TextStyle(
     fontFamily: AppFonts.cairo,
     fontSize: 18.sp,

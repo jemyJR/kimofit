@@ -11,8 +11,11 @@ import 'package:kimofit/features/home_cardio_plan/ui/warm_up_exercises_screen.da
 import 'package:kimofit/features/login/logic/login_cubit.dart';
 import 'package:kimofit/features/login/ui/login_screen.dart';
 import 'package:kimofit/features/onboarding/ui/onboarding_screen.dart';
+import 'package:kimofit/features/profile/logic/profile_cubit.dart';
+import 'package:kimofit/features/profile/ui/change_password_screen.dart';
 import 'package:kimofit/features/signup/logic/cubit/signup_cubit.dart';
 import 'package:kimofit/features/signup/ui/signup_screen.dart';
+import 'package:kimofit/features/supplement/logic/supplement_cubit.dart';
 import 'package:kimofit/features/supplement/ui/supplement_screen.dart';
 import 'package:kimofit/features/warm_up_exercises/ui/warm_up_exercises_screen.dart';
 import 'package:kimofit/features/workout_exercises/ui/workout_exercises_screen.dart';
@@ -47,6 +50,13 @@ class AppRouter {
             child: const HomeScreen(),
           ),
         );
+      case Routes.changePasswordScreen:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<ProfileCubit>(),
+            child: const ChangePasswordScreen(),
+          ),
+        );
       case Routes.warmUpExercisesScreen:
         return MaterialPageRoute(
           builder: (context) => const WarmUpExercisesScreen(),
@@ -64,8 +74,13 @@ class AppRouter {
           builder: (context) => const DietPlanScreen(),
         );
       case Routes.supplementScreen:
+        arguments as String;
+
         return MaterialPageRoute(
-          builder: (context) => const SupplementScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<SupplementCubit>()..getSupplementData(),
+            child: SupplementScreen(title: arguments),
+          ),
         );
       case Routes.subscriptionScreen:
         arguments as SubscriptionFeaturesModel;

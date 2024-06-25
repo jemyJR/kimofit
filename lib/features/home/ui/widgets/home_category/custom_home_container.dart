@@ -36,7 +36,7 @@ class CustomHomeContainer extends StatelessWidget {
     void handleTap(BuildContext context) {
       final routeName =
           isPaid || isFree ? homeCategoryNav : Routes.subscriptionScreen;
-      final arguments = isPaid || isFree ? null : subscriptionFeatures[index];
+      final arguments = isPaid || isFree ? text : subscriptionFeatures[index];
       context.pushNamed(routeName, arguments: arguments);
     }
 

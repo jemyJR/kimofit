@@ -20,13 +20,18 @@ class ErrorModel {
     this.trainerName,
   });
   factory ErrorModel.fromJson(Map<String, dynamic> json) {
+    // To fix the error in login screen when the user enter wrong credentials
+    LocalizedField? trainerName;
+    if (json[ApiKey.trainee] != null) {
+      trainerName =
+          LocalizedField.fromJson(json[ApiKey.trainee][ApiKey.trainerName]);
+    }
     return ErrorModel(
       errorMessage: json[ApiKey.errorMessage],
       errorCode: json[ApiKey.errorCode],
       phone: json[ApiKey.phone],
       deviceId: json[ApiKey.deviceId],
-      trainerName:
-          LocalizedField.fromJson(json[ApiKey.trainee][ApiKey.trainerName]),
+      trainerName: trainerName,
     );
   }
 }

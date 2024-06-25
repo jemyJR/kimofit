@@ -46,8 +46,34 @@
     "subscription": "الاشتراك",
     "SubscriptionMessage": "هذة الميزة متاحه للمستخدمين المشتركين فقط يرجي ترقية حسابكم عن طريق التواصل للاستمتاع بجميع المميزات",
     "SubscriptionFeatures":" مهم جدا وذلك للاسباب التاليه :",
-    "contactme": "تواصل معي للتفاصيل"
+    "contactme": "تواصل معي للتفاصيل",
 
+    "myProfile": "الملف الشخصي",
+    "personalInformation": "المعلومات الشخصية",
+    "number":"الرقم",
+    "age": "العمر",
+    "length": "الطول",
+    "weight": "الوزن",
+    "kg": "كجم",
+    "cm": "سم",
+    "subscriptionDetails": "تفاصيل الاشتراك",
+    "startDate": "تاريخ البدء",
+    "endDate": "تاريخ الانتهاء",
+    "duration": "المدة",
+    "month": "شهر",
+    "days": "ايام",
+    "changePassword": "تغيير كلمة المرور",
     
+    "changePasswordMessage": "قم بتغيير كلمة المرور الخاصة بك الان",
+    "oldPassword": "كلمة المرور القديمة",
+    "newPassword": "كلمة المرور الجديدة",
+
+    "tokenExpiredMessage" : "عذرا حدث خطا , قم بتسجيل الدخول مرة اخرى",
+
+    "dose": "وحدة",
+    "morning": "صباحا",
+    "evening": "مساء",
+
+    "noDataMessage": "عذرا، لا توجد بيانات الحالية. يرجى التواصل بنا للحصول على بيانات خاصة بك"
     
 }

@@ -46,7 +46,34 @@
     "subscription": "Subscription",
     "SubscriptionMessage": "This feature is available to subscribed users only. Please upgrade your account by contacting us to enjoy all the features",
     "SubscriptionFeatures":"are very important for the following reasons:",
-    "contactme": "Contact me for details"
-    
+    "contactme": "Contact me for details",
+
+    "myProfile": "My Profile",
+    "personalInformation": "Personal Information",
+    "number":"Number",
+    "age": "Age",
+    "length": "Length",
+    "weight": "Weight",
+    "kg": "KG",
+    "cm": "CM",
+    "subscriptionDetails": "Subscription Details",
+    "startDate": "Start Date",
+    "endDate": "End Date",
+    "duration": "Duration",
+    "month": "Month",
+    "days": "Days",
+    "changePassword": "Change Password",
+
+    "changePasswordMessage": "Change your password now",
+    "oldPassword": "Old Password",
+    "newPassword": "New Password",
+
+    "tokenExpiredMessage" : "Sorry, an error occurred, you have to log in again",
+
+    "dose": "Dose",
+    "morning": "Morning",
+    "evening": "Evening",
+
+    "noDataMessage":"Sorry, there is no current data . Please contact us to obtain data specifically for you"
     
 }

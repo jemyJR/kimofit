@@ -14,7 +14,7 @@ class DioConsumer extends ApiConsumer {
     dio.options.connectTimeout = timeOut;
     dio.options.receiveTimeout = timeOut;
 
-    dio.interceptors.add(ApiInterceptors());
+    dio.interceptors.add(ApiInterceptors(dio));
     dio.interceptors.add(PrettyDioLogger(
       request: true,
       requestHeader: true,

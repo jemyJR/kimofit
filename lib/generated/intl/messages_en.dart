@@ -27,16 +27,29 @@ class MessageLookup extends MessageLookupByLibrary {
             "are very important for the following reasons:"),
         "SubscriptionMessage": MessageLookupByLibrary.simpleMessage(
             "This feature is available to subscribed users only. Please upgrade your account by contacting us to enjoy all the features"),
+        "age": MessageLookupByLibrary.simpleMessage("Age"),
+        "changePassword":
+            MessageLookupByLibrary.simpleMessage("Change Password"),
+        "changePasswordMessage":
+            MessageLookupByLibrary.simpleMessage("Change your password now"),
+        "cm": MessageLookupByLibrary.simpleMessage("CM"),
         "contactme":
             MessageLookupByLibrary.simpleMessage("Contact me for details"),
         "currentUser":
             MessageLookupByLibrary.simpleMessage("Are you  current user ?"),
+        "days": MessageLookupByLibrary.simpleMessage("Days"),
+        "dose": MessageLookupByLibrary.simpleMessage("Dose"),
+        "duration": MessageLookupByLibrary.simpleMessage("Duration"),
         "end": MessageLookupByLibrary.simpleMessage("End"),
+        "endDate": MessageLookupByLibrary.simpleMessage("End Date"),
+        "evening": MessageLookupByLibrary.simpleMessage("Evening"),
         "free": MessageLookupByLibrary.simpleMessage("Free"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
         "homeWelcomeMessage":
             MessageLookupByLibrary.simpleMessage("We hope you are well"),
+        "kg": MessageLookupByLibrary.simpleMessage("KG"),
         "language": MessageLookupByLibrary.simpleMessage("عربي"),
+        "length": MessageLookupByLibrary.simpleMessage("Length"),
         "logOut": MessageLookupByLibrary.simpleMessage("Log out"),
         "loggedInSuccessfully": MessageLookupByLibrary.simpleMessage(
             "You have been logged in successfully"),
@@ -45,8 +58,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("Log in"),
         "loginMessage":
             MessageLookupByLibrary.simpleMessage("Log in to your account"),
+        "month": MessageLookupByLibrary.simpleMessage("Month"),
+        "morning": MessageLookupByLibrary.simpleMessage("Morning"),
+        "myProfile": MessageLookupByLibrary.simpleMessage("My Profile"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
         "newUser": MessageLookupByLibrary.simpleMessage("Are you a new user ?"),
+        "noDataMessage": MessageLookupByLibrary.simpleMessage(
+            "Sorry, there is no current data . Please contact us to obtain data specifically for you"),
+        "number": MessageLookupByLibrary.simpleMessage("Number"),
         "obParagraph1": MessageLookupByLibrary.simpleMessage(
             "You are the only one who can change yourself and I am here to help you\nChange needs a push"),
         "obParagraph2": MessageLookupByLibrary.simpleMessage(
@@ -57,7 +77,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "Don\'t lose hope that you will change your body, your health, and your life\nFirst and last, this is your body, this is your health, and you are the decision maker"),
         "obParagraph5": MessageLookupByLibrary.simpleMessage(
             "Your reaching your goal is\nas important to me as it is to you. Your shortcomings in some part, even if it is small in relation to you, may be a reason for your development and its lack thereof sometimes."),
+        "oldPassword": MessageLookupByLibrary.simpleMessage("Old Password"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "personalInformation":
+            MessageLookupByLibrary.simpleMessage("Personal Information"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "searchCountry": MessageLookupByLibrary.simpleMessage("Search Country"),
         "signUpSuccessfully": MessageLookupByLibrary.simpleMessage(
@@ -66,9 +89,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "signupMessage": MessageLookupByLibrary.simpleMessage(
             "Create your account now to enjoy a unique experience"),
         "start": MessageLookupByLibrary.simpleMessage("Start"),
+        "startDate": MessageLookupByLibrary.simpleMessage("Start Date"),
         "subscription": MessageLookupByLibrary.simpleMessage("Subscription"),
+        "subscriptionDetails":
+            MessageLookupByLibrary.simpleMessage("Subscription Details"),
         "subscriptionEndMessage": MessageLookupByLibrary.simpleMessage(
             "You have reached the end of your subscription!!\nPlease renew your subscription to continue using the app."),
+        "tokenExpiredMessage": MessageLookupByLibrary.simpleMessage(
+            "Sorry, an error occurred, you have to log in again"),
         "trainee": MessageLookupByLibrary.simpleMessage("Trainee"),
         "validationEmptyField":
             MessageLookupByLibrary.simpleMessage("This field can\'t be empty"),
@@ -82,6 +110,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "Please enter a valid phone number"),
         "validationPhoneEmptyField":
             MessageLookupByLibrary.simpleMessage("Please enter a phone number"),
+        "weight": MessageLookupByLibrary.simpleMessage("Weight"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome")
       };
 }

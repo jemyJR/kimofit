@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/assets.dart';
+import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/app_buttons.dart';
@@ -34,7 +35,11 @@ class SubscriptionEnd extends StatelessWidget {
           // button
           getButtonType(context, ButtonType.contactme),
           verticalSpace(10),
-          getButtonType(context, ButtonType.logOut),
+          getButtonType(
+            context,
+            ButtonType.logOut,
+            btnColor: ColorsManager.yellow,
+          ),
           verticalSpace(10),
         ],
       ),

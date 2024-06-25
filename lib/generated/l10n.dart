@@ -439,6 +439,236 @@ class S {
       args: [],
     );
   }
+
+  /// `My Profile`
+  String get myProfile {
+    return Intl.message(
+      'My Profile',
+      name: 'myProfile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Personal Information`
+  String get personalInformation {
+    return Intl.message(
+      'Personal Information',
+      name: 'personalInformation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Number`
+  String get number {
+    return Intl.message(
+      'Number',
+      name: 'number',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Age`
+  String get age {
+    return Intl.message(
+      'Age',
+      name: 'age',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Length`
+  String get length {
+    return Intl.message(
+      'Length',
+      name: 'length',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Weight`
+  String get weight {
+    return Intl.message(
+      'Weight',
+      name: 'weight',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `KG`
+  String get kg {
+    return Intl.message(
+      'KG',
+      name: 'kg',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `CM`
+  String get cm {
+    return Intl.message(
+      'CM',
+      name: 'cm',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subscription Details`
+  String get subscriptionDetails {
+    return Intl.message(
+      'Subscription Details',
+      name: 'subscriptionDetails',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Start Date`
+  String get startDate {
+    return Intl.message(
+      'Start Date',
+      name: 'startDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `End Date`
+  String get endDate {
+    return Intl.message(
+      'End Date',
+      name: 'endDate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Duration`
+  String get duration {
+    return Intl.message(
+      'Duration',
+      name: 'duration',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Month`
+  String get month {
+    return Intl.message(
+      'Month',
+      name: 'month',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Days`
+  String get days {
+    return Intl.message(
+      'Days',
+      name: 'days',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change Password`
+  String get changePassword {
+    return Intl.message(
+      'Change Password',
+      name: 'changePassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Change your password now`
+  String get changePasswordMessage {
+    return Intl.message(
+      'Change your password now',
+      name: 'changePasswordMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Old Password`
+  String get oldPassword {
+    return Intl.message(
+      'Old Password',
+      name: 'oldPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `New Password`
+  String get newPassword {
+    return Intl.message(
+      'New Password',
+      name: 'newPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sorry, an error occurred, you have to log in again`
+  String get tokenExpiredMessage {
+    return Intl.message(
+      'Sorry, an error occurred, you have to log in again',
+      name: 'tokenExpiredMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dose`
+  String get dose {
+    return Intl.message(
+      'Dose',
+      name: 'dose',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Morning`
+  String get morning {
+    return Intl.message(
+      'Morning',
+      name: 'morning',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Evening`
+  String get evening {
+    return Intl.message(
+      'Evening',
+      name: 'evening',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sorry, there is no current data . Please contact us to obtain data specifically for you`
+  String get noDataMessage {
+    return Intl.message(
+      'Sorry, there is no current data . Please contact us to obtain data specifically for you',
+      name: 'noDataMessage',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -27,15 +27,28 @@ class MessageLookup extends MessageLookupByLibrary {
             " مهم جدا وذلك للاسباب التاليه :"),
         "SubscriptionMessage": MessageLookupByLibrary.simpleMessage(
             "هذة الميزة متاحه للمستخدمين المشتركين فقط يرجي ترقية حسابكم عن طريق التواصل للاستمتاع بجميع المميزات"),
+        "age": MessageLookupByLibrary.simpleMessage("العمر"),
+        "changePassword":
+            MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
+        "changePasswordMessage": MessageLookupByLibrary.simpleMessage(
+            "قم بتغيير كلمة المرور الخاصة بك الان"),
+        "cm": MessageLookupByLibrary.simpleMessage("سم"),
         "contactme": MessageLookupByLibrary.simpleMessage("تواصل معي للتفاصيل"),
         "currentUser":
             MessageLookupByLibrary.simpleMessage("انت مستخدم حالي ؟"),
+        "days": MessageLookupByLibrary.simpleMessage("ايام"),
+        "dose": MessageLookupByLibrary.simpleMessage("وحدة"),
+        "duration": MessageLookupByLibrary.simpleMessage("المدة"),
         "end": MessageLookupByLibrary.simpleMessage("ينتهي"),
+        "endDate": MessageLookupByLibrary.simpleMessage("تاريخ الانتهاء"),
+        "evening": MessageLookupByLibrary.simpleMessage("مساء"),
         "free": MessageLookupByLibrary.simpleMessage("مجاني"),
         "getStarted": MessageLookupByLibrary.simpleMessage("ابدء الان"),
         "homeWelcomeMessage":
             MessageLookupByLibrary.simpleMessage("نأمل ان تكون بخير"),
+        "kg": MessageLookupByLibrary.simpleMessage("كجم"),
         "language": MessageLookupByLibrary.simpleMessage("English"),
+        "length": MessageLookupByLibrary.simpleMessage("الطول"),
         "logOut": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "loggedInSuccessfully":
             MessageLookupByLibrary.simpleMessage("تم تسجيل الدخول بنجاح"),
@@ -44,8 +57,16 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginMessage":
             MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول الي حسابك"),
+        "month": MessageLookupByLibrary.simpleMessage("شهر"),
+        "morning": MessageLookupByLibrary.simpleMessage("صباحا"),
+        "myProfile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
+        "newPassword":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
         "newUser": MessageLookupByLibrary.simpleMessage("انت مستخدم جديد ؟"),
+        "noDataMessage": MessageLookupByLibrary.simpleMessage(
+            "عذرا، لا توجد بيانات الحالية. يرجى التواصل بنا للحصول على بيانات خاصة بك"),
+        "number": MessageLookupByLibrary.simpleMessage("الرقم"),
         "obParagraph1": MessageLookupByLibrary.simpleMessage(
             "انت الوحيد الي تقدر تغير من نفسك وانا هنا عشان اساعدك\nالتغيير محتاج زقه"),
         "obParagraph2": MessageLookupByLibrary.simpleMessage(
@@ -56,7 +77,11 @@ class MessageLookup extends MessageLookupByLibrary {
             "أوعي تفقد الأمل من انك تغير من جسمك وصحتك وحياتك\nفالأول وفالاخر ده جسمك ودي صحتك وانت صاحب القرار"),
         "obParagraph5": MessageLookupByLibrary.simpleMessage(
             "وصولك لهدفك مهم لي بقدر أهميته ليك تقصيرك في جزء ما حتي لو كان صغير بالنسبالك ممكن يكون سبب في تطورك وانعدامه احيانا"),
+        "oldPassword":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور القديمة"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "personalInformation":
+            MessageLookupByLibrary.simpleMessage("المعلومات الشخصية"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "searchCountry": MessageLookupByLibrary.simpleMessage("بحث عن دولة"),
         "signUpSuccessfully":
@@ -65,9 +90,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "signupMessage": MessageLookupByLibrary.simpleMessage(
             " قم بانشاء حسابك الان للاستمتاع بتجربه فريدة"),
         "start": MessageLookupByLibrary.simpleMessage("يبدأ"),
+        "startDate": MessageLookupByLibrary.simpleMessage("تاريخ البدء"),
         "subscription": MessageLookupByLibrary.simpleMessage("الاشتراك"),
+        "subscriptionDetails":
+            MessageLookupByLibrary.simpleMessage("تفاصيل الاشتراك"),
         "subscriptionEndMessage": MessageLookupByLibrary.simpleMessage(
             "لقد وصلت إلى نهاية اشتراكك!!\nيرجى تجديد اشتراكك لمواصلة استخدام التطبيق."),
+        "tokenExpiredMessage": MessageLookupByLibrary.simpleMessage(
+            "عذرا حدث خطا , قم بتسجيل الدخول مرة اخرى"),
         "trainee": MessageLookupByLibrary.simpleMessage("المتدرب"),
         "validationEmptyField": MessageLookupByLibrary.simpleMessage(
             "لا يمكن أن يكون هذا الحقل فارغًا"),
@@ -81,6 +111,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الرجاء ادخال رقم هاتف صالح"),
         "validationPhoneEmptyField":
             MessageLookupByLibrary.simpleMessage("الرجاء ادخال رقم هاتف"),
+        "weight": MessageLookupByLibrary.simpleMessage("الوزن"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً")
       };
 }

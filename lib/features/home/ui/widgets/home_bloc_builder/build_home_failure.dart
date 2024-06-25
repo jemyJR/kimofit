@@ -17,26 +17,38 @@ class BuildHomeFailure extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          SafeArea(
-            child: TopBar(
-              welcomeText: Text(
-                S.of(context).welcome,
-                style: TextStyles.font22White,
-              ),
-              clientName: Text(
-                trainerName.getLocalizedText().getFirstWord(),
-                style: TextStyles.font22White,
-              ),
-              homeWelcomeMessage: Text(
-                S.of(context).homeWelcomeMessage,
-                style: TextStyles.font18Gray,
+          verticalSpace(1),
+          SizedBox(
+            height: MediaQuery.of(context).size.height,
+            child: SingleChildScrollView(
+              physics: const NeverScrollableScrollPhysics(),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  SafeArea(
+                    child: TopBar(
+                      welcomeText: Text(
+                        S.of(context).welcome,
+                        style: TextStyles.font22White,
+                      ),
+                      clientName: Text(
+                        trainerName.getLocalizedText().getFirstWord(),
+                        style: TextStyles.font22White,
+                      ),
+                      homeWelcomeMessage: Text(
+                        S.of(context).homeWelcomeMessage,
+                        style: TextStyles.font18Gray,
+                      ),
+                    ),
+                  ),
+                  const Center(
+                    child: SubscriptionEnd(),
+                  ),
+                ],
               ),
             ),
           ),
-          const Center(
-            child: SubscriptionEnd(),
-          ),
-          verticalSpace(20),
+          verticalSpace(1),
         ],
       ),
     );
