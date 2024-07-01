@@ -18,7 +18,7 @@ class ApiEndPoints {
   }
 
   static const String supplement = 'supplements/all/';
-  static const String diet = '/diets/all/';
+  static const String dietPlan = '/diets/all/';
 }
 
 class ApiKey {
