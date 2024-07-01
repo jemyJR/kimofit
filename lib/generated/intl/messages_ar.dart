@@ -37,6 +37,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "currentUser":
             MessageLookupByLibrary.simpleMessage("انت مستخدم حالي ؟"),
         "days": MessageLookupByLibrary.simpleMessage("ايام"),
+        "dietPlanHeaderMessage": MessageLookupByLibrary.simpleMessage(
+            "اتبع نظامًا غذائيًا متوازنًا لتزويد جسمك بالطاقة، وتحسين أدائك، وتحقيق أهداف لياقتك البدنية."),
         "dose": MessageLookupByLibrary.simpleMessage("وحدة"),
         "duration": MessageLookupByLibrary.simpleMessage("المدة"),
         "end": MessageLookupByLibrary.simpleMessage("ينتهي"),
@@ -66,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "newUser": MessageLookupByLibrary.simpleMessage("انت مستخدم جديد ؟"),
         "noDataMessage": MessageLookupByLibrary.simpleMessage(
             "عذرا، لا توجد بيانات الحالية. يرجى التواصل بنا للحصول على بيانات خاصة بك"),
+        "notes": MessageLookupByLibrary.simpleMessage("الملاحظات"),
         "number": MessageLookupByLibrary.simpleMessage("الرقم"),
         "obParagraph1": MessageLookupByLibrary.simpleMessage(
             "انت الوحيد الي تقدر تغير من نفسك وانا هنا عشان اساعدك\nالتغيير محتاج زقه"),

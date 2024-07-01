@@ -38,6 +38,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "currentUser":
             MessageLookupByLibrary.simpleMessage("Are you  current user ?"),
         "days": MessageLookupByLibrary.simpleMessage("Days"),
+        "dietPlanHeaderMessage": MessageLookupByLibrary.simpleMessage(
+            "Follow a balanced diet to fuel your body, enhance your performance, and achieve your fitness goals."),
         "dose": MessageLookupByLibrary.simpleMessage("Dose"),
         "duration": MessageLookupByLibrary.simpleMessage("Duration"),
         "end": MessageLookupByLibrary.simpleMessage("End"),
@@ -66,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "newUser": MessageLookupByLibrary.simpleMessage("Are you a new user ?"),
         "noDataMessage": MessageLookupByLibrary.simpleMessage(
             "Sorry, there is no current data . Please contact us to obtain data specifically for you"),
+        "notes": MessageLookupByLibrary.simpleMessage("Notes"),
         "number": MessageLookupByLibrary.simpleMessage("Number"),
         "obParagraph1": MessageLookupByLibrary.simpleMessage(
             "You are the only one who can change yourself and I am here to help you\nChange needs a push"),

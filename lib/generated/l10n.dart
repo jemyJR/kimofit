@@ -679,6 +679,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Follow a balanced diet to fuel your body, enhance your performance, and achieve your fitness goals.`
+  String get dietPlanHeaderMessage {
+    return Intl.message(
+      'Follow a balanced diet to fuel your body, enhance your performance, and achieve your fitness goals.',
+      name: 'dietPlanHeaderMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Notes`
+  String get notes {
+    return Intl.message(
+      'Notes',
+      name: 'notes',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

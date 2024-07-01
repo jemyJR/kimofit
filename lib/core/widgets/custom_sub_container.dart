@@ -5,18 +5,19 @@ import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/not_found_widget.dart';
 import 'package:kimofit/features/home/ui/widgets/home_shimmer/shimmer_normal.dart';
-import 'package:kimofit/features/warm_up_exercises/data/models/warm_up_category_model.dart';
 
 class CustomSubContainer extends StatelessWidget {
   const CustomSubContainer({
     super.key,
     required this.height,
-    required this.warmUpCategoryModel,
+    required this.title,
+    required this.imagePath,
     required this.onTap,
   });
 
   final double height;
-  final WarmUpCategoryModel warmUpCategoryModel;
+  final String title;
+  final String imagePath;
   final void Function() onTap;
 
   @override
@@ -35,7 +36,7 @@ class CustomSubContainer extends StatelessWidget {
                 child: CachedNetworkImage(
                   height: height,
                   width: double.infinity,
-                  imageUrl: warmUpCategoryModel.image,
+                  imageUrl: imagePath,
                   fit: BoxFit.cover,
                   placeholder: (context, url) =>
                       ShimmerNormal(height: height, width: double.infinity),
@@ -57,7 +58,7 @@ class CustomSubContainer extends StatelessWidget {
                   ),
                   child: Center(
                     child: Text(
-                      warmUpCategoryModel.name.getLocalizedText(),
+                      title,
                       style: TextStyles.font18White,
                     ),
                   ),
