@@ -77,8 +77,9 @@ class AppRouter {
           builder: (context) => const HomeCardioPlanScreen(),
         );
       case Routes.dietPlanScreen:
+        arguments as String;
         return MaterialPageRoute(
-          builder: (context) => const DietPlanScreen(),
+          builder: (context) => DietPlanScreen(title: arguments),
         );
       case Routes.supplementScreen:
         arguments as String;
