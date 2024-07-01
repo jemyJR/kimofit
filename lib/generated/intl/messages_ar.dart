@@ -111,6 +111,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الرجاء ادخال رقم هاتف صالح"),
         "validationPhoneEmptyField":
             MessageLookupByLibrary.simpleMessage("الرجاء ادخال رقم هاتف"),
+        "warmUpExerciseHeaderMessage": MessageLookupByLibrary.simpleMessage(
+            "قم بالإحماء بشكل صحيح قبل ممارسة الرياضة لتجنب الإصابة وجعل التدريبات الخاصة بك أكثر فعالية."),
         "weight": MessageLookupByLibrary.simpleMessage("الوزن"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً")
       };

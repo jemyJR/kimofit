@@ -5,6 +5,8 @@ class Routes {
   static const String homeScreen = '/homeScreen';
   static const String changePasswordScreen = '/changePasswordScreen';
   static const String warmUpExercisesScreen = '/warmUpExercisesScreen';
+  static const String warmUpExercisesDetailsScreen =
+      '/warmUpExercisesDetailsScreen';
   static const String workoutExercisesScreen = '/workoutExercisesScreen';
   static const String homeCardioPlanScreen = '/homeCardioPlanScreen';
   static const String dietPlanScreen = '/dietPlanScreen';

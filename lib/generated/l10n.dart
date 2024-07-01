@@ -669,6 +669,16 @@ class S {
       args: [],
     );
   }
+
+  /// `Warm up exercise properly before exercising to prevent injury and make your workouts more effective.`
+  String get warmUpExerciseHeaderMessage {
+    return Intl.message(
+      'Warm up exercise properly before exercising to prevent injury and make your workouts more effective.',
+      name: 'warmUpExerciseHeaderMessage',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

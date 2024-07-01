@@ -110,6 +110,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Please enter a valid phone number"),
         "validationPhoneEmptyField":
             MessageLookupByLibrary.simpleMessage("Please enter a phone number"),
+        "warmUpExerciseHeaderMessage": MessageLookupByLibrary.simpleMessage(
+            "Warm up exercise properly before exercising to prevent injury and make your workouts more effective."),
         "weight": MessageLookupByLibrary.simpleMessage("Weight"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome")
       };
