@@ -10,6 +10,8 @@ class Routes {
   static const String workoutExercisesScreen = '/workoutExercisesScreen';
   static const String homeCardioPlanScreen = '/homeCardioPlanScreen';
   static const String dietPlanScreen = '/dietPlanScreen';
+  static const String dietPlanDetailsScreen = '/dietPlanDetailsScreen';
+  static const String dietPlanNotesScreen = '/dietPlanNotesScreen';
   static const String supplementScreen = '/supplementScreen';
   static const String subscriptionScreen = '/subscriptionScreen';
 }

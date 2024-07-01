@@ -17,7 +17,14 @@ class DietPlanResponseModel {
 
     return DietPlanResponseModel(
       image: json[ApiKey.dietImage],
-      notes: List<String>.from(json[ApiKey.dietNotes]),
+      //TODO: Will be fixed in the future
+      // notes: List<String>.from(json[ApiKey.dietNotes] ),
+      notes: (json[ApiKey.dietNotes] as List<dynamic>?)
+              ?.whereType<String>()
+              .map((note) => note)
+              .toList() ??
+          [],
+
       diets: diets.map((e) => DietModel.fromJson(e)).toList(),
     );
   }
