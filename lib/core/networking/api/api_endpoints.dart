@@ -18,6 +18,7 @@ class ApiEndPoints {
   }
 
   static const String supplement = 'supplements/all/';
+  static const String diet = '/diets/all/';
 }
 
 class ApiKey {
@@ -87,4 +88,14 @@ class ApiKey {
   static const String supplementTimes = 'time_description';
   static const String results = 'results';
   static const String count = 'count';
+
+  //! Diet keys
+  static const String dietImage = 'image';
+  static const String dietNotes = 'notes';
+  static const String diets = 'diets';
+  static const String dietTitle = 'title';
+  static const String dietMeals = 'meals';
+  static const String dietMealName = 'name';
+  static const String dietOptions = 'options';
+  static const String dietIngredients = 'ingredients';
 }
