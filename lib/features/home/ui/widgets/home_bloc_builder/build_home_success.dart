@@ -42,7 +42,7 @@ class BuildHomeSuccess extends StatelessWidget {
                 ProfileAndIndicator(
                   subscription: homeResponseModel.subscription,
                 ),
-                isPaid
+                isPaid && homeResponseModel.sponsors.isNotEmpty
                     ? SponsorSlider(
                         sponsors: homeResponseModel.sponsors,
                       )
