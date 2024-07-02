@@ -6,7 +6,7 @@ import 'package:kimofit/core/widgets/custom_sub_container_shimmer.dart';
 import 'package:kimofit/core/widgets/no_data_widget.dart';
 import 'package:kimofit/features/diet_plan/logic/diet_plan_cubit.dart';
 import 'package:kimofit/features/diet_plan/ui/widget/diet_plan_bloc_builder/build_diet_plan_success.dart';
-import 'package:kimofit/features/diet_plan/ui/widget/header_text_and_content.dart';
+import 'package:kimofit/core/widgets/header_text_and_content.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 class DietPlanBlocBuilder extends StatelessWidget {
