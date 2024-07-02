@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kimofit/core/helpers/extensions.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/top_bar.dart';
 import 'package:kimofit/features/home/data/models/home_response_model/home_response_model.dart';
@@ -25,7 +26,7 @@ class BuildHomeSuccess extends StatelessWidget {
               style: TextStyles.font22White,
             ),
             clientName: Text(
-              homeResponseModel.trainerName.getLocalizedText(),
+              homeResponseModel.trainerName.getLocalizedText().getFirstWord(),
               style: TextStyles.font22White,
             ),
             homeWelcomeMessage: Text(
