@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:kimofit/features/profile/data/models/change_password_request_model.dart';
 import 'package:kimofit/features/profile/data/models/profile_response_model.dart';
 import 'package:kimofit/features/profile/data/repo/profile_repo.dart';
-import '../data/models/change_password_request_model.dart';
 part 'profile_state.dart';
 
 class ProfileCubit extends Cubit<ProfileState> {

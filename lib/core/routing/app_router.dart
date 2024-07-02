@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kimofit/core/di/dependency_injection.dart';
 import 'package:kimofit/core/routing/routes.dart';
+import 'package:kimofit/features/diet_plan/data/models/diet_model.dart';
+import 'package:kimofit/features/diet_plan/logic/diet_plan_cubit.dart';
+import 'package:kimofit/features/diet_plan/ui/diet_plan_details_screen.dart';
+import 'package:kimofit/features/diet_plan/ui/diet_plan_notes_screen.dart';
 import 'package:kimofit/features/diet_plan/ui/diet_plan_screen.dart';
 import 'package:kimofit/features/home/data/models/subscription_features_model.dart';
 import 'package:kimofit/features/home/logic/home_cubit.dart';
@@ -77,9 +81,24 @@ class AppRouter {
           builder: (context) => const HomeCardioPlanScreen(),
         );
       case Routes.dietPlanScreen:
+        arguments as String;
         return MaterialPageRoute(
-          builder: (context) => const DietPlanScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<DietPlanCubit>()..getDietPlanData(),
+            child: DietPlanScreen(title: arguments),
+          ),
         );
+      case Routes.dietPlanDetailsScreen:
+        arguments as DietModel;
+        return MaterialPageRoute(
+          builder: (context) => DietPlanDetailsScreen(diet: arguments),
+        );
+      case Routes.dietPlanNotesScreen:
+        arguments as List<String>;
+        return MaterialPageRoute(
+          builder: (context) => DietPlanNotesScreen(notes: arguments),
+        );
+
       case Routes.supplementScreen:
         arguments as String;
 

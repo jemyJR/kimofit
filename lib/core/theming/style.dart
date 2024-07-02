@@ -44,6 +44,11 @@ class TextStyles {
     color: ColorsManager.blue,
     fontWeight: FontWeight.bold,
   );
+  static TextStyle font18YellowBold = TextStyle(
+    fontSize: 18.sp,
+    color: ColorsManager.yellow,
+    fontWeight: FontWeight.bold,
+  );
   static TextStyle font32BoldWhite = TextStyle(
     fontFamily: AppFonts.cairo,
     fontSize: 32.sp,

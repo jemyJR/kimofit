@@ -8,7 +8,7 @@ import 'package:kimofit/core/routing/routes.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/custom_app_bar.dart';
 import 'package:kimofit/features/warm_up_exercises/data/models/warm_up_category_model.dart';
-import 'package:kimofit/features/warm_up_exercises/ui/widget/custom_sub_container.dart';
+import 'package:kimofit/core/widgets/custom_sub_container.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 class WarmUpExercisesScreen extends StatelessWidget {
@@ -39,7 +39,8 @@ class WarmUpExercisesScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 final category = warmUpCategoriesList[index];
                 return CustomSubContainer(
-                  warmUpCategoryModel: category,
+                  title: category.name.getLocalizedText(),
+                  imagePath: category.image,
                   height: 150.h,
                   onTap: () => context.pushNamed(
                     Routes.warmUpExercisesDetailsScreen,
