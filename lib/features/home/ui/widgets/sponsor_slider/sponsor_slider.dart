@@ -11,7 +11,7 @@ class SponsorSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CarouselSlider.builder(
-      itemCount: 3,
+      itemCount: sponsors.length,
       itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) {
         final sponsor = sponsors[itemIndex];
         return SponsorCard(sponsor: sponsor);
