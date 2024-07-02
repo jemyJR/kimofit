@@ -38,6 +38,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "currentUser":
             MessageLookupByLibrary.simpleMessage("Are you  current user ?"),
         "days": MessageLookupByLibrary.simpleMessage("Days"),
+        "dietPlanHeaderMessage": MessageLookupByLibrary.simpleMessage(
+            "Follow a balanced diet to fuel your body, enhance your performance, and achieve your fitness goals."),
         "dose": MessageLookupByLibrary.simpleMessage("Dose"),
         "duration": MessageLookupByLibrary.simpleMessage("Duration"),
         "end": MessageLookupByLibrary.simpleMessage("End"),
@@ -66,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "newUser": MessageLookupByLibrary.simpleMessage("Are you a new user ?"),
         "noDataMessage": MessageLookupByLibrary.simpleMessage(
             "Sorry, there is no current data . Please contact us to obtain data specifically for you"),
+        "notes": MessageLookupByLibrary.simpleMessage("Notes"),
         "number": MessageLookupByLibrary.simpleMessage("Number"),
         "obParagraph1": MessageLookupByLibrary.simpleMessage(
             "You are the only one who can change yourself and I am here to help you\nChange needs a push"),
@@ -78,6 +81,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "obParagraph5": MessageLookupByLibrary.simpleMessage(
             "Your reaching your goal is\nas important to me as it is to you. Your shortcomings in some part, even if it is small in relation to you, may be a reason for your development and its lack thereof sometimes."),
         "oldPassword": MessageLookupByLibrary.simpleMessage("Old Password"),
+        "or": MessageLookupByLibrary.simpleMessage("Or"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "personalInformation":
             MessageLookupByLibrary.simpleMessage("Personal Information"),
@@ -110,6 +114,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Please enter a valid phone number"),
         "validationPhoneEmptyField":
             MessageLookupByLibrary.simpleMessage("Please enter a phone number"),
+        "warmUpExerciseHeaderMessage": MessageLookupByLibrary.simpleMessage(
+            "Warm up exercise properly before exercising to prevent injury and make your workouts more effective."),
         "weight": MessageLookupByLibrary.simpleMessage("Weight"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome")
       };
