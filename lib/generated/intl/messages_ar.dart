@@ -82,6 +82,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "وصولك لهدفك مهم لي بقدر أهميته ليك تقصيرك في جزء ما حتي لو كان صغير بالنسبالك ممكن يكون سبب في تطورك وانعدامه احيانا"),
         "oldPassword":
             MessageLookupByLibrary.simpleMessage("كلمة المرور القديمة"),
+        "or": MessageLookupByLibrary.simpleMessage("أو"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "personalInformation":
             MessageLookupByLibrary.simpleMessage("المعلومات الشخصية"),

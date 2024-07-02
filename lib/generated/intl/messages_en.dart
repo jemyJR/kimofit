@@ -81,6 +81,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "obParagraph5": MessageLookupByLibrary.simpleMessage(
             "Your reaching your goal is\nas important to me as it is to you. Your shortcomings in some part, even if it is small in relation to you, may be a reason for your development and its lack thereof sometimes."),
         "oldPassword": MessageLookupByLibrary.simpleMessage("Old Password"),
+        "or": MessageLookupByLibrary.simpleMessage("Or"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "personalInformation":
             MessageLookupByLibrary.simpleMessage("Personal Information"),

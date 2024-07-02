@@ -5,7 +5,9 @@ import 'package:kimofit/core/widgets/custom_snack_bar.dart';
 import 'package:kimofit/core/widgets/custom_sub_container_shimmer.dart';
 import 'package:kimofit/core/widgets/no_data_widget.dart';
 import 'package:kimofit/features/diet_plan/logic/diet_plan_cubit.dart';
-import 'package:kimofit/features/diet_plan/ui/widget/build_diet_plan_success.dart';
+import 'package:kimofit/features/diet_plan/ui/widget/diet_plan_bloc_builder/build_diet_plan_success.dart';
+import 'package:kimofit/features/diet_plan/ui/widget/header_text_and_content.dart';
+import 'package:kimofit/generated/l10n.dart';
 
 class DietPlanBlocBuilder extends StatelessWidget {
   const DietPlanBlocBuilder({super.key});
@@ -15,15 +17,18 @@ class DietPlanBlocBuilder extends StatelessWidget {
     return BlocBuilder<DietPlanCubit, DietPlanState>(
       builder: (context, state) {
         if (state is DietPlanLoading) {
-          return ListView.builder(
-            itemBuilder: (context, index) {
-              return CustomSubContainerShimmer(
-                height: 100.h,
-              );
-            },
-            itemCount: 3,
-            shrinkWrap: true,
-            physics: const NeverScrollableScrollPhysics(),
+          return HeaderTextAndContent(
+            title: S.current.dietPlanHeaderMessage,
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return CustomSubContainerShimmer(
+                  height: 100.h,
+                );
+              },
+              itemCount: 3,
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+            ),
           );
         }
 
@@ -34,8 +39,11 @@ class DietPlanBlocBuilder extends StatelessWidget {
           if (dietsList.isEmpty) {
             return const NoDataWidget();
           } else {
-            return BuildDietPlanSuccess(
-              dietPlanResponseModel: dietPlanResponseModel,
+            return HeaderTextAndContent(
+              title: S.current.dietPlanHeaderMessage,
+              child: BuildDietPlanSuccess(
+                dietPlanResponseModel: dietPlanResponseModel,
+              ),
             );
           }
         }

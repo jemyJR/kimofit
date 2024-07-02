@@ -3,10 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kimofit/core/cache/cache_helper.dart';
 import 'package:kimofit/core/constants/constants.dart';
 import 'package:kimofit/core/di/dependency_injection.dart';
+import 'package:kimofit/core/helpers/device_info_service.dart';
 import 'package:kimofit/features/signup/data/models/signup_request_model.dart';
 import 'package:kimofit/features/signup/data/repos/signup_repo.dart';
-
-import '../../../../core/helpers/device_info_service.dart';
 
 part 'signup_state.dart';
 
