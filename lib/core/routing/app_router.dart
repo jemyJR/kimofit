@@ -21,6 +21,7 @@ import 'package:kimofit/features/signup/logic/cubit/signup_cubit.dart';
 import 'package:kimofit/features/signup/ui/signup_screen.dart';
 import 'package:kimofit/features/supplement/logic/supplement_cubit.dart';
 import 'package:kimofit/features/supplement/ui/supplement_screen.dart';
+import 'package:kimofit/features/warm_up_exercises/data/models/warm_up_category_model.dart';
 import 'package:kimofit/features/warm_up_exercises/ui/warm_up_exercises_details_screen.dart';
 import 'package:kimofit/features/warm_up_exercises/ui/warm_up_exercises_screen.dart';
 import 'package:kimofit/features/workout_exercises/ui/workout_exercises_screen.dart';
@@ -68,9 +69,10 @@ class AppRouter {
           builder: (context) => WarmUpExercisesScreen(title: arguments),
         );
       case Routes.warmUpExercisesDetailsScreen:
-        arguments as String;
+        arguments as WarmUpCategoryModel;
         return MaterialPageRoute(
-          builder: (context) => WarmUpExercisesDetailsScreen(title: arguments),
+          builder: (context) =>
+              WarmUpExercisesDetailsScreen(category: arguments),
         );
       case Routes.workoutExercisesScreen:
         return MaterialPageRoute(

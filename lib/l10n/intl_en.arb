@@ -77,6 +77,11 @@
     "noDataMessage":"Sorry, there is no current data . Please contact us to obtain data specifically for you",
 
     "warmUpExerciseHeaderMessage": "Warm up exercise properly before exercising to prevent injury and make your workouts more effective.",
+    "exerciseNo": "Exercise No",
+    "sets": "sets",
+    "reps": "reps",
+    "exercise": "Exercise",
+
 
     "dietPlanHeaderMessage": "Follow a balanced diet to fuel your body, enhance your performance, and achieve your fitness goals.",
     "notes":"Notes",

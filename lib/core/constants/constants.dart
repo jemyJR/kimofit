@@ -5,6 +5,7 @@ class Constants {
   static const String languageCode = 'languageCode';
   static const String deviceId = 'registered_device_id';
   static const String isUserLoggedIn = 'isUserLoggedIn';
+  static const String warmUpHeroTag = 'warmUpExercisesDetailsScreen';
 }
 
 class SocialMediaLinks {
