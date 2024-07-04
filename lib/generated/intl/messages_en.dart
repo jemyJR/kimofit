@@ -45,6 +45,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "end": MessageLookupByLibrary.simpleMessage("End"),
         "endDate": MessageLookupByLibrary.simpleMessage("End Date"),
         "evening": MessageLookupByLibrary.simpleMessage("Evening"),
+        "exercise": MessageLookupByLibrary.simpleMessage("Exercise"),
+        "exerciseNo": MessageLookupByLibrary.simpleMessage("Exercise No"),
         "free": MessageLookupByLibrary.simpleMessage("Free"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
         "homeWelcomeMessage":
@@ -86,7 +88,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "personalInformation":
             MessageLookupByLibrary.simpleMessage("Personal Information"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone Number"),
+        "reps": MessageLookupByLibrary.simpleMessage("reps"),
         "searchCountry": MessageLookupByLibrary.simpleMessage("Search Country"),
+        "sets": MessageLookupByLibrary.simpleMessage("sets"),
         "signUpSuccessfully": MessageLookupByLibrary.simpleMessage(
             "You have been signed up successfully"),
         "signup": MessageLookupByLibrary.simpleMessage("Sign up"),

@@ -680,6 +680,46 @@ class S {
     );
   }
 
+  /// `Exercise No`
+  String get exerciseNo {
+    return Intl.message(
+      'Exercise No',
+      name: 'exerciseNo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `sets`
+  String get sets {
+    return Intl.message(
+      'sets',
+      name: 'sets',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `reps`
+  String get reps {
+    return Intl.message(
+      'reps',
+      name: 'reps',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exercise`
+  String get exercise {
+    return Intl.message(
+      'Exercise',
+      name: 'exercise',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Follow a balanced diet to fuel your body, enhance your performance, and achieve your fitness goals.`
   String get dietPlanHeaderMessage {
     return Intl.message(

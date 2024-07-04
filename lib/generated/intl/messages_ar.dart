@@ -44,6 +44,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "end": MessageLookupByLibrary.simpleMessage("ينتهي"),
         "endDate": MessageLookupByLibrary.simpleMessage("تاريخ الانتهاء"),
         "evening": MessageLookupByLibrary.simpleMessage("مساء"),
+        "exercise": MessageLookupByLibrary.simpleMessage(" التمرين"),
+        "exerciseNo": MessageLookupByLibrary.simpleMessage(" التمرين رقم"),
         "free": MessageLookupByLibrary.simpleMessage("مجاني"),
         "getStarted": MessageLookupByLibrary.simpleMessage("ابدء الان"),
         "homeWelcomeMessage":
@@ -87,7 +89,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "personalInformation":
             MessageLookupByLibrary.simpleMessage("المعلومات الشخصية"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
+        "reps": MessageLookupByLibrary.simpleMessage("العدات"),
         "searchCountry": MessageLookupByLibrary.simpleMessage("بحث عن دولة"),
+        "sets": MessageLookupByLibrary.simpleMessage("مجموعات"),
         "signUpSuccessfully":
             MessageLookupByLibrary.simpleMessage("تم انشاء حساب جديد بنجاح"),
         "signup": MessageLookupByLibrary.simpleMessage("انشاء حساب"),
