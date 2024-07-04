@@ -110,7 +110,7 @@ class ExerciseLogInSlider extends StatelessWidget {
           horizontalSpace(10),
           Text(
             text,
-            style: TextStyles.font18White,
+            style: TextStyles.font15White,
           ),
         ],
       ),

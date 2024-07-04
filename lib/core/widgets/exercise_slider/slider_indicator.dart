@@ -19,22 +19,25 @@ class SliderIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        controller: indicatorScrollController,
-        child: AnimatedSmoothIndicator(
-          onDotClicked: (int index) => controller.animateToPage(index),
-          effect: const ExpandingDotsEffect(
-            expansionFactor: 2,
-            spacing: 8.0,
-            radius: 16.0,
-            dotWidth: 10.0,
-            dotHeight: 10.0,
-            dotColor: ColorsManager.gray,
-            activeDotColor: ColorsManager.blue,
+      child: Align(
+        alignment: Alignment.center,
+        child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          controller: indicatorScrollController,
+          child: AnimatedSmoothIndicator(
+            onDotClicked: (int index) => controller.animateToPage(index),
+            effect: const ExpandingDotsEffect(
+              expansionFactor: 2,
+              spacing: 8.0,
+              radius: 16.0,
+              dotWidth: 10.0,
+              dotHeight: 10.0,
+              dotColor: ColorsManager.gray,
+              activeDotColor: ColorsManager.blue,
+            ),
+            activeIndex: currentSlideIndex,
+            count: sliderLength,
           ),
-          activeIndex: currentSlideIndex,
-          count: sliderLength,
         ),
       ),
     );

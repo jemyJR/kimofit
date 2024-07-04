@@ -19,6 +19,7 @@ class ApiEndPoints {
 
   static const String supplement = 'supplements/all/';
   static const String dietPlan = '/diets/all/';
+  static const String warmups = 'warmups/all/';
 }
 
 class ApiKey {
@@ -98,4 +99,15 @@ class ApiKey {
   static const String dietMealName = 'name';
   static const String dietOptions = 'options';
   static const String dietIngredients = 'ingredients';
+
+  //! Warmups keys
+  static const String warmupName = 'name';
+  static const String warmupImage = 'image';
+  static const String warmupReps = 'reps';
+  static const String warmupSets = 'sets';
+  static const String warmupWeight = 'weight';
+  static const String warmupDuration = 'duration';
+  static const String warmupType = 'type';
+  static const String warmupLower = 'lower';
+  static const String warmupUpper = 'upper';
 }
