@@ -4,7 +4,7 @@ class WarmUpExerciseModel {
   final String gifPath;
   final int? reps;
   final int? sets;
-  final int? weight;
+  final double? weight;
   final String? duration;
 
   WarmUpExerciseModel({
