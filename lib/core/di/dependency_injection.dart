@@ -17,6 +17,8 @@ import 'package:kimofit/features/signup/data/repos/signup_repo.dart';
 import 'package:kimofit/features/signup/logic/cubit/signup_cubit.dart';
 import 'package:kimofit/features/supplement/data/repo/supplenemt_repo.dart';
 import 'package:kimofit/features/supplement/logic/supplement_cubit.dart';
+import 'package:kimofit/features/warm_up_exercises/data/repo/warm_up_repo.dart';
+import 'package:kimofit/features/warm_up_exercises/logic/warm_up_cubit.dart';
 
 final getIt = GetIt.instance;
 
@@ -62,4 +64,8 @@ Future<void> setupGetIt() async {
   // Register DietPlanCubit
   getIt.registerLazySingleton<DietPlanRepo>(() => DietPlanRepo(getIt()));
   getIt.registerFactory<DietPlanCubit>(() => DietPlanCubit(getIt()));
+
+  // Register WarmUpCubit
+  getIt.registerLazySingleton<WarmUpRepo>(() => WarmUpRepo(getIt()));
+  getIt.registerFactory<WarmUpCubit>(() => WarmUpCubit(getIt()));
 }
