@@ -17,3 +17,16 @@ final class WarmUpExerciseFailure extends WarmUpState {
   final String errorMessage;
   WarmUpExerciseFailure({required this.errorMessage});
 }
+
+//! Warm up category states
+final class WarmUpCategoryLoading extends WarmUpState {}
+
+final class WarmUpCategorySuccess extends WarmUpState {
+  final List<WarmUpCategoryModel> warmUpCategoryResponseModel;
+  WarmUpCategorySuccess({required this.warmUpCategoryResponseModel});
+}
+
+final class WarmUpCategoryFailure extends WarmUpState {
+  final String errorMessage;
+  WarmUpCategoryFailure({required this.errorMessage});
+}

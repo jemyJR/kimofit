@@ -68,7 +68,10 @@ class AppRouter {
       case Routes.warmUpExercisesScreen:
         arguments as String;
         return MaterialPageRoute(
-          builder: (context) => WarmUpExercisesScreen(title: arguments),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<WarmUpCubit>()..getWarmUpCategoryData(),
+            child: WarmUpExercisesScreen(title: arguments),
+          ),
         );
       case Routes.warmUpExercisesDetailsScreen:
         arguments as WarmUpCategoryModel;
@@ -76,7 +79,7 @@ class AppRouter {
           builder: (context) => BlocProvider(
             create: (context) => getIt<WarmUpCubit>()
               ..getWarmUpExerciseData(
-                warmUpParams: WarmUpParams(id: arguments.id),
+                warmUpParams: WarmUpParams(category: arguments.category),
               ),
             child: WarmUpExercisesDetailsScreen(category: arguments),
           ),

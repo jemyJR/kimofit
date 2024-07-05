@@ -1,20 +1,15 @@
 import 'package:kimofit/core/networking/api/api_endpoints.dart';
 
 class WarmUpParams {
-  final int id;
+  final String category;
 
   WarmUpParams({
-    required this.id,
+    required this.category,
   });
 
-  String get getParamsType {
-    switch (id) {
-      case 1:
-        return ApiKey.warmupUpper;
-      case 2:
-        return ApiKey.warmupLower;
-      default:
-        return '';
-    }
+  Map<String, dynamic> toJson() {
+    return {
+      ApiKey.warmupType: category,
+    };
   }
 }
