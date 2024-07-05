@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kimofit/core/di/dependency_injection.dart';
+import 'package:kimofit/core/networking/params/warm_up_params.dart';
 import 'package:kimofit/core/routing/routes.dart';
 import 'package:kimofit/features/diet_plan/data/models/diet_model.dart';
 import 'package:kimofit/features/diet_plan/logic/diet_plan_cubit.dart';
@@ -21,6 +22,8 @@ import 'package:kimofit/features/signup/logic/cubit/signup_cubit.dart';
 import 'package:kimofit/features/signup/ui/signup_screen.dart';
 import 'package:kimofit/features/supplement/logic/supplement_cubit.dart';
 import 'package:kimofit/features/supplement/ui/supplement_screen.dart';
+import 'package:kimofit/features/warm_up_exercises/data/models/warm_up_category_model.dart';
+import 'package:kimofit/features/warm_up_exercises/logic/warm_up_cubit.dart';
 import 'package:kimofit/features/warm_up_exercises/ui/warm_up_exercises_details_screen.dart';
 import 'package:kimofit/features/warm_up_exercises/ui/warm_up_exercises_screen.dart';
 import 'package:kimofit/features/workout_exercises/ui/workout_exercises_screen.dart';
@@ -65,12 +68,21 @@ class AppRouter {
       case Routes.warmUpExercisesScreen:
         arguments as String;
         return MaterialPageRoute(
-          builder: (context) => WarmUpExercisesScreen(title: arguments),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<WarmUpCubit>()..getWarmUpCategoryData(),
+            child: WarmUpExercisesScreen(title: arguments),
+          ),
         );
       case Routes.warmUpExercisesDetailsScreen:
-        arguments as String;
+        arguments as WarmUpCategoryModel;
         return MaterialPageRoute(
-          builder: (context) => WarmUpExercisesDetailsScreen(title: arguments),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<WarmUpCubit>()
+              ..getWarmUpExerciseData(
+                warmUpParams: WarmUpParams(category: arguments.category),
+              ),
+            child: WarmUpExercisesDetailsScreen(category: arguments),
+          ),
         );
       case Routes.workoutExercisesScreen:
         return MaterialPageRoute(

@@ -1,0 +1,121 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:kimofit/core/helpers/spacing.dart';
+import 'package:kimofit/core/theming/style.dart';
+import 'package:kimofit/core/widgets/not_found_widget.dart';
+import 'package:kimofit/features/home/ui/widgets/home_shimmer/shimmer_with_text.dart';
+import 'package:kimofit/features/warm_up_exercises/data/models/warm_up_exercise_model.dart';
+import 'package:kimofit/core/widgets/exercise_slider/arrow_buttons_and_indicator.dart';
+import 'package:kimofit/core/widgets/exercise_slider/exercise_log_in_slider.dart';
+import 'package:kimofit/generated/l10n.dart';
+
+class ExerciseSlider extends StatefulWidget {
+  const ExerciseSlider({super.key, required this.exercises});
+  final List<WarmUpExerciseModel> exercises;
+
+  @override
+  State<ExerciseSlider> createState() => _ExerciseSliderState();
+}
+
+class _ExerciseSliderState extends State<ExerciseSlider> {
+  final CarouselController controller = CarouselController();
+  final ScrollController indicatorScrollController = ScrollController();
+  int currentSlideIndex = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Text(
+            "${S.of(context).exerciseNo} ( ${currentSlideIndex + 1}/${widget.exercises.length} )",
+            style: TextStyles.font22Blue,
+          ),
+          verticalSpace(15),
+          CarouselSlider.builder(
+            itemCount: widget.exercises.length,
+            itemBuilder:
+                (BuildContext context, int itemIndex, int pageViewIndex) {
+              final exercise = widget.exercises[itemIndex];
+              return Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  _sliderImge(exercise.gifPath),
+                  verticalSpace(10),
+                  SizedBox(
+                    height: 70.h,
+                    child: ExerciseLogInSlider(exercise: exercise),
+                  ),
+                ],
+              );
+            },
+            options: CarouselOptions(
+              enlargeCenterPage: true,
+              aspectRatio: 13 / 10,
+              enableInfiniteScroll: false,
+              onPageChanged: (index, reason) {
+                setState(
+                  () => currentSlideIndex = index,
+                );
+                scrollToCurrentDot(isNext: index > currentSlideIndex);
+              },
+            ),
+            carouselController: controller,
+          ),
+          verticalSpace(15),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 30.w),
+            child: ArrowButtonsAndIndicator(
+              controller: controller,
+              indicatorScrollController: indicatorScrollController,
+              currentSlideIndex: currentSlideIndex,
+              sliderLength: widget.exercises.length,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _sliderImge(gifPath) {
+    return Expanded(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10.r),
+        child: CachedNetworkImage(
+          height: 150.h,
+          width: double.infinity,
+          imageUrl: gifPath,
+          fit: BoxFit.cover,
+          placeholder: (context, url) => ShimmerWithText(
+            height: 150.h,
+            width: double.infinity,
+            text: S.of(context).exercise,
+            textStyle: TextStyles.font32BoldWhite.copyWith(
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+          errorWidget: (context, url, error) => const NotFoundWidget(),
+        ),
+      ),
+    );
+  }
+
+  //scroll to current dot
+  void scrollToCurrentDot({required bool isNext}) {
+    double scrollToPosition = (currentSlideIndex * 8);
+    if (isNext &&
+        scrollToPosition > indicatorScrollController.position.maxScrollExtent) {
+      scrollToPosition = indicatorScrollController.position.maxScrollExtent;
+    } else if (!isNext &&
+        scrollToPosition < indicatorScrollController.position.minScrollExtent) {
+      scrollToPosition = indicatorScrollController.position.minScrollExtent;
+    }
+    indicatorScrollController.animateTo(
+      scrollToPosition,
+      duration: const Duration(milliseconds: 200),
+      curve: Curves.easeInOut,
+    );
+  }
+}
