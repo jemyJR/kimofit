@@ -36,6 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "contactme": MessageLookupByLibrary.simpleMessage("تواصل معي للتفاصيل"),
         "currentUser":
             MessageLookupByLibrary.simpleMessage("انت مستخدم حالي ؟"),
+        "dayNamber": MessageLookupByLibrary.simpleMessage("رقم اليوم"),
         "days": MessageLookupByLibrary.simpleMessage("ايام"),
         "dietPlanHeaderMessage": MessageLookupByLibrary.simpleMessage(
             "اتبع نظامًا غذائيًا متوازنًا لتزويد جسمك بالطاقة، وتحسين أدائك، وتحقيق أهداف لياقتك البدنية."),
@@ -121,6 +122,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الرجاء ادخال رقم هاتف"),
         "warmUpExerciseHeaderMessage": MessageLookupByLibrary.simpleMessage(
             "قم بالإحماء بشكل صحيح قبل ممارسة الرياضة لتجنب الإصابة وجعل التدريبات الخاصة بك أكثر فعالية."),
+        "weekNamber": MessageLookupByLibrary.simpleMessage("رقم الأسبوع"),
         "weight": MessageLookupByLibrary.simpleMessage("الوزن"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً")
       };

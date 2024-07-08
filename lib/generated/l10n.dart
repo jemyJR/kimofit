@@ -749,6 +749,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Day Number`
+  String get dayNamber {
+    return Intl.message(
+      'Day Number',
+      name: 'dayNamber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Week Number`
+  String get weekNamber {
+    return Intl.message(
+      'Week Number',
+      name: 'weekNamber',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

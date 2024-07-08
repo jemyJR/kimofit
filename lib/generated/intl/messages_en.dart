@@ -37,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Contact me for details"),
         "currentUser":
             MessageLookupByLibrary.simpleMessage("Are you  current user ?"),
+        "dayNamber": MessageLookupByLibrary.simpleMessage("Day Number"),
         "days": MessageLookupByLibrary.simpleMessage("Days"),
         "dietPlanHeaderMessage": MessageLookupByLibrary.simpleMessage(
             "Follow a balanced diet to fuel your body, enhance your performance, and achieve your fitness goals."),
@@ -120,6 +121,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter a phone number"),
         "warmUpExerciseHeaderMessage": MessageLookupByLibrary.simpleMessage(
             "Warm up exercise properly before exercising to prevent injury and make your workouts more effective."),
+        "weekNamber": MessageLookupByLibrary.simpleMessage("Week Number"),
         "weight": MessageLookupByLibrary.simpleMessage("Weight"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome")
       };

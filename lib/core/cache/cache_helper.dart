@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:kimofit/core/helpers/localized_field.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CacheHelper {
@@ -111,5 +114,20 @@ class CacheHelper {
   //! Clear all secured data
   Future<void> clearSecuredData() async {
     await flutterSecureStorage.deleteAll();
+  }
+
+  //! Save LocalizedField
+  Future<void> saveLocalizedField(String key, LocalizedField value) async {
+    final valueJson = jsonEncode(value.toJson());
+    await saveData(key: key, value: valueJson);
+  }
+
+  //! Get LocalizedField
+  LocalizedField? getLocalizedField(String key) {
+    final valueJson = getDataString(key: key);
+    if (valueJson != null) {
+      return LocalizedField.fromJson(jsonDecode(valueJson));
+    }
+    return null;
   }
 }

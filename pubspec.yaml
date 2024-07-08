@@ -70,6 +70,8 @@ dependencies:
   no_screenshot: ^0.0.1+6
   # Customizable animated page indicator with a set of built-in effects
   smooth_page_indicator: ^1.1.0
+  # Generate random UUIDs
+  uuid: ^4.4.0
 
 
 flutter_launcher_icons:

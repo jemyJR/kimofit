@@ -1,6 +1,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for animationCalendar
+  /// assets/animation/calendar.json
+  static const String animationCalendar = "assets/animation/calendar.json";
+
   /// Assets for animationLoading
   /// assets/animation/loading.json
   static const String animationLoading = "assets/animation/loading.json";
