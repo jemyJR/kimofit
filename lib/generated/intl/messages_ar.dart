@@ -62,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginMessage":
             MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول الي حسابك"),
+        "min": MessageLookupByLibrary.simpleMessage("د"),
         "month": MessageLookupByLibrary.simpleMessage("شهر"),
         "morning": MessageLookupByLibrary.simpleMessage("صباحا"),
         "myProfile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
@@ -92,6 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "reps": MessageLookupByLibrary.simpleMessage("العدات"),
         "searchCountry": MessageLookupByLibrary.simpleMessage("بحث عن دولة"),
+        "sec": MessageLookupByLibrary.simpleMessage("ث"),
         "sets": MessageLookupByLibrary.simpleMessage("مجموعات"),
         "signUpSuccessfully":
             MessageLookupByLibrary.simpleMessage("تم انشاء حساب جديد بنجاح"),

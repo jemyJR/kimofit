@@ -3,7 +3,7 @@ import 'package:kimofit/core/constants/constants.dart';
 import 'package:kimofit/core/helpers/localized_field.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
-import 'package:kimofit/features/home_cardio_plan/ui/widgets/custom_dropdown_bloc_builder.dart';
+import 'package:kimofit/features/timer_and_calender/ui/widgets/calender/custom_dropdown_bloc_builder.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 class DayAndWeekRow extends StatelessWidget {

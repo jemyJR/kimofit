@@ -21,6 +21,10 @@ class Assets {
   /// assets/animation/subscription_end_alert.json
   static const String animationSubscriptionEndAlert = "assets/animation/subscription_end_alert.json";
 
+  /// Assets for animationTimer
+  /// assets/animation/timer.json
+  static const String animationTimer = "assets/animation/timer.json";
+
   /// Assets for fontsCairoRegular
   /// assets/fonts/Cairo-Regular.ttf
   static const String fontsCairoRegular = "assets/fonts/Cairo-Regular.ttf";

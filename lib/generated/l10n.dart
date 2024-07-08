@@ -769,6 +769,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Sec`
+  String get sec {
+    return Intl.message(
+      'Sec',
+      name: 'sec',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Min`
+  String get min {
+    return Intl.message(
+      'Min',
+      name: 'min',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -87,7 +87,9 @@
     "or" : "أو",
 
     "dayNamber": "رقم اليوم",
-    "weekNamber": "رقم الأسبوع"
+    "weekNamber": "رقم الأسبوع",
+    "sec":"ث",
+    "min":"د"
 
 
 

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kimofit/core/helpers/localized_field.dart';
-import 'package:kimofit/features/home_cardio_plan/logic/cubit/timer_and_calender_cubit.dart';
-import 'package:kimofit/features/home_cardio_plan/ui/widgets/custom_dropdown.dart';
+import 'package:kimofit/features/timer_and_calender/logic/timer_and_calender_cubit.dart';
+import 'package:kimofit/features/timer_and_calender/ui/widgets/calender/custom_dropdown.dart';
 
 class CustomDropdownBlocBuilder extends StatelessWidget {
   final List<LocalizedField> list;

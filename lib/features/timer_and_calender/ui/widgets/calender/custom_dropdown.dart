@@ -4,8 +4,8 @@ import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/helpers/localized_field.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/disable_splash_highlight.dart';
-import 'package:kimofit/features/home_cardio_plan/logic/cubit/timer_and_calender_cubit.dart';
-import 'package:kimofit/features/home_cardio_plan/ui/widgets/dropdown_menu_container.dart';
+import 'package:kimofit/features/timer_and_calender/logic/timer_and_calender_cubit.dart';
+import 'package:kimofit/features/timer_and_calender/ui/widgets/calender/dropdown_menu_container.dart';
 
 class CustomDropdown extends StatelessWidget {
   const CustomDropdown({

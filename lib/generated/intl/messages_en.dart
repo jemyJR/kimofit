@@ -63,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("Log in"),
         "loginMessage":
             MessageLookupByLibrary.simpleMessage("Log in to your account"),
+        "min": MessageLookupByLibrary.simpleMessage("Min"),
         "month": MessageLookupByLibrary.simpleMessage("Month"),
         "morning": MessageLookupByLibrary.simpleMessage("Morning"),
         "myProfile": MessageLookupByLibrary.simpleMessage("My Profile"),
@@ -91,6 +92,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "reps": MessageLookupByLibrary.simpleMessage("reps"),
         "searchCountry": MessageLookupByLibrary.simpleMessage("Search Country"),
+        "sec": MessageLookupByLibrary.simpleMessage("Sec"),
         "sets": MessageLookupByLibrary.simpleMessage("sets"),
         "signUpSuccessfully": MessageLookupByLibrary.simpleMessage(
             "You have been signed up successfully"),

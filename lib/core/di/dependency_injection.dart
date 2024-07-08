@@ -9,7 +9,7 @@ import 'package:kimofit/features/diet_plan/data/repo/diet_plan_repo.dart';
 import 'package:kimofit/features/diet_plan/logic/diet_plan_cubit.dart';
 import 'package:kimofit/features/home/data/repo/home_repo.dart';
 import 'package:kimofit/features/home/logic/home_cubit.dart';
-import 'package:kimofit/features/home_cardio_plan/logic/cubit/timer_and_calender_cubit.dart';
+import 'package:kimofit/features/timer_and_calender/logic/timer_and_calender_cubit.dart';
 import 'package:kimofit/features/login/data/repos/login_repo.dart';
 import 'package:kimofit/features/login/logic/login_cubit.dart';
 import 'package:kimofit/features/profile/data/repo/profile_repo.dart';

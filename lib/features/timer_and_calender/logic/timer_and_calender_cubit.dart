@@ -29,4 +29,13 @@ class TimerAndCalenderCubit extends Cubit<TimerAndCalenderState> {
     getIt<CacheHelper>().saveData(key: preferenceKey, value: valueJson);
     emit(DropdownValueState(value));
   }
+
+  //! toggle between calender and timer
+  void toggleMode() {
+    if (state is TimerOptionsModeState) {
+      emit(CalenderModeState());
+    } else {
+      emit(TimerOptionsModeState());
+    }
+  }
 }

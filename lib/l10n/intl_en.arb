@@ -87,7 +87,9 @@
     "or": "Or",
 
     "dayNamber": "Day Number",
-    "weekNamber": "Week Number"
+    "weekNamber": "Week Number",
+    "sec":"Sec",
+    "min":"Min"
 
 
     
