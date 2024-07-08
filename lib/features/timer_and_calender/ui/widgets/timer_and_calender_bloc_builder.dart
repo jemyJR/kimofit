@@ -4,6 +4,7 @@ import 'package:kimofit/core/constants/assets.dart';
 import 'package:kimofit/core/helpers/localized_field.dart';
 import 'package:kimofit/features/timer_and_calender/logic/timer_and_calender_cubit.dart';
 import 'package:kimofit/features/timer_and_calender/ui/widgets/calender/day_and_week_row.dart';
+import 'package:kimofit/features/timer_and_calender/ui/widgets/timer/count_down_timer_row.dart';
 import 'package:kimofit/features/timer_and_calender/ui/widgets/timer_and_calender_button.dart';
 import 'package:kimofit/features/timer_and_calender/ui/widgets/timer/timer_option.dart';
 
@@ -41,7 +42,12 @@ class TimerAndCalenderBlocBuilder extends StatelessWidget {
                   ),
                 ),
               ),
-              child,
+              // child,
+              CountDownTimerRow(
+                duration: 10,
+                onComplete: () {},
+                stop: () {},
+              ),
             ],
           );
         },
