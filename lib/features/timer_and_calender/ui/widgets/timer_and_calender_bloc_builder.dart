@@ -5,6 +5,7 @@ import 'package:kimofit/core/helpers/localized_field.dart';
 import 'package:kimofit/features/timer_and_calender/logic/timer_and_calender_cubit.dart';
 import 'package:kimofit/features/timer_and_calender/ui/widgets/calender/day_and_week_row.dart';
 import 'package:kimofit/features/timer_and_calender/ui/widgets/timer/count_down_timer_row.dart';
+import 'package:kimofit/features/timer_and_calender/ui/widgets/timer/time_up_message.dart';
 import 'package:kimofit/features/timer_and_calender/ui/widgets/timer_and_calender_button.dart';
 import 'package:kimofit/features/timer_and_calender/ui/widgets/timer/timer_option.dart';
 
@@ -23,13 +24,9 @@ class TimerAndCalenderBlocBuilder extends StatelessWidget {
       child: BlocBuilder<TimerAndCalenderCubit, TimerAndCalenderState>(
         builder: (context, state) {
           final cubit = context.read<TimerAndCalenderCubit>();
-          final String iconPath = cubit.state is TimerOptionsModeState
-              ? Assets.animationCalendar
-              : Assets.animationTimer;
-
-          final Widget child = cubit.state is TimerOptionsModeState
-              ? TimerOption(onSelectDuration: (int duration) {})
-              : DayAndWeekRow(days: days, weeks: weeks);
+          final String iconPath = cubit.state is CalenderModeState
+              ? Assets.animationTimer
+              : Assets.animationCalendar;
 
           return Column(
             children: [
@@ -42,16 +39,45 @@ class TimerAndCalenderBlocBuilder extends StatelessWidget {
                   ),
                 ),
               ),
-              // child,
-              CountDownTimerRow(
-                duration: 10,
-                onComplete: () {},
-                stop: () {},
+              getTimerAndCalenderChild(
+                cubit: cubit,
+                state: state,
+                days: days,
+                weeks: weeks,
               ),
             ],
           );
         },
       ),
     );
+  }
+}
+
+Widget getTimerAndCalenderChild({
+  required TimerAndCalenderCubit cubit,
+  required TimerAndCalenderState state,
+  required List<LocalizedField>? days,
+  required List<LocalizedField>? weeks,
+}) {
+  if (state is CalenderModeState) {
+    return DayAndWeekRow(days: days!, weeks: weeks!);
+  } else if (state is TimerOptionsModeState) {
+    return TimerOption(
+      onSelectDuration: (int duration) {
+        cubit.startCountDown(duration);
+      },
+    );
+  } else if (state is CountdownTimerState) {
+    return CountDownTimerRow(
+      duration: state.duration,
+      onComplete: () => cubit.endCountDown(),
+      stop: () => cubit.showTimerOptions(),
+    );
+  } else if (state is TimeUpModeState) {
+    return TimeUpMessage(
+      onPressed: () => cubit.showTimerOptions(),
+    );
+  } else {
+    return DayAndWeekRow(days: days!, weeks: weeks!);
   }
 }

@@ -107,6 +107,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تفاصيل الاشتراك"),
         "subscriptionEndMessage": MessageLookupByLibrary.simpleMessage(
             "لقد وصلت إلى نهاية اشتراكك!!\nيرجى تجديد اشتراكك لمواصلة استخدام التطبيق."),
+        "timeUp": MessageLookupByLibrary.simpleMessage("انتهى الوقت !"),
         "tokenExpiredMessage": MessageLookupByLibrary.simpleMessage(
             "عذرا حدث خطا , قم بتسجيل الدخول مرة اخرى"),
         "trainee": MessageLookupByLibrary.simpleMessage("المتدرب"),

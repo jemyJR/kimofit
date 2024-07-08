@@ -789,6 +789,16 @@ class S {
       args: [],
     );
   }
+
+  /// `TIME UP !`
+  String get timeUp {
+    return Intl.message(
+      'TIME UP !',
+      name: 'timeUp',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

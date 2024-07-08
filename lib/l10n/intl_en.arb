@@ -89,7 +89,8 @@
     "dayNamber": "Day Number",
     "weekNamber": "Week Number",
     "sec":"Sec",
-    "min":"Min"
+    "min":"Min",
+    "timeUp": "TIME UP !"
 
 
     

@@ -32,10 +32,25 @@ class TimerAndCalenderCubit extends Cubit<TimerAndCalenderState> {
 
   //! toggle between calender and timer
   void toggleMode() {
-    if (state is TimerOptionsModeState) {
+    if (state is TimerOptionsModeState || state is CountdownTimerState) {
       emit(CalenderModeState());
     } else {
       emit(TimerOptionsModeState());
     }
+  }
+
+  //! Countdown Timer
+  void startCountDown(int duration) {
+    emit(CountdownTimerState(duration: duration));
+  }
+
+  //! TimeUp
+  void endCountDown() {
+    emit(TimeUpModeState());
+  }
+
+  //! Stop Countdown
+  void showTimerOptions() {
+    emit(TimerOptionsModeState());
   }
 }
