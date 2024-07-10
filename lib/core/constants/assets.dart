@@ -25,6 +25,10 @@ class Assets {
   /// assets/animation/timer.json
   static const String animationTimer = "assets/animation/timer.json";
 
+  /// Assets for audioTimerSound
+  /// assets/audio/timer_sound.mp3
+  static const String audioTimerSound = "assets/audio/timer_sound.mp3";
+
   /// Assets for fontsCairoRegular
   /// assets/fonts/Cairo-Regular.ttf
   static const String fontsCairoRegular = "assets/fonts/Cairo-Regular.ttf";

@@ -18,9 +18,7 @@ class CustomDropdownBlocBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (_) => TimerAndCalenderCubit()
-        ..loadSelectedValue(
-          preferenceKey: preferenceKey,
-        ),
+        ..loadSelectedValue(preferenceKey: preferenceKey),
       child: BlocBuilder<TimerAndCalenderCubit, TimerAndCalenderState>(
         builder: (context, state) {
           LocalizedField? selectedValue;

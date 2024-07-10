@@ -74,6 +74,11 @@ dependencies:
   uuid: ^4.4.0
   # Make an animated circular countdown using Circular Countdown Timer
   circular_countdown_timer: ^0.2.3
+  # A Flutter plugin to play multiple audio files simultaneously
+  audioplayers: ^6.0.0
+  # A plugin for handling Vibration API on iOS, Android, web and OpenHarmony
+  vibration: ^1.8.4
+
 
 
 flutter_launcher_icons:
@@ -100,6 +105,7 @@ flutter:
     - assets/images/bg/
     - assets/images/logo/
     - assets/animation/
+    - assets/audio/
   fonts:
     - family: Cairo
       fonts:
