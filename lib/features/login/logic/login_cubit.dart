@@ -32,7 +32,7 @@ class LoginCubit extends Cubit<LoginState> {
         loginRequest: LoginRequestModel(
       phone: phone,
       password: password,
-      deviceId: deviceId,
+      deviceId: await DeviceUtils.generateUniqueId(phone, password, deviceId),
     ));
 
     loginResponse.fold(
