@@ -1,6 +1,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for animationCalendar
+  /// assets/animation/calendar.json
+  static const String animationCalendar = "assets/animation/calendar.json";
+
   /// Assets for animationLoading
   /// assets/animation/loading.json
   static const String animationLoading = "assets/animation/loading.json";
@@ -16,6 +20,14 @@ class Assets {
   /// Assets for animationSubscriptionEndAlert
   /// assets/animation/subscription_end_alert.json
   static const String animationSubscriptionEndAlert = "assets/animation/subscription_end_alert.json";
+
+  /// Assets for animationTimer
+  /// assets/animation/timer.json
+  static const String animationTimer = "assets/animation/timer.json";
+
+  /// Assets for audioTimerSound
+  /// assets/audio/timer_sound.mp3
+  static const String audioTimerSound = "assets/audio/timer_sound.mp3";
 
   /// Assets for fontsCairoRegular
   /// assets/fonts/Cairo-Regular.ttf

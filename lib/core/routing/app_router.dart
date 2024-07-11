@@ -12,7 +12,7 @@ import 'package:kimofit/features/home/data/models/subscription_features_model.da
 import 'package:kimofit/features/home/logic/home_cubit.dart';
 import 'package:kimofit/features/home/ui/home_screen.dart';
 import 'package:kimofit/features/home/ui/subscription_screen.dart';
-import 'package:kimofit/features/home_cardio_plan/ui/warm_up_exercises_screen.dart';
+import 'package:kimofit/features/home_cardio_plan/ui/home_cardio_plan_screen.dart';
 import 'package:kimofit/features/login/logic/login_cubit.dart';
 import 'package:kimofit/features/login/ui/login_screen.dart';
 import 'package:kimofit/features/onboarding/ui/onboarding_screen.dart';
@@ -89,8 +89,9 @@ class AppRouter {
           builder: (context) => const WorkoutExercisesScreen(),
         );
       case Routes.homeCardioPlanScreen:
+        arguments as String;
         return MaterialPageRoute(
-          builder: (context) => const HomeCardioPlanScreen(),
+          builder: (context) => HomeCardioPlanScreen(title: arguments),
         );
       case Routes.dietPlanScreen:
         arguments as String;

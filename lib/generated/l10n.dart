@@ -749,6 +749,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Day Number`
+  String get dayNamber {
+    return Intl.message(
+      'Day Number',
+      name: 'dayNamber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Week Number`
+  String get weekNamber {
+    return Intl.message(
+      'Week Number',
+      name: 'weekNamber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sec`
+  String get sec {
+    return Intl.message(
+      'Sec',
+      name: 'sec',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Min`
+  String get min {
+    return Intl.message(
+      'Min',
+      name: 'min',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `TIME UP !`
+  String get timeUp {
+    return Intl.message(
+      'TIME UP !',
+      name: 'timeUp',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -36,6 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "contactme": MessageLookupByLibrary.simpleMessage("تواصل معي للتفاصيل"),
         "currentUser":
             MessageLookupByLibrary.simpleMessage("انت مستخدم حالي ؟"),
+        "dayNamber": MessageLookupByLibrary.simpleMessage("رقم اليوم"),
         "days": MessageLookupByLibrary.simpleMessage("ايام"),
         "dietPlanHeaderMessage": MessageLookupByLibrary.simpleMessage(
             "اتبع نظامًا غذائيًا متوازنًا لتزويد جسمك بالطاقة، وتحسين أدائك، وتحقيق أهداف لياقتك البدنية."),
@@ -61,6 +62,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginMessage":
             MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول الي حسابك"),
+        "min": MessageLookupByLibrary.simpleMessage("د"),
         "month": MessageLookupByLibrary.simpleMessage("شهر"),
         "morning": MessageLookupByLibrary.simpleMessage("صباحا"),
         "myProfile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
@@ -91,6 +93,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "reps": MessageLookupByLibrary.simpleMessage("العدات"),
         "searchCountry": MessageLookupByLibrary.simpleMessage("بحث عن دولة"),
+        "sec": MessageLookupByLibrary.simpleMessage("ث"),
         "sets": MessageLookupByLibrary.simpleMessage("مجموعات"),
         "signUpSuccessfully":
             MessageLookupByLibrary.simpleMessage("تم انشاء حساب جديد بنجاح"),
@@ -104,6 +107,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تفاصيل الاشتراك"),
         "subscriptionEndMessage": MessageLookupByLibrary.simpleMessage(
             "لقد وصلت إلى نهاية اشتراكك!!\nيرجى تجديد اشتراكك لمواصلة استخدام التطبيق."),
+        "timeUp": MessageLookupByLibrary.simpleMessage("انتهى الوقت !"),
         "tokenExpiredMessage": MessageLookupByLibrary.simpleMessage(
             "عذرا حدث خطا , قم بتسجيل الدخول مرة اخرى"),
         "trainee": MessageLookupByLibrary.simpleMessage("المتدرب"),
@@ -121,6 +125,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الرجاء ادخال رقم هاتف"),
         "warmUpExerciseHeaderMessage": MessageLookupByLibrary.simpleMessage(
             "قم بالإحماء بشكل صحيح قبل ممارسة الرياضة لتجنب الإصابة وجعل التدريبات الخاصة بك أكثر فعالية."),
+        "weekNamber": MessageLookupByLibrary.simpleMessage("رقم الأسبوع"),
         "weight": MessageLookupByLibrary.simpleMessage("الوزن"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً")
       };
