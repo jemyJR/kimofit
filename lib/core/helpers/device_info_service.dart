@@ -14,37 +14,41 @@ class DeviceUtils {
 
     if (Platform.isAndroid) {
       AndroidDeviceInfo androidInfo = await deviceInfoPlugin.androidInfo;
-
-      String serial = androidInfo.supportedAbis.join(", ");
-
       String androidId = androidInfo.id;
-
       try {
         String getAndroidId = await platform.invokeMethod('getAndroidId');
-        deviceId =
-            _generateUniqueId(androidId, serial, getAndroidId) + getAndroidId;
+
+        deviceId = getAndroidId + androidId;
       } on PlatformException catch (e) {
         deviceId = 'Failed to get Android ID: ${e.message}';
       }
     } else if (Platform.isIOS) {
       IosDeviceInfo iosInfo = await deviceInfoPlugin.iosInfo;
 
-      String? identifierForVendor = iosInfo.identifierForVendor ?? '';
-      String model = iosInfo.model;
-      String systemVersion = iosInfo.systemVersion;
-
-      deviceId = _generateUniqueId(identifierForVendor, model, systemVersion) +
-          identifierForVendor;
+      deviceId = iosInfo.identifierForVendor;
     } else {
       deviceId = 'unknown';
     }
 
-    return deviceId;
+    return deviceId!;
   }
 
-  static String _generateUniqueId(
-      String id, String additionalInfo, String deviceId) {
-    var bytes = utf8.encode(id + additionalInfo + deviceId);
-    return sha256.convert(bytes).toString();
+  static Future<String> generateUniqueId(
+    String phoneNumber,
+    String password,
+    String deviceId,
+  ) async {
+    String deviceId = await getDeviceId();
+
+    // Combine phone number, password, and device ID
+    String combined = phoneNumber + password + deviceId;
+
+    // Convert the combined string to bytes
+    List<int> bytes = utf8.encode(combined);
+
+    // Generate the hash
+    Digest digest = sha256.convert(bytes);
+
+    return digest.toString();
   }
 }
