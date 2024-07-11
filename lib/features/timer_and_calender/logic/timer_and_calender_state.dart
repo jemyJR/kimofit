@@ -10,6 +10,11 @@ class DropdownValueState extends TimerAndCalenderState {
   DropdownValueState(this.selectedValue);
 }
 
+class DropDownparamsUpdated extends TimerAndCalenderState {
+  final DropDownMenuParams initParams;
+  DropDownparamsUpdated(this.initParams);
+}
+
 //! Calender Mode
 class CalenderModeState extends TimerAndCalenderState {}
 

@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kimofit/core/cache/cache_helper.dart';
+import 'package:kimofit/core/constants/constants.dart';
 import 'package:kimofit/core/di/dependency_injection.dart';
 import 'package:kimofit/core/helpers/localized_field.dart';
 import 'package:kimofit/core/networking/params/drop_down_menu_params.dart';
@@ -50,10 +51,7 @@ class TimerAndCalenderCubit extends Cubit<TimerAndCalenderState> {
   ];
 
   //! Calender Logic ( Load and Save Selected Value )
-  late DropDownMenuParams initParams = DropDownMenuParams(
-    day: days.first.en,
-    week: weeks.first.en,
-  );
+  DropDownMenuParams initParams = DropDownMenuParams(day: '', week: '');
 
   void loadSelectedValue({required String preferenceKey}) {
     final selectedValueJson =
@@ -73,7 +71,45 @@ class TimerAndCalenderCubit extends Cubit<TimerAndCalenderState> {
     final valueJson = jsonEncode(value.toJson());
     getIt<CacheHelper>().saveData(key: preferenceKey, value: valueJson);
 
+    updateInitParams(preferenceKey, value);
+
     emit(DropdownValueState(value));
+  }
+
+  void updateInitParams(String preferenceKey, LocalizedField selectedValue) {
+    final selectedDay = _getSelectedValue(Constants.selectedDay, days.first.en);
+    final selectedWeek =
+        _getSelectedValue(Constants.selectedWeek, weeks.first.en);
+
+    if (preferenceKey == Constants.selectedDay) {
+      initParams = DropDownMenuParams(
+        day: selectedValue.en,
+        week: selectedWeek,
+      );
+    } else {
+      initParams = DropDownMenuParams(
+        day: selectedDay,
+        week: selectedValue.en,
+      );
+    }
+  }
+
+  Future<void> getInitParams() async {
+    final selectedDay = _getSelectedValue(Constants.selectedDay, days.first.en);
+    final selectedWeek =
+        _getSelectedValue(Constants.selectedWeek, weeks.first.en);
+
+    initParams = DropDownMenuParams(day: selectedDay, week: selectedWeek);
+
+    emit(DropDownparamsUpdated(initParams));
+  }
+
+  String _getSelectedValue(String preferenceKey, String defaultValue) {
+    final selectedValueJson =
+        getIt<CacheHelper>().getDataString(key: preferenceKey);
+    return selectedValueJson != null
+        ? LocalizedField.fromJson(jsonDecode(selectedValueJson)).en
+        : defaultValue;
   }
 
   //! toggle between calender and timer
