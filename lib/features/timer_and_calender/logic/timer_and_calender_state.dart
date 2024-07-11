@@ -1,0 +1,31 @@
+part of 'timer_and_calender_cubit.dart';
+
+sealed class TimerAndCalenderState {}
+
+final class TimerAndCalenderInitial extends TimerAndCalenderState {}
+
+//! Calender states
+class DropdownValueState extends TimerAndCalenderState {
+  final LocalizedField? selectedValue;
+  DropdownValueState(this.selectedValue);
+}
+
+class DropDownparamsUpdated extends TimerAndCalenderState {
+  final DropDownMenuParams initParams;
+  DropDownparamsUpdated(this.initParams);
+}
+
+//! Calender Mode
+class CalenderModeState extends TimerAndCalenderState {}
+
+//! Timer Options Mode
+class TimerOptionsModeState extends TimerAndCalenderState {}
+
+//! Countdown Timer Mode
+class CountdownTimerState extends TimerAndCalenderState {
+  final int duration;
+  CountdownTimerState({required this.duration});
+}
+
+//! TimeUp Mode
+class TimeUpModeState extends TimerAndCalenderState {}

@@ -37,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Contact me for details"),
         "currentUser":
             MessageLookupByLibrary.simpleMessage("Are you  current user ?"),
+        "dayNamber": MessageLookupByLibrary.simpleMessage("Day Number"),
         "days": MessageLookupByLibrary.simpleMessage("Days"),
         "dietPlanHeaderMessage": MessageLookupByLibrary.simpleMessage(
             "Follow a balanced diet to fuel your body, enhance your performance, and achieve your fitness goals."),
@@ -62,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("Log in"),
         "loginMessage":
             MessageLookupByLibrary.simpleMessage("Log in to your account"),
+        "min": MessageLookupByLibrary.simpleMessage("Min"),
         "month": MessageLookupByLibrary.simpleMessage("Month"),
         "morning": MessageLookupByLibrary.simpleMessage("Morning"),
         "myProfile": MessageLookupByLibrary.simpleMessage("My Profile"),
@@ -90,6 +92,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "reps": MessageLookupByLibrary.simpleMessage("reps"),
         "searchCountry": MessageLookupByLibrary.simpleMessage("Search Country"),
+        "sec": MessageLookupByLibrary.simpleMessage("Sec"),
         "sets": MessageLookupByLibrary.simpleMessage("sets"),
         "signUpSuccessfully": MessageLookupByLibrary.simpleMessage(
             "You have been signed up successfully"),
@@ -103,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Subscription Details"),
         "subscriptionEndMessage": MessageLookupByLibrary.simpleMessage(
             "You have reached the end of your subscription!!\nPlease renew your subscription to continue using the app."),
+        "timeUp": MessageLookupByLibrary.simpleMessage("TIME UP !"),
         "tokenExpiredMessage": MessageLookupByLibrary.simpleMessage(
             "Sorry, an error occurred, you have to log in again"),
         "trainee": MessageLookupByLibrary.simpleMessage("Trainee"),
@@ -120,6 +124,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter a phone number"),
         "warmUpExerciseHeaderMessage": MessageLookupByLibrary.simpleMessage(
             "Warm up exercise properly before exercising to prevent injury and make your workouts more effective."),
+        "weekNamber": MessageLookupByLibrary.simpleMessage("Week Number"),
         "weight": MessageLookupByLibrary.simpleMessage("Weight"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome")
       };

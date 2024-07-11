@@ -82,10 +82,15 @@
     "reps": "reps",
     "exercise": "Exercise",
 
-
     "dietPlanHeaderMessage": "Follow a balanced diet to fuel your body, enhance your performance, and achieve your fitness goals.",
     "notes":"Notes",
-    "or": "Or"
+    "or": "Or",
+
+    "dayNamber": "Day Number",
+    "weekNamber": "Week Number",
+    "sec":"Sec",
+    "min":"Min",
+    "timeUp": "TIME UP !"
 
 
     

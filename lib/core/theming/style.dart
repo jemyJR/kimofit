@@ -18,6 +18,7 @@ class TextStyles {
     fontSize: 18.sp,
     color: ColorsManager.white,
   );
+
   static TextStyle font18Gray = TextStyle(
     fontFamily: AppFonts.cairo,
     fontSize: 18.sp,
@@ -47,6 +48,12 @@ class TextStyles {
   static TextStyle font18YellowBold = TextStyle(
     fontSize: 18.sp,
     color: ColorsManager.yellow,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle font18RedBold = TextStyle(
+    fontFamily: AppFonts.cairo,
+    fontSize: 18.sp,
+    color: ColorsManager.red,
     fontWeight: FontWeight.bold,
   );
   static TextStyle font32BoldWhite = TextStyle(
