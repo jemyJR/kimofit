@@ -3,7 +3,7 @@ description: "Persomal Trainer App"
 
 publish_to: 'none' 
 
-version: 1.0.8+1
+version: 1.0.9+1
 
 environment:
   sdk: '>=3.3.4 <4.0.0'
@@ -78,6 +78,8 @@ dependencies:
   audioplayers: ^6.0.0
   # A plugin for handling Vibration API on iOS, Android, web and OpenHarmony
   vibration: ^1.8.4
+  # Implementations of SHA, MD5, and HMAC cryptographic functions.
+  crypto: ^3.0.3
 
 
 

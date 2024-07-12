@@ -36,7 +36,7 @@ class SignupCubit extends Cubit<SignupState> {
       name: name,
       phone: phone,
       password: password,
-      deviceId: deviceId,
+      deviceId: await DeviceUtils.generateUniqueId(phone, password, deviceId),
     ));
 
     signupResponse.fold(
