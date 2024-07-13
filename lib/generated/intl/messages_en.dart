@@ -37,6 +37,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Contact me for details"),
         "currentUser":
             MessageLookupByLibrary.simpleMessage("Are you  current user ?"),
+        "day": MessageLookupByLibrary.simpleMessage("Day"),
         "dayNamber": MessageLookupByLibrary.simpleMessage("Day Number"),
         "days": MessageLookupByLibrary.simpleMessage("Days"),
         "dietPlanHeaderMessage": MessageLookupByLibrary.simpleMessage(

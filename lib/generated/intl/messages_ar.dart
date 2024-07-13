@@ -36,6 +36,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "contactme": MessageLookupByLibrary.simpleMessage("تواصل معي للتفاصيل"),
         "currentUser":
             MessageLookupByLibrary.simpleMessage("انت مستخدم حالي ؟"),
+        "day": MessageLookupByLibrary.simpleMessage("اليوم"),
         "dayNamber": MessageLookupByLibrary.simpleMessage("رقم اليوم"),
         "days": MessageLookupByLibrary.simpleMessage("ايام"),
         "dietPlanHeaderMessage": MessageLookupByLibrary.simpleMessage(

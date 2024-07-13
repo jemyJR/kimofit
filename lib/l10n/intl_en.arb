@@ -90,7 +90,8 @@
     "weekNamber": "Week Number",
     "sec":"Sec",
     "min":"Min",
-    "timeUp": "TIME UP !"
+    "timeUp": "TIME UP !",
+    "day": "Day"
 
 
     
