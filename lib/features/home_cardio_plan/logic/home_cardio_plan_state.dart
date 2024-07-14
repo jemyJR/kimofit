@@ -17,3 +17,16 @@ final class HomeCardioCalenderFailure extends HomeCardioPlanState {
   final String errorMessage;
   HomeCardioCalenderFailure({required this.errorMessage});
 }
+
+//! Home cardio plan exercises states
+final class HomeCardioPlanLoading extends HomeCardioPlanState {}
+
+final class HomeCardioPlanSuccess extends HomeCardioPlanState {
+  final HomeCardioPlanResponseModel homeCardioPlanResponseModel;
+  HomeCardioPlanSuccess({required this.homeCardioPlanResponseModel});
+}
+
+final class HomeCardioPlanFailure extends HomeCardioPlanState {
+  final String errorMessage;
+  HomeCardioPlanFailure({required this.errorMessage});
+}

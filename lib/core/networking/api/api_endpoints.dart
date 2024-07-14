@@ -22,6 +22,7 @@ class ApiEndPoints {
   static const String warmups = 'warmups/all/';
   static const String warmupcategories = 'warmups/home/';
   static const String homeCardioCalender = 'home-cardios/calender/';
+  static const String homeCardioPlan = 'home-cardios/all/';
 }
 
 class ApiKey {
@@ -120,5 +121,6 @@ class ApiKey {
 
   //! Home Cardios calender
   static const String calenderDays = 'days';
-  static const String calenderweektype = 'week';
+  static const String calenderweekType = 'week';
+  static const String calenderDayType = 'day';
 }

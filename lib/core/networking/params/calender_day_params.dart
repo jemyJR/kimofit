@@ -9,7 +9,7 @@ class CalenderDaysParams {
 
   Map<String, dynamic> toJson() {
     return {
-      ApiKey.calenderweektype: week,
+      ApiKey.calenderweekType: week,
     };
   }
 }
