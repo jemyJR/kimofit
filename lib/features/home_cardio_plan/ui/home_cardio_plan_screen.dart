@@ -16,6 +16,7 @@ class HomeCardioPlanScreen extends StatelessWidget {
       appBar: CustomAppBar(
         title: title,
       ),
+      //TODO: Handle when the training plan is empty
       body: const Column(
         children: [
           TimerAndCalender(),
