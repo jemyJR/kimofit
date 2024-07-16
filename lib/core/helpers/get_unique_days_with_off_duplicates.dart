@@ -3,6 +3,7 @@ import 'package:kimofit/features/timer_and_calender/data/calender_list.dart';
 
 List<LocalizedField> getUniqueDaysWithOffDuplicates(List<LocalizedField> days) {
   List<LocalizedField> result = [];
+  List<LocalizedField> orderdResult = [];
   Set<String> seenDays = {};
 
   for (var day in days) {
@@ -26,5 +27,14 @@ List<LocalizedField> getUniqueDaysWithOffDuplicates(List<LocalizedField> days) {
     );
   }
 
-  return result;
+  // update id to be ordered
+  for (var day in result) {
+    orderdResult.add(
+      day.copyWith(
+        id: (result.indexOf(day) + 1).toString(),
+      ),
+    );
+  }
+
+  return orderdResult;
 }
