@@ -93,6 +93,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("المعلومات الشخصية"),
         "phone": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "reps": MessageLookupByLibrary.simpleMessage("العدات"),
+        "restDay": MessageLookupByLibrary.simpleMessage("يوم الراحة"),
+        "restDayMessage": MessageLookupByLibrary.simpleMessage(
+            "أنت تستحق هذا اليوم . استمتع به!"),
         "searchCountry": MessageLookupByLibrary.simpleMessage("بحث عن دولة"),
         "sec": MessageLookupByLibrary.simpleMessage("ث"),
         "sets": MessageLookupByLibrary.simpleMessage("مجموعات"),
@@ -126,6 +129,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الرجاء ادخال رقم هاتف"),
         "warmUpExerciseHeaderMessage": MessageLookupByLibrary.simpleMessage(
             "قم بالإحماء بشكل صحيح قبل ممارسة الرياضة لتجنب الإصابة وجعل التدريبات الخاصة بك أكثر فعالية."),
+        "week": MessageLookupByLibrary.simpleMessage("الأسبوع"),
         "weekNamber": MessageLookupByLibrary.simpleMessage("رقم الأسبوع"),
         "weight": MessageLookupByLibrary.simpleMessage("الوزن"),
         "welcome": MessageLookupByLibrary.simpleMessage("مرحباً")

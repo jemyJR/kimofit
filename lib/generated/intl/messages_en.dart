@@ -92,6 +92,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Personal Information"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "reps": MessageLookupByLibrary.simpleMessage("reps"),
+        "restDay": MessageLookupByLibrary.simpleMessage("Rest Day"),
+        "restDayMessage": MessageLookupByLibrary.simpleMessage(
+            "You deserve this day. Enjoy it!"),
         "searchCountry": MessageLookupByLibrary.simpleMessage("Search Country"),
         "sec": MessageLookupByLibrary.simpleMessage("Sec"),
         "sets": MessageLookupByLibrary.simpleMessage("sets"),
@@ -125,6 +128,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter a phone number"),
         "warmUpExerciseHeaderMessage": MessageLookupByLibrary.simpleMessage(
             "Warm up exercise properly before exercising to prevent injury and make your workouts more effective."),
+        "week": MessageLookupByLibrary.simpleMessage("Week"),
         "weekNamber": MessageLookupByLibrary.simpleMessage("Week Number"),
         "weight": MessageLookupByLibrary.simpleMessage("Weight"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome")

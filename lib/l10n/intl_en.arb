@@ -91,7 +91,10 @@
     "sec":"Sec",
     "min":"Min",
     "timeUp": "TIME UP !",
-    "day": "Day"
+    "day": "Day",
+    "week": "Week",
+    "restDay" : "Rest Day",
+    "restDayMessage" : "You deserve this day. Enjoy it!"
 
 
     
