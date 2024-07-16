@@ -6,8 +6,8 @@ class Constants {
   static const String deviceId = 'registered_device_id';
   static const String isUserLoggedIn = 'isUserLoggedIn';
   static const String warmUpHeroTag = 'warmUpExercisesDetailsScreen';
-  static const String selectedDay = 'selected_day';
-  static const String selectedWeek = 'selected_week';
+  static const String homeCardioSelectedDay = 'home_cardio_selected_day';
+  static const String homeCardioSelectedWeek = 'home_cardio_selected_week';
 }
 
 class SocialMediaLinks {
