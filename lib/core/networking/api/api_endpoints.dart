@@ -123,4 +123,13 @@ class ApiKey {
   static const String calenderDays = 'days';
   static const String calenderweekType = 'week';
   static const String calenderDayType = 'day';
+
+  //! Home Cardios plan
+  static const String homeCardioName = 'name';
+  static const String homeCardioImage = 'image';
+  static const String homeCardioReps = 'reps';
+  static const String homeCardioSets = 'sets';
+  static const String homeCardioWeight = 'weight';
+  static const String homeCardioDuration = 'duration';
+  static const String homeCardio = 'cardio';
 }

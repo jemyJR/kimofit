@@ -3,14 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
-import 'package:kimofit/features/warm_up_exercises/data/models/warm_up_exercise_model.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 enum ExerciseLogInSliderType { reps, sets, weight, duration }
 
 class ExerciseLogInSlider extends StatelessWidget {
   const ExerciseLogInSlider({super.key, required this.exercise});
-  final WarmUpExerciseModel exercise;
+  final dynamic exercise;
 
   @override
   Widget build(BuildContext context) {
