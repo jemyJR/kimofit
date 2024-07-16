@@ -799,6 +799,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Day`
+  String get day {
+    return Intl.message(
+      'Day',
+      name: 'day',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Week`
+  String get week {
+    return Intl.message(
+      'Week',
+      name: 'week',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rest Day`
+  String get restDay {
+    return Intl.message(
+      'Rest Day',
+      name: 'restDay',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You deserve this day. Enjoy it!`
+  String get restDayMessage {
+    return Intl.message(
+      'You deserve this day. Enjoy it!',
+      name: 'restDayMessage',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

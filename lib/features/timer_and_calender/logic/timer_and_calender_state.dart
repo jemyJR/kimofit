@@ -4,18 +4,42 @@ sealed class TimerAndCalenderState {}
 
 final class TimerAndCalenderInitial extends TimerAndCalenderState {}
 
-//! Calender states
-class DropdownValueState extends TimerAndCalenderState {
-  final LocalizedField? selectedValue;
-  DropdownValueState(this.selectedValue);
+class TimerAndCalenderLoading extends TimerAndCalenderState {}
+
+class TimerAndCalenderLoaded extends TimerAndCalenderState {
+  final List<LocalizedField> days;
+  final List<LocalizedField> weeks;
+  final LocalizedField selectedDay;
+  final LocalizedField selectedWeek;
+
+  TimerAndCalenderLoaded({
+    required this.days,
+    required this.weeks,
+    required this.selectedDay,
+    required this.selectedWeek,
+  });
+
+  TimerAndCalenderLoaded copyWith({
+    List<LocalizedField>? days,
+    List<LocalizedField>? weeks,
+    LocalizedField? selectedDay,
+    LocalizedField? selectedWeek,
+  }) {
+    return TimerAndCalenderLoaded(
+      days: days ?? this.days,
+      weeks: weeks ?? this.weeks,
+      selectedDay: selectedDay ?? this.selectedDay,
+      selectedWeek: selectedWeek ?? this.selectedWeek,
+    );
+  }
 }
 
-class DropDownparamsUpdated extends TimerAndCalenderState {
-  final DropDownMenuParams initParams;
-  DropDownparamsUpdated(this.initParams);
+final class TimerAndCalenderFailure extends TimerAndCalenderState {
+  final String errorMessage;
+  TimerAndCalenderFailure({required this.errorMessage});
 }
 
-//! Calender Mode
+// //! Calender Mode
 class CalenderModeState extends TimerAndCalenderState {}
 
 //! Timer Options Mode

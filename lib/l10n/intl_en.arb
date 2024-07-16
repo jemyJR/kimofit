@@ -90,7 +90,11 @@
     "weekNamber": "Week Number",
     "sec":"Sec",
     "min":"Min",
-    "timeUp": "TIME UP !"
+    "timeUp": "TIME UP !",
+    "day": "Day",
+    "week": "Week",
+    "restDay" : "Rest Day",
+    "restDayMessage" : "You deserve this day. Enjoy it!"
 
 
     

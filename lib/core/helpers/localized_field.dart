@@ -12,6 +12,18 @@ class LocalizedField {
     String? id,
   }) : id = id ?? const Uuid().v4(); // Generate a unique id if none is provided
 
+  LocalizedField copyWith({
+    String? en,
+    String? ar,
+    String? id,
+  }) {
+    return LocalizedField(
+      en: en ?? this.en,
+      ar: ar ?? this.ar,
+      id: id ?? this.id,
+    );
+  }
+
   factory LocalizedField.fromJson(Map<String, dynamic> json) {
     return LocalizedField(
       en: json['en'],
@@ -42,14 +54,11 @@ class LocalizedField {
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other is LocalizedField &&
-        other.en == en &&
-        other.ar == ar &&
-        other.id == id;
+    return other is LocalizedField && other.id == id;
   }
 
   @override
-  int get hashCode => en.hashCode ^ ar.hashCode ^ id.hashCode;
+  int get hashCode => id.hashCode;
 
   @override
   String toString() {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
-import 'package:kimofit/core/helpers/localized_field.dart';
 import 'package:kimofit/core/theming/style.dart';
+import 'package:kimofit/features/timer_and_calender/data/calender_list.dart';
 
 class DropdownMenuContainer extends StatelessWidget {
   final String value;
@@ -50,12 +50,9 @@ TextStyle _getTextStyle(bool isSelected, String value) {
     return TextStyles.font18RedBold;
   } else if (isSelected) {
     return TextStyles.font18BlueBold;
+  } else if (value == notFoundDay.getLocalizedText()) {
+    return TextStyles.font18YellowBold;
   } else {
     return TextStyles.font18White;
   }
 }
-
-LocalizedField restDay = LocalizedField(
-  en: 'OFF',
-  ar: 'الراحه',
-);

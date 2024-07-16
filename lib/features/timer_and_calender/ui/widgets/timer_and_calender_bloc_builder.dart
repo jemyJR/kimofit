@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kimofit/core/constants/assets.dart';
-import 'package:kimofit/core/helpers/localized_field.dart';
 import 'package:kimofit/features/timer_and_calender/logic/timer_and_calender_cubit.dart';
 import 'package:kimofit/features/timer_and_calender/ui/widgets/calender/day_and_week_row.dart';
 import 'package:kimofit/features/timer_and_calender/ui/widgets/timer/count_down_timer_row.dart';
@@ -10,13 +9,7 @@ import 'package:kimofit/features/timer_and_calender/ui/widgets/timer_and_calende
 import 'package:kimofit/features/timer_and_calender/ui/widgets/timer/timer_option.dart';
 
 class TimerAndCalenderBlocBuilder extends StatelessWidget {
-  const TimerAndCalenderBlocBuilder({
-    super.key,
-    required this.days,
-    required this.weeks,
-  });
-  final List<LocalizedField> days;
-  final List<LocalizedField> weeks;
+  const TimerAndCalenderBlocBuilder({super.key});
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -42,8 +35,6 @@ class TimerAndCalenderBlocBuilder extends StatelessWidget {
               getTimerAndCalenderChild(
                 cubit: cubit,
                 state: state,
-                days: days,
-                weeks: weeks,
               ),
             ],
           );
@@ -56,11 +47,9 @@ class TimerAndCalenderBlocBuilder extends StatelessWidget {
 Widget getTimerAndCalenderChild({
   required TimerAndCalenderCubit cubit,
   required TimerAndCalenderState state,
-  required List<LocalizedField>? days,
-  required List<LocalizedField>? weeks,
 }) {
   if (state is CalenderModeState) {
-    return DayAndWeekRow(days: days!, weeks: weeks!);
+    return const DayAndWeekRow();
   } else if (state is TimerOptionsModeState) {
     return TimerOption(
       onSelectDuration: (int duration) {
@@ -78,6 +67,6 @@ Widget getTimerAndCalenderChild({
       onPressed: () => cubit.showTimerOptions(),
     );
   } else {
-    return DayAndWeekRow(days: days!, weeks: weeks!);
+    return const DayAndWeekRow();
   }
 }
