@@ -1,17 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
-import 'package:kimofit/core/helpers/localized_field.dart';
 import 'package:kimofit/features/timer_and_calender/ui/widgets/timer_and_calender_bloc_builder.dart';
 
 class TimerAndCalender extends StatelessWidget {
-  const TimerAndCalender({
-    super.key,
-    required this.days,
-    required this.weeks,
-  });
-  final List<LocalizedField> days;
-  final List<LocalizedField> weeks;
+  const TimerAndCalender({super.key});
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -35,10 +28,7 @@ class TimerAndCalender extends StatelessWidget {
                 ),
               ),
             ),
-            TimerAndCalenderBlocBuilder(
-              days: days,
-              weeks: weeks,
-            ),
+            const TimerAndCalenderBlocBuilder(),
           ],
         ),
       ),
