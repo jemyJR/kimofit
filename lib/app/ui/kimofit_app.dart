@@ -4,6 +4,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/app/logic/cubit/language_cubit.dart';
 import 'package:kimofit/app/logic/cubit/language_state.dart';
+import 'package:kimofit/app/ui/widgets/initialization_alert_widget.dart';
 import 'package:kimofit/core/constants/constants.dart';
 import 'package:kimofit/core/helpers/get_context.dart';
 import 'package:kimofit/core/routing/app_router.dart';
@@ -46,6 +47,9 @@ class KimoFitApp extends StatelessWidget {
             supportedLocales: S.delegate.supportedLocales,
             // to Get the Global Context
             navigatorKey: GetContext.key,
+            builder: (context, child) {
+              return InitializationAlertWidget(child: child!);
+            },
           );
         },
       ),

@@ -32,15 +32,21 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Change Password"),
         "changePasswordMessage":
             MessageLookupByLibrary.simpleMessage("Change your password now"),
+        "close": MessageLookupByLibrary.simpleMessage("Close"),
         "cm": MessageLookupByLibrary.simpleMessage("CM"),
         "contactme":
             MessageLookupByLibrary.simpleMessage("Contact me for details"),
         "currentUser":
             MessageLookupByLibrary.simpleMessage("Are you  current user ?"),
+        "day": MessageLookupByLibrary.simpleMessage("Day"),
         "dayNamber": MessageLookupByLibrary.simpleMessage("Day Number"),
         "days": MessageLookupByLibrary.simpleMessage("Days"),
+        "deviceIdNoticeMessage": MessageLookupByLibrary.simpleMessage(
+            "Uninstalling the application or clearing its data will prevent you from accessing your account again. So be careful"),
         "dietPlanHeaderMessage": MessageLookupByLibrary.simpleMessage(
             "Follow a balanced diet to fuel your body, enhance your performance, and achieve your fitness goals."),
+        "dontShowAgain":
+            MessageLookupByLibrary.simpleMessage("Don\'t show it again"),
         "dose": MessageLookupByLibrary.simpleMessage("Dose"),
         "duration": MessageLookupByLibrary.simpleMessage("Duration"),
         "end": MessageLookupByLibrary.simpleMessage("End"),
@@ -50,8 +56,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "exerciseNo": MessageLookupByLibrary.simpleMessage("Exercise No"),
         "free": MessageLookupByLibrary.simpleMessage("Free"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
+        "golden": MessageLookupByLibrary.simpleMessage("Golden"),
         "homeWelcomeMessage":
             MessageLookupByLibrary.simpleMessage("We hope you are well"),
+        "importantNotice":
+            MessageLookupByLibrary.simpleMessage("Important Notice"),
         "kg": MessageLookupByLibrary.simpleMessage("KG"),
         "language": MessageLookupByLibrary.simpleMessage("عربي"),
         "length": MessageLookupByLibrary.simpleMessage("Length"),
@@ -91,6 +100,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Personal Information"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "reps": MessageLookupByLibrary.simpleMessage("reps"),
+        "restDay": MessageLookupByLibrary.simpleMessage("Rest Day"),
+        "restDayMessage": MessageLookupByLibrary.simpleMessage(
+            "You deserve this day. Enjoy it!"),
         "searchCountry": MessageLookupByLibrary.simpleMessage("Search Country"),
         "sec": MessageLookupByLibrary.simpleMessage("Sec"),
         "sets": MessageLookupByLibrary.simpleMessage("sets"),
@@ -124,6 +136,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter a phone number"),
         "warmUpExerciseHeaderMessage": MessageLookupByLibrary.simpleMessage(
             "Warm up exercise properly before exercising to prevent injury and make your workouts more effective."),
+        "week": MessageLookupByLibrary.simpleMessage("Week"),
         "weekNamber": MessageLookupByLibrary.simpleMessage("Week Number"),
         "weight": MessageLookupByLibrary.simpleMessage("Weight"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome")

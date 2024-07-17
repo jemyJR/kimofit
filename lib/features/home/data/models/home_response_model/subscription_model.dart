@@ -6,6 +6,7 @@ class SubscriptionModel {
   final bool status;
   final double percent;
   final bool isPaid;
+  final bool? goldenSubscription;
   final int? subscriptionMonths;
   SubscriptionModel({
     required this.startDate,
@@ -13,6 +14,7 @@ class SubscriptionModel {
     required this.status,
     required this.percent,
     required this.isPaid,
+    this.goldenSubscription,
     this.subscriptionMonths,
   });
 
@@ -23,6 +25,7 @@ class SubscriptionModel {
       status: json[ApiKey.subscriptionStatus],
       percent: json[ApiKey.subscriptionPercent],
       isPaid: json[ApiKey.subscriptionIsPaid],
+      goldenSubscription: json[ApiKey.subscriptionGolden],
       subscriptionMonths: json[ApiKey.subscriptionMonths],
     );
   }

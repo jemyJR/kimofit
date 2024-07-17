@@ -21,6 +21,9 @@ class ApiEndPoints {
   static const String dietPlan = 'diets/all/';
   static const String warmups = 'warmups/all/';
   static const String warmupcategories = 'warmups/home/';
+  static const String homeCardioCalender = 'home-cardios/calender/';
+  static const String homeCardioPlan = 'home-cardios/all/';
+  static const String foodRecipeBook = 'meals/recipes-book/';
 }
 
 class ApiKey {
@@ -66,6 +69,7 @@ class ApiKey {
   static const String subscriptionStatus = 'status';
   static const String subscriptionPercent = 'percentage';
   static const String subscriptionIsPaid = 'monthly';
+  static const String subscriptionGolden = 'golden';
   static const String homeErrorMessage = 'message';
 
   //! LocalizedField keys
@@ -116,4 +120,21 @@ class ApiKey {
   static const String warmupCategoryName = 'name';
   static const String warmupCategoryImage = 'attachment';
   static const String warmupCategory = 'warm_up_category';
+
+  //! Home Cardios calender
+  static const String calenderDays = 'days';
+  static const String calenderweekType = 'week';
+  static const String calenderDayType = 'day';
+
+  //! Home Cardios plan
+  static const String homeCardioName = 'name';
+  static const String homeCardioImage = 'image';
+  static const String homeCardioReps = 'reps';
+  static const String homeCardioSets = 'sets';
+  static const String homeCardioWeight = 'weight';
+  static const String homeCardioDuration = 'duration';
+  static const String homeCardio = 'cardio';
+
+  //! Food Recipe Book keys
+  static const String foodRecipeBookAttachment = 'attachment';
 }

@@ -17,6 +17,10 @@ class Assets {
   /// assets/animation/profile.json
   static const String animationProfile = "assets/animation/profile.json";
 
+  /// Assets for animationRestDayPeople
+  /// assets/animation/rest_day_people.json
+  static const String animationRestDayPeople = "assets/animation/rest_day_people.json";
+
   /// Assets for animationSubscriptionEndAlert
   /// assets/animation/subscription_end_alert.json
   static const String animationSubscriptionEndAlert = "assets/animation/subscription_end_alert.json";

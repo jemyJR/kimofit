@@ -6,14 +6,13 @@ import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/not_found_widget.dart';
 import 'package:kimofit/features/home/ui/widgets/home_shimmer/shimmer_with_text.dart';
-import 'package:kimofit/features/warm_up_exercises/data/models/warm_up_exercise_model.dart';
 import 'package:kimofit/core/widgets/exercise_slider/arrow_buttons_and_indicator.dart';
 import 'package:kimofit/core/widgets/exercise_slider/exercise_log_in_slider.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 class ExerciseSlider extends StatefulWidget {
   const ExerciseSlider({super.key, required this.exercises});
-  final List<WarmUpExerciseModel> exercises;
+  final List<dynamic> exercises;
 
   @override
   State<ExerciseSlider> createState() => _ExerciseSliderState();

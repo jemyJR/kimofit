@@ -6,13 +6,17 @@ import 'package:kimofit/core/cache/cache_helper.dart';
 import 'package:kimofit/core/constants/constants.dart';
 import 'package:kimofit/core/di/dependency_injection.dart';
 import 'package:kimofit/core/helpers/localized_field.dart';
-import 'package:kimofit/core/networking/params/drop_down_menu_params.dart';
+import 'package:kimofit/core/networking/params/calender_day_params.dart';
+import 'package:kimofit/features/home_cardio_plan/data/repo/home_cardio_plan_repo.dart';
+import 'package:kimofit/features/timer_and_calender/data/calender_list.dart';
 import 'package:vibration/vibration.dart';
 
 part 'timer_and_calender_state.dart';
 
 class TimerAndCalenderCubit extends Cubit<TimerAndCalenderState> {
-  TimerAndCalenderCubit() : super(TimerAndCalenderInitial());
+  TimerAndCalenderCubit() : super(TimerAndCalenderInitial()) {
+    loadWeeks();
+  }
 
   //! Audio Player And Vibrator
   final AudioPlayer audioPlayer = AudioPlayer();
@@ -32,84 +36,124 @@ class TimerAndCalenderCubit extends Cubit<TimerAndCalenderState> {
     Vibration.cancel();
   }
 
-  // //TODO: Remove this dummy data and replace it with real data
-  List<LocalizedField> days = [
-    LocalizedField(en: 'OFF', ar: 'الراحه', id: '7'),
-    LocalizedField(en: 'one', ar: 'الاول', id: '1'),
-    LocalizedField(en: 'two', ar: 'الثاني', id: '2'),
-    LocalizedField(en: 'OFF', ar: 'الراحه', id: '3'),
-    LocalizedField(en: 'four', ar: 'الرابع', id: '4'),
-    LocalizedField(en: 'five', ar: 'الخامس', id: '5'),
-    LocalizedField(en: 'six', ar: 'السادس', id: '6'),
-  ];
+  //! Track current selected week and day
+  LocalizedField? currentSelectedWeek;
+  LocalizedField? currentSelectedDay;
+  List<LocalizedField>? currentWeekList;
+  List<LocalizedField>? currentDayList;
 
-  List<LocalizedField> weeks = [
-    LocalizedField(en: 'one', ar: 'الاول', id: '1'),
-    LocalizedField(en: 'two', ar: 'الثاني', id: '2'),
-    LocalizedField(en: 'three', ar: 'الثالث', id: '3'),
-    LocalizedField(en: 'four', ar: 'الرابع', id: '4'),
-  ];
+  LocalizedField emptyLocalizedField = LocalizedField(id: '', en: '', ar: '');
 
-  //! Calender Logic ( Load and Save Selected Value )
-  DropDownMenuParams initParams = DropDownMenuParams(day: '', week: '');
-
-  void loadSelectedValue({required String preferenceKey}) {
-    final selectedValueJson =
-        getIt<CacheHelper>().getDataString(key: preferenceKey);
-    if (selectedValueJson != null) {
-      final selectedValue =
-          LocalizedField.fromJson(jsonDecode(selectedValueJson));
-
-      emit(DropdownValueState(selectedValue));
-    } else {
-      emit(DropdownValueState(null));
-    }
-  }
-
-  void saveSelectedValue(
-      {required String preferenceKey, required LocalizedField value}) {
+  //! Save and Load Selected Value
+  Future<void> saveSelectedValue({
+    required String preferenceKey,
+    required LocalizedField value,
+  }) async {
     final valueJson = jsonEncode(value.toJson());
     getIt<CacheHelper>().saveData(key: preferenceKey, value: valueJson);
-
-    updateInitParams(preferenceKey, value);
-
-    emit(DropdownValueState(value));
   }
 
-  void updateInitParams(String preferenceKey, LocalizedField selectedValue) {
-    final selectedDay = _getSelectedValue(Constants.selectedDay, days.first.en);
-    final selectedWeek =
-        _getSelectedValue(Constants.selectedWeek, weeks.first.en);
-
-    if (preferenceKey == Constants.selectedDay) {
-      initParams = DropDownMenuParams(
-        day: selectedValue.en,
-        week: selectedWeek,
-      );
-    } else {
-      initParams = DropDownMenuParams(
-        day: selectedDay,
-        week: selectedValue.en,
-      );
-    }
-  }
-
-  Future<void> getInitParams() async {
-    final selectedDay = _getSelectedValue(Constants.selectedDay, days.first.en);
-    final selectedWeek =
-        _getSelectedValue(Constants.selectedWeek, weeks.first.en);
-
-    initParams = DropDownMenuParams(day: selectedDay, week: selectedWeek);
-
-    emit(DropDownparamsUpdated(initParams));
-  }
-
-  String _getSelectedValue(String preferenceKey, String defaultValue) {
+  LocalizedField? getSelectedValue(String preferenceKey) {
     final selectedValueJson =
         getIt<CacheHelper>().getDataString(key: preferenceKey);
     return selectedValueJson != null
-        ? LocalizedField.fromJson(jsonDecode(selectedValueJson)).en
-        : defaultValue;
+        ? LocalizedField.fromJson(jsonDecode(selectedValueJson))
+        : null;
+  }
+
+  //! Load Weeks and Days
+  Future<void> loadWeeks() async {
+    emit(TimerAndCalenderLoading());
+
+    try {
+      LocalizedField? cachedWeek =
+          getSelectedValue(Constants.homeCardioSelectedWeek);
+
+      LocalizedField initialWeek = cachedWeek ?? weeks.first;
+
+      currentSelectedWeek = initialWeek;
+
+      emit(TimerAndCalenderLoaded(
+        weeks: weeks,
+        selectedWeek: initialWeek,
+        days: [],
+        selectedDay: emptyLocalizedField,
+      ));
+
+      await loadDays(initialWeek);
+    } catch (error) {
+      emit(TimerAndCalenderFailure(errorMessage: error.toString()));
+    }
+  }
+
+  Future<void> loadDays(LocalizedField week) async {
+    emit(TimerAndCalenderLoading());
+
+    try {
+      CalenderDaysParams calenderDaysParams = CalenderDaysParams(week: week.id);
+      final response = await getIt<HomeCardioPlanRepo>().getHomeCardioDays(
+        calenderDaysParams: calenderDaysParams,
+      );
+
+      response.fold(
+        (errorMessage) =>
+            emit(TimerAndCalenderFailure(errorMessage: errorMessage)),
+        (homeCardioCalenderResponseModel) {
+          List<LocalizedField> days = homeCardioCalenderResponseModel.days;
+
+          currentDayList = days;
+
+          LocalizedField? cachedDay =
+              getSelectedValue(Constants.homeCardioSelectedDay);
+
+          LocalizedField initialDay = cachedDay ?? days.first;
+
+          currentSelectedDay = initialDay;
+
+          emit(TimerAndCalenderLoaded(
+            days: days,
+            weeks: weeks,
+            selectedDay: initialDay,
+            selectedWeek: week,
+          ));
+
+          saveSelectedValue(
+            preferenceKey: Constants.homeCardioSelectedWeek,
+            value: week,
+          );
+          saveSelectedValue(
+            preferenceKey: Constants.homeCardioSelectedDay,
+            value: initialDay,
+          );
+        },
+      );
+    } catch (errorMessage) {
+      emit(TimerAndCalenderFailure(errorMessage: errorMessage.toString()));
+    }
+  }
+
+  //! Select Week and Day
+
+  void selectDay(LocalizedField day) {
+    saveSelectedValue(
+      preferenceKey: Constants.homeCardioSelectedDay,
+      value: day,
+    );
+
+    final currentState = state;
+    if (currentState is TimerAndCalenderLoaded) {
+      currentSelectedDay = day;
+      emit(currentState.copyWith(selectedDay: day));
+    }
+  }
+
+  void selectWeek(LocalizedField week) async {
+    saveSelectedValue(
+      preferenceKey: Constants.homeCardioSelectedWeek,
+      value: week,
+    );
+    currentSelectedWeek = week;
+    await loadDays(week);
   }
 
   //! toggle between calender and timer
@@ -118,7 +162,13 @@ class TimerAndCalenderCubit extends Cubit<TimerAndCalenderState> {
         state is CountdownTimerState ||
         state is TimeUpModeState) {
       stopSoundAndVibration();
-      emit(CalenderModeState());
+
+      emit(TimerAndCalenderLoaded(
+        days: currentSelectedDay != null ? currentDayList! : [],
+        weeks: currentSelectedWeek != null ? weeks : [],
+        selectedDay: currentSelectedDay ?? emptyLocalizedField,
+        selectedWeek: currentSelectedWeek ?? emptyLocalizedField,
+      ));
     } else {
       emit(TimerOptionsModeState());
     }
