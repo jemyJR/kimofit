@@ -5,9 +5,12 @@ import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:rotated_corner_decoration/rotated_corner_decoration.dart';
 
-Decoration rotatedCornerBadgeDecoration({required String text}) {
+Decoration rotatedCornerBadgeDecoration({
+  required String text,
+  required Color color,
+}) {
   return RotatedCornerDecoration.withColor(
-    color: ColorsManager.green,
+    color: color,
     badgeSize: Size(75.w, 75.h),
     badgeCornerRadius: Radius.circular(10.r),
     badgePosition: BadgePosition.topStart,
