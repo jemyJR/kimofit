@@ -6,7 +6,7 @@ class SubscriptionModel {
   final bool status;
   final double percent;
   final bool isPaid;
-  final bool goldenSubscription;
+  final bool? goldenSubscription;
   final int? subscriptionMonths;
   SubscriptionModel({
     required this.startDate,
@@ -14,7 +14,7 @@ class SubscriptionModel {
     required this.status,
     required this.percent,
     required this.isPaid,
-    required this.goldenSubscription,
+    this.goldenSubscription,
     this.subscriptionMonths,
   });
 

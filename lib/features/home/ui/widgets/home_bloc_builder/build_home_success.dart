@@ -52,7 +52,8 @@ class BuildHomeSuccess extends StatelessWidget {
                   homeCategories: homeResponseModel.categories,
                   isPaid: isPaid,
                   goldenSubscription:
-                      homeResponseModel.subscription.goldenSubscription,
+                      homeResponseModel.subscription.goldenSubscription ??
+                          false,
                 ),
                 const ContactsWidget(),
               ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/widgets/custom_app_bar.dart';
-import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+import 'package:kimofit/features/food_recipe_book/ui/widget/food_recipe_book_bloc_builder.dart';
 
 class FoodRecipeBookScreen extends StatelessWidget {
   final String title;
@@ -15,9 +15,7 @@ class FoodRecipeBookScreen extends StatelessWidget {
       appBar: CustomAppBar(
         title: title,
       ),
-      body: SfPdfViewer.network(
-        'https://kimofit-production.up.railway.app/media/categories/attachments/FoodRecipeBookScreen.pdf',
-      ),
+      body: const FoodRecipeBookBlocBuilder(),
     );
   }
 }

@@ -32,7 +32,7 @@ class HomeCategoriesListView extends StatelessWidget {
             index: index,
             text: category.name.getLocalizedText(),
             isPaid: isPaid,
-            goldenSubscription: true,
+            goldenSubscription: goldenSubscription,
           );
           return CustomHomeContainer(
             homeCardCategoryArguments: homeCardCategoryArguments,
