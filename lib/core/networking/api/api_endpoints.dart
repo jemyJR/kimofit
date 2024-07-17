@@ -23,6 +23,7 @@ class ApiEndPoints {
   static const String warmupcategories = 'warmups/home/';
   static const String homeCardioCalender = 'home-cardios/calender/';
   static const String homeCardioPlan = 'home-cardios/all/';
+  static const String foodRecipeBook = 'meals/recipes-book/';
 }
 
 class ApiKey {
@@ -133,4 +134,7 @@ class ApiKey {
   static const String homeCardioWeight = 'weight';
   static const String homeCardioDuration = 'duration';
   static const String homeCardio = 'cardio';
+
+  //! Food Recipe Book keys
+  static const String foodRecipeBookAttachment = 'attachment';
 }
