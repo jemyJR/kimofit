@@ -8,6 +8,7 @@ import 'package:kimofit/features/diet_plan/logic/diet_plan_cubit.dart';
 import 'package:kimofit/features/diet_plan/ui/diet_plan_details_screen.dart';
 import 'package:kimofit/features/diet_plan/ui/diet_plan_notes_screen.dart';
 import 'package:kimofit/features/diet_plan/ui/diet_plan_screen.dart';
+import 'package:kimofit/features/food_recipe_book/ui/food_recipe_book_screen.dart';
 import 'package:kimofit/features/home/data/models/subscription_features_model.dart';
 import 'package:kimofit/features/home/logic/home_cubit.dart';
 import 'package:kimofit/features/home/ui/home_screen.dart';
@@ -137,6 +138,11 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) =>
               SubscriptionScreen(subscriptionFeatures: arguments),
+        );
+      case Routes.foodRecipeBookScreen:
+        arguments as String;
+        return MaterialPageRoute(
+          builder: (context) => FoodRecipeBookScreen(title: arguments),
         );
     }
     return null;
