@@ -51,6 +51,8 @@ class BuildHomeSuccess extends StatelessWidget {
                 HomeCategoriesListView(
                   homeCategories: homeResponseModel.categories,
                   isPaid: isPaid,
+                  goldenSubscription:
+                      homeResponseModel.subscription.goldenSubscription,
                 ),
                 const ContactsWidget(),
               ],

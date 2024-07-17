@@ -68,6 +68,7 @@ class ApiKey {
   static const String subscriptionStatus = 'status';
   static const String subscriptionPercent = 'percentage';
   static const String subscriptionIsPaid = 'monthly';
+  static const String subscriptionGolden = 'golden';
   static const String homeErrorMessage = 'message';
 
   //! LocalizedField keys

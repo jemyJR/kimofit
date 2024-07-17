@@ -63,4 +63,18 @@ List<SubscriptionFeaturesModel> subscriptionFeatures = [
       'Basic feature 5',
     ],
   ),
+  SubscriptionFeaturesModel(
+    title: LocalizedField(
+      en: "Food Recipe Book",
+      ar: "كتاب الوصفات",
+    ),
+    features: [
+      'Basic feature 1',
+      'Basic feature 2',
+      'Basic feature 3',
+      'Basic feature 4',
+      'Basic feature 5',
+      'Basic feature 6',
+    ],
+  ),
 ];
