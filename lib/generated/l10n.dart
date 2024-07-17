@@ -849,6 +849,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Important Notice`
+  String get importantNotice {
+    return Intl.message(
+      'Important Notice',
+      name: 'importantNotice',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Uninstalling the application or clearing its data will prevent you from accessing your account again. So be careful`
+  String get deviceIdNoticeMessage {
+    return Intl.message(
+      'Uninstalling the application or clearing its data will prevent you from accessing your account again. So be careful',
+      name: 'deviceIdNoticeMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Close`
+  String get close {
+    return Intl.message(
+      'Close',
+      name: 'close',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Don't show it again`
+  String get dontShowAgain {
+    return Intl.message(
+      'Don\'t show it again',
+      name: 'dontShowAgain',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

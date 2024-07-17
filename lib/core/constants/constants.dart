@@ -4,6 +4,7 @@ class Constants {
   static const String isOnBoardingVisited = 'isOnBoardingVisited';
   static const String languageCode = 'languageCode';
   static const String deviceId = 'registered_device_id';
+  static const String showDeviceIdAlert = 'showDeviceIdAlert';
   static const String isUserLoggedIn = 'isUserLoggedIn';
   static const String warmUpHeroTag = 'warmUpExercisesDetailsScreen';
   static const String homeCardioSelectedDay = 'home_cardio_selected_day';

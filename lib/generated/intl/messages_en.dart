@@ -32,6 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Change Password"),
         "changePasswordMessage":
             MessageLookupByLibrary.simpleMessage("Change your password now"),
+        "close": MessageLookupByLibrary.simpleMessage("Close"),
         "cm": MessageLookupByLibrary.simpleMessage("CM"),
         "contactme":
             MessageLookupByLibrary.simpleMessage("Contact me for details"),
@@ -40,8 +41,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "day": MessageLookupByLibrary.simpleMessage("Day"),
         "dayNamber": MessageLookupByLibrary.simpleMessage("Day Number"),
         "days": MessageLookupByLibrary.simpleMessage("Days"),
+        "deviceIdNoticeMessage": MessageLookupByLibrary.simpleMessage(
+            "Uninstalling the application or clearing its data will prevent you from accessing your account again. So be careful"),
         "dietPlanHeaderMessage": MessageLookupByLibrary.simpleMessage(
             "Follow a balanced diet to fuel your body, enhance your performance, and achieve your fitness goals."),
+        "dontShowAgain":
+            MessageLookupByLibrary.simpleMessage("Don\'t show it again"),
         "dose": MessageLookupByLibrary.simpleMessage("Dose"),
         "duration": MessageLookupByLibrary.simpleMessage("Duration"),
         "end": MessageLookupByLibrary.simpleMessage("End"),
@@ -54,6 +59,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "golden": MessageLookupByLibrary.simpleMessage("Golden"),
         "homeWelcomeMessage":
             MessageLookupByLibrary.simpleMessage("We hope you are well"),
+        "importantNotice":
+            MessageLookupByLibrary.simpleMessage("Important Notice"),
         "kg": MessageLookupByLibrary.simpleMessage("KG"),
         "language": MessageLookupByLibrary.simpleMessage("عربي"),
         "length": MessageLookupByLibrary.simpleMessage("Length"),
