@@ -14,6 +14,7 @@ class Routes {
   static const String dietPlanNotesScreen = '/dietPlanNotesScreen';
   static const String supplementScreen = '/supplementScreen';
   static const String subscriptionScreen = '/subscriptionScreen';
+  static const String foodRecipeBookScreen = '/foodRecipeBookScreen';
 }
 
 List<String> homeCategoriesScreens = [
@@ -22,4 +23,5 @@ List<String> homeCategoriesScreens = [
   Routes.homeCardioPlanScreen,
   Routes.dietPlanScreen,
   Routes.supplementScreen,
+  Routes.foodRecipeBookScreen,
 ];

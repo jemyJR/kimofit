@@ -94,7 +94,9 @@
     "day": "Day",
     "week": "Week",
     "restDay" : "Rest Day",
-    "restDayMessage" : "You deserve this day. Enjoy it!"
+    "restDayMessage" : "You deserve this day. Enjoy it!",
+
+    "golden" : "Golden"
 
 
     

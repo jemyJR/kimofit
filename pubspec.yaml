@@ -79,7 +79,11 @@ dependencies:
   # A plugin for handling Vibration API on iOS, Android, web and OpenHarmony
   vibration: ^1.8.4
   # Implementations of SHA, MD5, and HMAC cryptographic functions.
-  crypto: ^3.0.3
+  crypto: ^3.0.3  
+  # Flutter PDF Viewer library is used to display a PDF document
+  syncfusion_flutter_pdfviewer: ^26.1.42
+  # Syncfusion Flutter Core is a dependent package for all the Syncfusion Flutter widgets
+  syncfusion_flutter_core: ^26.1.42
 
 
 

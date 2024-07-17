@@ -50,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "exerciseNo": MessageLookupByLibrary.simpleMessage(" التمرين رقم"),
         "free": MessageLookupByLibrary.simpleMessage("مجاني"),
         "getStarted": MessageLookupByLibrary.simpleMessage("ابدء الان"),
+        "golden": MessageLookupByLibrary.simpleMessage("ذهبي"),
         "homeWelcomeMessage":
             MessageLookupByLibrary.simpleMessage("نأمل ان تكون بخير"),
         "kg": MessageLookupByLibrary.simpleMessage("كجم"),

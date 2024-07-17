@@ -7,6 +7,8 @@ import 'package:kimofit/core/networking/api/dio_consumer.dart';
 import 'package:kimofit/core/widgets/loading_widget.dart';
 import 'package:kimofit/features/diet_plan/data/repo/diet_plan_repo.dart';
 import 'package:kimofit/features/diet_plan/logic/diet_plan_cubit.dart';
+import 'package:kimofit/features/food_recipe_book/data/repo/food_recipe_book_repo.dart';
+import 'package:kimofit/features/food_recipe_book/logic/food_recipe_book_cubit.dart';
 import 'package:kimofit/features/home/data/repo/home_repo.dart';
 import 'package:kimofit/features/home/logic/home_cubit.dart';
 import 'package:kimofit/features/home_cardio_plan/data/repo/home_cardio_plan_repo.dart';
@@ -80,4 +82,10 @@ Future<void> setupGetIt() async {
       () => HomeCardioPlanRepo(getIt()));
   getIt
       .registerFactory<HomeCardioPlanCubit>(() => HomeCardioPlanCubit(getIt()));
+
+  // Register FoodRecipeBookCubit
+  getIt.registerLazySingleton<FoodRecipeBookRepo>(
+      () => FoodRecipeBookRepo(getIt()));
+  getIt
+      .registerFactory<FoodRecipeBookCubit>(() => FoodRecipeBookCubit(getIt()));
 }

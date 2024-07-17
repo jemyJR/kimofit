@@ -51,6 +51,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "exerciseNo": MessageLookupByLibrary.simpleMessage("Exercise No"),
         "free": MessageLookupByLibrary.simpleMessage("Free"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
+        "golden": MessageLookupByLibrary.simpleMessage("Golden"),
         "homeWelcomeMessage":
             MessageLookupByLibrary.simpleMessage("We hope you are well"),
         "kg": MessageLookupByLibrary.simpleMessage("KG"),

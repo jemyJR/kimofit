@@ -23,6 +23,7 @@ class ApiEndPoints {
   static const String warmupcategories = 'warmups/home/';
   static const String homeCardioCalender = 'home-cardios/calender/';
   static const String homeCardioPlan = 'home-cardios/all/';
+  static const String foodRecipeBook = 'meals/recipes-book/';
 }
 
 class ApiKey {
@@ -68,6 +69,7 @@ class ApiKey {
   static const String subscriptionStatus = 'status';
   static const String subscriptionPercent = 'percentage';
   static const String subscriptionIsPaid = 'monthly';
+  static const String subscriptionGolden = 'golden';
   static const String homeErrorMessage = 'message';
 
   //! LocalizedField keys
@@ -132,4 +134,7 @@ class ApiKey {
   static const String homeCardioWeight = 'weight';
   static const String homeCardioDuration = 'duration';
   static const String homeCardio = 'cardio';
+
+  //! Food Recipe Book keys
+  static const String foodRecipeBookAttachment = 'attachment';
 }
