@@ -32,6 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
         "changePasswordMessage": MessageLookupByLibrary.simpleMessage(
             "قم بتغيير كلمة المرور الخاصة بك الان"),
+        "close": MessageLookupByLibrary.simpleMessage("اغلاق"),
         "cm": MessageLookupByLibrary.simpleMessage("سم"),
         "contactme": MessageLookupByLibrary.simpleMessage("تواصل معي للتفاصيل"),
         "currentUser":
@@ -39,8 +40,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "day": MessageLookupByLibrary.simpleMessage("اليوم"),
         "dayNamber": MessageLookupByLibrary.simpleMessage("رقم اليوم"),
         "days": MessageLookupByLibrary.simpleMessage("ايام"),
+        "deviceIdNoticeMessage": MessageLookupByLibrary.simpleMessage(
+            "إلغاء تثبيت التطبيق أو مسح بياناته سيمنعك من الوصول إلى حسابك مرة أخرى . فكن حذرا"),
         "dietPlanHeaderMessage": MessageLookupByLibrary.simpleMessage(
             "اتبع نظامًا غذائيًا متوازنًا لتزويد جسمك بالطاقة، وتحسين أدائك، وتحقيق أهداف لياقتك البدنية."),
+        "dontShowAgain":
+            MessageLookupByLibrary.simpleMessage("لا تظهر ذلك مرة أخرى"),
         "dose": MessageLookupByLibrary.simpleMessage("وحدة"),
         "duration": MessageLookupByLibrary.simpleMessage("المدة"),
         "end": MessageLookupByLibrary.simpleMessage("ينتهي"),
@@ -53,6 +58,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "golden": MessageLookupByLibrary.simpleMessage("ذهبي"),
         "homeWelcomeMessage":
             MessageLookupByLibrary.simpleMessage("نأمل ان تكون بخير"),
+        "importantNotice": MessageLookupByLibrary.simpleMessage("تنبيه هام"),
         "kg": MessageLookupByLibrary.simpleMessage("كجم"),
         "language": MessageLookupByLibrary.simpleMessage("English"),
         "length": MessageLookupByLibrary.simpleMessage("الطول"),

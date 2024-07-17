@@ -96,7 +96,14 @@
     "restDay" : "Rest Day",
     "restDayMessage" : "You deserve this day. Enjoy it!",
 
-    "golden" : "Golden"
+    "golden" : "Golden",
+    "importantNotice": "Important Notice",
+    "deviceIdNoticeMessage": "Uninstalling the application or clearing its data will prevent you from accessing your account again. So be careful",
+    "close": "Close",
+    "dontShowAgain" : "Don't show it again"
+
+
+
 
 
     
