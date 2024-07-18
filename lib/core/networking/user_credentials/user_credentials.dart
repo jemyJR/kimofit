@@ -40,7 +40,10 @@ class UserCredentials {
 
   static void deleteAll(String message) {
     BuildContext? context = GetContext.key.currentContext;
-    getIt<CacheHelper>().clearSecuredData();
+    // remove all user data exept device ID
+    getIt<CacheHelper>().removeSecuredData(key: ApiKey.token);
+    getIt<CacheHelper>().removeSecuredData(key: ApiKey.refreshToken);
+    getIt<CacheHelper>().removeSecuredData(key: ApiKey.id);
     getIt<CacheHelper>().removeData(key: Constants.isUserLoggedIn);
     context!.pushNamedAndRemoveUntil(
       Routes.loginScreen,
