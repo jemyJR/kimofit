@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
-import 'package:kimofit/features/timer_and_calender/ui/widgets/timer_and_calender_bloc_builder.dart';
 
-class TimerAndCalender extends StatelessWidget {
-  const TimerAndCalender({super.key});
+class TimerAndCalenderBase extends StatelessWidget {
+  const TimerAndCalenderBase({super.key, required this.child});
+  final Widget child;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -28,7 +29,7 @@ class TimerAndCalender extends StatelessWidget {
                 ),
               ),
             ),
-            const TimerAndCalenderBlocBuilder(),
+            child,
           ],
         ),
       ),

@@ -11,8 +11,10 @@ import 'package:kimofit/features/food_recipe_book/data/repo/food_recipe_book_rep
 import 'package:kimofit/features/food_recipe_book/logic/food_recipe_book_cubit.dart';
 import 'package:kimofit/features/home/data/repo/home_repo.dart';
 import 'package:kimofit/features/home/logic/home_cubit.dart';
+import 'package:kimofit/features/home_cardio_plan/data/repo/home_cardio_calender_repo.dart';
 import 'package:kimofit/features/home_cardio_plan/data/repo/home_cardio_plan_repo.dart';
-import 'package:kimofit/features/home_cardio_plan/logic/home_cardio_plan_cubit.dart';
+import 'package:kimofit/features/home_cardio_plan/logic/home_cardio_calender_cubit/home_cardio_calender_cubit.dart';
+import 'package:kimofit/features/home_cardio_plan/logic/home_cardio_plan_cubit/home_cardio_plan_cubit.dart';
 import 'package:kimofit/features/timer_and_calender/logic/timer_and_calender_cubit.dart';
 import 'package:kimofit/features/login/data/repos/login_repo.dart';
 import 'package:kimofit/features/login/logic/login_cubit.dart';
@@ -82,6 +84,12 @@ Future<void> setupGetIt() async {
       () => HomeCardioPlanRepo(getIt()));
   getIt
       .registerFactory<HomeCardioPlanCubit>(() => HomeCardioPlanCubit(getIt()));
+
+  // Register HomeCardioCalenderCubit
+  getIt.registerLazySingleton<HomeCardioCalenderRepo>(
+      () => HomeCardioCalenderRepo(getIt()));
+  getIt.registerFactory<HomeCardioCalenderCubit>(
+      () => HomeCardioCalenderCubit(getIt()));
 
   // Register FoodRecipeBookCubit
   getIt.registerLazySingleton<FoodRecipeBookRepo>(
