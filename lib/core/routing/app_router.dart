@@ -90,8 +90,16 @@ class AppRouter {
           ),
         );
       case Routes.workoutExercisesScreen:
+        arguments as String;
         return MaterialPageRoute(
-          builder: (context) => const WorkoutExercisesScreen(),
+          builder: (context) => MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: (context) => getIt<TimerAndCalenderCubit>(),
+              ),
+            ],
+            child: WorkoutExercisesScreen(title: arguments),
+          ),
         );
       case Routes.homeCardioPlanScreen:
         arguments as String;
