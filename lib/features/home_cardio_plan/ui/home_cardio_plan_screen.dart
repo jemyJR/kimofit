@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/widgets/custom_app_bar.dart';
-import 'package:kimofit/features/home_cardio_plan/ui/widgets/home_cardio_plan_exercise_data_bloc_builder.dart';
-import 'package:kimofit/features/timer_and_calender/ui/timer_and_calender.dart';
+import 'widgets/home_cardio_bloc_consumer.dart';
 
 class HomeCardioPlanScreen extends StatelessWidget {
   final String title;
@@ -16,13 +15,7 @@ class HomeCardioPlanScreen extends StatelessWidget {
       appBar: CustomAppBar(
         title: title,
       ),
-      //TODO: Handle when the training plan is empty
-      body: const Column(
-        children: [
-          TimerAndCalender(),
-          HomeCardioPlanExerciseBlocBuilder(),
-        ],
-      ),
+      body: const HomeCardioBlocConsumer(),
     );
   }
 }
