@@ -18,7 +18,8 @@ class HomeResponseModel {
   });
 
   factory HomeResponseModel.fromJson(Map<String, dynamic> json) {
-    final List<dynamic> sponsors = json[ApiKey.sponsers];
+    final List<dynamic> sponsors = json[ApiKey.sponsers] ?? [];
+
     final List<dynamic> categories = json[ApiKey.categories];
 
     return HomeResponseModel(

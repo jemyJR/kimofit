@@ -14,7 +14,8 @@ import 'package:kimofit/features/home/data/models/subscription_features_model.da
 import 'package:kimofit/features/home/logic/home_cubit.dart';
 import 'package:kimofit/features/home/ui/home_screen.dart';
 import 'package:kimofit/features/home/ui/subscription_screen.dart';
-import 'package:kimofit/features/home_cardio_plan/logic/home_cardio_plan_cubit.dart';
+import 'package:kimofit/features/home_cardio_plan/logic/home_cardio_calender_cubit/home_cardio_calender_cubit.dart';
+import 'package:kimofit/features/home_cardio_plan/logic/home_cardio_plan_cubit/home_cardio_plan_cubit.dart';
 import 'package:kimofit/features/home_cardio_plan/ui/home_cardio_plan_screen.dart';
 import 'package:kimofit/features/login/logic/login_cubit.dart';
 import 'package:kimofit/features/login/ui/login_screen.dart';
@@ -97,7 +98,13 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => MultiBlocProvider(
             providers: [
-              BlocProvider(create: (context) => getIt<HomeCardioPlanCubit>()),
+              BlocProvider(
+                create: (context) =>
+                    getIt<HomeCardioCalenderCubit>()..loadHomeCardioWeeks(),
+              ),
+              BlocProvider(
+                create: (context) => getIt<HomeCardioPlanCubit>(),
+              ),
               BlocProvider(
                 create: (context) => getIt<TimerAndCalenderCubit>(),
               ),
