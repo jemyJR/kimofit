@@ -1,13 +1,11 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/helpers/extensions.dart';
 import 'package:kimofit/core/theming/style.dart';
-import 'package:kimofit/core/widgets/not_found_widget.dart';
+import 'package:kimofit/core/widgets/custom_rounded_network_image.dart';
 import 'package:kimofit/features/home/data/models/home_response_model/home_category_model.dart';
 import 'package:kimofit/features/home/ui/widgets/home_category/home_cadegory_arguments_model.dart';
-import 'package:kimofit/features/home/ui/widgets/home_shimmer/shimmer_normal.dart';
 import 'package:kimofit/features/home/ui/widgets/home_category/rotated_corner_badge_decoration.dart';
 
 class CustomHomeContainer extends StatelessWidget {
@@ -59,19 +57,12 @@ class CustomHomeContainer extends StatelessWidget {
   }
 
   Widget _buildHomeCategoryImage() {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(10.r),
-      child: CachedNetworkImage(
-        height: 150.h,
-        width: double.infinity,
-        imageUrl: category.image,
-        fit: BoxFit.cover,
-        placeholder: (context, url) =>
-            ShimmerNormal(height: 150.h, width: double.infinity),
-        errorWidget: (context, url, error) => const NotFoundWidget(),
-        color: ColorsManager.black.withOpacity(0.2),
-        colorBlendMode: BlendMode.darken,
-      ),
+    return CustomRoundedNetworkImage(
+      imageUrl: category.image,
+      height: 150.h,
+      width: double.infinity,
+      withColorOverlay: true,
+      opacity: 0.2,
     );
   }
 

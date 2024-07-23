@@ -1,10 +1,9 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
-import 'package:kimofit/core/widgets/not_found_widget.dart';
+import 'package:kimofit/core/widgets/custom_rounded_network_image.dart';
 import 'package:kimofit/features/home/ui/widgets/home_shimmer/shimmer_with_text.dart';
 import 'package:kimofit/core/widgets/exercise_slider/arrow_buttons_and_indicator.dart';
 import 'package:kimofit/core/widgets/exercise_slider/exercise_log_in_slider.dart';
@@ -80,22 +79,17 @@ class _ExerciseSliderState extends State<ExerciseSlider> {
 
   Widget _sliderImge(gifPath) {
     return Expanded(
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(10.r),
-        child: CachedNetworkImage(
+      child: CustomRoundedNetworkImage(
+        imageUrl: gifPath,
+        height: 150.h,
+        width: double.infinity,
+        placeholder: ShimmerWithText(
           height: 150.h,
           width: double.infinity,
-          imageUrl: gifPath,
-          fit: BoxFit.cover,
-          placeholder: (context, url) => ShimmerWithText(
-            height: 150.h,
-            width: double.infinity,
-            text: S.of(context).exercise,
-            textStyle: TextStyles.font32BoldWhite.copyWith(
-              fontWeight: FontWeight.normal,
-            ),
+          text: S.of(context).exercise,
+          textStyle: TextStyles.font32BoldWhite.copyWith(
+            fontWeight: FontWeight.normal,
           ),
-          errorWidget: (context, url, error) => const NotFoundWidget(),
         ),
       ),
     );

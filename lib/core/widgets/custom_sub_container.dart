@@ -1,10 +1,8 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/theming/style.dart';
-import 'package:kimofit/core/widgets/not_found_widget.dart';
-import 'package:kimofit/features/home/ui/widgets/home_shimmer/shimmer_normal.dart';
+import 'package:kimofit/core/widgets/custom_rounded_network_image.dart';
 
 class CustomSubContainer extends StatelessWidget {
   const CustomSubContainer({
@@ -31,19 +29,11 @@ class CustomSubContainer extends StatelessWidget {
           height: height,
           child: Stack(
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(10.r),
-                child: CachedNetworkImage(
-                  height: height,
-                  width: double.infinity,
-                  imageUrl: imagePath,
-                  fit: BoxFit.cover,
-                  placeholder: (context, url) =>
-                      ShimmerNormal(height: height, width: double.infinity),
-                  errorWidget: (context, url, error) => const NotFoundWidget(),
-                  color: ColorsManager.black.withOpacity(0.5),
-                  colorBlendMode: BlendMode.darken,
-                ),
+              CustomRoundedNetworkImage(
+                height: height,
+                width: double.infinity,
+                imageUrl: imagePath,
+                withColorOverlay: true,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 20.h, horizontal: 20.w),
