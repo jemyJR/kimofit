@@ -670,6 +670,16 @@ class S {
     );
   }
 
+  /// `Sorry, there is no current data`
+  String get noDataMessageSmall {
+    return Intl.message(
+      'Sorry, there is no current data',
+      name: 'noDataMessageSmall',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Warm up exercise properly before exercising to prevent injury and make your workouts more effective.`
   String get warmUpExerciseHeaderMessage {
     return Intl.message(
@@ -885,6 +895,16 @@ class S {
     return Intl.message(
       'Don\'t show it again',
       name: 'dontShowAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Warm up Exercises`
+  String get warmUpExercises {
+    return Intl.message(
+      'Warm up Exercises',
+      name: 'warmUpExercises',
       desc: '',
       args: [],
     );

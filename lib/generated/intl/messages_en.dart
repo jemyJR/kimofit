@@ -81,6 +81,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "newUser": MessageLookupByLibrary.simpleMessage("Are you a new user ?"),
         "noDataMessage": MessageLookupByLibrary.simpleMessage(
             "Sorry, there is no current data . Please contact us to obtain data specifically for you"),
+        "noDataMessageSmall": MessageLookupByLibrary.simpleMessage(
+            "Sorry, there is no current data"),
         "notes": MessageLookupByLibrary.simpleMessage("Notes"),
         "number": MessageLookupByLibrary.simpleMessage("Number"),
         "obParagraph1": MessageLookupByLibrary.simpleMessage(
@@ -136,6 +138,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please enter a phone number"),
         "warmUpExerciseHeaderMessage": MessageLookupByLibrary.simpleMessage(
             "Warm up exercise properly before exercising to prevent injury and make your workouts more effective."),
+        "warmUpExercises":
+            MessageLookupByLibrary.simpleMessage("Warm up Exercises"),
         "week": MessageLookupByLibrary.simpleMessage("Week"),
         "weekNamber": MessageLookupByLibrary.simpleMessage("Week Number"),
         "weight": MessageLookupByLibrary.simpleMessage("Weight"),

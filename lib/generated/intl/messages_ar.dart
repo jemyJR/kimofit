@@ -79,7 +79,9 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("كلمة المرور الجديدة"),
         "newUser": MessageLookupByLibrary.simpleMessage("انت مستخدم جديد ؟"),
         "noDataMessage": MessageLookupByLibrary.simpleMessage(
-            "عذرا، لا توجد بيانات الحالية. يرجى التواصل بنا للحصول على بيانات خاصة بك"),
+            "عذرا، لا توجد بيانات حاليه. يرجى التواصل بنا للحصول على بيانات خاصة بك"),
+        "noDataMessageSmall":
+            MessageLookupByLibrary.simpleMessage("عذرا، لا توجد بيانات حاليه"),
         "notes": MessageLookupByLibrary.simpleMessage("الملاحظات"),
         "number": MessageLookupByLibrary.simpleMessage("الرقم"),
         "obParagraph1": MessageLookupByLibrary.simpleMessage(
@@ -136,6 +138,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الرجاء ادخال رقم هاتف"),
         "warmUpExerciseHeaderMessage": MessageLookupByLibrary.simpleMessage(
             "قم بالإحماء بشكل صحيح قبل ممارسة الرياضة لتجنب الإصابة وجعل التدريبات الخاصة بك أكثر فعالية."),
+        "warmUpExercises":
+            MessageLookupByLibrary.simpleMessage("تمارين الاحماء"),
         "week": MessageLookupByLibrary.simpleMessage("الأسبوع"),
         "weekNamber": MessageLookupByLibrary.simpleMessage("رقم الأسبوع"),
         "weight": MessageLookupByLibrary.simpleMessage("الوزن"),
