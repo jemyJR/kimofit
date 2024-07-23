@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/widgets/custom_app_bar.dart';
+import 'package:kimofit/core/widgets/no_data_widget_small.dart';
 import 'package:kimofit/features/timer_and_calender/ui/timer_and_calender_base.dart';
 import 'package:kimofit/features/timer_and_calender/ui/widgets/calender_shimmer.dart';
+import 'package:kimofit/features/workout_exercises/data/test_data.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/warmup_exercise.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/title_with_content.dart';
+import 'package:kimofit/generated/l10n.dart';
 
 class WorkoutExercisesScreen extends StatelessWidget {
   const WorkoutExercisesScreen({super.key, required this.title});
@@ -16,12 +21,20 @@ class WorkoutExercisesScreen extends StatelessWidget {
       appBar: CustomAppBar(
         title: title,
       ),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            TimerAndCalenderBase(
+            const TimerAndCalenderBase(
               child: CalenderShimmer(),
             ),
+            TitleWithContent(
+              title: S.of(context).warmUpExercises,
+              child: WarmUpExercise(
+                warmUpExercise: workoutBodyResponse.warmUpExercise,
+              ),
+            ),
+            const NoDataWidgetSmall(),
           ],
         ),
       ),
