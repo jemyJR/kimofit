@@ -5,6 +5,14 @@ class Assets {
   /// assets/animation/calendar.json
   static const String animationCalendar = "assets/animation/calendar.json";
 
+  /// Assets for animationDumble
+  /// assets/animation/dumble.json
+  static const String animationDumble = "assets/animation/dumble.json";
+
+  /// Assets for animationLightning
+  /// assets/animation/Lightning.json
+  static const String animationLightning = "assets/animation/Lightning.json";
+
   /// Assets for animationLoading
   /// assets/animation/loading.json
   static const String animationLoading = "assets/animation/loading.json";

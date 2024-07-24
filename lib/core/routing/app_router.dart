@@ -31,6 +31,8 @@ import 'package:kimofit/features/warm_up_exercises/data/models/warm_up_category_
 import 'package:kimofit/features/warm_up_exercises/logic/warm_up_cubit.dart';
 import 'package:kimofit/features/warm_up_exercises/ui/warm_up_exercises_details_screen.dart';
 import 'package:kimofit/features/warm_up_exercises/ui/warm_up_exercises_screen.dart';
+import 'package:kimofit/features/workout_exercises/data/models/workout_exercise_model.dart';
+import 'package:kimofit/features/workout_exercises/ui/workout_exercises_details_screen.dart';
 import 'package:kimofit/features/workout_exercises/ui/workout_exercises_screen.dart';
 
 class AppRouter {
@@ -101,6 +103,13 @@ class AppRouter {
             child: WorkoutExercisesScreen(title: arguments),
           ),
         );
+      case Routes.workoutExercisesDetailsScreen:
+        arguments as WorkoutExerciseModel;
+        return MaterialPageRoute(
+          builder: (context) =>
+              WorkoutExercisesDetailsScreen(exerciseModel: arguments),
+        );
+
       case Routes.homeCardioPlanScreen:
         arguments as String;
         return MaterialPageRoute(

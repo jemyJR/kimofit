@@ -103,7 +103,13 @@
     "close": "Close",
     "dontShowAgain" : "Don't show it again",
 
-    "warmUpExercises": "Warm up Exercises"
+    "warmUpExercises": "Warm up Exercises",
+    "workoutExercises": "Workout Exercises",
+    "absExercises": "Abs Exercises",
+    "cardioExercises": "Cardio Exercises",
+    "exerciseLog": "Exercise Log",
+    "superSet": "Super Set"
+
 
 
 

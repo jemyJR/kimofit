@@ -909,6 +909,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Workout Exercises`
+  String get workoutExercises {
+    return Intl.message(
+      'Workout Exercises',
+      name: 'workoutExercises',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Abs Exercises`
+  String get absExercises {
+    return Intl.message(
+      'Abs Exercises',
+      name: 'absExercises',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cardio Exercises`
+  String get cardioExercises {
+    return Intl.message(
+      'Cardio Exercises',
+      name: 'cardioExercises',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exercise Log`
+  String get exerciseLog {
+    return Intl.message(
+      'Exercise Log',
+      name: 'exerciseLog',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Super Set`
+  String get superSet {
+    return Intl.message(
+      'Super Set',
+      name: 'superSet',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

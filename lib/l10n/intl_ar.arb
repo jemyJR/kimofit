@@ -103,7 +103,13 @@
     "close": "اغلاق",
     "dontShowAgain": "لا تظهر ذلك مرة أخرى",
 
-    "warmUpExercises": "تمارين الاحماء"
+    "warmUpExercises": "تمارين الاحماء",
+    "workoutExercises": "نظام التمرين",
+    "absExercises": "تمارين البطن",
+    "cardioExercises": "تمارين الكارديو",
+    "exerciseLog": "سجل التمرين",
+    "superSet": "مجموعه سوبر سيت"
+
 
 
 

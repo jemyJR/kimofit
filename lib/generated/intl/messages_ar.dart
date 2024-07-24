@@ -27,7 +27,10 @@ class MessageLookup extends MessageLookupByLibrary {
             " مهم جدا وذلك للاسباب التاليه :"),
         "SubscriptionMessage": MessageLookupByLibrary.simpleMessage(
             "هذة الميزة متاحه للمستخدمين المشتركين فقط يرجي ترقية حسابكم عن طريق التواصل للاستمتاع بجميع المميزات"),
+        "absExercises": MessageLookupByLibrary.simpleMessage("تمارين البطن"),
         "age": MessageLookupByLibrary.simpleMessage("العمر"),
+        "cardioExercises":
+            MessageLookupByLibrary.simpleMessage("تمارين الكارديو"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
         "changePasswordMessage": MessageLookupByLibrary.simpleMessage(
@@ -52,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "endDate": MessageLookupByLibrary.simpleMessage("تاريخ الانتهاء"),
         "evening": MessageLookupByLibrary.simpleMessage("مساء"),
         "exercise": MessageLookupByLibrary.simpleMessage(" التمرين"),
+        "exerciseLog": MessageLookupByLibrary.simpleMessage("سجل التمرين"),
         "exerciseNo": MessageLookupByLibrary.simpleMessage(" التمرين رقم"),
         "free": MessageLookupByLibrary.simpleMessage("مجاني"),
         "getStarted": MessageLookupByLibrary.simpleMessage("ابدء الان"),
@@ -120,6 +124,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تفاصيل الاشتراك"),
         "subscriptionEndMessage": MessageLookupByLibrary.simpleMessage(
             "لقد وصلت إلى نهاية اشتراكك!!\nيرجى تجديد اشتراكك لمواصلة استخدام التطبيق."),
+        "superSet": MessageLookupByLibrary.simpleMessage("مجموعه سوبر سيت"),
         "timeUp": MessageLookupByLibrary.simpleMessage("انتهى الوقت !"),
         "tokenExpiredMessage": MessageLookupByLibrary.simpleMessage(
             "عذرا حدث خطا , قم بتسجيل الدخول مرة اخرى"),
@@ -143,6 +148,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "week": MessageLookupByLibrary.simpleMessage("الأسبوع"),
         "weekNamber": MessageLookupByLibrary.simpleMessage("رقم الأسبوع"),
         "weight": MessageLookupByLibrary.simpleMessage("الوزن"),
-        "welcome": MessageLookupByLibrary.simpleMessage("مرحباً")
+        "welcome": MessageLookupByLibrary.simpleMessage("مرحباً"),
+        "workoutExercises": MessageLookupByLibrary.simpleMessage("نظام التمرين")
       };
 }

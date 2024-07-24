@@ -27,7 +27,10 @@ class MessageLookup extends MessageLookupByLibrary {
             "are very important for the following reasons:"),
         "SubscriptionMessage": MessageLookupByLibrary.simpleMessage(
             "This feature is available to subscribed users only. Please upgrade your account by contacting us to enjoy all the features"),
+        "absExercises": MessageLookupByLibrary.simpleMessage("Abs Exercises"),
         "age": MessageLookupByLibrary.simpleMessage("Age"),
+        "cardioExercises":
+            MessageLookupByLibrary.simpleMessage("Cardio Exercises"),
         "changePassword":
             MessageLookupByLibrary.simpleMessage("Change Password"),
         "changePasswordMessage":
@@ -53,6 +56,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "endDate": MessageLookupByLibrary.simpleMessage("End Date"),
         "evening": MessageLookupByLibrary.simpleMessage("Evening"),
         "exercise": MessageLookupByLibrary.simpleMessage("Exercise"),
+        "exerciseLog": MessageLookupByLibrary.simpleMessage("Exercise Log"),
         "exerciseNo": MessageLookupByLibrary.simpleMessage("Exercise No"),
         "free": MessageLookupByLibrary.simpleMessage("Free"),
         "getStarted": MessageLookupByLibrary.simpleMessage("Get Started"),
@@ -120,6 +124,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Subscription Details"),
         "subscriptionEndMessage": MessageLookupByLibrary.simpleMessage(
             "You have reached the end of your subscription!!\nPlease renew your subscription to continue using the app."),
+        "superSet": MessageLookupByLibrary.simpleMessage("Super Set"),
         "timeUp": MessageLookupByLibrary.simpleMessage("TIME UP !"),
         "tokenExpiredMessage": MessageLookupByLibrary.simpleMessage(
             "Sorry, an error occurred, you have to log in again"),
@@ -143,6 +148,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "week": MessageLookupByLibrary.simpleMessage("Week"),
         "weekNamber": MessageLookupByLibrary.simpleMessage("Week Number"),
         "weight": MessageLookupByLibrary.simpleMessage("Weight"),
-        "welcome": MessageLookupByLibrary.simpleMessage("Welcome")
+        "welcome": MessageLookupByLibrary.simpleMessage("Welcome"),
+        "workoutExercises":
+            MessageLookupByLibrary.simpleMessage("Workout Exercises")
       };
 }
