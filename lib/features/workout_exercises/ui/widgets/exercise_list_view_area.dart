@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:kimofit/features/workout_exercises/data/models/workout_exercise_item_model.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/cardio_exercise.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/group_of_exercise/group_of_exercise.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/workout_exercise.dart';
 
-enum WorkoutExerciseType { workout, abs }
+enum WorkoutExerciseType { workout, abs, cardio }
 
-class WorkoutExerciseArea extends StatelessWidget {
-  const WorkoutExerciseArea({
+class ExerciseListViewArea extends StatelessWidget {
+  const ExerciseListViewArea({
     super.key,
-    required this.workoutExercise,
+    required this.exercisesList,
     required this.type,
   });
-  final List<WorkoutExerciseItem> workoutExercise;
+  final List<dynamic> exercisesList;
   final WorkoutExerciseType type;
 
   @override
@@ -19,14 +19,20 @@ class WorkoutExerciseArea extends StatelessWidget {
     return ListView.builder(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
-      itemCount: workoutExercise.length,
+      itemCount: exercisesList.length,
       itemBuilder: (context, index) {
-        final exerciseItem = workoutExercise[index];
+        final exerciseItem = exercisesList[index];
         if (exerciseItem.isSimpleExercise) {
-          return WorkoutExercise(
-            exercise: exerciseItem.exercise!,
-            heroId: 'simple-${index + 1}-$type',
-          );
+          return type == WorkoutExerciseType.workout ||
+                  type == WorkoutExerciseType.abs
+              ? WorkoutExercise(
+                  exercise: exerciseItem.exercise!,
+                  heroId: 'simple-${index + 1}-$type',
+                )
+              : CardioExercise(
+                  exercise: exerciseItem.exercise!,
+                  heroId: 'simple-${index + 1}-$type',
+                );
         } else if (exerciseItem.isGroupExercise) {
           return GroupOfExercise(
             groupOfExercise: exerciseItem.groupExercises!,
@@ -34,6 +40,7 @@ class WorkoutExerciseArea extends StatelessWidget {
               exerciseItem.groupExercises!.length,
               (i) => 'group-${index + 1}-${i + 1}-$type',
             ),
+            type: type,
           );
         }
         return const SizedBox.shrink();

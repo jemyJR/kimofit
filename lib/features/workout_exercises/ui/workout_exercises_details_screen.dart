@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kimofit/features/workout_exercises/data/models/workout_exercise_model.dart';
 
 class WorkoutExercisesDetailsScreen extends StatelessWidget {
   const WorkoutExercisesDetailsScreen({
@@ -7,7 +6,7 @@ class WorkoutExercisesDetailsScreen extends StatelessWidget {
     required this.exerciseModel,
   });
 
-  final WorkoutExerciseModel exerciseModel;
+  final dynamic exerciseModel;
 
   @override
   Widget build(BuildContext context) {

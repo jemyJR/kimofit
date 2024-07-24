@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
-import 'package:kimofit/features/workout_exercises/data/models/workout_exercise_model.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/cardio_exercise.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/exercise_list_view_area.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/group_of_exercise/title_group_of_exercise.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/workout_exercise.dart';
 
@@ -10,10 +11,12 @@ class GroupOfExercise extends StatelessWidget {
     super.key,
     required this.groupOfExercise,
     required this.heroId,
+    required this.type,
   });
 
-  final List<WorkoutExerciseModel> groupOfExercise;
+  final List<dynamic> groupOfExercise;
   final List<String> heroId;
+  final WorkoutExerciseType type;
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +39,18 @@ class GroupOfExercise extends StatelessWidget {
                   itemCount: groupOfExercise.length,
                   itemBuilder: (context, index) {
                     final exercise = groupOfExercise[index];
-                    return WorkoutExercise(
-                      exercise: exercise,
-                      heroId: heroId[index],
-                      isGroupExercise: true,
-                    );
+                    return type == WorkoutExerciseType.workout ||
+                            type == WorkoutExerciseType.abs
+                        ? WorkoutExercise(
+                            exercise: exercise,
+                            heroId: heroId[index],
+                            isGroupExercise: true,
+                          )
+                        : CardioExercise(
+                            exercise: exercise,
+                            heroId: heroId[index],
+                            isGroupExercise: true,
+                          );
                   },
                 ),
               ],

@@ -10,7 +10,10 @@ class TextStyles {
     fontSize: 12.sp,
     color: ColorsManager.white,
   );
-
+  static TextStyle font13White = TextStyle(
+    fontSize: 13.sp,
+    color: ColorsManager.white,
+  );
   static TextStyle font15White = TextStyle(
     fontSize: 15.sp,
     color: ColorsManager.white,

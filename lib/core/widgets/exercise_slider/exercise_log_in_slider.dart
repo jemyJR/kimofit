@@ -8,8 +8,11 @@ import 'package:kimofit/generated/l10n.dart';
 enum ExerciseLogInSliderType { reps, sets, weight, duration }
 
 class ExerciseLogInSlider extends StatelessWidget {
-  const ExerciseLogInSlider({super.key, required this.exercise});
+  const ExerciseLogInSlider(
+      {super.key, required this.exercise, this.isSmall = false});
+
   final dynamic exercise;
+  final bool isSmall;
 
   @override
   Widget build(BuildContext context) {
@@ -104,12 +107,12 @@ class ExerciseLogInSlider extends StatelessWidget {
           Icon(
             iconData,
             color: ColorsManager.yellow,
-            size: 20.sp,
+            size: isSmall ? 15.sp : 20.sp,
           ),
-          horizontalSpace(10),
+          isSmall ? horizontalSpace(5) : horizontalSpace(20),
           Text(
             text,
-            style: TextStyles.font15White,
+            style: isSmall ? TextStyles.font12White : TextStyles.font15White,
           ),
         ],
       ),

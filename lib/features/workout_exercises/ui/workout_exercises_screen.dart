@@ -5,9 +5,9 @@ import 'package:kimofit/core/widgets/no_data_widget_small.dart';
 import 'package:kimofit/features/timer_and_calender/ui/timer_and_calender_base.dart';
 import 'package:kimofit/features/timer_and_calender/ui/widgets/calender_shimmer.dart';
 import 'package:kimofit/features/workout_exercises/data/test_data.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/exercise_list_view_area.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/warmup_exercise_area.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/title_with_content.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise_area.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 class WorkoutExercisesScreen extends StatelessWidget {
@@ -37,16 +37,23 @@ class WorkoutExercisesScreen extends StatelessWidget {
             ),
             TitleWithContent(
               title: S.of(context).workoutExercises,
-              child: WorkoutExerciseArea(
-                workoutExercise: workoutBodyResponse.workoutExercise,
+              child: ExerciseListViewArea(
+                exercisesList: workoutBodyResponse.workoutExercise,
                 type: WorkoutExerciseType.workout,
               ),
             ),
             TitleWithContent(
               title: S.of(context).absExercises,
-              child: WorkoutExerciseArea(
-                workoutExercise: workoutBodyResponse.absExercises,
+              child: ExerciseListViewArea(
+                exercisesList: workoutBodyResponse.absExercises,
                 type: WorkoutExerciseType.abs,
+              ),
+            ),
+            TitleWithContent(
+              title: S.of(context).cardioExercises,
+              child: ExerciseListViewArea(
+                exercisesList: workoutBodyResponse.cardioExercises,
+                type: WorkoutExerciseType.cardio,
               ),
             ),
             const NoDataWidgetSmall(),

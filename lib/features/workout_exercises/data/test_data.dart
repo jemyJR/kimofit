@@ -353,6 +353,43 @@ String jsonString = '''
       ],
       "group-id": 2
     }
+  ],
+  "cardio-exercises": [
+    {
+      "name": {
+        "en": "Jumping Jacks",
+        "ar": "القفز بالأرجل"
+      },
+      "image": "https://kimofit-production.up.railway.app/media/sponsers/club30_xzkc0cr.jpg",
+      "reps": 15,
+      "sets": 3,
+      "weight": 0,
+      "duration": "1 min",
+      "notes": ["Keep your back straight", "Land softly"],
+      "description": [
+        "Stand straight and start running in place.",
+        "Gradually increase the speed to maintain your heart rate.",
+        "Repeat the exercise for the specified number of times."
+      ],
+      "group-id": 2
+    },
+    {
+      "name": {
+        "en": "Jumping Jacks",
+        "ar": "القفز بالأرجل"
+      },
+      "image": "https://kimofit-production.up.railway.app/media/sponsers/club30_xzkc0cr.jpg",
+      "reps": 15,
+      "sets": 3,
+      "weight": 0,
+      "duration": "1 min",
+      "notes": ["Keep your back straight", "Land softly"],
+      "description": [
+        "Stand straight and start running in place.",
+        "Gradually increase the speed to maintain your heart rate.",
+        "Repeat the exercise for the specified number of times."
+      ]
+    }
   ]
 
 }
