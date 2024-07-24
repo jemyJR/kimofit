@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/features/workout_exercises/data/models/workout_exercise_model.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/form_of_exercise/title_form_of_exercise.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/group_of_exercise/title_group_of_exercise.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/workout_exercise.dart';
 
 class GroupOfExercise extends StatelessWidget {

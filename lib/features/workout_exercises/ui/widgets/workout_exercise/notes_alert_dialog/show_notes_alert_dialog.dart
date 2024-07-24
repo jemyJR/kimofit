@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/notes_alert_dialog/notes_alert_dialog.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/notes_alert_dialog/notes_alert_dialog.dart';
 
 class ShownotesAlertDialog extends StatelessWidget {
   const ShownotesAlertDialog({
