@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:kimofit/core/helpers/extensions.dart';
 import 'package:kimofit/core/networking/api/api_consumer.dart';
 import 'package:kimofit/core/networking/api/api_endpoints.dart';
 import 'package:kimofit/core/networking/errors/error_handle_exeptions.dart';
@@ -21,6 +22,13 @@ class WarmUpRepo {
       );
       final warmUpExerciseResponseModel =
           WarmUpExerciseResponseModel.fromJson(response);
+
+      // format the weight to be like int 5.0 to be 5
+      for (var item in warmUpExerciseResponseModel.results) {
+        if (item.weight != null) {
+          item.weight = item.weight!.toFormattedNumber();
+        }
+      }
 
       return Right(warmUpExerciseResponseModel);
     } on ServerException catch (e) {
