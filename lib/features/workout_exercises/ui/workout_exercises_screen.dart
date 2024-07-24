@@ -5,8 +5,9 @@ import 'package:kimofit/core/widgets/no_data_widget_small.dart';
 import 'package:kimofit/features/timer_and_calender/ui/timer_and_calender_base.dart';
 import 'package:kimofit/features/timer_and_calender/ui/widgets/calender_shimmer.dart';
 import 'package:kimofit/features/workout_exercises/data/test_data.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/warmup_exercise.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/warmup_exercise_area.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/title_with_content.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise_area.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 class WorkoutExercisesScreen extends StatelessWidget {
@@ -30,8 +31,14 @@ class WorkoutExercisesScreen extends StatelessWidget {
             ),
             TitleWithContent(
               title: S.of(context).warmUpExercises,
-              child: WarmUpExercise(
+              child: WarmUpExerciseArea(
                 warmUpExercise: workoutBodyResponse.warmUpExercise,
+              ),
+            ),
+            TitleWithContent(
+              title: S.of(context).workoutExercises,
+              child: WorkoutExerciseArea(
+                workoutExercise: workoutBodyResponse.workoutExercise,
               ),
             ),
             const NoDataWidgetSmall(),

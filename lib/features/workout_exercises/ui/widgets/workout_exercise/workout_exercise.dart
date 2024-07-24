@@ -7,7 +7,7 @@ import 'package:kimofit/core/routing/routes.dart';
 import 'package:kimofit/core/widgets/custom_rounded_network_image.dart';
 import 'package:kimofit/core/widgets/hero_animation.dart';
 import 'package:kimofit/features/workout_exercises/data/models/workout_exercise_model.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/exercise_log/show_exercise_log.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/exercise_log/show_exercise_log.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/notes_alert_dialog/show_notes_alert_dialog.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/workout_exercise_name_and_sets.dart';
 
