@@ -5,19 +5,35 @@ import 'package:kimofit/features/workout_exercises/data/models/workout_exercise_
 class WorkoutBodyResponseModel {
   final WarmUpCategoryModel warmUpExercise;
   final List<WorkoutExerciseItem> workoutExercise;
+  final List<WorkoutExerciseItem> absExercises;
 
   WorkoutBodyResponseModel({
     required this.warmUpExercise,
     required this.workoutExercise,
+    required this.absExercises,
   });
 
   factory WorkoutBodyResponseModel.fromJson(Map<String, dynamic> json) {
     final List<dynamic> workoutExercisesJson = json['workout-exercises'];
+    final List<dynamic> absExercisesJson = json['abs-exercises'];
 
-    List<WorkoutExerciseItem> workoutExercises = [];
+    List<WorkoutExerciseItem> workoutExercises =
+        _parseExercises(workoutExercisesJson);
+    List<WorkoutExerciseItem> absExercises = _parseExercises(absExercisesJson);
+
+    return WorkoutBodyResponseModel(
+      warmUpExercise: WarmUpCategoryModel.fromJson(json['warmup-exercise']),
+      workoutExercise: workoutExercises,
+      absExercises: absExercises,
+    );
+  }
+
+  static List<WorkoutExerciseItem> _parseExercises(
+      List<dynamic> exercisesJson) {
+    List<WorkoutExerciseItem> exercises = [];
     Map<int, List<WorkoutExerciseModel>> currentGroup = {};
 
-    for (var exerciseJson in workoutExercisesJson) {
+    for (var exerciseJson in exercisesJson) {
       final exercise = WorkoutExerciseModel.fromJson(exerciseJson);
       if (exercise.groupId != null) {
         // If there's a groupId, handle it as part of a group
@@ -29,26 +45,21 @@ class WorkoutBodyResponseModel {
         // If there's no groupId, finalize any existing group and add a simple exercise
         if (currentGroup.isNotEmpty) {
           currentGroup.forEach((groupId, groupExercises) {
-            workoutExercises
-                .add(WorkoutExerciseItem(groupExercises: groupExercises));
+            exercises.add(WorkoutExerciseItem(groupExercises: groupExercises));
           });
           currentGroup.clear();
         }
-        workoutExercises.add(WorkoutExerciseItem(exercise: exercise));
+        exercises.add(WorkoutExerciseItem(exercise: exercise));
       }
     }
 
     // Add any remaining group at the end
     if (currentGroup.isNotEmpty) {
       currentGroup.forEach((groupId, groupExercises) {
-        workoutExercises
-            .add(WorkoutExerciseItem(groupExercises: groupExercises));
+        exercises.add(WorkoutExerciseItem(groupExercises: groupExercises));
       });
     }
 
-    return WorkoutBodyResponseModel(
-      warmUpExercise: WarmUpCategoryModel.fromJson(json['warmup-exercise']),
-      workoutExercise: workoutExercises,
-    );
+    return exercises;
   }
 }

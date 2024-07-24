@@ -39,6 +39,14 @@ class WorkoutExercisesScreen extends StatelessWidget {
               title: S.of(context).workoutExercises,
               child: WorkoutExerciseArea(
                 workoutExercise: workoutBodyResponse.workoutExercise,
+                type: WorkoutExerciseType.workout,
+              ),
+            ),
+            TitleWithContent(
+              title: S.of(context).absExercises,
+              child: WorkoutExerciseArea(
+                workoutExercise: workoutBodyResponse.absExercises,
+                type: WorkoutExerciseType.abs,
               ),
             ),
             const NoDataWidgetSmall(),
