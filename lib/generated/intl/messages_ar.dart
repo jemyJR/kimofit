@@ -35,6 +35,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تغيير كلمة المرور"),
         "changePasswordMessage": MessageLookupByLibrary.simpleMessage(
             "قم بتغيير كلمة المرور الخاصة بك الان"),
+        "chooseWeight": MessageLookupByLibrary.simpleMessage("اختر الوزن"),
         "close": MessageLookupByLibrary.simpleMessage("اغلاق"),
         "cm": MessageLookupByLibrary.simpleMessage("سم"),
         "contactme": MessageLookupByLibrary.simpleMessage("تواصل معي للتفاصيل"),

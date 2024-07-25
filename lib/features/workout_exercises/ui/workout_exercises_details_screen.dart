@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/exercise_log/weight_picker.dart';
 
 class WorkoutExercisesDetailsScreen extends StatelessWidget {
   const WorkoutExercisesDetailsScreen({
@@ -10,6 +11,10 @@ class WorkoutExercisesDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Scaffold(
+      body: Center(
+        child: WeightPicker(weightType: WeightType.plateWeights),
+      ),
+    );
   }
 }

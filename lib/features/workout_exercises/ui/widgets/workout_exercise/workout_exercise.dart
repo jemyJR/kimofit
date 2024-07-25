@@ -75,6 +75,7 @@ class WorkoutExercise extends StatelessWidget {
                       ),
                       ShowExerciseLog(
                         name: exercise.name.getLocalizedText(),
+                        id: exercise.id,
                         logs: exercise.logs,
                       ),
                     ],

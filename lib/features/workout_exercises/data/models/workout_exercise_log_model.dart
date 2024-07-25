@@ -9,6 +9,18 @@ class WorkoutExerciseLogModel {
     required this.weight,
   });
 
+  WorkoutExerciseLogModel copyWith({
+    int? sets,
+    int? reps,
+    num? weight,
+  }) {
+    return WorkoutExerciseLogModel(
+      sets: sets ?? this.sets,
+      reps: reps ?? this.reps,
+      weight: weight ?? this.weight,
+    );
+  }
+
   factory WorkoutExerciseLogModel.fromJson(Map<String, dynamic> json) {
     return WorkoutExerciseLogModel(
       sets: json['sets'],

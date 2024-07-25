@@ -14,6 +14,7 @@ String jsonString = '''
   },
   "workout-exercises": [
       {
+      "id": 1,
       "name": {
         "en": "Cardio Exercises",
         "ar": "تمارين القلب"
@@ -35,6 +36,7 @@ String jsonString = '''
       ]
     },
     {
+      "id": 2,
       "name": {
         "en": "Lower Body Exercises",
         "ar": "تمارين الجزء السفلي"
@@ -68,6 +70,7 @@ String jsonString = '''
       "group-id": 3
     },
     {
+      "id": 3,
       "name": {
         "en": "Upper Body Exercises",
         "ar": "تمارين الجزء العلوي"
@@ -93,6 +96,7 @@ String jsonString = '''
       "group-id": 3
     },
     {
+      "id": 4,
       "name": {
         "en": "Core Exercises",
         "ar": "تمارين البطن"
@@ -117,6 +121,7 @@ String jsonString = '''
       "group-id": 3
     },
     {
+      "id": 5,
       "name": {
         "en": "Cardio Exercises",
         "ar": "تمارين القلب"
@@ -138,6 +143,7 @@ String jsonString = '''
       ]
     },
     {
+      "id": 6,
       "name": {
         "en": "Stretching Exercises",
         "ar": "تمارين الإطالة"
@@ -161,6 +167,7 @@ String jsonString = '''
       "group-id": 2
     },
     {
+      "id": 7,
       "name": {
         "en": "Balance Exercises",
         "ar": "تمارين التوازن"
@@ -185,6 +192,7 @@ String jsonString = '''
   ],
   "abs-exercises": [
       {
+      "id": 8,
       "name": {
         "en": "Cardio Exercises",
         "ar": "تمارين القلب"
@@ -206,6 +214,7 @@ String jsonString = '''
       ]
     },
     {
+      "id": 9,
       "name": {
         "en": "Lower Body Exercises",
         "ar": "تمارين الجزء السفلي"
@@ -239,6 +248,7 @@ String jsonString = '''
       "group-id": 3
     },
     {
+      "id": 10,
       "name": {
         "en": "Upper Body Exercises",
         "ar": "تمارين الجزء العلوي"
@@ -264,6 +274,7 @@ String jsonString = '''
       "group-id": 3
     },
     {
+      "id": 11,
       "name": {
         "en": "Core Exercises",
         "ar": "تمارين البطن"
@@ -288,6 +299,7 @@ String jsonString = '''
       "group-id": 3
     },
     {
+      "id": 12,
       "name": {
         "en": "Cardio Exercises",
         "ar": "تمارين القلب"
@@ -309,6 +321,7 @@ String jsonString = '''
       ]
     },
     {
+      "id": 13,
       "name": {
         "en": "Stretching Exercises",
         "ar": "تمارين الإطالة"
@@ -332,6 +345,7 @@ String jsonString = '''
       "group-id": 2
     },
     {
+      "id": 14,
       "name": {
         "en": "Balance Exercises",
         "ar": "تمارين التوازن"
@@ -356,6 +370,7 @@ String jsonString = '''
   ],
   "cardio-exercises": [
     {
+      "id": 15,
       "name": {
         "en": "Jumping Jacks",
         "ar": "القفز بالأرجل"
@@ -374,6 +389,7 @@ String jsonString = '''
       "group-id": 2
     },
     {
+      "id": 16,
       "name": {
         "en": "Jumping Jacks",
         "ar": "القفز بالأرجل"

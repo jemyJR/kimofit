@@ -1,6 +1,8 @@
 import 'package:kimofit/core/helpers/localized_field.dart';
 
 class CardioExerciseModel {
+  final int id;
+
   final LocalizedField name;
   final String image;
   final int? reps;
@@ -12,6 +14,7 @@ class CardioExerciseModel {
   final int? groupId;
 
   CardioExerciseModel({
+    required this.id,
     required this.name,
     required this.image,
     required this.reps,
@@ -25,6 +28,7 @@ class CardioExerciseModel {
 
   factory CardioExerciseModel.fromJson(Map<String, dynamic> json) {
     return CardioExerciseModel(
+      id: json['id'],
       name: LocalizedField.fromJson(json['name']),
       image: json['image'],
       reps: json['reps'],

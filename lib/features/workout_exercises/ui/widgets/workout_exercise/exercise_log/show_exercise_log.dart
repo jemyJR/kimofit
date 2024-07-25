@@ -10,10 +10,12 @@ class ShowExerciseLog extends StatelessWidget {
   const ShowExerciseLog({
     super.key,
     required this.name,
+    required this.id,
     required this.logs,
   });
 
   final String name;
+  final int id;
   final List<WorkoutExerciseLogModel> logs;
 
   @override

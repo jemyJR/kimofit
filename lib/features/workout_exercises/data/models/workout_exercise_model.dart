@@ -2,6 +2,8 @@ import 'package:kimofit/core/helpers/localized_field.dart';
 import 'package:kimofit/features/workout_exercises/data/models/workout_exercise_log_model.dart';
 
 class WorkoutExerciseModel {
+  final int id;
+
   final LocalizedField name;
   final String image;
   final String video;
@@ -11,6 +13,7 @@ class WorkoutExerciseModel {
   final int? groupId;
 
   WorkoutExerciseModel({
+    required this.id,
     required this.name,
     required this.image,
     required this.video,
@@ -23,6 +26,7 @@ class WorkoutExerciseModel {
   factory WorkoutExerciseModel.fromJson(Map<String, dynamic> json) {
     final List<dynamic> logs = json['logs'];
     return WorkoutExerciseModel(
+      id: json['id'],
       name: LocalizedField.fromJson(json['name']),
       image: json['image'],
       video: json['video'],
