@@ -15,12 +15,10 @@ class CardioExercise extends StatelessWidget {
   const CardioExercise({
     super.key,
     required this.exercise,
-    required this.heroId,
     this.isGroupExercise = false,
   });
 
   final CardioExerciseModel exercise;
-  final String heroId;
   final bool isGroupExercise;
 
   @override
@@ -46,7 +44,7 @@ class CardioExercise extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 HeroAnimation(
-                  tag: heroId,
+                  tag: exercise.id.toString(),
                   child: CustomRoundedNetworkImage(
                     height: 100.h,
                     width: 80.w,
@@ -79,9 +77,12 @@ class CardioExercise extends StatelessWidget {
                         ],
                       ),
                       verticalSpace(5),
-                      ExerciseLogInSlider(
-                        exercise: exercise,
-                        isSmall: true,
+                      SizedBox(
+                        height: 45.h,
+                        child: ExerciseLogInSlider(
+                          exercise: exercise,
+                          isSmall: true,
+                        ),
                       ),
                     ],
                   ),

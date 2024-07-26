@@ -23,23 +23,16 @@ class ExerciseListViewArea extends StatelessWidget {
       itemBuilder: (context, index) {
         final exerciseItem = exercisesList[index];
         if (exerciseItem.isSimpleExercise) {
-          return type == WorkoutExerciseType.workout ||
-                  type == WorkoutExerciseType.abs
-              ? WorkoutExercise(
+          return type == WorkoutExerciseType.cardio
+              ? CardioExercise(
                   exercise: exerciseItem.exercise!,
-                  heroId: 'simple-${index + 1}-$type',
                 )
-              : CardioExercise(
+              : WorkoutExercise(
                   exercise: exerciseItem.exercise!,
-                  heroId: 'simple-${index + 1}-$type',
                 );
         } else if (exerciseItem.isGroupExercise) {
           return GroupOfExercise(
             groupOfExercise: exerciseItem.groupExercises!,
-            heroId: List<String>.generate(
-              exerciseItem.groupExercises!.length,
-              (i) => 'group-${index + 1}-${i + 1}-$type',
-            ),
             type: type,
           );
         }

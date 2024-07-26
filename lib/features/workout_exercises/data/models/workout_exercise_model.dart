@@ -8,6 +8,8 @@ class WorkoutExerciseModel {
   final String image;
   final String video;
   final List<WorkoutExerciseLogModel> logs;
+  final String weightType;
+
   List<String> notes;
   List<String> description;
   final int? groupId;
@@ -18,6 +20,7 @@ class WorkoutExerciseModel {
     required this.image,
     required this.video,
     required this.logs,
+    required this.weightType,
     required this.notes,
     required this.description,
     this.groupId,
@@ -31,6 +34,7 @@ class WorkoutExerciseModel {
       image: json['image'],
       video: json['video'],
       logs: logs.map((e) => WorkoutExerciseLogModel.fromJson(e)).toList(),
+      weightType: json['weight-type'],
       notes: List<String>.from(json['notes']),
       description: List<String>.from(json['description']),
       groupId: json['group-id'],

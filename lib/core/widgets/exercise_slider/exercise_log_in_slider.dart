@@ -18,17 +18,21 @@ class ExerciseLogInSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Widget> exerciseLog = _generateExerciseLog(context);
 
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        if (exerciseLog.isNotEmpty)
-          _buildRowWithDividers(exerciseLog.sublist(
-              0, exerciseLog.length >= 2 ? 2 : exerciseLog.length)),
-        if (exerciseLog.length > 2) ...[
-          verticalSpace(10),
-          _buildRowWithDividers(exerciseLog.sublist(2)),
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          if (exerciseLog.isNotEmpty)
+            _buildRowWithDividers(exerciseLog.sublist(
+                0, exerciseLog.length >= 2 ? 2 : exerciseLog.length)),
+          if (exerciseLog.length > 2) ...[
+            verticalSpace(10),
+            _buildRowWithDividers(exerciseLog.sublist(2)),
+          ],
         ],
-      ],
+      ),
     );
   }
 
@@ -99,8 +103,11 @@ class ExerciseLogInSlider extends StatelessWidget {
         text = exercise.duration!;
         break;
     }
-
-    return Flexible(
+    double width = MediaQuery.of(context).size.width;
+    return Container(
+      constraints: isSmall
+          ? BoxConstraints(minWidth: width / 4)
+          : BoxConstraints(minWidth: width / 2 - 40.w),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [

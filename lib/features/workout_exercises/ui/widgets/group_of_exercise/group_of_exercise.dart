@@ -10,12 +10,10 @@ class GroupOfExercise extends StatelessWidget {
   const GroupOfExercise({
     super.key,
     required this.groupOfExercise,
-    required this.heroId,
     required this.type,
   });
 
   final List<dynamic> groupOfExercise;
-  final List<String> heroId;
   final WorkoutExerciseType type;
 
   @override
@@ -39,16 +37,13 @@ class GroupOfExercise extends StatelessWidget {
                   itemCount: groupOfExercise.length,
                   itemBuilder: (context, index) {
                     final exercise = groupOfExercise[index];
-                    return type == WorkoutExerciseType.workout ||
-                            type == WorkoutExerciseType.abs
-                        ? WorkoutExercise(
+                    return type == WorkoutExerciseType.cardio
+                        ? CardioExercise(
                             exercise: exercise,
-                            heroId: heroId[index],
                             isGroupExercise: true,
                           )
-                        : CardioExercise(
+                        : WorkoutExercise(
                             exercise: exercise,
-                            heroId: heroId[index],
                             isGroupExercise: true,
                           );
                   },

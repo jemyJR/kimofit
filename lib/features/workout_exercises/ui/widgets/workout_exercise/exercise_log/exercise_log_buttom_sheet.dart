@@ -6,7 +6,6 @@ import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/features/workout_exercises/data/models/workout_exercise_log_model.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/exercise_log/exercise_log_header.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/exercise_log/exercise_log_table.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/exercise_log/weight_picker.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 void exerciseBottomSheet(
