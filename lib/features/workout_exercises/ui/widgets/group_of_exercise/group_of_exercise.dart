@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/cardio_exercise.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/exercise_list_view_area.dart';
+import 'package:kimofit/features/workout_exercises/data/models/exercise_type_eum.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/group_of_exercise/title_group_of_exercise.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/workout_exercise.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/exercise_container.dart';
 
 class GroupOfExercise extends StatelessWidget {
   const GroupOfExercise({
@@ -14,7 +13,7 @@ class GroupOfExercise extends StatelessWidget {
   });
 
   final List<dynamic> groupOfExercise;
-  final WorkoutExerciseType type;
+  final ExerciseType type;
 
   @override
   Widget build(BuildContext context) {
@@ -37,15 +36,11 @@ class GroupOfExercise extends StatelessWidget {
                   itemCount: groupOfExercise.length,
                   itemBuilder: (context, index) {
                     final exercise = groupOfExercise[index];
-                    return type == WorkoutExerciseType.cardio
-                        ? CardioExercise(
-                            exercise: exercise,
-                            isGroupExercise: true,
-                          )
-                        : WorkoutExercise(
-                            exercise: exercise,
-                            isGroupExercise: true,
-                          );
+                    return ExerciseContainer(
+                      exercise: exercise,
+                      type: type,
+                      isGroupExercise: true,
+                    );
                   },
                 ),
               ],

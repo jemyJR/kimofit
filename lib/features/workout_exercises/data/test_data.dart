@@ -440,7 +440,7 @@ String jsonString = '''
             "id": 12,
             "name": {
                 "en": "Cardio Exercises",
-                "ar": "تمارين القلب"
+                "ar": " القفز بالأرجل القفز بالأرجل  القفز بالأرجل"
             },
             "image": "https://kimofit-production.up.railway.app/media/sponsers/club30_xzkc0cr.jpg",
             "video": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
@@ -461,6 +461,34 @@ String jsonString = '''
                 "استشارة المدرب في حالة الشعور بأي ألم أثناء التمرين.",
                 "التأكد من أخذ يوم راحة بين التمارين لتجنب الإجهاد."
             ],
+            "description": [
+                "قف بشكل مستقيم وابدأ الجري في مكانك.",
+                "قم بزيادة السرعة تدريجيًا للحفاظ على معدل ضربات القلب.",
+                "كرر التمرين بالعدد المحدد من المرات."
+            ]
+        },
+        {
+            "id": 50,
+            "name": {
+                "en": "Cardio Exercises",
+                "ar": "القفز بالأرجل القفز بالأرجل  القفز بالأرجل القفز بالأرجل القفز بالأرجل  القفز بالأرجل"
+            },
+            "image": "https://kimofit-production.up.railway.app/media/sponsers/club30_xzkc0cr.jpg",
+            "video": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+            "logs": [
+                {
+                    "sets": 1,
+                    "reps": 20,
+                    "weight": 25
+                },
+                {
+                    "sets": 2,
+                    "reps": 15,
+                    "weight": 20
+                }
+            ],
+            "weight-type": "free-weights",
+            "notes": [],
             "description": [
                 "قف بشكل مستقيم وابدأ الجري في مكانك.",
                 "قم بزيادة السرعة تدريجيًا للحفاظ على معدل ضربات القلب.",
@@ -617,6 +645,27 @@ String jsonString = '''
             "name": {
                 "en": "Jumping Jacks",
                 "ar": "القفز بالأرجل"
+            },
+            "image": "https://kimofit-production.up.railway.app/media/sponsers/club30_xzkc0cr.jpg",
+            "reps": 15,
+            "sets": 3,
+            "duration": "1 minrebeeberbesdcdscsd",
+            "notes": [
+                "Keep your back straight",
+                "Land softly"
+            ],
+            "description": [
+                "Stand straight and start running in place.",
+                "Gradually increase the speed to maintain your heart rate.",
+                "Repeat the exercise for the specified number of times."
+            ],
+            "group-id": 1
+        },
+        {
+            "id": 20,
+            "name": {
+                "en": "Jumping Jacks",
+                "ar": " القفز بالأرجل القفز بالأرجل  القفز بالأرجل"
             },
             "image": "https://kimofit-production.up.railway.app/media/sponsers/club30_xzkc0cr.jpg",
             "reps": 15,

@@ -4,6 +4,7 @@ import 'package:kimofit/core/widgets/custom_app_bar.dart';
 import 'package:kimofit/core/widgets/no_data_widget_small.dart';
 import 'package:kimofit/features/timer_and_calender/ui/timer_and_calender_base.dart';
 import 'package:kimofit/features/timer_and_calender/ui/widgets/calender_shimmer.dart';
+import 'package:kimofit/features/workout_exercises/data/models/exercise_type_eum.dart';
 import 'package:kimofit/features/workout_exercises/data/test_data.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/exercise_list_view_area.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/warmup_exercise_area.dart';
@@ -39,21 +40,21 @@ class WorkoutExercisesScreen extends StatelessWidget {
               title: S.of(context).workoutExercises,
               child: ExerciseListViewArea(
                 exercisesList: workoutBodyResponse.workoutExercise,
-                type: WorkoutExerciseType.workout,
+                type: ExerciseType.workout,
               ),
             ),
             TitleWithContent(
               title: S.of(context).absExercises,
               child: ExerciseListViewArea(
                 exercisesList: workoutBodyResponse.absExercises,
-                type: WorkoutExerciseType.abs,
+                type: ExerciseType.abs,
               ),
             ),
             TitleWithContent(
               title: S.of(context).cardioExercises,
               child: ExerciseListViewArea(
                 exercisesList: workoutBodyResponse.cardioExercises,
-                type: WorkoutExerciseType.cardio,
+                type: ExerciseType.cardio,
               ),
             ),
             const NoDataWidgetSmall(),

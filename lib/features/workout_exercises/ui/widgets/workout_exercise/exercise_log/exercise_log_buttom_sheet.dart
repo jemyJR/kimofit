@@ -26,9 +26,12 @@ void exerciseBottomSheet(
           children: [
             const ExerciseLogHeader(),
             verticalSpace(10),
-            Text(
-              name,
-              style: TextStyles.font18White,
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Text(
+                name,
+                style: TextStyles.font18White,
+              ),
             ),
             verticalSpace(10),
             Text(

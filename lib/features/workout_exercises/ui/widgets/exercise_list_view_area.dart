@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/cardio_exercise.dart';
+import 'package:kimofit/features/workout_exercises/data/models/exercise_type_eum.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/group_of_exercise/group_of_exercise.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/workout_exercise.dart';
-
-enum WorkoutExerciseType { workout, abs, cardio }
+import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/exercise_container.dart';
 
 class ExerciseListViewArea extends StatelessWidget {
   const ExerciseListViewArea({
@@ -12,7 +10,7 @@ class ExerciseListViewArea extends StatelessWidget {
     required this.type,
   });
   final List<dynamic> exercisesList;
-  final WorkoutExerciseType type;
+  final ExerciseType type;
 
   @override
   Widget build(BuildContext context) {
@@ -23,16 +21,13 @@ class ExerciseListViewArea extends StatelessWidget {
       itemBuilder: (context, index) {
         final exerciseItem = exercisesList[index];
         if (exerciseItem.isSimpleExercise) {
-          return type == WorkoutExerciseType.cardio
-              ? CardioExercise(
-                  exercise: exerciseItem.exercise!,
-                )
-              : WorkoutExercise(
-                  exercise: exerciseItem.exercise!,
-                );
+          return ExerciseContainer(
+            exercise: exerciseItem.exercise,
+            type: type,
+          );
         } else if (exerciseItem.isGroupExercise) {
           return GroupOfExercise(
-            groupOfExercise: exerciseItem.groupExercises!,
+            groupOfExercise: exerciseItem.groupExercises,
             type: type,
           );
         }

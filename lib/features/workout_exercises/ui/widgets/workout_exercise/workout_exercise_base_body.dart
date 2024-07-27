@@ -6,20 +6,17 @@ import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/routing/routes.dart';
 import 'package:kimofit/core/widgets/custom_rounded_network_image.dart';
 import 'package:kimofit/core/widgets/hero_animation.dart';
-import 'package:kimofit/features/workout_exercises/data/models/workout_exercise_model.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/exercise_log/show_exercise_log.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/notes_alert_dialog/show_notes_alert_dialog.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/workout_exercise_name_and_sets.dart';
 
-class WorkoutExercise extends StatelessWidget {
-  const WorkoutExercise({
+class WorkoutExerciseBaseBody extends StatelessWidget {
+  const WorkoutExerciseBaseBody({
     super.key,
     required this.exercise,
     this.isGroupExercise = false,
+    required this.child,
   });
-
-  final WorkoutExerciseModel exercise;
+  final dynamic exercise;
   final bool isGroupExercise;
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
@@ -52,33 +49,7 @@ class WorkoutExercise extends StatelessWidget {
                   ),
                 ),
                 horizontalSpace(10),
-                Expanded(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          WorkoutExerciseNameAndSets(
-                            name: exercise.name.getLocalizedText(),
-                            sets: exercise.logs.length.toString(),
-                          ),
-                          horizontalSpace(10),
-                          exercise.notes.isNotEmpty
-                              ? ShownotesAlertDialog(
-                                  notes: exercise.notes,
-                                )
-                              : const SizedBox.shrink(),
-                        ],
-                      ),
-                      ShowExerciseLog(
-                        name: exercise.name.getLocalizedText(),
-                        id: exercise.id,
-                        logs: exercise.logs,
-                      ),
-                    ],
-                  ),
-                ),
+                child,
               ],
             ),
           ),

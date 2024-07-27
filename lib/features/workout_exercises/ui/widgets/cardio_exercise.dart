@@ -6,7 +6,7 @@ import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/routing/routes.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/custom_rounded_network_image.dart';
-import 'package:kimofit/core/widgets/exercise_slider/exercise_log_in_slider.dart';
+import 'package:kimofit/core/widgets/exercise_logs.dart';
 import 'package:kimofit/core/widgets/hero_animation.dart';
 import 'package:kimofit/features/workout_exercises/data/models/cardio_exercise_model.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/notes_alert_dialog/show_notes_alert_dialog.dart';
@@ -79,7 +79,7 @@ class CardioExercise extends StatelessWidget {
                       verticalSpace(5),
                       SizedBox(
                         height: 45.h,
-                        child: ExerciseLogInSlider(
+                        child: ExerciseLogs(
                           exercise: exercise,
                           isSmall: true,
                         ),
