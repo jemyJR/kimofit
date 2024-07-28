@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kimofit/features/workout_exercises/data/models/exercise_type_eum.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/cardio_exercise_body.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/workout_exercise_base_body.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise_base_body.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise_body.dart';
 
 class ExerciseContainer extends StatelessWidget {

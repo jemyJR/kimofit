@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/features/workout_exercises/data/models/workout_exercise_log_model.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/exercise_log/exercise_log_buttom_sheet.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/exercise_log/exercise_log_buttom_sheet.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 class ShowExerciseLog extends StatelessWidget {

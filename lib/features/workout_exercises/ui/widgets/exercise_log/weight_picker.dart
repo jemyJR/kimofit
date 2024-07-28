@@ -5,25 +5,9 @@ import 'package:kimofit/core/helpers/extensions.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/custom_button.dart';
+import 'package:kimofit/features/workout_exercises/data/enums/weight_type_enum.dart';
 import 'package:kimofit/generated/l10n.dart';
 import 'package:numberpicker/numberpicker.dart';
-
-enum WeightType {
-  freeWeights,
-  plateWeights,
-}
-
-List<double> getWeights(WeightType weightType) {
-  switch (weightType) {
-    case WeightType.freeWeights:
-      return List<double>.generate(20, (index) => (index + 1) * 2.5);
-
-    case WeightType.plateWeights:
-      return List<double>.generate(29, (index) => 1.0 + (index * 0.5));
-    default:
-      return [];
-  }
-}
 
 class WeightPicker extends StatefulWidget {
   const WeightPicker({

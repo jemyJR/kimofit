@@ -4,8 +4,8 @@ import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/features/workout_exercises/data/models/workout_exercise_log_model.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/exercise_log/exercise_log_header.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/exercise_log/exercise_log_table.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/exercise_log/exercise_log_header.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/exercise_log/exercise_log_table.dart';
 import 'package:kimofit/generated/l10n.dart';
 
 void exerciseBottomSheet(
@@ -26,11 +26,14 @@ void exerciseBottomSheet(
           children: [
             const ExerciseLogHeader(),
             verticalSpace(10),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Text(
-                name,
-                style: TextStyles.font18White,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 30.w),
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Text(
+                  name,
+                  style: TextStyles.font18White,
+                ),
               ),
             ),
             verticalSpace(10),

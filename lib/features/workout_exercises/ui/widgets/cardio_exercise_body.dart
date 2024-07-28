@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/exercise_logs.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/notes_alert_dialog/show_notes_alert_dialog.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/notes_alert_dialog/show_notes_alert_dialog.dart';
 
 class CardioExerciseBody extends StatelessWidget {
   const CardioExerciseBody({

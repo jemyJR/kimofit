@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kimofit/features/workout_exercises/data/models/exercise_type_eum.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/group_of_exercise/group_of_exercise.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/workout_exercise/exercise_container.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/exercise_container.dart';
 
 class ExerciseListViewArea extends StatelessWidget {
   const ExerciseListViewArea({
