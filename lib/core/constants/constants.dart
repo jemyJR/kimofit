@@ -9,6 +9,8 @@ class Constants {
   static const String warmUpHeroTag = 'warmUpExercisesDetailsScreen';
   static const String homeCardioSelectedDay = 'home_cardio_selected_day';
   static const String homeCardioSelectedWeek = 'home_cardio_selected_week';
+  static const String weightTypeFreeWeights = 'free-weights';
+  static const String weightTypePlateWeights = 'plate-weights';
 }
 
 class SocialMediaLinks {

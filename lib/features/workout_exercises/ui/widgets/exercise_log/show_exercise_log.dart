@@ -12,16 +12,24 @@ class ShowExerciseLog extends StatelessWidget {
     required this.name,
     required this.id,
     required this.logs,
+    required this.weightType,
   });
 
   final String name;
   final int id;
   final List<WorkoutExerciseLogModel> logs;
+  final String weightType;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => exerciseBottomSheet(context, name, logs),
+      onTap: () => exerciseBottomSheet(
+        context: context,
+        name: name,
+        id: id,
+        logs: logs,
+        weightType: weightType,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [

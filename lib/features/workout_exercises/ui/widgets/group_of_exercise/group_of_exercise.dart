@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
-import 'package:kimofit/features/workout_exercises/data/models/exercise_type_eum.dart';
+import 'package:kimofit/features/workout_exercises/data/enums/exercise_type_eum.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/group_of_exercise/title_group_of_exercise.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/exercise_container.dart';
 

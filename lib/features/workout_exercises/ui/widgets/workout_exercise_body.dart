@@ -37,6 +37,7 @@ class WorkoutExerciseBody extends StatelessWidget {
             name: exercise.name.getLocalizedText(),
             id: exercise.id,
             logs: exercise.logs,
+            weightType: exercise.weightType,
           ),
         ],
       ),
