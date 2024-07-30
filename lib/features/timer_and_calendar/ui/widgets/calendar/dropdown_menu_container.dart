@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/theming/style.dart';
-import 'package:kimofit/features/timer_and_calender/data/calender_list.dart';
+import 'package:kimofit/features/timer_and_calendar/data/calendar_list.dart';
 
 class DropdownMenuContainer extends StatelessWidget {
   final String value;

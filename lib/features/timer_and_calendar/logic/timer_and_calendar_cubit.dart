@@ -2,10 +2,10 @@ import 'dart:async';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:vibration/vibration.dart';
-part 'timer_and_calender_state.dart';
+part 'timer_and_calendar_state.dart';
 
-class TimerAndCalenderCubit extends Cubit<TimerAndCalenderState> {
-  TimerAndCalenderCubit() : super(TimerAndCalenderInitial());
+class TimerAndCalendarCubit extends Cubit<TimerAndCalendarState> {
+  TimerAndCalendarCubit() : super(TimerAndCalendarInitial());
 
   //! Audio Player And Vibrator
   final AudioPlayer audioPlayer = AudioPlayer();
@@ -25,13 +25,13 @@ class TimerAndCalenderCubit extends Cubit<TimerAndCalenderState> {
     Vibration.cancel();
   }
 
-  //! toggle between calender and timer
+  //! toggle between calendar and timer
   void toggleMode() {
     if (state is TimerOptionsModeState ||
         state is CountdownTimerState ||
         state is TimeUpModeState) {
       stopSoundAndVibration();
-      emit(CalenderModeState());
+      emit(CalendarModeState());
     } else {
       emit(TimerOptionsModeState());
     }

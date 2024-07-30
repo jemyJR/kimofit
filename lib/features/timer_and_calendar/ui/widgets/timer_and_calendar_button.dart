@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:lottie/lottie.dart';
 
-class TimerAndCalenderButton extends StatelessWidget {
-  const TimerAndCalenderButton({super.key, required this.iconPath});
+class TimerAndCalendarButton extends StatelessWidget {
+  const TimerAndCalendarButton({super.key, required this.iconPath});
   final String iconPath;
   @override
   Widget build(BuildContext context) {

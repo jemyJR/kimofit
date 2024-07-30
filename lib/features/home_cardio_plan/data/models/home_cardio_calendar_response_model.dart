@@ -2,18 +2,18 @@ import 'package:kimofit/core/helpers/get_unique_days_with_off_duplicates.dart';
 import 'package:kimofit/core/helpers/localized_field.dart';
 import 'package:kimofit/core/networking/api/api_endpoints.dart';
 
-class HomeCardioCalenderResponseModel {
+class HomeCardioCalendarResponseModel {
   final List<LocalizedField> days;
 
-  HomeCardioCalenderResponseModel({required this.days});
+  HomeCardioCalendarResponseModel({required this.days});
 
-  factory HomeCardioCalenderResponseModel.fromJson(Map<String, dynamic> json) {
+  factory HomeCardioCalendarResponseModel.fromJson(Map<String, dynamic> json) {
     final List<LocalizedField> days = [];
-    for (var day in json[ApiKey.calenderDays]) {
+    for (var day in json[ApiKey.calendarDays]) {
       days.add(LocalizedField.fromJson(day));
     }
 
-    return HomeCardioCalenderResponseModel(
+    return HomeCardioCalendarResponseModel(
       days: getUniqueDaysWithOffDuplicates(days),
     );
   }

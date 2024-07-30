@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
 
-class TimerAndCalenderBase extends StatelessWidget {
-  const TimerAndCalenderBase({super.key, required this.child});
+class TimerAndCalendarBase extends StatelessWidget {
+  const TimerAndCalendarBase({super.key, required this.child});
   final Widget child;
 
   @override

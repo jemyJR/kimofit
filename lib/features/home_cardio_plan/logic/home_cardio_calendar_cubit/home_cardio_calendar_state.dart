@@ -1,32 +1,32 @@
-part of 'home_cardio_calender_cubit.dart';
+part of 'home_cardio_calendar_cubit.dart';
 
-sealed class HomeCardioCalenderState {}
+sealed class HomeCardioCalendarState {}
 
-final class HomeCardioCalenderInitial extends HomeCardioCalenderState {}
+final class HomeCardioCalendarInitial extends HomeCardioCalendarState {}
 
-//! Home cardio calender states
-final class HomeCardioCalenderLoading extends HomeCardioCalenderState {}
+//! Home cardio calendar states
+final class HomeCardioCalendarLoading extends HomeCardioCalendarState {}
 
-final class HomeCardioCalenderSuccess extends HomeCardioCalenderState {
+final class HomeCardioCalendarSuccess extends HomeCardioCalendarState {
   final List<LocalizedField> days;
   final List<LocalizedField> weeks;
   final LocalizedField selectedDay;
   final LocalizedField selectedWeek;
 
-  HomeCardioCalenderSuccess({
+  HomeCardioCalendarSuccess({
     required this.days,
     required this.weeks,
     required this.selectedDay,
     required this.selectedWeek,
   });
 
-  HomeCardioCalenderSuccess copyWith({
+  HomeCardioCalendarSuccess copyWith({
     List<LocalizedField>? days,
     List<LocalizedField>? weeks,
     LocalizedField? selectedDay,
     LocalizedField? selectedWeek,
   }) {
-    return HomeCardioCalenderSuccess(
+    return HomeCardioCalendarSuccess(
       days: days ?? this.days,
       weeks: weeks ?? this.weeks,
       selectedDay: selectedDay ?? this.selectedDay,
@@ -35,7 +35,7 @@ final class HomeCardioCalenderSuccess extends HomeCardioCalenderState {
   }
 }
 
-final class HomeCardioCalenderFailure extends HomeCardioCalenderState {
+final class HomeCardioCalendarFailure extends HomeCardioCalendarState {
   final String errorMessage;
-  HomeCardioCalenderFailure({required this.errorMessage});
+  HomeCardioCalendarFailure({required this.errorMessage});
 }

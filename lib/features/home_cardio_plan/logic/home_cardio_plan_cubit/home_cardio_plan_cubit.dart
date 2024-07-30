@@ -3,7 +3,7 @@ import 'package:kimofit/core/helpers/localized_field.dart';
 import 'package:kimofit/core/networking/params/drop_down_menu_params.dart';
 import 'package:kimofit/features/home_cardio_plan/data/models/home_cardio_plan_response_model.dart';
 import 'package:kimofit/features/home_cardio_plan/data/repo/home_cardio_plan_repo.dart';
-import 'package:kimofit/features/timer_and_calender/data/calender_list.dart';
+import 'package:kimofit/features/timer_and_calendar/data/calendar_list.dart';
 
 part 'home_cardio_plan_state.dart';
 

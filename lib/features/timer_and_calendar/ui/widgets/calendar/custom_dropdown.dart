@@ -4,7 +4,7 @@ import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/helpers/localized_field.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/disable_splash_highlight.dart';
-import 'package:kimofit/features/timer_and_calender/ui/widgets/calender/dropdown_menu_container.dart';
+import 'package:kimofit/features/timer_and_calendar/ui/widgets/calendar/dropdown_menu_container.dart';
 
 class CustomDropdown extends StatelessWidget {
   const CustomDropdown({

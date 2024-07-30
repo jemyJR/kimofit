@@ -2,20 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
-import 'package:kimofit/features/home_cardio_plan/logic/home_cardio_calender_cubit/home_cardio_calender_cubit.dart';
-import 'package:kimofit/features/timer_and_calender/data/calender_list.dart';
-import 'package:kimofit/features/timer_and_calender/ui/widgets/calender/custom_dropdown.dart';
+import 'package:kimofit/features/home_cardio_plan/logic/home_cardio_calendar_cubit/home_cardio_calendar_cubit.dart';
+import 'package:kimofit/features/timer_and_calendar/data/calendar_list.dart';
+import 'package:kimofit/features/timer_and_calendar/ui/widgets/calendar/custom_dropdown.dart';
 import 'package:kimofit/generated/l10n.dart';
 
-class HomeCardioCalenderRowBlocBuilder extends StatelessWidget {
-  const HomeCardioCalenderRowBlocBuilder({super.key});
+class HomeCardioCalendarRowBlocBuilder extends StatelessWidget {
+  const HomeCardioCalendarRowBlocBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<HomeCardioCalenderCubit, HomeCardioCalenderState>(
+    return BlocBuilder<HomeCardioCalendarCubit, HomeCardioCalendarState>(
       builder: (context, state) {
-        if (state is HomeCardioCalenderSuccess) {
-          final cubit = context.read<HomeCardioCalenderCubit>();
+        if (state is HomeCardioCalendarSuccess) {
+          final cubit = context.read<HomeCardioCalendarCubit>();
           return Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
