@@ -8,6 +8,8 @@ class Routes {
   static const String warmUpExercisesDetailsScreen =
       '/warmUpExercisesDetailsScreen';
   static const String workoutExercisesScreen = '/workoutExercisesScreen';
+  static const String workoutExercisesDetailsScreen =
+      '/workoutExercisesDetailsScreen';
   static const String homeCardioPlanScreen = '/homeCardioPlanScreen';
   static const String dietPlanScreen = '/dietPlanScreen';
   static const String dietPlanDetailsScreen = '/dietPlanDetailsScreen';

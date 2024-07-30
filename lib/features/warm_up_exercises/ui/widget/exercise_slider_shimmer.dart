@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
-import 'package:kimofit/core/widgets/exercise_slider/exercise_log_in_slider.dart';
+import 'package:kimofit/core/widgets/exercise_logs.dart';
 import 'package:kimofit/features/home/ui/widgets/home_shimmer/shimmer_with_text.dart';
 import 'package:kimofit/features/warm_up_exercises/data/models/warm_up_exercise_model.dart';
 import 'package:kimofit/generated/l10n.dart';
@@ -96,7 +96,7 @@ Widget _sliderBuilder() {
           verticalSpace(10),
           SizedBox(
             height: 70.h,
-            child: ExerciseLogInSlider(exercise: exercise),
+            child: ExerciseLogs(exercise: exercise),
           ),
         ],
       );

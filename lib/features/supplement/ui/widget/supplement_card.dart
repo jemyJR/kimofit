@@ -1,11 +1,9 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
-import 'package:kimofit/core/widgets/not_found_widget.dart';
-import 'package:kimofit/features/home/ui/widgets/home_shimmer/shimmer_normal.dart';
+import 'package:kimofit/core/widgets/custom_rounded_network_image.dart';
 import 'package:kimofit/features/supplement/data/models/supplement_model.dart';
 import 'package:kimofit/features/supplement/ui/widget/build_supplement_dose.dart';
 
@@ -31,19 +29,10 @@ class SupplementCard extends StatelessWidget {
             style: TextStyles.font15BlueBold,
           ),
           verticalSpace(5),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(10.r),
-            child: CachedNetworkImage(
-              height: 100.h,
-              width: double.infinity,
-              imageUrl: supplement.image,
-              fit: BoxFit.cover,
-              placeholder: (context, url) =>
-                  ShimmerNormal(height: 100.h, width: double.infinity),
-              errorWidget: (context, url, error) => const NotFoundWidget(),
-              color: ColorsManager.black.withOpacity(0.2),
-              colorBlendMode: BlendMode.darken,
-            ),
+          CustomRoundedNetworkImage(
+            height: 100.h,
+            width: double.infinity,
+            imageUrl: supplement.image,
           ),
           verticalSpace(5),
           Center(

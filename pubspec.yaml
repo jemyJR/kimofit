@@ -82,6 +82,8 @@ dependencies:
   syncfusion_flutter_pdfviewer: ^26.1.42
   # Syncfusion Flutter Core is a dependent package for all the Syncfusion Flutter widgets
   syncfusion_flutter_core: ^26.1.42
+  # NumberPicker is a widget allowing user to choose numbers by scrolling spinners.
+  numberpicker: ^2.1.2
 
 
 

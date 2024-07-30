@@ -38,3 +38,14 @@ extension DateFormatter on String {
     return '$month/$day';
   }
 }
+
+extension DoubleExtension on num {
+  num toFormattedNumber() {
+    // Check if the value has a fractional part
+    if (this % 1 == 0) {
+      return toInt();
+    } else {
+      return this;
+    }
+  }
+}

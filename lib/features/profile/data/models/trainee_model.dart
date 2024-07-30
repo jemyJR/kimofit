@@ -5,8 +5,8 @@ class TraineeModel {
   final LocalizedField name;
   final String phone;
   final int? age;
-  final double? height;
-  final double? weight;
+  num? height;
+  num? weight;
 
   TraineeModel({
     required this.name,

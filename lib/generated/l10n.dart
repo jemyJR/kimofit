@@ -670,6 +670,16 @@ class S {
     );
   }
 
+  /// `Sorry, there is no current data`
+  String get noDataMessageSmall {
+    return Intl.message(
+      'Sorry, there is no current data',
+      name: 'noDataMessageSmall',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Warm up exercise properly before exercising to prevent injury and make your workouts more effective.`
   String get warmUpExerciseHeaderMessage {
     return Intl.message(
@@ -885,6 +895,76 @@ class S {
     return Intl.message(
       'Don\'t show it again',
       name: 'dontShowAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Warm up Exercises`
+  String get warmUpExercises {
+    return Intl.message(
+      'Warm up Exercises',
+      name: 'warmUpExercises',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Workout Exercises`
+  String get workoutExercises {
+    return Intl.message(
+      'Workout Exercises',
+      name: 'workoutExercises',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Abs Exercises`
+  String get absExercises {
+    return Intl.message(
+      'Abs Exercises',
+      name: 'absExercises',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Cardio Exercises`
+  String get cardioExercises {
+    return Intl.message(
+      'Cardio Exercises',
+      name: 'cardioExercises',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Exercise Log`
+  String get exerciseLog {
+    return Intl.message(
+      'Exercise Log',
+      name: 'exerciseLog',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Super Set`
+  String get superSet {
+    return Intl.message(
+      'Super Set',
+      name: 'superSet',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose Weight`
+  String get chooseWeight {
+    return Intl.message(
+      'Choose Weight',
+      name: 'chooseWeight',
       desc: '',
       args: [],
     );

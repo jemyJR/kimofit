@@ -75,6 +75,7 @@
     "evening": "Evening",
 
     "noDataMessage":"Sorry, there is no current data . Please contact us to obtain data specifically for you",
+    "noDataMessageSmall": "Sorry, there is no current data",
 
     "warmUpExerciseHeaderMessage": "Warm up exercise properly before exercising to prevent injury and make your workouts more effective.",
     "exerciseNo": "Exercise No",
@@ -100,7 +101,16 @@
     "importantNotice": "Important Notice",
     "deviceIdNoticeMessage": "Uninstalling the application or clearing its data will prevent you from accessing your account again. So be careful",
     "close": "Close",
-    "dontShowAgain" : "Don't show it again"
+    "dontShowAgain" : "Don't show it again",
+
+    "warmUpExercises": "Warm up Exercises",
+    "workoutExercises": "Workout Exercises",
+    "absExercises": "Abs Exercises",
+    "cardioExercises": "Cardio Exercises",
+    "exerciseLog": "Exercise Log",
+    "superSet": "Super Set",
+    "chooseWeight": "Choose Weight"
+
 
 
 
