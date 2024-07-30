@@ -12,8 +12,8 @@ class DropDownMenuParams {
 
   Map<String, dynamic> toJson() {
     return {
-      ApiKey.calenderweekType: week.id,
-      ApiKey.calenderDayType: day.id,
+      ApiKey.calendarweekType: week.id,
+      ApiKey.calendarDayType: day.id,
     };
   }
 }

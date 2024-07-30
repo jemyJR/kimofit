@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:kimofit/features/timer_and_calender/data/models/timer_option_model.dart';
-import 'package:kimofit/features/timer_and_calender/ui/widgets/timer/timer_option_container.dart';
-import 'package:kimofit/features/timer_and_calender/data/build_timer_options_list.dart';
+import 'package:kimofit/features/timer_and_calendar/data/models/timer_option_model.dart';
+import 'package:kimofit/features/timer_and_calendar/ui/widgets/timer/timer_option_container.dart';
+import 'package:kimofit/features/timer_and_calendar/data/build_timer_options_list.dart';
 
 class TimerOption extends StatelessWidget {
   const TimerOption({

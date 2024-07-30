@@ -3,23 +3,23 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kimofit/core/constants/assets.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
-import 'package:kimofit/features/timer_and_calender/logic/timer_and_calender_cubit.dart';
-import 'package:kimofit/features/timer_and_calender/ui/widgets/calender/dropdown_menu_container_shimmer.dart';
-import 'package:kimofit/features/timer_and_calender/ui/widgets/timer/count_down_timer_row.dart';
-import 'package:kimofit/features/timer_and_calender/ui/widgets/timer/time_up_message.dart';
-import 'package:kimofit/features/timer_and_calender/ui/widgets/timer_and_calender_button.dart';
-import 'package:kimofit/features/timer_and_calender/ui/widgets/timer/timer_option.dart';
+import 'package:kimofit/features/timer_and_calendar/logic/timer_and_calendar_cubit.dart';
+import 'package:kimofit/features/timer_and_calendar/ui/widgets/calendar/dropdown_menu_container_shimmer.dart';
+import 'package:kimofit/features/timer_and_calendar/ui/widgets/timer/count_down_timer_row.dart';
+import 'package:kimofit/features/timer_and_calendar/ui/widgets/timer/time_up_message.dart';
+import 'package:kimofit/features/timer_and_calendar/ui/widgets/timer_and_calendar_button.dart';
+import 'package:kimofit/features/timer_and_calendar/ui/widgets/timer/timer_option.dart';
 import 'package:kimofit/generated/l10n.dart';
-import 'calender/custom_dropdown_shimmer.dart';
+import 'calendar/custom_dropdown_shimmer.dart';
 
-class CalenderShimmer extends StatelessWidget {
-  const CalenderShimmer({super.key});
+class CalendarShimmer extends StatelessWidget {
+  const CalendarShimmer({super.key});
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<TimerAndCalenderCubit, TimerAndCalenderState>(
+    return BlocBuilder<TimerAndCalendarCubit, TimerAndCalendarState>(
       builder: (context, state) {
-        final cubit = context.read<TimerAndCalenderCubit>();
-        final String iconPath = cubit.state is CalenderModeState
+        final cubit = context.read<TimerAndCalendarCubit>();
+        final String iconPath = cubit.state is CalendarModeState
             ? Assets.animationTimer
             : Assets.animationCalendar;
 
@@ -29,12 +29,12 @@ class CalenderShimmer extends StatelessWidget {
               alignment: Alignment.topCenter,
               child: GestureDetector(
                 onTap: () => cubit.toggleMode(),
-                child: TimerAndCalenderButton(
+                child: TimerAndCalendarButton(
                   iconPath: iconPath,
                 ),
               ),
             ),
-            getTimerAndCalenderChild(
+            getTimerAndCalendarChild(
               cubit: cubit,
               state: state,
             ),
@@ -45,11 +45,11 @@ class CalenderShimmer extends StatelessWidget {
   }
 }
 
-Widget getTimerAndCalenderChild({
-  required TimerAndCalenderCubit cubit,
-  required TimerAndCalenderState state,
+Widget getTimerAndCalendarChild({
+  required TimerAndCalendarCubit cubit,
+  required TimerAndCalendarState state,
 }) {
-  if (state is CalenderModeState) {
+  if (state is CalendarModeState) {
     return const DayAndWeekRowShimmer();
   } else if (state is TimerOptionsModeState) {
     return TimerOption(

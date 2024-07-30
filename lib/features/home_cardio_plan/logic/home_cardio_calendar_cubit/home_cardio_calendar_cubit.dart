@@ -4,16 +4,16 @@ import 'package:kimofit/core/cache/cache_helper.dart';
 import 'package:kimofit/core/constants/constants.dart';
 import 'package:kimofit/core/di/dependency_injection.dart';
 import 'package:kimofit/core/helpers/localized_field.dart';
-import 'package:kimofit/core/networking/params/calender_day_params.dart';
-import 'package:kimofit/features/home_cardio_plan/data/repo/home_cardio_calender_repo.dart';
-import 'package:kimofit/features/timer_and_calender/data/calender_list.dart';
+import 'package:kimofit/core/networking/params/calendar_day_params.dart';
+import 'package:kimofit/features/home_cardio_plan/data/repo/home_cardio_calendar_repo.dart';
+import 'package:kimofit/features/timer_and_calendar/data/calendar_list.dart';
 
-part 'home_cardio_calender_state.dart';
+part 'home_cardio_calendar_state.dart';
 
-class HomeCardioCalenderCubit extends Cubit<HomeCardioCalenderState> {
-  HomeCardioCalenderCubit(this.homeCardioCalenderRepo)
-      : super(HomeCardioCalenderInitial());
-  final HomeCardioCalenderRepo homeCardioCalenderRepo;
+class HomeCardioCalendarCubit extends Cubit<HomeCardioCalendarState> {
+  HomeCardioCalendarCubit(this.homeCardioCalendarRepo)
+      : super(HomeCardioCalendarInitial());
+  final HomeCardioCalendarRepo homeCardioCalendarRepo;
 
   //! Track current selected week and day
   LocalizedField? currentSelectedWeek;
@@ -41,7 +41,7 @@ class HomeCardioCalenderCubit extends Cubit<HomeCardioCalenderState> {
 
   //! Load home cardio weeks
   Future<void> loadHomeCardioWeeks() async {
-    emit(HomeCardioCalenderLoading());
+    emit(HomeCardioCalendarLoading());
 
     try {
       LocalizedField? cachedWeek =
@@ -55,7 +55,7 @@ class HomeCardioCalenderCubit extends Cubit<HomeCardioCalenderState> {
         value: initialWeek,
       );
 
-      emit(HomeCardioCalenderSuccess(
+      emit(HomeCardioCalendarSuccess(
         weeks: weeks,
         selectedWeek: initialWeek,
         days: [],
@@ -64,27 +64,27 @@ class HomeCardioCalenderCubit extends Cubit<HomeCardioCalenderState> {
 
       // Automatically load days for the initial week
       await getHomeCardioDays(
-        calenderDaysParams: CalenderDaysParams(week: initialWeek.id),
+        calendarDaysParams: CalendarDaysParams(week: initialWeek.id),
       );
     } catch (error) {
-      emit(HomeCardioCalenderFailure(errorMessage: error.toString()));
+      emit(HomeCardioCalendarFailure(errorMessage: error.toString()));
     }
   }
 
   //! Get home cardio days
   Future<void> getHomeCardioDays({
-    required CalenderDaysParams calenderDaysParams,
+    required CalendarDaysParams calendarDaysParams,
   }) async {
-    emit(HomeCardioCalenderLoading());
+    emit(HomeCardioCalendarLoading());
 
-    final homeCardioCalenderResponse = await homeCardioCalenderRepo
-        .getHomeCardioDays(calenderDaysParams: calenderDaysParams);
+    final homeCardioCalendarResponse = await homeCardioCalendarRepo
+        .getHomeCardioDays(calendarDaysParams: calendarDaysParams);
 
-    homeCardioCalenderResponse.fold(
+    homeCardioCalendarResponse.fold(
       (errorMessage) =>
-          emit(HomeCardioCalenderFailure(errorMessage: errorMessage)),
-      (homeCardioCalenderResponseModel) {
-        List<LocalizedField> days = homeCardioCalenderResponseModel.days;
+          emit(HomeCardioCalendarFailure(errorMessage: errorMessage)),
+      (homeCardioCalendarResponseModel) {
+        List<LocalizedField> days = homeCardioCalendarResponseModel.days;
         currentDayList = days;
 
         // Get cached values
@@ -105,7 +105,7 @@ class HomeCardioCalenderCubit extends Cubit<HomeCardioCalenderState> {
         }
 
         currentSelectedDay = initialDay;
-        emit(HomeCardioCalenderSuccess(
+        emit(HomeCardioCalendarSuccess(
           days: days,
           weeks: weeks,
           selectedDay: initialDay,
@@ -129,7 +129,7 @@ class HomeCardioCalenderCubit extends Cubit<HomeCardioCalenderState> {
     );
 
     final currentState = state;
-    if (currentState is HomeCardioCalenderSuccess) {
+    if (currentState is HomeCardioCalendarSuccess) {
       currentSelectedDay = day;
       emit(currentState.copyWith(selectedDay: day));
     }
@@ -142,7 +142,7 @@ class HomeCardioCalenderCubit extends Cubit<HomeCardioCalenderState> {
     );
     currentSelectedWeek = week;
     await getHomeCardioDays(
-      calenderDaysParams: CalenderDaysParams(week: week.id),
+      calendarDaysParams: CalendarDaysParams(week: week.id),
     );
   }
 }

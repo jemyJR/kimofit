@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/widgets/custom_app_bar.dart';
 import 'package:kimofit/core/widgets/no_data_widget_small.dart';
-import 'package:kimofit/features/timer_and_calender/ui/timer_and_calender_base.dart';
-import 'package:kimofit/features/timer_and_calender/ui/widgets/calender_shimmer.dart';
+import 'package:kimofit/features/timer_and_calendar/ui/timer_and_calendar_base.dart';
+import 'package:kimofit/features/timer_and_calendar/ui/widgets/calendar_shimmer.dart';
 import 'package:kimofit/features/workout_exercises/data/enums/exercise_type_eum.dart';
 import 'package:kimofit/features/workout_exercises/data/test_data.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/exercise_list_view_area.dart';
@@ -27,8 +27,8 @@ class WorkoutExercisesScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const TimerAndCalenderBase(
-              child: CalenderShimmer(),
+            const TimerAndCalendarBase(
+              child: CalendarShimmer(),
             ),
             TitleWithContent(
               title: S.of(context).warmUpExercises,

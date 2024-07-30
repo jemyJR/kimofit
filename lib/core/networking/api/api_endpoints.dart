@@ -21,7 +21,7 @@ class ApiEndPoints {
   static const String dietPlan = 'diets/all/';
   static const String warmups = 'warmups/all/';
   static const String warmupcategories = 'warmups/home/';
-  static const String homeCardioCalender = 'home-cardios/calender/';
+  static const String homeCardioCalendar = 'home-cardios/calendar/';
   static const String homeCardioPlan = 'home-cardios/all/';
   static const String foodRecipeBook = 'meals/recipes-book/';
 }
@@ -121,10 +121,10 @@ class ApiKey {
   static const String warmupCategoryImage = 'attachment';
   static const String warmupCategory = 'warm_up_category';
 
-  //! Home Cardios calender
-  static const String calenderDays = 'days';
-  static const String calenderweekType = 'week';
-  static const String calenderDayType = 'day';
+  //! Home Cardios calendar
+  static const String calendarDays = 'days';
+  static const String calendarweekType = 'week';
+  static const String calendarDayType = 'day';
 
   //! Home Cardios plan
   static const String homeCardioName = 'name';

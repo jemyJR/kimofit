@@ -14,7 +14,7 @@ import 'package:kimofit/features/home/data/models/subscription_features_model.da
 import 'package:kimofit/features/home/logic/home_cubit.dart';
 import 'package:kimofit/features/home/ui/home_screen.dart';
 import 'package:kimofit/features/home/ui/subscription_screen.dart';
-import 'package:kimofit/features/home_cardio_plan/logic/home_cardio_calender_cubit/home_cardio_calender_cubit.dart';
+import 'package:kimofit/features/home_cardio_plan/logic/home_cardio_calendar_cubit/home_cardio_calendar_cubit.dart';
 import 'package:kimofit/features/home_cardio_plan/logic/home_cardio_plan_cubit/home_cardio_plan_cubit.dart';
 import 'package:kimofit/features/home_cardio_plan/ui/home_cardio_plan_screen.dart';
 import 'package:kimofit/features/login/logic/login_cubit.dart';
@@ -26,7 +26,7 @@ import 'package:kimofit/features/signup/logic/cubit/signup_cubit.dart';
 import 'package:kimofit/features/signup/ui/signup_screen.dart';
 import 'package:kimofit/features/supplement/logic/supplement_cubit.dart';
 import 'package:kimofit/features/supplement/ui/supplement_screen.dart';
-import 'package:kimofit/features/timer_and_calender/logic/timer_and_calender_cubit.dart';
+import 'package:kimofit/features/timer_and_calendar/logic/timer_and_calendar_cubit.dart';
 import 'package:kimofit/features/warm_up_exercises/data/models/warm_up_category_model.dart';
 import 'package:kimofit/features/warm_up_exercises/logic/warm_up_cubit.dart';
 import 'package:kimofit/features/warm_up_exercises/ui/warm_up_exercises_details_screen.dart';
@@ -97,7 +97,7 @@ class AppRouter {
           builder: (context) => MultiBlocProvider(
             providers: [
               BlocProvider(
-                create: (context) => getIt<TimerAndCalenderCubit>(),
+                create: (context) => getIt<TimerAndCalendarCubit>(),
               ),
               BlocProvider(
                 create: (context) => getIt<ExerciseLogCubit>(),
@@ -120,13 +120,13 @@ class AppRouter {
             providers: [
               BlocProvider(
                 create: (context) =>
-                    getIt<HomeCardioCalenderCubit>()..loadHomeCardioWeeks(),
+                    getIt<HomeCardioCalendarCubit>()..loadHomeCardioWeeks(),
               ),
               BlocProvider(
                 create: (context) => getIt<HomeCardioPlanCubit>(),
               ),
               BlocProvider(
-                create: (context) => getIt<TimerAndCalenderCubit>(),
+                create: (context) => getIt<TimerAndCalendarCubit>(),
               ),
             ],
             child: HomeCardioPlanScreen(title: arguments),

@@ -4,8 +4,8 @@ import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/helpers/localized_field.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/core/widgets/disable_splash_highlight.dart';
-import 'package:kimofit/features/timer_and_calender/data/calender_list.dart';
-import 'package:kimofit/features/timer_and_calender/ui/widgets/calender/dropdown_menu_container_shimmer.dart';
+import 'package:kimofit/features/timer_and_calendar/data/calendar_list.dart';
+import 'package:kimofit/features/timer_and_calendar/ui/widgets/calendar/dropdown_menu_container_shimmer.dart';
 
 class CustomDropdownShimmer extends StatelessWidget {
   const CustomDropdownShimmer({super.key, required this.type});

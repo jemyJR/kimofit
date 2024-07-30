@@ -1,5 +1,5 @@
 import 'package:kimofit/core/helpers/localized_field.dart';
-import 'package:kimofit/features/timer_and_calender/data/calender_list.dart';
+import 'package:kimofit/features/timer_and_calendar/data/calendar_list.dart';
 
 List<LocalizedField> getUniqueDaysWithOffDuplicates(List<LocalizedField> days) {
   List<LocalizedField> result = [];
