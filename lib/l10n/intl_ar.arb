@@ -109,7 +109,9 @@
     "cardioExercises": "تمارين الكارديو",
     "exerciseLog": "سجل التمرين",
     "superSet": "مجموعه سوبر سيت",
-    "chooseWeight": "اختر الوزن"
+    "chooseWeight": "اختر الوزن",
+
+    "exerciseDescription": "وصف التمرين"
 
 
 

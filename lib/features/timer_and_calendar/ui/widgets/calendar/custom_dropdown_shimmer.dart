@@ -25,7 +25,8 @@ class CustomDropdownShimmer extends StatelessWidget {
             icon: const SizedBox.shrink(),
             dropdownColor: ColorsManager.dark,
             style: TextStyles.font18White,
-            itemHeight: 70.h,
+            // To Avoid the kMinInteractiveDimension error (when make video fullscreen)
+            itemHeight: 70.h >= 48.0 ? 70.h : 48.0,
             items: type == ShimmerType.day
                 ? days
                     .map(
