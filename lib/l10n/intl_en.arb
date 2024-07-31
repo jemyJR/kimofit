@@ -109,7 +109,9 @@
     "cardioExercises": "Cardio Exercises",
     "exerciseLog": "Exercise Log",
     "superSet": "Super Set",
-    "chooseWeight": "Choose Weight"
+    "chooseWeight": "Choose Weight",
+
+    "exerciseDescription": "Exercise Description"
 
 
 

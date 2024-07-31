@@ -19,7 +19,7 @@ String jsonString = '''
                 "ar": "تمارين القلب"
             },
             "image": "https://kimofit-production.up.railway.app/media/sponsers/club30_xzkc0cr.jpg",
-            "video": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+            "video": "https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4",
             "logs": [
                 {
                     "sets": 1,

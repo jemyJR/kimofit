@@ -56,6 +56,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "endDate": MessageLookupByLibrary.simpleMessage("تاريخ الانتهاء"),
         "evening": MessageLookupByLibrary.simpleMessage("مساء"),
         "exercise": MessageLookupByLibrary.simpleMessage(" التمرين"),
+        "exerciseDescription":
+            MessageLookupByLibrary.simpleMessage("وصف التمرين"),
         "exerciseLog": MessageLookupByLibrary.simpleMessage("سجل التمرين"),
         "exerciseNo": MessageLookupByLibrary.simpleMessage(" التمرين رقم"),
         "free": MessageLookupByLibrary.simpleMessage("مجاني"),
