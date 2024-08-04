@@ -11,6 +11,8 @@ class Constants {
   static const String homeCardioSelectedWeek = 'home_cardio_selected_week';
   static const String weightTypeFreeWeights = 'free-weights';
   static const String weightTypePlateWeights = 'plate-weights';
+  static const String workoutSelectedDay = 'workout_selected_day';
+  static const String workoutSelectedWeek = 'workout_selected_week';
 }
 
 class SocialMediaLinks {

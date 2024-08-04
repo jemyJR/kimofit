@@ -24,6 +24,7 @@ class ApiEndPoints {
   static const String homeCardioCalendar = 'home-cardios/calendar/';
   static const String homeCardioPlan = 'home-cardios/all/';
   static const String foodRecipeBook = 'meals/recipes-book/';
+  static const String workoutCalendar = 'workouts/calendar/';
 }
 
 class ApiKey {
@@ -137,4 +138,25 @@ class ApiKey {
 
   //! Food Recipe Book keys
   static const String foodRecipeBookAttachment = 'attachment';
+
+  //! Workout Exercise keys
+  //! Fields
+  static const String workoutResponse = 'response';
+  static const String workoutWarmUpsField = 'warm_ups';
+  static const String workoutField = 'workouts';
+  static const String workoutAbsField = 'abs_workouts';
+  static const String workoutCardioField = 'cardio_workouts';
+  //! Exercise
+  static const String workoutExerciseName = 'name';
+  static const String workoutExerciseImage = 'image';
+  static const String workoutExerciseVideo = 'video';
+  static const String workoutExerciseLogs = 'logs';
+  static const String workoutExerciseSets = 'sets';
+  static const String workoutExerciseReps = 'reps';
+  static const String workoutExerciseWeight = 'weight';
+  static const String workoutExerciseWeightType = 'weight_type';
+  static const String workoutExerciseNotes = 'notes';
+  static const String workoutExerciseDescription = 'description';
+  static const String workoutExerciseGroupID = 'group_id';
+  static const String workoutExerciseDuration = 'duration';
 }

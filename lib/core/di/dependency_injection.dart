@@ -26,6 +26,8 @@ import 'package:kimofit/features/supplement/data/repo/supplenemt_repo.dart';
 import 'package:kimofit/features/supplement/logic/supplement_cubit.dart';
 import 'package:kimofit/features/warm_up_exercises/data/repo/warm_up_repo.dart';
 import 'package:kimofit/features/warm_up_exercises/logic/warm_up_cubit.dart';
+import 'package:kimofit/features/workout_exercises/data/repo/workout_calendar_repo.dart';
+import 'package:kimofit/features/workout_exercises/logic/workout_calendar_cubit/workout_calendar_cubit.dart';
 
 final getIt = GetIt.instance;
 
@@ -96,4 +98,10 @@ Future<void> setupGetIt() async {
       () => FoodRecipeBookRepo(getIt()));
   getIt
       .registerFactory<FoodRecipeBookCubit>(() => FoodRecipeBookCubit(getIt()));
+
+  // Register WorkoutCalendarCubit
+  getIt.registerLazySingleton<WorkoutCalendarRepo>(
+      () => WorkoutCalendarRepo(getIt()));
+  getIt.registerFactory<WorkoutCalendarCubit>(
+      () => WorkoutCalendarCubit(getIt()));
 }

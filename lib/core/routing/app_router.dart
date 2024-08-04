@@ -32,6 +32,7 @@ import 'package:kimofit/features/warm_up_exercises/logic/warm_up_cubit.dart';
 import 'package:kimofit/features/warm_up_exercises/ui/warm_up_exercises_details_screen.dart';
 import 'package:kimofit/features/warm_up_exercises/ui/warm_up_exercises_screen.dart';
 import 'package:kimofit/features/workout_exercises/logic/cubit/exercise_log_cubit.dart';
+import 'package:kimofit/features/workout_exercises/logic/workout_calendar_cubit/workout_calendar_cubit.dart';
 import 'package:kimofit/features/workout_exercises/ui/workout_exercises_details_screen.dart';
 import 'package:kimofit/features/workout_exercises/ui/workout_exercises_screen.dart';
 
@@ -96,6 +97,10 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (context) => MultiBlocProvider(
             providers: [
+              BlocProvider(
+                create: (context) =>
+                    getIt<WorkoutCalendarCubit>()..loadWorkoutWeeks(),
+              ),
               BlocProvider(
                 create: (context) => getIt<TimerAndCalendarCubit>(),
               ),
