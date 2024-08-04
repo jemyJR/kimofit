@@ -688,5 +688,5 @@ String jsonString = '''
 
 Map<String, dynamic> jsonData = jsonDecode(jsonString);
 
-WorkoutBodyResponseModel workoutBodyResponse =
-    WorkoutBodyResponseModel.fromJson(jsonData);
+WorkoutFieldsResponseModel workoutBodyResponse =
+    WorkoutFieldsResponseModel.fromJson(jsonData);

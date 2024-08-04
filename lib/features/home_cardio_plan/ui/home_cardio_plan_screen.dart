@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/widgets/custom_app_bar.dart';
-import 'widgets/home_cardio_bloc_consumer.dart';
+import 'package:kimofit/features/home_cardio_plan/logic/widgets/home_cardio_consumer.dart';
 
 class HomeCardioPlanScreen extends StatelessWidget {
   final String title;

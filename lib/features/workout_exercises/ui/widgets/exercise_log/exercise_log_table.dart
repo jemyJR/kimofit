@@ -184,7 +184,7 @@ class ExerciseLogTable extends StatelessWidget {
               _buildTableRow(
                 context: context,
                 label: S.of(context).weight,
-                values: logs.map((log) => '${log.weight.toFormattedNumber()}'),
+                values: logs.map((log) => '${log.weight!.toFormattedNumber()}'),
                 isWeight: true,
               ),
             ],
