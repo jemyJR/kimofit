@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/helpers/extensions.dart';
 import 'package:kimofit/core/theming/style.dart';
-import 'package:kimofit/core/widgets/custom_rounded_network_image.dart';
+import 'package:kimofit/core/widgets/custom_network_image.dart';
 import 'package:kimofit/features/home/data/models/home_response_model/home_category_model.dart';
 import 'package:kimofit/features/home/ui/widgets/home_category/home_cadegory_arguments_model.dart';
 import 'package:kimofit/features/home/ui/widgets/home_category/rotated_corner_badge_decoration.dart';
@@ -57,7 +57,7 @@ class CustomHomeContainer extends StatelessWidget {
   }
 
   Widget _buildHomeCategoryImage() {
-    return CustomRoundedNetworkImage(
+    return CustomNetworkImage(
       imageUrl: category.image,
       height: 150.h,
       width: double.infinity,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/theming/style.dart';
-import 'package:kimofit/core/widgets/custom_rounded_network_image.dart';
+import 'package:kimofit/core/widgets/custom_network_image.dart';
 
 class CustomSubContainer extends StatelessWidget {
   const CustomSubContainer({
@@ -29,7 +29,7 @@ class CustomSubContainer extends StatelessWidget {
           height: height,
           child: Stack(
             children: [
-              CustomRoundedNetworkImage(
+              CustomNetworkImage(
                 height: height,
                 width: double.infinity,
                 imageUrl: imagePath,

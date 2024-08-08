@@ -5,8 +5,8 @@ import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/widgets/not_found_widget.dart';
 import 'package:kimofit/features/home/ui/widgets/home_shimmer/shimmer_normal.dart';
 
-class CustomRoundedNetworkImage extends StatelessWidget {
-  const CustomRoundedNetworkImage({
+class CustomNetworkImage extends StatelessWidget {
+  const CustomNetworkImage({
     super.key,
     required this.height,
     required this.width,
@@ -15,6 +15,7 @@ class CustomRoundedNetworkImage extends StatelessWidget {
     this.errorWidget,
     this.withColorOverlay = false,
     this.opacity = 0.5,
+    this.withBorderRadius = true,
   });
   final double height;
   final double width;
@@ -23,11 +24,14 @@ class CustomRoundedNetworkImage extends StatelessWidget {
   final Widget? errorWidget;
   final bool? withColorOverlay;
   final double opacity;
+  final bool? withBorderRadius;
 
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-      borderRadius: BorderRadius.circular(10.r),
+      borderRadius: withBorderRadius!
+          ? BorderRadius.circular(10.r)
+          : BorderRadius.circular(0.r),
       child: CachedNetworkImage(
         height: height,
         width: width,

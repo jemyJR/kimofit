@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
-import 'package:kimofit/core/widgets/custom_rounded_network_image.dart';
+import 'package:kimofit/core/widgets/custom_network_image.dart';
 import 'package:kimofit/features/home/ui/widgets/home_shimmer/shimmer_with_text.dart';
 import 'package:kimofit/core/widgets/exercise_slider/arrow_buttons_and_indicator.dart';
 import 'package:kimofit/core/widgets/exercise_logs.dart';
@@ -79,7 +79,7 @@ class _ExerciseSliderState extends State<ExerciseSlider> {
 
   Widget _sliderImge(gifPath) {
     return Expanded(
-      child: CustomRoundedNetworkImage(
+      child: CustomNetworkImage(
         imageUrl: gifPath,
         height: 150.h,
         width: double.infinity,

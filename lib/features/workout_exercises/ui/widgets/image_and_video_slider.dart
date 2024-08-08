@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:kimofit/core/constants/colors.dart';
-import 'package:kimofit/core/widgets/custom_rounded_network_image.dart';
+import 'package:kimofit/core/widgets/custom_network_image.dart';
 import 'package:kimofit/core/widgets/hero_animation.dart';
+import 'package:kimofit/features/workout_exercises/data/enums/exercise_type_eum.dart';
+import 'package:kimofit/features/workout_exercises/data/models/workout_exercises_details_argument_model.dart';
 import 'package:kimofit/features/workout_exercises/ui/widgets/exercise_video_player.dart';
 
 class ImageAndVideoSlider extends StatefulWidget {
-  final dynamic exerciseModel;
+  final WorkoutExercisesDetailsArgumentModel args;
 
-  const ImageAndVideoSlider({super.key, required this.exerciseModel});
+  const ImageAndVideoSlider({
+    super.key,
+    required this.args,
+  });
 
   @override
   State<ImageAndVideoSlider> createState() => _ImageAndVideoSliderState();
@@ -40,18 +45,20 @@ class _ImageAndVideoSliderState extends State<ImageAndVideoSlider> {
   List<Widget> getSliderItems(BuildContext context) {
     return [
       HeroAnimation(
-        tag: widget.exerciseModel.id.toString(),
-        child: CustomRoundedNetworkImage(
+        tag:
+            '${widget.args.exercise.id} - ${getExerciseTypeString(widget.args.type)}',
+        child: CustomNetworkImage(
           height: 100.h,
           width: MediaQuery.of(context).size.width,
-          imageUrl: widget.exerciseModel.image,
+          imageUrl: widget.args.exercise.image,
+          withBorderRadius: false,
         ),
       ),
       SizedBox(
         width: MediaQuery.of(context).size.width,
         child: AspectRatio(
           aspectRatio: 16 / 9,
-          child: ExerciseVideoPlayer(exerciseModel: widget.exerciseModel),
+          child: ExerciseVideoPlayer(exerciseModel: widget.args.exercise),
         ),
       ),
     ];
