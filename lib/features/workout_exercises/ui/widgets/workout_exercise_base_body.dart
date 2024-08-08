@@ -4,8 +4,10 @@ import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/helpers/extensions.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/routing/routes.dart';
-import 'package:kimofit/core/widgets/custom_rounded_network_image.dart';
+import 'package:kimofit/core/widgets/custom_network_image.dart';
 import 'package:kimofit/core/widgets/hero_animation.dart';
+import 'package:kimofit/features/workout_exercises/data/enums/exercise_type_eum.dart';
+import 'package:kimofit/features/workout_exercises/data/models/workout_exercises_details_argument_model.dart';
 
 class WorkoutExerciseBaseBody extends StatelessWidget {
   const WorkoutExerciseBaseBody({
@@ -13,10 +15,12 @@ class WorkoutExerciseBaseBody extends StatelessWidget {
     required this.exercise,
     this.isGroupExercise = false,
     required this.child,
+    required this.type,
   });
   final dynamic exercise;
   final bool isGroupExercise;
   final Widget child;
+  final ExerciseType type;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +31,10 @@ class WorkoutExerciseBaseBody extends StatelessWidget {
       child: GestureDetector(
         onTap: () => context.pushNamed(
           Routes.workoutExercisesDetailsScreen,
-          arguments: exercise,
+          arguments: WorkoutExercisesDetailsArgumentModel(
+            exercise: exercise,
+            type: type,
+          ),
         ),
         child: Container(
           height: 100.h,
@@ -41,8 +48,8 @@ class WorkoutExerciseBaseBody extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 HeroAnimation(
-                  tag: exercise.id.toString(),
-                  child: CustomRoundedNetworkImage(
+                  tag: '${exercise.id} - ${getExerciseTypeString(type)}',
+                  child: CustomNetworkImage(
                     height: 100.h,
                     width: 80.w,
                     imageUrl: exercise.image,

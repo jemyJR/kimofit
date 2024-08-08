@@ -1,15 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kimofit/core/constants/colors.dart';
 import 'package:kimofit/core/widgets/custom_app_bar.dart';
-import 'package:kimofit/core/widgets/no_data_widget_small.dart';
-import 'package:kimofit/features/timer_and_calendar/ui/timer_and_calendar_base.dart';
-import 'package:kimofit/features/timer_and_calendar/ui/widgets/calendar_shimmer.dart';
-import 'package:kimofit/features/workout_exercises/data/enums/exercise_type_eum.dart';
-import 'package:kimofit/features/workout_exercises/data/test_data.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/exercise_list_view_area.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/warmup_exercise_area.dart';
-import 'package:kimofit/features/workout_exercises/ui/widgets/title_with_content.dart';
-import 'package:kimofit/generated/l10n.dart';
+import 'package:kimofit/features/timer_and_calendar/logic/exercise_body_cubit/exercise_body_cubit.dart';
+import 'package:kimofit/features/timer_and_calendar/ui/widgets/bloc_widgets/calendar_bloc_consumer.dart';
+import 'package:kimofit/features/workout_exercises/ui/widgets/workout_body_bloc/workout_body_bloc_builder.dart';
 
 class WorkoutExercisesScreen extends StatelessWidget {
   const WorkoutExercisesScreen({super.key, required this.title});
@@ -23,43 +18,9 @@ class WorkoutExercisesScreen extends StatelessWidget {
       appBar: CustomAppBar(
         title: title,
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const TimerAndCalendarBase(
-              child: CalendarShimmer(),
-            ),
-            TitleWithContent(
-              title: S.of(context).warmUpExercises,
-              child: WarmUpExerciseArea(
-                warmUpExercise: workoutBodyResponse.warmUpExercise,
-              ),
-            ),
-            TitleWithContent(
-              title: S.of(context).workoutExercises,
-              child: ExerciseListViewArea(
-                exercisesList: workoutBodyResponse.workoutExercise,
-                type: ExerciseType.workout,
-              ),
-            ),
-            TitleWithContent(
-              title: S.of(context).absExercises,
-              child: ExerciseListViewArea(
-                exercisesList: workoutBodyResponse.absExercises,
-                type: ExerciseType.abs,
-              ),
-            ),
-            TitleWithContent(
-              title: S.of(context).cardioExercises,
-              child: ExerciseListViewArea(
-                exercisesList: workoutBodyResponse.cardioExercises,
-                type: ExerciseType.cardio,
-              ),
-            ),
-            const NoDataWidgetSmall(),
-          ],
-        ),
+      body: CalendarBlocConsumer(
+        exerciseBodyCubit: context.read<ExerciseBodyCubit>(),
+        exerciseBodyBlocBuilder: const WorkoutBodyBlocBuilder(),
       ),
     );
   }

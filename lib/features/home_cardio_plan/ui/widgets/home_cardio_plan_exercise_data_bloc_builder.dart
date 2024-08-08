@@ -4,8 +4,9 @@ import 'package:kimofit/core/widgets/custom_snack_bar.dart';
 import 'package:kimofit/core/widgets/exercise_slider/exercise_slider.dart';
 import 'package:kimofit/core/widgets/no_data_widget.dart';
 import 'package:kimofit/features/home_cardio_plan/data/enums/exercise_status_enum.dart';
-import 'package:kimofit/features/home_cardio_plan/logic/home_cardio_plan_cubit/home_cardio_plan_cubit.dart';
 import 'package:kimofit/core/widgets/rest_day_widget.dart';
+import 'package:kimofit/features/timer_and_calendar/logic/exercise_body_cubit/exercise_body_cubit.dart';
+import 'package:kimofit/features/timer_and_calendar/logic/exercise_body_cubit/exercise_body_state.dart';
 import 'package:kimofit/features/warm_up_exercises/ui/widget/exercise_slider_shimmer.dart';
 
 class HomeCardioPlanExerciseBlocBuilder extends StatelessWidget {
@@ -13,20 +14,23 @@ class HomeCardioPlanExerciseBlocBuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<HomeCardioPlanCubit, HomeCardioPlanState>(
+    return BlocBuilder<ExerciseBodyCubit, ExerciseBodyState>(
       builder: (context, state) {
-        if (state is HomeCardioPlanLoading) {
+        if (state is ExerciseBodyLoading) {
           return const ExerciseSliderShimmer();
         }
 
-        if (state is HomeCardioPlanSuccess) {
-          final homeCardioPlanResponseModel = state.homeCardioPlanResponseModel;
+        if (state is ExerciseBodySuccess) {
+          final homeCardioPlanResponseModel = state.exerciseBodyResponseModel;
           final homeCardioExercises = homeCardioPlanResponseModel.results;
-          final cubit = context.read<HomeCardioPlanCubit>();
+          final cubit = context.read<ExerciseBodyCubit>();
           if (cubit.type == ExerciseStatus.restDay) {
             return const RestDayWidget();
           } else if (cubit.type == ExerciseStatus.notFoundDay) {
-            return const NoDataWidget();
+            return SizedBox(
+              height: MediaQuery.of(context).size.height * 0.6,
+              child: const NoDataWidget(),
+            );
           } else {
             return ExerciseSlider(
               exercises: homeCardioExercises,
@@ -34,7 +38,7 @@ class HomeCardioPlanExerciseBlocBuilder extends StatelessWidget {
           }
         }
 
-        if (state is HomeCardioPlanFailure) {
+        if (state is ExerciseBodyFailure) {
           customSnackBar(context, state.errorMessage);
           return const SizedBox.shrink();
         }

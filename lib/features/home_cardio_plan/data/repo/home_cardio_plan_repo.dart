@@ -11,9 +11,8 @@ class HomeCardioPlanRepo {
   HomeCardioPlanRepo(this.api);
 
   //! get home cardio plan exercises
-  Future<Either<String, HomeCardioPlanResponseModel>>
-      getHomeCardioPlanExercises(
-          {required DropDownMenuParams dropDownMenuParams}) async {
+  Future<Either<String, HomeCardioPlanResponseModel>> getBodyExercises(
+      {required DropDownMenuParams dropDownMenuParams}) async {
     try {
       final response = await api.get(
         ApiEndPoints.homeCardioPlan,

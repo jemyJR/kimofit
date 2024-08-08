@@ -13,6 +13,12 @@ class Constants {
   static const String weightTypePlateWeights = 'plate-weights';
   static const String workoutSelectedDay = 'workout_selected_day';
   static const String workoutSelectedWeek = 'workout_selected_week';
+  static const String homecardioCalendarCubit = 'HomeCardioCalendarCubit';
+  static const String homecardioCalendarRepo = 'HomeCardioCalendarRepo';
+  static const String workoutCalendarCubit = 'WorkoutCalendarCubit';
+  static const String workoutCalendarRepo = 'WorkoutCalendarRepo';
+  static const String workoutBodyCubit = 'WorkoutBodyCubit';
+  static const String homeCardioBodyCubit = 'HomeCardioBodyCubit';
 }
 
 class SocialMediaLinks {

@@ -2,7 +2,9 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:kimofit/app/logic/cubit/language_cubit.dart';
 import 'package:kimofit/core/cache/cache_helper.dart';
+import 'package:kimofit/core/constants/constants.dart';
 import 'package:kimofit/core/networking/api/api_consumer.dart';
+import 'package:kimofit/core/networking/api/api_endpoints.dart';
 import 'package:kimofit/core/networking/api/dio_consumer.dart';
 import 'package:kimofit/core/widgets/loading_widget.dart';
 import 'package:kimofit/features/diet_plan/data/repo/diet_plan_repo.dart';
@@ -11,10 +13,10 @@ import 'package:kimofit/features/food_recipe_book/data/repo/food_recipe_book_rep
 import 'package:kimofit/features/food_recipe_book/logic/food_recipe_book_cubit.dart';
 import 'package:kimofit/features/home/data/repo/home_repo.dart';
 import 'package:kimofit/features/home/logic/home_cubit.dart';
-import 'package:kimofit/features/home_cardio_plan/data/repo/home_cardio_calendar_repo.dart';
 import 'package:kimofit/features/home_cardio_plan/data/repo/home_cardio_plan_repo.dart';
-import 'package:kimofit/features/home_cardio_plan/logic/home_cardio_calendar_cubit/home_cardio_calendar_cubit.dart';
-import 'package:kimofit/features/home_cardio_plan/logic/home_cardio_plan_cubit/home_cardio_plan_cubit.dart';
+import 'package:kimofit/features/timer_and_calendar/data/repo/calendar_repo.dart';
+import 'package:kimofit/features/timer_and_calendar/logic/calendar_cubit/calendar_cubit.dart';
+import 'package:kimofit/features/timer_and_calendar/logic/exercise_body_cubit/exercise_body_cubit.dart';
 import 'package:kimofit/features/timer_and_calendar/logic/timer_and_calendar_cubit.dart';
 import 'package:kimofit/features/login/data/repos/login_repo.dart';
 import 'package:kimofit/features/login/logic/login_cubit.dart';
@@ -26,8 +28,7 @@ import 'package:kimofit/features/supplement/data/repo/supplenemt_repo.dart';
 import 'package:kimofit/features/supplement/logic/supplement_cubit.dart';
 import 'package:kimofit/features/warm_up_exercises/data/repo/warm_up_repo.dart';
 import 'package:kimofit/features/warm_up_exercises/logic/warm_up_cubit.dart';
-import 'package:kimofit/features/workout_exercises/data/repo/workout_calendar_repo.dart';
-import 'package:kimofit/features/workout_exercises/logic/workout_calendar_cubit/workout_calendar_cubit.dart';
+import 'package:kimofit/features/workout_exercises/data/repo/workout_body_repo.dart';
 
 final getIt = GetIt.instance;
 
@@ -84,14 +85,6 @@ Future<void> setupGetIt() async {
   // Register HomeCardioPlanCubit
   getIt.registerLazySingleton<HomeCardioPlanRepo>(
       () => HomeCardioPlanRepo(getIt()));
-  getIt
-      .registerFactory<HomeCardioPlanCubit>(() => HomeCardioPlanCubit(getIt()));
-
-  // Register HomeCardioCalendarCubit
-  getIt.registerLazySingleton<HomeCardioCalendarRepo>(
-      () => HomeCardioCalendarRepo(getIt()));
-  getIt.registerFactory<HomeCardioCalendarCubit>(
-      () => HomeCardioCalendarCubit(getIt()));
 
   // Register FoodRecipeBookCubit
   getIt.registerLazySingleton<FoodRecipeBookRepo>(
@@ -99,9 +92,60 @@ Future<void> setupGetIt() async {
   getIt
       .registerFactory<FoodRecipeBookCubit>(() => FoodRecipeBookCubit(getIt()));
 
-  // Register WorkoutCalendarCubit
-  getIt.registerLazySingleton<WorkoutCalendarRepo>(
-      () => WorkoutCalendarRepo(getIt()));
-  getIt.registerFactory<WorkoutCalendarCubit>(
-      () => WorkoutCalendarCubit(getIt()));
+  // Register WorkoutBodyCubit
+  getIt.registerLazySingleton<WorkoutBodyRepo>(() => WorkoutBodyRepo(getIt()));
+
+  //! Register Calender Repo and Cubit
+
+  // Register the HomeCardioCalendarCubit
+  getIt.registerLazySingleton<CalendarRepo>(
+    () => CalendarRepo(
+      api: getIt<ApiConsumer>(),
+      calendarEndpoint: ApiEndPoints.homeCardioCalendar,
+    ),
+    instanceName: Constants.homecardioCalendarRepo,
+  );
+  getIt.registerFactory<CalendarCubit>(
+    () => CalendarCubit(
+      repo: getIt<CalendarRepo>(
+        instanceName: Constants.homecardioCalendarRepo,
+      ),
+      cachedWeekKey: Constants.homeCardioSelectedWeek,
+      cachedDayKey: Constants.homeCardioSelectedDay,
+    ),
+    instanceName: Constants.homecardioCalendarCubit,
+  );
+
+  // Register the WorkoutCalendarCubit
+  getIt.registerLazySingleton<CalendarRepo>(
+    () => CalendarRepo(
+      api: getIt<ApiConsumer>(),
+      calendarEndpoint: ApiEndPoints.workoutCalendar,
+    ),
+    instanceName: Constants.workoutCalendarRepo,
+  );
+  getIt.registerFactory<CalendarCubit>(
+    () => CalendarCubit(
+      repo: getIt<CalendarRepo>(
+        instanceName: Constants.workoutCalendarRepo,
+      ),
+      cachedWeekKey: Constants.workoutSelectedWeek,
+      cachedDayKey: Constants.workoutSelectedDay,
+    ),
+    instanceName: Constants.workoutCalendarCubit,
+  );
+
+  // Register the ExerciseBodyCubit
+  getIt.registerFactory<ExerciseBodyCubit>(
+    () => ExerciseBodyCubit(
+      getIt<HomeCardioPlanRepo>(),
+    ),
+    instanceName: Constants.homeCardioBodyCubit,
+  );
+  getIt.registerFactory<ExerciseBodyCubit>(
+    () => ExerciseBodyCubit(
+      getIt<WorkoutBodyRepo>(),
+    ),
+    instanceName: Constants.workoutBodyCubit,
+  );
 }
