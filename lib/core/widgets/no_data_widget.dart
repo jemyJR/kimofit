@@ -11,33 +11,31 @@ class NoDataWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 30.w),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Spacer(),
-            Lottie.asset(
-              Assets.animationNoData,
-              width: 150.w,
-              fit: BoxFit.contain,
-              reverse: true,
-              repeat: true,
-            ),
-            const Spacer(),
-            Text(
-              S.of(context).noDataMessage,
-              style: TextStyles.font22White,
-              textAlign: TextAlign.center,
-            ),
-            const Spacer(),
-            // button
-            getButtonType(context, ButtonType.contactme),
-            const Spacer(),
-          ],
-        ),
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 30.w),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Spacer(),
+          Lottie.asset(
+            Assets.animationNoData,
+            width: 150.w,
+            fit: BoxFit.contain,
+            reverse: true,
+            repeat: true,
+          ),
+          const Spacer(),
+          Text(
+            S.of(context).noDataMessage,
+            style: TextStyles.font22White,
+            textAlign: TextAlign.center,
+          ),
+          const Spacer(),
+          // button
+          getButtonType(context, ButtonType.contactme),
+          const Spacer(),
+        ],
       ),
     );
   }
