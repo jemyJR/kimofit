@@ -1,26 +1,29 @@
 import 'package:dartz/dartz.dart';
 import 'package:kimofit/core/networking/api/api_consumer.dart';
-import 'package:kimofit/core/networking/api/api_endpoints.dart';
 import 'package:kimofit/core/networking/errors/error_handle_exeptions.dart';
 import 'package:kimofit/core/networking/params/calendar_day_params.dart';
-import 'package:kimofit/features/home_cardio_plan/data/models/home_cardio_calendar_response_model.dart';
+import 'package:kimofit/features/timer_and_calendar/data/models/calendar_response_model.dart';
 
-class HomeCardioCalendarRepo {
+class CalendarRepo {
   final ApiConsumer api;
-  HomeCardioCalendarRepo(this.api);
+  final String calendarEndpoint;
+  CalendarRepo({
+    required this.api,
+    required this.calendarEndpoint,
+  });
 
   //! get calendar Data (Days)
-  Future<Either<String, HomeCardioCalendarResponseModel>> getHomeCardioDays(
+  Future<Either<String, CalendarResponseModel>> getDays(
       {required CalendarDaysParams calendarDaysParams}) async {
     try {
       final response = await api.get(
-        ApiEndPoints.homeCardioCalendar,
+        calendarEndpoint,
         queryParameters: calendarDaysParams.toJson(),
       );
-      final homeCardioCalendarResponseModel =
-          HomeCardioCalendarResponseModel.fromJson(response);
+      final workoutCalendarResponseModel =
+          CalendarResponseModel.fromJson(response);
 
-      return Right(homeCardioCalendarResponseModel);
+      return Right(workoutCalendarResponseModel);
     } on ServerException catch (e) {
       return Left(e.errorModel.errorMessage!);
     }

@@ -1,32 +1,31 @@
-part of 'workout_calendar_cubit.dart';
+part of 'calendar_cubit.dart';
 
-sealed class WorkoutCalendarState {}
+sealed class CalendarState {}
 
-final class WorkoutCalendarInitial extends WorkoutCalendarState {}
+final class CalendarInitial extends CalendarState {}
 
-//! Home cardio calendar states
-final class WorkoutCalendarLoading extends WorkoutCalendarState {}
+final class CalendarLoading extends CalendarState {}
 
-final class WorkoutCalendarSuccess extends WorkoutCalendarState {
+final class CalendarSuccess extends CalendarState {
   final List<LocalizedField> days;
   final List<LocalizedField> weeks;
   final LocalizedField selectedDay;
   final LocalizedField selectedWeek;
 
-  WorkoutCalendarSuccess({
+  CalendarSuccess({
     required this.days,
     required this.weeks,
     required this.selectedDay,
     required this.selectedWeek,
   });
 
-  WorkoutCalendarSuccess copyWith({
+  CalendarSuccess copyWith({
     List<LocalizedField>? days,
     List<LocalizedField>? weeks,
     LocalizedField? selectedDay,
     LocalizedField? selectedWeek,
   }) {
-    return WorkoutCalendarSuccess(
+    return CalendarSuccess(
       days: days ?? this.days,
       weeks: weeks ?? this.weeks,
       selectedDay: selectedDay ?? this.selectedDay,
@@ -35,7 +34,7 @@ final class WorkoutCalendarSuccess extends WorkoutCalendarState {
   }
 }
 
-final class WorkoutCalendarFailure extends WorkoutCalendarState {
+final class CalendarFailure extends CalendarState {
   final String errorMessage;
-  WorkoutCalendarFailure({required this.errorMessage});
+  CalendarFailure({required this.errorMessage});
 }

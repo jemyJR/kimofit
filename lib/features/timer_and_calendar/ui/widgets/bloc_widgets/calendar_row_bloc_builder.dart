@@ -3,19 +3,19 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kimofit/core/helpers/spacing.dart';
 import 'package:kimofit/core/theming/style.dart';
 import 'package:kimofit/features/timer_and_calendar/data/calendar_list.dart';
+import 'package:kimofit/features/timer_and_calendar/logic/calendar_cubit/calendar_cubit.dart';
 import 'package:kimofit/features/timer_and_calendar/ui/widgets/calendar/custom_dropdown.dart';
-import 'package:kimofit/features/workout_exercises/logic/workout_calendar_cubit/workout_calendar_cubit.dart';
 import 'package:kimofit/generated/l10n.dart';
 
-class WorkoutCalendarRowBlocBuilder extends StatelessWidget {
-  const WorkoutCalendarRowBlocBuilder({super.key});
+class CalendarRowBlocBuilder extends StatelessWidget {
+  const CalendarRowBlocBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<WorkoutCalendarCubit, WorkoutCalendarState>(
+    return BlocBuilder<CalendarCubit, CalendarState>(
       builder: (context, state) {
-        if (state is WorkoutCalendarSuccess) {
-          final cubit = context.read<WorkoutCalendarCubit>();
+        if (state is CalendarSuccess) {
+          final cubit = context.read<CalendarCubit>();
           return Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
